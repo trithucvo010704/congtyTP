@@ -114,6 +114,20 @@ File này đóng vai trò là "bộ nhớ dài hạn" của dự án, lưu trữ
   2. File `index.html` được tái thiết lập với 2099 dòng mã tinh hoa, chuẩn HTML5 và JavaScript (0 lỗi cú pháp).
   3. Lệnh cài đặt Google Chrome trên Fedora 44 được đúc kết thành lệnh 1 dòng cho người dùng.
 
+### Phiên làm việc: Ngày 22/09/2026 (Phiên 6 - Nâng Cấp Trí Tuệ AI Chốt Lead SPIN Selling, Gỡ Bỏ Logo Viettel Đỏ & Thiết Lập Phòng Thủ Đa Tầng Prompt Injection)
+- **Nhiệm vụ:**
+  1. Nâng cấp Trợ lý AI thành Chuyên viên Tư vấn Giải pháp Phần mềm (Solution Architect): Tích hợp khung tư vấn SPIN Selling & Discovery Probing — chủ động hỏi lại 1 câu hỏi trọng tâm để bộc lộ quy mô/nỗi đau, mồi chào bằng demo kiến trúc có sẵn, và chốt lead tự nhiên mời để lại SĐT/Zalo kết nối Founder Võ Trí Thức trong 5–15 phút.
+  2. Gỡ bỏ toàn bộ logo / badge Viettel màu đỏ trên toàn bộ trang web (Header `VIETTEL ENG`, Hero badge `VIETTEL SOFTWARE ENGINEER`, console `viettel_telecom_eng.sys`, role tag); thay thế đồng bộ bằng nhận diện Obsidian Titanium & Laser Cyan cao cấp (`FOUNDER & TECH LEAD`, `CORE SYSTEM`, `Senior Software Engineer • HaUI Alumnus`).
+  3. Thiết lập hệ thống bảo mật đa tầng cho API `/api/assistant.js`:
+     - In-memory IP Rate Limiting (giới hạn tối đa 5 requests / 60 giây / 1 IP, trả về HTTP 429 nếu spam).
+     - Bộ lọc Heuristic Zero-Token Cost Defense: Quét và chặn đứng ngay lập tức các mẫu tấn công Prompt Injection, Jailbreak (DAN mode, override instruction, show system prompt, steal API key, spam thơ/văn/code) trước khi gửi tới DeepSeek API (tiết kiệm 100% chi phí token).
+     - Cắt gọt tin nhắn người dùng tối đa 350 ký tự, giữ 4 tin nhắn gần nhất trong context window, siết chặt `max_tokens: 220` và `temperature: 0.5`.
+     - Củng cố System Prompt với chỉ thị bảo mật bất khả xâm phạm.
+- **Kết quả:**
+  1. Test tự động 6 kịch bản tấn công Prompt Injection và Rate Limiter: Đạt 100% pass, chặn đứng toàn bộ nỗ lực jailbreak và leak prompt.
+  2. Test kịch bản tư vấn đa vòng: AI hỏi lại trúng quy mô 3 kho, chỉ đúng nguyên nhân lệch tồn realtime, và chốt lead thành công xin SĐT/Zalo.
+  3. Giao diện trang web đạt chuẩn nhận diện đồng nhất, 0 lỗi cú pháp, 184/184 keys song ngữ khớp tuyệt đối.
+
 ---
 
 ## V. NHIỆM VỤ TIẾP THEO ĐANG THỰC HIỆN (CURRENT SPRINT)
