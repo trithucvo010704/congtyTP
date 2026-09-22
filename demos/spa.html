@@ -3,234 +3,498 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aurora Derma Clinic | Viện Thẩm Mỹ Công Nghệ Cao — Mẫu Landing Page Spa & Nha Khoa</title>
-  <meta name="description" content="Mẫu Landing Page Thẩm Mỹ Viện, Spa & Nha Khoa chuyển đổi cao tối ưu bởi TP Teams. Tải trang 0.6s, so sánh Trước & Sau, form đặt lịch khám và webhook Telegram tức thì.">
+  <title>Aurora Derma Clinic | Phòng Khám Da Liễu Y Khoa & Thẩm Mỹ Công Nghệ Cao</title>
+  <meta name="description" content="Aurora Derma Clinic - Phòng khám chuyên khoa da liễu chuẩn y khoa. 100% Bác sĩ CKII trực tiếp thăm khám, công nghệ Picosecond Laser & HIFU FDA Hoa Kỳ chứng nhận.">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            serif: ['Playfair Display', 'serif'],
-            sans: ['Plus Jakarta Sans', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-          }
-        }
-      }
-    }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body { background-color: #0c080d; color: #f8fafc; font-family: 'Plus Jakarta Sans', sans-serif; }
-    .glass-rose { background: rgba(28, 17, 24, 0.75); backdrop-filter: blur(14px); border: 1px solid rgba(244, 63, 94, 0.2); }
-    .rose-btn {
-      background: linear-gradient(180deg, #f43f5e 0%, #e11d48 100%);
-      box-shadow: 0 4px 20px -2px rgba(244, 63, 94, 0.4);
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0a0e17;
+      color: #f3f4f6;
+      overflow-x: hidden;
+    }
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    /* 3D Solid Elevation Styles - No Gradients */
+    .card-solid-3d {
+      background-color: #111827;
+      border: 1px solid #1f2937;
+      border-top: 1px solid rgba(6, 182, 212, 0.25);
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.8), 0 4px 6px -2px rgba(0, 0, 0, 0.6);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .card-solid-3d:hover {
+      transform: translateY(-4px);
+      border-color: #374151;
+      border-top-color: rgba(6, 182, 212, 0.5);
+      box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.95);
+    }
+    .badge-medical {
+      background-color: #082f49;
+      border: 1px solid #0369a1;
+      color: #38bdf8;
+    }
+    .btn-solid-cyan {
+      background-color: #06b6d4;
+      color: #04141c;
+      font-weight: 700;
+      border: 1px solid #22d3ee;
+      box-shadow: 0 4px 14px 0 rgba(6, 182, 212, 0.35);
+      transition: all 0.2s ease;
+    }
+    .btn-solid-cyan:hover {
+      background-color: #22d3ee;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(6, 182, 212, 0.5);
+    }
+    .tab-active {
+      background-color: #06b6d4;
+      color: #04141c;
+      border-color: #22d3ee;
+      font-weight: 700;
+    }
+    .tab-inactive {
+      background-color: #161e2e;
+      color: #94a3b8;
+      border-color: #1f2937;
+    }
+    .tab-inactive:hover {
+      background-color: #1f293d;
+      color: #f1f5f9;
     }
   </style>
 </head>
-<body class="selection:bg-rose-500 selection:text-white pb-16">
+<body class="selection:bg-cyan-500 selection:text-black antialiased">
 
-  <!-- TOP SHOWCASE BANNER -->
-  <div class="sticky top-0 z-50 px-4 py-2.5 flex items-center justify-between text-xs bg-slate-950/90 backdrop-blur border-b border-rose-500/20">
-    <div class="flex items-center space-x-2 sm:space-x-3">
-      <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-rose-500/20 text-rose-300 border border-rose-500/40">
-        DEMO THỰC CHIẾN 04
-      </span>
-      <span class="text-slate-300 hidden sm:inline">Mẫu Landing Page Thẩm Mỹ Viện, Nha Khoa & Spa Trị Liệu</span>
-      <span class="inline-flex items-center text-rose-400 font-mono text-[11px]">
-        <span class="w-1.5 h-1.5 rounded-full bg-rose-400 animate-ping mr-1.5"></span>
-        PageSpeed 98 • Tải 0.6s
-      </span>
-    </div>
-    <div class="flex items-center space-x-2">
-      <a href="../index.html#showcase" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 transition">
-        ← Về Trang Chủ TP Teams
-      </a>
-      <a href="../index.html#contact?template=spa" class="px-3 py-1 rounded rose-btn text-white font-bold hover:brightness-110 transition">
-        Đặt Làm Mẫu Này
-      </a>
+  <!-- TOP BAR (SOLID COLOR - NO GRADIENT) -->
+  <div class="bg-slate-900 border-b border-slate-800 text-xs py-2 px-4 text-center">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center space-x-2 text-slate-300">
+        <span class="inline-block w-2 h-2 rounded-full bg-cyan-400"></span>
+        <span class="font-medium">DEMO THỰC CHIẾN PHÒNG KHÁM DA LIỄU, SPA & NHA KHOA THẨM MỸ</span>
+      </div>
+      <div class="hidden sm:flex items-center space-x-4 text-slate-400">
+        <span>⚡ Tốc độ tải: <strong class="text-emerald-400 font-mono">0.6s</strong></span>
+        <span>🛡️ Chuẩn Y Khoa: <strong class="text-cyan-400 font-mono">Giấy Phép Sở Y Tế</strong></span>
+        <a href="/" class="text-cyan-400 hover:underline font-medium">← Quay lại Trang Chủ TP Teams</a>
+      </div>
     </div>
   </div>
 
-  <!-- HERO SECTION -->
-  <section class="max-w-6xl mx-auto px-4 pt-12 sm:pt-16 pb-10">
-    <div class="text-center max-w-3xl mx-auto space-y-4">
-      <span class="inline-block text-xs font-mono text-rose-400 border border-rose-500/30 px-3 py-1 rounded-full bg-rose-950/40 uppercase tracking-widest">
-        CHUẨN Y KHOA QUỐC TẾ • CÔNG NGHỆ CHUYỂN GIAO HOA KỲ
-      </span>
-      <h1 class="text-3xl sm:text-5xl font-serif font-bold text-white tracking-wide leading-tight">
-        Aurora Derma Clinic <br>
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-300 via-pink-400 to-amber-300">
-          Tái Sinh Làn Da Không Tì Vết
-        </span>
-      </h1>
-      <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-        Phác đồ điều trị cá nhân hóa bởi đội ngũ Thạc sĩ - Bác sĩ Chuyên khoa Da liễu 15 năm kinh nghiệm. Cam kết cải thiện 85% khuyết điểm chỉ sau liệu trình đầu tiên.
-      </p>
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 bg-slate-950/95 backdrop-blur-md border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-lg bg-cyan-950 border border-cyan-800 flex items-center justify-center text-cyan-400 font-black text-xl shadow-inner">
+          AD
+        </div>
+        <div>
+          <span class="text-base font-bold text-white tracking-tight">Aurora Derma</span>
+          <span class="text-xs px-2 py-0.5 rounded bg-cyan-950 border border-cyan-800 text-cyan-400 font-mono font-bold ml-1.5">CLINIC</span>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a href="#results" class="hover:text-cyan-400 transition-colors">Kết Quả Trước/Sau</a>
+        <a href="#doctors" class="hover:text-cyan-400 transition-colors">Bác Sĩ Chuyên Khoa</a>
+        <a href="#tech" class="hover:text-cyan-400 transition-colors">Công Nghệ FDA</a>
+        <a href="#process" class="hover:text-cyan-400 transition-colors">Quy Trình 7 Bước</a>
+      </nav>
+      <div class="flex items-center space-x-3">
+        <a href="#booking" class="btn-solid-cyan px-5 py-2.5 rounded-lg text-sm flex items-center space-x-2">
+          <span>Đặt Lịch Khám 1-1</span>
+        </a>
+      </div>
+    </div>
+  </header>
 
-      <!-- 4 Trust Badges -->
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 text-center">
-        <div class="glass-rose p-3 rounded-xl">
-          <div class="text-rose-400 font-serif font-bold text-xl">15.000+</div>
-          <div class="text-[11px] text-slate-400 mt-0.5">Khách hàng hài lòng</div>
+  <!-- HERO SECTION -->
+  <section class="py-12 sm:py-20 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Copy & Value Propositions -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full badge-medical text-xs font-mono">
+            <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+            <span>CHUYÊN KHOA DA LIỄU CHUẨN Y KHOA • BÁC SĨ CKII TRỰC TIẾP ĐIỀU TRỊ</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+            Tái Sinh Làn Da.<br>
+            <span class="text-cyan-400">Chuẩn Y Khoa Quốc Tế.</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
+            Điều trị dứt điểm mụn viêm, nám tàn nhang chân sâu và trẻ hóa nâng cơ không phẫu thuật. 100% liệu trình do Bác sĩ Chuyên khoa Da liễu trực tiếp lên phác đồ cá nhân hóa dựa trên phân tích soi da cắt lớp 3D AI.
+          </p>
+
+          <!-- Core Metric Badges -->
+          <div class="grid grid-cols-3 gap-4 pt-2">
+            <div class="bg-slate-900 border border-slate-800 rounded-xl p-3.5 border-t-cyan-500/30">
+              <div class="text-xl sm:text-2xl font-bold font-mono text-cyan-400">100%</div>
+              <div class="text-xs text-slate-400 mt-1">Bác Sĩ Da Liễu CKII</div>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 rounded-xl p-3.5 border-t-cyan-500/30">
+              <div class="text-xl sm:text-2xl font-bold font-mono text-emerald-400">FDA</div>
+              <div class="text-xs text-slate-400 mt-1">Công Nghệ Hoa Kỳ Chứng Nhận</div>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 rounded-xl p-3.5 border-t-cyan-500/30">
+              <div class="text-xl sm:text-2xl font-bold font-mono text-amber-400">15.000+</div>
+              <div class="text-xs text-slate-400 mt-1">Ca Điều Trị Thành Công</div>
+            </div>
+          </div>
+
+          <!-- CTA Box -->
+          <div class="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4">
+            <a href="#booking" class="btn-solid-cyan py-3.5 px-8 rounded-xl text-center text-base font-bold shadow-xl">
+              ĐẶT HẸN SOI DA 3D MIỄN PHÍ
+            </a>
+            <div class="flex items-center space-x-2 text-xs text-slate-400 px-2 justify-center sm:justify-start">
+              <span>✓ Tặng Voucher 500.000đ</span>
+              <span>•</span>
+              <span>✓ Cam kết hiệu quả bằng văn bản</span>
+            </div>
+          </div>
+
         </div>
-        <div class="glass-rose p-3 rounded-xl">
-          <div class="text-rose-400 font-serif font-bold text-xl">100%</div>
-          <div class="text-[11px] text-slate-400 mt-0.5">Bác sĩ da liễu khám</div>
+
+        <!-- Right: 3D Laser Pulse Clinical Visualizer -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="w-full max-w-md card-solid-3d rounded-2xl p-6 sm:p-8">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-800 text-xs">
+              <span class="font-mono text-cyan-400 font-bold">PICOSECOND LASER SYSTEM</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-950 border border-emerald-800 text-emerald-400 font-mono font-bold">FDA CLEARED</span>
+            </div>
+
+            <!-- Medical Vector Graphic -->
+            <div class="py-6 flex justify-center">
+              <svg width="280" height="240" viewBox="0 0 280 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Laser Handpiece Head -->
+                <path d="M 120 20 L 160 20 L 150 90 L 130 90 Z" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+                <circle cx="140" cy="90" r="10" fill="#0369a1" stroke="#38bdf8" stroke-width="2"/>
+                <circle cx="140" cy="90" r="4" fill="#ffffff"/>
+
+                <!-- Laser Focus Beam (Cyan) -->
+                <polygon points="140,95 105,180 175,180" fill="#06b6d4" fill-opacity="0.15"/>
+                <line x1="140" y1="95" x2="140" y2="180" stroke="#06b6d4" stroke-width="2"/>
+
+                <!-- Skin Layers (Stratum Corneum & Dermis) -->
+                <!-- Epidermis Surface -->
+                <rect x="30" y="180" width="220" height="15" rx="3" fill="#1e293b" stroke="#334155"/>
+                <text x="35" y="191" fill="#94a3b8" font-size="9" font-family="monospace">BIỂU BÌ (0.1mm)</text>
+
+                <!-- Dermis Layer -->
+                <rect x="30" y="200" width="220" height="30" rx="3" fill="#0f172a" stroke="#334155"/>
+                <text x="35" y="218" fill="#38bdf8" font-size="9" font-family="monospace">TRUNG BÌ (COLLAGEN & ELASTIN)</text>
+
+                <!-- Melanin Pigment Targets Shattered -->
+                <circle cx="130" cy="215" r="4" fill="#f43f5e" stroke="#fda4af" stroke-dasharray="1 1"/>
+                <circle cx="140" cy="215" r="3" fill="#06b6d4"/>
+                <circle cx="150" cy="215" r="4" fill="#f43f5e" stroke="#fda4af" stroke-dasharray="1 1"/>
+              </svg>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
+              <div>
+                <span class="text-slate-400">Thời gian xung:</span>
+                <div class="text-xl font-bold font-mono text-cyan-400">375 Picosecond</div>
+              </div>
+              <div class="text-right">
+                <span class="text-slate-400">Mức độ đau:</span>
+                <div class="text-emerald-400 font-bold font-mono">0% (Không xâm lấn)</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="glass-rose p-3 rounded-xl">
-          <div class="text-rose-400 font-serif font-bold text-xl">FDA</div>
-          <div class="text-[11px] text-slate-400 mt-0.5">Hoa Kỳ chứng nhận</div>
-        </div>
-        <div class="glass-rose p-3 rounded-xl">
-          <div class="text-rose-400 font-serif font-bold text-xl">0 ĐỒNG</div>
-          <div class="text-[11px] text-slate-400 mt-0.5">Soi da & phác đồ 1-1</div>
-        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- INTERACTIVE SERVICES & BOOKING FORM -->
-  <section class="max-w-6xl mx-auto px-4 py-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+  <!-- INTERACTIVE BEFORE & AFTER RESULTS -->
+  <section id="results" class="py-16 sm:py-24 border-b border-slate-800/80 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Services & Before-After Column -->
-      <div class="lg:col-span-7 space-y-5">
-        <div class="glass-rose p-6 rounded-2xl">
-          <h2 class="font-serif text-lg font-bold text-white mb-4">Các Liệu Trình Đỉnh Cao</h2>
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full badge-medical text-xs font-mono mb-3">
+          <span>[ 01 // KẾT QUẢ ĐIỀU TRỊ THỰC TẾ ]</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Minh Chứng Khách Hàng Thực Tế
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-3">
+          Hình ảnh chụp tại phòng khám bằng máy phân tích da 3D Reveal Imager, không can thiệp bộ lọc hay phần mềm chỉnh sửa ảnh.
+        </p>
+      </div>
+
+      <!-- Treatment Switcher Tabs -->
+      <div class="flex flex-wrap justify-center gap-3 mb-10">
+        <button onclick="switchTreatment('acne')" id="tabAcne" class="tab-active px-5 py-2.5 rounded-xl border text-sm transition-all">
+          Trị Mụn Viêm & Thâm Đỏ (Sau 3 Tuần)
+        </button>
+        <button onclick="switchTreatment('melasma')" id="tabMelasma" class="tab-inactive px-5 py-2.5 rounded-xl border text-sm transition-all">
+          Xóa Nám Chân Sâu Picosecond (Sau 5 Buổi)
+        </button>
+        <button onclick="switchTreatment('hifu')" id="tabHifu" class="tab-inactive px-5 py-2.5 rounded-xl border text-sm transition-all">
+          Nâng Cơ Trẻ Hóa HIFU (Sau 1 Buổi)
+        </button>
+      </div>
+
+      <!-- Result Card -->
+      <div class="card-solid-3d rounded-2xl p-6 sm:p-10 max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
           
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-left">
-            <div onclick="selectService('Hifu 7D Trẻ Hóa')" class="p-3.5 rounded-xl bg-slate-900/80 border border-rose-500/30 hover:border-rose-400 cursor-pointer transition">
-              <span class="text-[10px] font-mono bg-rose-950 text-rose-300 px-1.5 py-0.5 rounded">TOP 1</span>
-              <h4 class="text-xs font-bold text-white mt-2">Nâng Cơ Hifu 7D</h4>
-              <p class="text-[11px] text-slate-400 mt-1">Xóa nếp nhăn, thon gọn viền hàm không phẫu thuật.</p>
-            </div>
-
-            <div onclick="selectService('Picotech Trị Nám')" class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-rose-400 cursor-pointer transition">
-              <span class="text-[10px] font-mono bg-purple-950 text-purple-300 px-1.5 py-0.5 rounded">HIỆU QUẢ</span>
-              <h4 class="text-xs font-bold text-white mt-2">Laser Picotech</h4>
-              <p class="text-[11px] text-slate-400 mt-1">Đánh bật sạm nám, tàn nhang và sẹo rỗ tận gốc.</p>
-            </div>
-
-            <div onclick="selectService('Cấy Trắng Nano Collagen')" class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-rose-400 cursor-pointer transition">
-              <span class="text-[10px] font-mono bg-pink-950 text-pink-300 px-1.5 py-0.5 rounded">SÁNG MỊN</span>
-              <h4 class="text-xs font-bold text-white mt-2">Nano Collagen</h4>
-              <p class="text-[11px] text-slate-400 mt-1">Căng bóng mọng nước, bật 2-3 tone da tự nhiên.</p>
-            </div>
-          </div>
-
-          <!-- Before / After Toggle Demo -->
-          <div class="mt-6 pt-5 border-t border-slate-800">
-            <div class="flex items-center justify-between mb-3">
-              <h3 class="text-xs font-bold text-white uppercase tracking-wider">Kết Quả Khách Hàng Thực Tế (Trước & Sau)</h3>
-              <div class="flex space-x-1 text-xs">
-                <button onclick="toggleBa('before')" id="btnBefore" class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 hover:text-white">Trước Trị Liệu</button>
-                <button onclick="toggleBa('after')" id="btnAfter" class="px-2.5 py-1 rounded bg-rose-500 text-white font-bold">Sau 3 Buổi</button>
+          <!-- Before Box -->
+          <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 text-center space-y-3">
+            <span class="px-3 py-1 rounded bg-red-950 text-red-300 border border-red-800 font-mono text-xs font-bold">
+              TRƯỚC ĐIỀU TRỊ (NGÀY 01)
+            </span>
+            <div class="py-8 flex justify-center">
+              <div class="w-32 h-32 rounded-full bg-slate-950 border-2 border-red-500/50 flex flex-col items-center justify-center text-xs text-slate-400 font-mono p-4 text-center">
+                <span class="text-red-400 font-bold" id="beforeCondition">Mụn bọc & thâm đỏ diện rộng</span>
+                <span class="text-slate-500 text-[10px] mt-1">Tổn thương tầng biểu bì</span>
               </div>
             </div>
-
-            <div class="p-5 rounded-xl bg-slate-950 border border-slate-800 text-center">
-              <p id="baDesc" class="text-xs text-rose-300 font-medium">
-                ✨ Sau 3 buổi Hifu 7D: Nếp nhăn rãnh cười mờ 80%, cơ mặt nâng cao rõ rệt, da sáng hồng căng mịn.
-              </p>
-              <p class="text-[10px] text-slate-500 mt-1">* Khách hàng: Chị Mai Thảo Vy (36 tuổi, Quận 1, TP.HCM)</p>
-            </div>
+            <p class="text-xs text-slate-400" id="beforeDesc">
+              Da bóng dầu, viêm nhiễm nang lông, thâm đỏ sau mụn kéo dài trên 6 tháng.
+            </p>
           </div>
+
+          <!-- After Box -->
+          <div class="bg-slate-900 border border-cyan-500/40 rounded-xl p-6 text-center space-y-3">
+            <span class="px-3 py-1 rounded bg-emerald-950 text-emerald-300 border border-emerald-800 font-mono text-xs font-bold">
+              KẾT QUẢ SAU LIỆU TRÌNH
+            </span>
+            <div class="py-8 flex justify-center">
+              <div class="w-32 h-32 rounded-full bg-slate-950 border-2 border-cyan-400 flex flex-col items-center justify-center text-xs text-slate-400 font-mono p-4 text-center shadow-lg shadow-cyan-500/20">
+                <span class="text-cyan-400 font-bold" id="afterCondition">Sạch 95% mụn, đều màu da</span>
+                <span class="text-emerald-400 text-[10px] mt-1">Tái tạo hàng rào sinh học</span>
+              </div>
+            </div>
+            <p class="text-xs text-slate-300" id="afterDesc">
+              Hết hoàn toàn ổ viêm, mờ 90% thâm đỏ, tuyến bã nhờn được kiểm soát cân bằng.
+            </p>
+          </div>
+
         </div>
       </div>
 
-      <!-- Booking Form Column -->
-      <div class="lg:col-span-5 glass-rose p-6 rounded-2xl relative border-rose-500/40">
-        <div class="mb-4">
-          <span class="text-xs font-mono text-rose-400 font-bold uppercase tracking-wider">[ ƯU ĐÃI THÁNG NÀY ]</span>
-          <h3 class="font-serif text-xl font-bold text-white mt-1">Đặt Lịch Soi Da 1-1 Miễn Phí</h3>
-          <p class="text-xs text-slate-300 mt-1">
-            Tặng ngay voucher tiền mặt trị giá 500.000đ áp dụng cho mọi dịch vụ khi đăng ký hôm nay.
+    </div>
+  </section>
+
+  <!-- 7-STEP MEDICAL PROCEDURE -->
+  <section id="process" class="py-16 sm:py-24 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full badge-medical text-xs font-mono mb-3">
+          <span>[ 02 // QUY TRÌNH VÔ TRÙNG CHUẨN Y KHOA ]</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+          7 Bước Nghiêm Ngặt Tại Phòng Khám
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-3">
+          Đảm bảo vô khuẩn tuyệt đối, dụng cụ y tế sử dụng 1 lần riêng biệt cho từng khách hàng.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <div class="card-solid-3d rounded-xl p-5">
+          <div class="text-cyan-400 font-mono font-bold text-sm">BƯỚC 01</div>
+          <h3 class="text-sm font-bold text-white mt-1">Soi Da Cắt Lớp 3D AI</h3>
+          <p class="text-xs text-slate-300 mt-2">Phân tích sắc tố Melanin, độ ẩm, độ sâu chân nám và mức độ bã nhờn.</p>
+        </div>
+
+        <div class="card-solid-3d rounded-xl p-5">
+          <div class="text-cyan-400 font-mono font-bold text-sm">BƯỚC 02</div>
+          <h3 class="text-sm font-bold text-white mt-1">Bác Sĩ CKII Thăm Khám</h3>
+          <p class="text-xs text-slate-300 mt-2">Bác sĩ chuyên khoa trực tiếp đối thoại, thiết lập phác đồ cá nhân hóa.</p>
+        </div>
+
+        <div class="card-solid-3d rounded-xl p-5">
+          <div class="text-cyan-400 font-mono font-bold text-sm">BƯỚC 03</div>
+          <h3 class="text-sm font-bold text-white mt-1">Làm Sạch Dược Mỹ Phẩm</h3>
+          <p class="text-xs text-slate-300 mt-2">Tẩy trang dịu nhẹ và xông hơi hút tạp chất nang lông chuẩn Pháp.</p>
+        </div>
+
+        <div class="card-solid-3d rounded-xl p-5">
+          <div class="text-cyan-400 font-mono font-bold text-sm">BƯỚC 04</div>
+          <h3 class="text-sm font-bold text-white mt-1">Sát Khuẩn Vô Trùng</h3>
+          <p class="text-xs text-slate-300 mt-2">Sát khuẩn Povidine và cồn y tế theo tiêu chuẩn kiểm soát nhiễm khuẩn.</p>
+        </div>
+
+        <div class="card-solid-3d rounded-xl p-5 border-cyan-500/40">
+          <div class="text-cyan-400 font-mono font-bold text-sm">BƯỚC 05</div>
+          <h3 class="text-sm font-bold text-white mt-1">Laser / HIFU Chính Hãng</h3>
+          <p class="text-xs text-slate-300 mt-2">Bác sĩ trực tiếp điều chỉnh bước sóng và bắn năng lượng chính xác từng điểm.</p>
+        </div>
+
+        <div class="card-solid-3d rounded-xl p-5">
+          <div class="text-cyan-400 font-mono font-bold text-sm">BƯỚC 06</div>
+          <h3 class="text-sm font-bold text-white mt-1">Điện Di Lạnh & Tế Bào Gốc</h3>
+          <p class="text-xs text-slate-300 mt-2">Làm dịu da tức thì, đẩy sâu tinh chất phục hồi Exosome vào hạ bì.</p>
+        </div>
+
+        <div class="card-solid-3d rounded-xl p-5 sm:col-span-2">
+          <div class="text-emerald-400 font-mono font-bold text-sm">BƯỚC 07</div>
+          <h3 class="text-sm font-bold text-white mt-1">Bàn Giao Phác Đồ Chăm Sóc Tại Nhà & Theo Dõi 24/7</h3>
+          <p class="text-xs text-slate-300 mt-2">Cấp phát bộ dược mỹ phẩm bôi thoa và đội ngũ trợ lý y khoa gọi điện hỏi thăm tiến độ hồi phục sau mỗi 48 giờ.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BOOKING FORM -->
+  <section id="booking" class="py-16 sm:py-24 bg-slate-950">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="card-solid-3d rounded-2xl p-6 sm:p-10 border-cyan-500/40">
+        
+        <div class="text-center max-w-xl mx-auto mb-8">
+          <span class="px-3 py-1 rounded badge-medical font-mono text-xs font-bold uppercase tracking-wider">
+            ƯU ĐÃI THÁNG NÀY • TẶNG GÓI SOI DA 3D 500K
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-3">
+            Đặt Lịch Thăm Khám 1-1 Cùng Bác Sĩ
+          </h2>
+          <p class="text-slate-400 text-xs sm:text-sm mt-2">
+            Không phải chờ đợi. Lễ tân y khoa sẽ gọi điện xác nhận khung giờ riêng tư và gửi mã Voucher qua Zalo.
           </p>
         </div>
 
-        <form id="spaForm" onsubmit="handleSpaBooking(event)" class="space-y-3.5">
+        <form id="clinicForm" onsubmit="handleClinicSubmit(event)" class="space-y-4">
           <div>
-            <label class="block text-xs font-medium text-slate-300 mb-1">Họ và Tên *</label>
-            <input type="text" id="spaName" required placeholder="Ví dụ: Lê Thị Bích Ngọc" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-white text-xs focus:border-rose-400 focus:outline-none">
+            <label class="block text-xs font-medium text-slate-400 mb-1">Họ và tên Quý khách *</label>
+            <input type="text" id="clinicName" required placeholder="Ví dụ: Lê Thảo Nhi" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:border-cyan-500 focus:outline-none">
           </div>
 
-          <div>
-            <label class="block text-xs font-medium text-slate-300 mb-1">Số Điện Thoại / Zalo *</label>
-            <input type="tel" id="spaPhone" required pattern="^(0[3|5|7|8|9])[0-9]{8}$" placeholder="Ví dụ: 0938123456" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-white text-xs focus:border-rose-400 focus:outline-none">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-medium text-slate-400 mb-1">Số điện thoại / Zalo nhận Voucher *</label>
+              <input type="tel" id="clinicPhone" required placeholder="Ví dụ: 0938 123 456" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:border-cyan-500 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-400 mb-1">Vấn đề da cần thăm khám *</label>
+              <select id="clinicConcern" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:border-cyan-500 focus:outline-none">
+                <option value="Trị mụn viêm & thâm đỏ">Trị mụn viêm, mụn ẩn & thâm đỏ</option>
+                <option value="Trị nám chân sâu & tàn nhang">Trị nám chân sâu, nám mảng & tàn nhang</option>
+                <option value="Nâng cơ trẻ hóa da HIFU">Nâng cơ trẻ hóa, xóa rãnh cười HIFU</option>
+                <option value="Điều trị sẹo rỗ lâu năm">Điều trị sẹo rỗ vi điểm đa tầng</option>
+                <option value="Khám da liễu tổng quát">Khám da liễu & soi da 3D tổng quát</option>
+              </select>
+            </div>
           </div>
 
-          <div>
-            <label class="block text-xs font-medium text-slate-300 mb-1">Dịch Vụ Quan Tâm</label>
-            <select id="spaService" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-white text-xs focus:border-rose-400 focus:outline-none">
-              <option value="Hifu 7D Trẻ Hóa">Nâng Cơ Trẻ Hóa Hifu 7D</option>
-              <option value="Picotech Trị Nám">Laser Picotech Trị Nám & Tàn Nhang</option>
-              <option value="Cấy Trắng Nano Collagen">Cấy Trắng Căng Bóng Nano Collagen</option>
-              <option value="Điều Trị Mụn Chuyên Sâu">Điều Trị Mụn Chuẩn Y Khoa</option>
-            </select>
-          </div>
-
-          <button type="submit" id="btnSpaSubmit" class="w-full py-3.5 rounded-xl rose-btn text-white font-extrabold text-xs tracking-wider shadow-lg hover:brightness-110 transition duration-200">
-            ĐẶT LỊCH NGAY & NHẬN VOUCHER 500K
+          <button type="submit" id="clinicSubmitBtn" class="btn-solid-cyan w-full py-3.5 rounded-xl font-bold text-sm tracking-wide mt-4">
+            XÁC NHẬN ĐẶT HẸN VÀ NHẬN VOUCHER 500K QUA ZALO →
           </button>
+
+          <div id="clinicSuccessAlert" class="hidden p-4 rounded-xl bg-emerald-950 border border-emerald-800 text-emerald-300 text-sm text-center">
+            🎉 Đặt hẹn thành công! Lễ tân Aurora Derma Clinic sẽ gọi điện xác nhận khung giờ ưu tiên cho bạn trong vòng 5–15 phút.
+          </div>
         </form>
 
-        <div id="spaSuccess" class="hidden mt-3 p-3 rounded-lg bg-emerald-950/80 border border-emerald-500/50 text-center">
-          <p class="text-emerald-300 font-bold text-xs">✓ ĐẶT LỊCH THÀNH CÔNG!</p>
-          <p class="text-[11px] text-slate-300 mt-1">Lịch khám và mã Voucher 500k đã được gửi về số Zalo của bạn. Bác sĩ chuyên khoa sẽ liên hệ xác nhận giờ hẹn trong ít phút.</p>
-        </div>
       </div>
+
     </div>
   </section>
 
-  <!-- FOOTER BANNER FOR TP TEAMS -->
-  <div class="max-w-4xl mx-auto px-4 mt-12 text-center">
-    <div class="glass-rose rounded-2xl p-6 border-rose-500/30">
-      <h3 class="text-base font-bold text-white mb-2">Bạn Là Chủ Thẩm Mỹ Viện, Nha Khoa Hay Spa Cần Bùng Nổ Khách Hàng?</h3>
-      <p class="text-xs text-slate-300 mb-4 max-w-xl mx-auto">
-        TP Teams xây dựng Landing Page ngành làm đẹp với bố cục sang trọng, tích hợp form đặt lịch tự động đẩy số về Zalo Lễ tân trong 2 giây, giúp tỷ lệ đến phòng khám đạt trên 80%.
-      </p>
-      <a href="../index.html#contact?template=spa" class="inline-block px-6 py-2.5 rounded-xl rose-btn text-white font-extrabold text-xs shadow-lg transition">
-        KẾT NỐI VỚI KỸ SƯ TP TEAMS (TƯ VẤN MIỄN PHÍ)
-      </a>
+  <!-- FOOTER -->
+  <footer class="py-12 border-t border-slate-800 bg-slate-950 text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <p class="text-slate-300 font-bold">Aurora Derma Clinic • Demo Thực Chiến Thẩm Mỹ Viện & Da Liễu Y Khoa</p>
+        <p class="mt-1">Được phát triển bởi TP Teams Solutions — Giao diện y khoa sang trọng, chuyển đổi cao, tải 0.6s.</p>
+      </div>
+      <div class="flex items-center space-x-4">
+        <a href="/" class="text-cyan-400 hover:underline">Về Trang Chủ Giải Pháp</a>
+        <span>•</span>
+        <a href="https://zalo.me/0349363992" target="_blank" class="text-slate-300 hover:text-white">Tư Vấn Mẫu Phòng Khám Này</a>
+      </div>
     </div>
-  </div>
+  </footer>
 
+  <!-- SCRIPT LOGIC -->
   <script>
-    function selectService(name) {
-      document.getElementById('spaService').value = name;
-    }
+    const treatments = {
+      acne: {
+        beforeCond: 'Mụn bọc & thâm đỏ diện rộng',
+        beforeDesc: 'Da bóng dầu, viêm nhiễm nang lông, thâm đỏ sau mụn kéo dài trên 6 tháng.',
+        afterCond: 'Sạch 95% mụn, đều màu da',
+        afterDesc: 'Hết hoàn toàn ổ viêm, mờ 90% thâm đỏ, tuyến bã nhờn được kiểm soát cân bằng.'
+      },
+      melasma: {
+        beforeCond: 'Nám chân sâu & tàn nhang 2 bên má',
+        beforeDesc: 'Sắc tố Melanin tích tụ tầng trung bì do ánh nắng và nội tiết tố sau sinh.',
+        afterCond: 'Xóa mờ 90% nám, da căng bóng',
+        afterDesc: 'Công nghệ Picosecond phá vỡ hạt sắc tố thành vi hạt tự đào thải tự nhiên qua bạch huyết.'
+      },
+      hifu: {
+        beforeCond: 'Cơ mặt chùng nhão, rãnh cười sâu',
+        beforeDesc: 'Suy giảm Collagen & Elastin khiến đường viền hàm mất định hình, khóe miệng chảy xệ.',
+        afterCond: 'Nâng cung hàm thon gọn V-line',
+        afterDesc: 'Sóng siêu âm hội tụ SMAS 4.5mm kích thích tăng sinh 300% sợi collagen mới ngay sau liệu trình.'
+      }
+    };
 
-    function toggleBa(mode) {
-      const desc = document.getElementById('baDesc');
-      const bBefore = document.getElementById('btnBefore');
-      const bAfter = document.getElementById('btnAfter');
-      if (mode === 'before') {
-        desc.innerText = '⚠️ Trước trị liệu: Da xuất hiện nhiều nếp nhăn đuôi mắt, cơ má chùng nhão, sắc tố da không đều màu.';
-        bBefore.className = 'px-2.5 py-1 rounded bg-rose-500 text-white font-bold';
-        bAfter.className = 'px-2.5 py-1 rounded bg-slate-800 text-slate-300 hover:text-white';
-      } else {
-        desc.innerText = '✨ Sau 3 buổi Hifu 7D: Nếp nhăn rãnh cười mờ 80%, cơ mặt nâng cao rõ rệt, da sáng hồng căng mịn.';
-        bAfter.className = 'px-2.5 py-1 rounded bg-rose-500 text-white font-bold';
-        bBefore.className = 'px-2.5 py-1 rounded bg-slate-800 text-slate-300 hover:text-white';
+    function switchTreatment(key) {
+      const tabs = ['acne', 'melasma', 'hifu'];
+      tabs.forEach(t => {
+        const btn = document.getElementById('tab' + t.charAt(0).toUpperCase() + t.slice(1));
+        if (btn) {
+          if (t === key) {
+            btn.className = 'tab-active px-5 py-2.5 rounded-xl border text-sm transition-all';
+          } else {
+            btn.className = 'tab-inactive px-5 py-2.5 rounded-xl border text-sm transition-all';
+          }
+        }
+      });
+
+      const d = treatments[key];
+      if (d) {
+        document.getElementById('beforeCondition').textContent = d.beforeCond;
+        document.getElementById('beforeDesc').textContent = d.beforeDesc;
+        document.getElementById('afterCondition').textContent = d.afterCond;
+        document.getElementById('afterDesc').textContent = d.afterDesc;
       }
     }
 
-    function handleSpaBooking(e) {
+    function handleClinicSubmit(e) {
       e.preventDefault();
-      const btn = document.getElementById('btnSpaSubmit');
+      const btn = document.getElementById('clinicSubmitBtn');
+      const alertBox = document.getElementById('clinicSuccessAlert');
+      const name = document.getElementById('clinicName').value.trim();
+      const phone = document.getElementById('clinicPhone').value.trim();
+      const concern = document.getElementById('clinicConcern').value;
+
       btn.disabled = true;
-      btn.innerText = 'ĐANG ĐẶT LỊCH HẸN...';
+      btn.textContent = 'ĐANG ĐĂNG KÝ LỊCH KHÁM...';
+
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: name,
+          phone: phone,
+          service: `[Clinic Demo Lead] Aurora Derma - ${concern}`,
+          message: `Khách hàng đặt lịch khám da liễu 1-1 và nhận Voucher 500k.`
+        })
+      }).catch(() => {});
 
       setTimeout(() => {
-        btn.innerText = 'ĐẶT LỊCH NGAY & NHẬN VOUCHER 500K';
-        btn.disabled = false;
-        document.getElementById('spaSuccess').classList.remove('hidden');
-        document.getElementById('spaForm').reset();
-      }, 700);
+        btn.textContent = 'ĐÃ ĐẶT LỊCH THÀNH CÔNG ✓';
+        btn.className = 'btn-solid-cyan w-full py-3.5 rounded-xl font-bold text-sm tracking-wide mt-4 bg-emerald-600 text-white';
+        alertBox.classList.remove('hidden');
+      }, 1000);
     }
   </script>
 </body>
