@@ -990,12 +990,23 @@
   </div>
 </footer>
 
-<!-- ================= FLOATING ACTION BUTTONS: ZALO & PHONE (FOR ADS CONVERSION) ================= -->
+<!-- ================= FLOATING ACTION BUTTONS: TELEGRAM, ZALO & PHONE (FOR ADS CONVERSION) ================= -->
 <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-  <!-- Zalo Direct Button with Glowing Pulse -->
+  <!-- Telegram Direct Button with Glowing Pulse -->
+  <a href="https://t.me/Trithuc23" target="_blank" rel="noopener noreferrer" title="Chat Telegram với Võ Trí Thức" class="group relative flex items-center justify-center w-14 h-14 rounded-full bg-[#229ED9] hover:bg-[#1E88E5] text-white shadow-2xl shadow-sky-500/40 transition-transform transform hover:scale-110">
+    <span class="absolute -top-1 -right-1 w-4 h-4 bg-emerald-400 rounded-full border-2 border-slate-950 animate-ping"></span>
+    <span class="absolute -top-1 -right-1 w-4 h-4 bg-emerald-400 rounded-full border-2 border-slate-950"></span>
+    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+    </svg>
+    <!-- Hover Tooltip -->
+    <span class="hidden md:block absolute right-16 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-[11px] font-bold text-white whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg">
+      ✈️ Chat Telegram: @Trithuc23
+    </span>
+  </a>
+
+  <!-- Zalo Direct Button -->
   <a href="https://zalo.me/0349363992" target="_blank" rel="noopener noreferrer" title="Chat Zalo ngay với Võ Trí Thức" class="group relative flex items-center justify-center w-14 h-14 rounded-full bg-blue-600 hover:bg-blue-500 text-white shadow-2xl shadow-blue-500/40 transition-transform transform hover:scale-110">
-    <span class="absolute -top-1 -right-1 w-4 h-4 bg-emerald-500 rounded-full border-2 border-slate-950 animate-ping"></span>
-    <span class="absolute -top-1 -right-1 w-4 h-4 bg-emerald-500 rounded-full border-2 border-slate-950"></span>
     <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
       <path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.08L2 22l5.12-1.34C8.57 21.49 10.23 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm1 14.5h-2v-2h2v2zm0-4h-2V7h2v5.5z"/>
     </svg>
@@ -1104,13 +1115,13 @@
   // Form submission handler with Rate-Limiting Simulation
   let lastSubmitTime = 0;
 
-  function handleLeadSubmit(event) {
+  async function handleLeadSubmit(event) {
     event.preventDefault();
 
     const now = Date.now();
-    // Simulate Redis Rate Limiter: 1 request per 30 seconds to prevent spam
-    if (now - lastSubmitTime < 30000) {
-      showModal("Vui Lòng Thử Lại Sau", "Hệ thống đang bảo vệ chống spam (Rate Limit: 1 yêu cầu / 30 giây). Vui lòng đợi một chút.");
+    // Chống spam: 1 request / 15 giây
+    if (now - lastSubmitTime < 15000) {
+      showModal("Vui Lòng Thử Lại Sau", "Hệ thống đang bảo vệ chống spam. Vui lòng đợi 15 giây trước khi gửi tiếp.");
       return;
     }
 
@@ -1119,30 +1130,57 @@
     const spinner = document.getElementById('btnSpinner');
 
     btn.disabled = true;
-    btnText.textContent = "Đang gửi thông tin...";
+    btnText.textContent = "Đang gửi thông tin đến Telegram...";
     spinner.classList.remove('hidden');
 
-    const name = document.getElementById('leadName').value;
-    const email = document.getElementById('leadEmail').value;
-    const phone = document.getElementById('leadPhone').value;
+    const name = document.getElementById('leadName').value.trim();
+    const email = document.getElementById('leadEmail').value.trim();
+    const phone = document.getElementById('leadPhone').value.trim();
     const type = document.getElementById('leadType').value;
     const budget = document.getElementById('leadBudget').value;
-    const msg = document.getElementById('leadMsg').value;
+    const message = document.getElementById('leadMsg').value.trim();
 
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          type,
+          budget,
+          message,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Không thể gửi yêu cầu lúc này.');
+      }
+
       lastSubmitTime = Date.now();
-      btn.disabled = false;
-      btnText.textContent = "Gửi Yêu Cầu & Nhận Báo Giá Ngay";
-      spinner.classList.add('hidden');
-
       showModal(
         "Gửi Yêu Cầu Thành Công!",
-        `Cảm ơn anh/chị ${name}. Thông tin dự án "${type}" đã được chuyển thẳng tới Võ Trí Thức. Tôi sẽ liên hệ qua số ${phone} hoặc email ${email} trong vòng 24 giờ làm việc.`
+        `Cảm ơn anh/chị ${name}! Yêu cầu tư vấn đã được gửi tức thì đến Telegram của Võ Trí Thức. Tôi sẽ chủ động liên hệ lại qua số điện thoại/Zalo ${phone} hoặc email ${email} trong vòng 24 giờ làm việc.`
       );
 
       // Reset form
       document.getElementById('leadForm').reset();
-    }, 1000);
+    } catch (error) {
+      console.error('Lead submission failed:', error);
+      showModal(
+        "Chưa gửi được yêu cầu",
+        `Đã có sự cố kết nối: ${error.message || 'Vui lòng thử lại sau hoặc liên hệ trực tiếp qua Zalo / Hotline 0349 363 992'}.`
+      );
+    } finally {
+      btn.disabled = false;
+      btnText.textContent = "Gửi Yêu Cầu & Nhận Báo Giá Ngay";
+      spinner.classList.add('hidden');
+    }
   }
 
   function showModal(title, msg) {
