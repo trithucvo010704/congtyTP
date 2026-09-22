@@ -80,6 +80,27 @@ File này đóng vai trò là "bộ nhớ dài hạn" của dự án, lưu trữ
   5. Cập nhật đồng bộ vào `index.html`, `tailieu/11_BO_HO_SO_VA_MAU_CHAO_GIA_VLANCE_FREELANCERVIET.md`.
   6. Git commit `422d72a` và Vercel deploy thành công `state: success` live trên `https://landing.votrithuc.click`.
 
+### Phiên làm việc: Ngày 22/09/2026 (Phiên 4 - Chuẩn Hóa 100% Song Ngữ & Tối Ưu Responsive Toàn Diện)
+- **Nhiệm vụ:** Giải quyết triệt để lỗi câu từ tiếng lóng ("Không ngáo giá", "Bắt con tin"), mở rộng từ điển song ngữ đạt độ phủ 100% trên toàn bộ trang (172 keys) và khắc phục toàn diện lỗi responsive (bảng so sánh AI bị bóp chữ, vỡ layout Header trên màn hình nhỏ, iOS auto-zoom, nút nổi che form, broken anchor link).
+- **Kết quả:**
+  1. **Chuẩn hóa văn phong B2B:** Đổi "Không ngáo giá" thành "Giá Trị Thực — Chi Phí Cạnh Tranh & Tối Ưu Cho Doanh Nghiệp" ("Real Value — Competitive & Transparent Investment"). Đổi "Bắt con tin" thành "Bị 'Trói Buộc' Phí Thuê Bao Định Kỳ Hàng Năm" ("Trapped in Recurring Platform Subscription Fees").
+  2. **Thống nhất thời gian phản hồi siêu tốc 5–15 phút:** Triệt tiêu mâu thuẫn giữa cảnh báo Pain 2 ("chậm 15 phút mất khách") và Form liên hệ ("phản hồi trong 2 giờ"). Cập nhật toàn bộ cam kết liên hệ từ "2 giờ" sang **"Kỹ sư Viettel kết nối trực tiếp trong 5–15 phút"** (khớp hoàn hảo với webhook Telegram 2s).
+  3. **Chuyển hóa toàn bộ thuật ngữ kỹ thuật IT sang Lợi ích Tiền bạc & Kinh doanh:**
+     - Thay `Meta CAPI / GTM` ➔ "Đo lường chuẩn xác: Chống báo cáo ảo Facebook, biết đúng bài ads ra tiền".
+     - Thay `Honeypot / Turnstile` ➔ "Bộ lọc chặn click tặc & form rác tự động: Bảo vệ tối đa ngân sách ads".
+     - Thay `PostgreSQL + API` ➔ "Kho dữ liệu khách hàng độc quyền: Bảo mật tuyệt đối, không sợ lộ hay mất tệp khách".
+     - Thay `Bảng Kanban` ➔ "Bảng theo dõi bán hàng trực quan: Biết rõ khách nào mới vào, đang gọi, hay đã chốt đơn".
+     - Thay `Bắt UTM mù quáng` ➔ "Không biết nguồn khách, đốt tiền mù quáng".
+  4. **Hoàn thiện Bilingual Engine 100%:** Nâng cấp từ điển từ 50 keys lên 172 keys song ngữ chuẩn xác 1:1, dịch toàn diện Bảng so sánh AI (24 ô), Bảng giá & 16 gạch đầu dòng tính năng, 3 khối cam kết Founder, Live Demos, Form placeholders & options, Footer, Modals và Tooltips.
+  5. **Tối ưu Responsive di động & tablet:**
+     - Đặt `min-w-[700px]` cho bảng so sánh AI kèm chỉ dẫn vuốt cảm ứng trên di động (`👈 Vuốt ngang để xem so sánh đầy đủ 4 cột 👉`).
+     - Tối ưu thanh Header co giãn mượt mà từ 320px (iPhone SE, Galaxy A) đến 4K.
+     - Đổi thẻ ngắt dòng Hero `<h1>` sang `<br class="hidden sm:inline">` giúp câu chữ tự co giãn tự nhiên trên mobile.
+     - Chuẩn hóa kích thước 3 nút nổi sang `w-11 h-11 sm:w-12 sm:h-12` với khoảng cách an toàn, không che lấp form nhập liệu.
+     - Đổi cỡ chữ toàn bộ form lên `text-base sm:text-sm` triệt tiêu vĩnh viễn lỗi tự động phóng to (auto-zoom) trên iOS Safari.
+     - Sửa liên kết neo bị đứt `#solutions` trỏ chính xác về `#pricing`.
+  6. **Kiểm thử tự động:** Script Python thẩm tra 172/172 keys khớp 100%, thẻ HTML cân bằng 100%.
+
 ---
 
 ## V. NHIỆM VỤ TIẾP THEO ĐANG THỰC HIỆN (CURRENT SPRINT)
