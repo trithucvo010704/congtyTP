@@ -107,10 +107,11 @@ File này đóng vai trò là "bộ nhớ dài hạn" của dự án, lưu trữ
   2. Đại tu hệ thống màu sắc và thị giác: Chuyển toàn diện sang phong cách **Obsidian Titanium & Cyber-Precision 3D Glassmorphism** (nền tối sâu `#040711`, viền vát cạnh 3D bevel, thanh điều hướng Floating Island Navigation).
   3. Nâng cấp Section D1 Sandbox: Chuyển đổi thành **iPhone 3D Live Webhook Telemetry Simulator** tương tác thời gian thực (hiệu ứng rung haptic mô phỏng trên điện thoại 3D, đồng hồ đo mili-giây ping thật, hiển thị bong bóng tin nhắn Telegram push ngay trên màn hình iPhone ảo khi bấm thử nghiệm).
   4. Tích hợp **Trợ Lý AI Kỹ Sư TP Teams**: Widget chat 3D nổi góc phải kết nối trực tiếp DeepSeek API (`api/assistant.js`), trang bị system prompt kỹ sư tư vấn B2B chuyên nghiệp, gợi ý quick chips thông minh, tự động nhận diện SĐT để bắn lead về Telegram.
-  5. Đạt độ phủ song ngữ 176 keys khớp 100% không một lỗi thiếu sót.
+  5. **Mở rộng phạm vi tiếp nhận dự án phần mềm đa dạng (Không khóa cá):** Trợ lý AI và Form tư vấn mở rộng đón nhận toàn bộ các nhu cầu phát triển phần mềm (Web App quản lý, Mini-CRM, HRM/ERP theo yêu cầu, tích hợp AI & Automation, bên cạnh Landing Page chạy ads), tư vấn may đo theo bài toán và trích dẫn minh chứng các hệ thống live thực tế (`hrm.votrithuc.click`, `jobs.votrithuc.click`).
+  6. Đạt độ phủ song ngữ 184 keys khớp 100% không một lỗi thiếu sót.
 - **Kết quả:**
-  1. File `api/assistant.js` hoàn chỉnh trên Vercel Serverless Function, test thực tế trả về phản hồi chuẩn xác cho từng ngành hàng và gói dịch vụ.
-  2. File `index.html` được tái thiết lập với 2079 dòng mã tinh hoa, chuẩn HTML5 và JavaScript (0 lỗi cú pháp).
+  1. File `api/assistant.js` hoàn chỉnh trên Vercel Serverless Function, test thực tế trả về phản hồi chuẩn xác cho cả dự án phần mềm custom (logistic, kho vận, chuỗi cửa hàng) lẫn landing page thu lead.
+  2. File `index.html` được tái thiết lập với 2099 dòng mã tinh hoa, chuẩn HTML5 và JavaScript (0 lỗi cú pháp).
   3. Lệnh cài đặt Google Chrome trên Fedora 44 được đúc kết thành lệnh 1 dòng cho người dùng.
 
 ---
