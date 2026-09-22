@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TP Teams | Giải Pháp Landing Page Thu Lead, Hệ Thống Web & Tự Động Hóa AI Doanh Nghiệp</title>
-  <meta name="description" content="TP Teams - Đội ngũ kỹ sư phần mềm & AI thực chiến do Võ Trí Thức sáng lập. Chuyên sâu xây dựng Landing Page chuyển đổi cao, hệ thống quản lý Lead tập trung và tự động hóa AI cho doanh nghiệp SME.">
+  <title>TP Teams | Giải Pháp Landing Page Thu Lead Tốc Độ Cao & Tự Động Hóa AI Doanh Nghiệp</title>
+  <meta name="description" content="TP Teams - Đội ngũ kỹ sư phần mềm Viettel do Võ Trí Thức (HaUI) sáng lập. Chuyên sâu Landing Page tối ưu chuyển đổi ads, tự động bắt UTM, webhook Telegram 2s và hệ thống Mini-CRM lưu lead.">
   <link rel="icon" type="image/png" href="anh/tp_teams_icon.png">
   
   <!-- OpenGraph -->
-  <meta property="og:title" content="TP Teams | Software & AI Engineering Solutions">
-  <meta property="og:description" content="Biến lưu lượng truy cập thành khách hàng tiềm năng và tự động hóa vận hành bằng Web, Backend và AI.">
+  <meta property="og:title" content="TP Teams | Giải Pháp Web Chuyển Đổi Cao & Tự Động Hóa AI">
+  <meta property="og:description" content="Kỹ sư Viettel kiến tạo giải pháp Landing Page tốc độ <1.5s, webhook Telegram 2s, bắt trọn UTM và bảo vệ dòng tiền quảng cáo cho doanh nghiệp.">
   <meta property="og:image" content="anh/tp_teams_logo.jpg">
   <meta property="og:type" content="website">
 
   <!-- Google Fonts: Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -31,20 +31,13 @@
           },
           colors: {
             brand: {
-              50: '#ecfdf5',
-              100: '#d1fae5',
               400: '#34d399',
               500: '#10b981',
               600: '#059669',
-              700: '#047857',
-              900: '#064e3b',
             },
-            tech: {
-              cyan: '#06b6d4',
-              blue: '#2563eb',
-              dark: '#030712',
-              card: '#0b1329',
-              border: 'rgba(255, 255, 255, 0.08)'
+            viettel: {
+              red: '#ee0033',
+              glow: 'rgba(238, 0, 51, 0.35)'
             }
           }
         }
@@ -61,21 +54,31 @@
       overflow-x: hidden;
     }
     .glass-nav {
-      background: rgba(3, 7, 18, 0.88);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      background: rgba(3, 7, 18, 0.90);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
     .glass-card {
       background: rgba(11, 19, 41, 0.75);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border: 1px solid rgba(255, 255, 255, 0.08);
-      transition: all 0.3s ease;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .glass-card:hover {
-      border-color: rgba(6, 182, 212, 0.4);
-      box-shadow: 0 12px 36px -10px rgba(6, 182, 212, 0.2);
+      border-color: rgba(6, 182, 212, 0.45);
+      box-shadow: 0 16px 40px -12px rgba(6, 182, 212, 0.25);
+    }
+    .pain-card {
+      background: rgba(26, 15, 19, 0.75);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(239, 68, 68, 0.2);
+      transition: all 0.3s ease;
+    }
+    .pain-card:hover {
+      border-color: rgba(239, 68, 68, 0.5);
+      box-shadow: 0 12px 30px -10px rgba(239, 68, 68, 0.25);
     }
     .gradient-text-tp {
       background: linear-gradient(135deg, #38bdf8 0%, #34d399 50%, #a78bfa 100%);
@@ -85,13 +88,12 @@
     .gradient-cyan-emerald {
       background: linear-gradient(135deg, #06b6d4 0%, #10b981 100%);
     }
-    .glow-box {
-      box-shadow: 0 0 25px rgba(6, 182, 212, 0.25);
+    .glow-box-cyan {
+      box-shadow: 0 0 30px rgba(6, 182, 212, 0.28);
     }
-    .glow-box-emerald {
-      box-shadow: 0 0 25px rgba(16, 185, 129, 0.25);
+    .glow-box-viettel {
+      box-shadow: 0 0 25px rgba(238, 0, 51, 0.3);
     }
-    /* Grid background pattern */
     .bg-grid-pattern {
       background-size: 40px 40px;
       background-image: 
@@ -107,27 +109,28 @@
 <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-nav">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
     
-    <!-- Brand Logo -->
+    <!-- Brand Logo & Viettel Engineer Tag -->
     <a href="#" class="flex items-center gap-3 group">
-      <div class="relative w-11 h-11 rounded-xl overflow-hidden shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform border border-cyan-500/30">
+      <div class="relative w-11 h-11 rounded-xl overflow-hidden shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform border border-cyan-500/30 bg-slate-900">
         <img src="anh/tp_teams_icon.png" alt="TP Teams Logo" class="w-full h-full object-cover">
       </div>
       <div class="flex flex-col">
-        <div class="flex items-center gap-1.5">
+        <div class="flex items-center gap-2">
           <span class="text-lg font-black tracking-tight text-white group-hover:text-cyan-400 transition-colors">TP TEAMS</span>
-          <span class="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+          <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-black bg-red-600/90 text-white font-mono tracking-wider">VIETTEL ENG</span>
         </div>
         <span class="text-[10px] font-mono text-cyan-400 uppercase tracking-widest" data-i18n="nav.tagline">Software & AI Agency</span>
       </div>
     </a>
 
     <!-- Desktop Navigation Links -->
-    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
-      <a href="#about" class="hover:text-cyan-400 transition-colors" data-i18n="nav.about">Về Chúng Tôi</a>
+    <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
+      <a href="#pain-points" class="hover:text-red-400 transition-colors" data-i18n="nav.pain">Nỗi Đau Doanh Nghiệp</a>
+      <a href="#ai-comparison" class="hover:text-cyan-400 transition-colors" data-i18n="nav.vs_ai">Tại Sao Không Dùng AI?</a>
       <a href="#solutions" class="hover:text-cyan-400 transition-colors" data-i18n="nav.solutions">Giải Pháp D1-D3</a>
       <a href="#live-demos" class="hover:text-cyan-400 transition-colors" data-i18n="nav.demos">Minh Chứng Live</a>
-      <a href="#pricing" class="hover:text-cyan-400 transition-colors" data-i18n="nav.pricing">Bảng Giá</a>
-      <a href="#founder" class="hover:text-cyan-400 transition-colors" data-i18n="nav.founder">Đội Ngũ & Founder</a>
+      <a href="#pricing" class="hover:text-cyan-400 transition-colors" data-i18n="nav.pricing">Bảng Giá Thị Trường</a>
+      <a href="#founder" class="hover:text-cyan-400 transition-colors" data-i18n="nav.founder">Founder & Đội Ngũ</a>
       <a href="#faq" class="hover:text-cyan-400 transition-colors" data-i18n="nav.faq">FAQ</a>
     </nav>
 
@@ -147,7 +150,7 @@
       <!-- CTA Button -->
       <a 
         href="#contact" 
-        class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl gradient-cyan-emerald hover:opacity-95 text-slate-950 font-bold text-xs uppercase tracking-wider transition-all shadow-md shadow-cyan-500/25 hover:scale-[1.02]"
+        class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl gradient-cyan-emerald hover:opacity-95 text-slate-950 font-black text-xs uppercase tracking-wider transition-all shadow-md shadow-cyan-500/25 hover:scale-[1.02]"
         data-i18n="nav.cta"
       >
         <span>Tư Vấn 1-1</span>
@@ -164,11 +167,12 @@
 
   <!-- Mobile Dropdown Menu -->
   <div id="mobileMenu" class="hidden lg:hidden px-4 pt-2 pb-6 bg-slate-950/95 border-b border-slate-800 space-y-3 text-sm">
-    <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-cyan-400" data-i18n="nav.about">Về Chúng Tôi</a>
+    <a href="#pain-points" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-red-400" data-i18n="nav.pain">Nỗi Đau Doanh Nghiệp</a>
+    <a href="#ai-comparison" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-cyan-400" data-i18n="nav.vs_ai">Tại Sao Không Dùng AI?</a>
     <a href="#solutions" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-cyan-400" data-i18n="nav.solutions">Giải Pháp D1-D3</a>
     <a href="#live-demos" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-cyan-400" data-i18n="nav.demos">Minh Chứng Live</a>
-    <a href="#pricing" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-cyan-400" data-i18n="nav.pricing">Bảng Giá</a>
-    <a href="#founder" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-cyan-400" data-i18n="nav.founder">Đội Ngũ & Founder</a>
+    <a href="#pricing" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-cyan-400" data-i18n="nav.pricing">Bảng Giá Thị Trường</a>
+    <a href="#founder" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-cyan-400" data-i18n="nav.founder">Founder & Đội Ngũ</a>
     <a href="#faq" onclick="toggleMobileMenu()" class="block py-2 text-slate-300 hover:text-cyan-400" data-i18n="nav.faq">FAQ</a>
     <a href="#contact" onclick="toggleMobileMenu()" class="block text-center py-2.5 rounded-xl gradient-cyan-emerald text-slate-950 font-bold" data-i18n="nav.cta">Tư Vấn 1-1</a>
   </div>
@@ -176,42 +180,47 @@
 
 <!-- ================= 2. HERO SECTION ================= -->
 <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-grid-pattern">
-  <!-- Radial Glow Background -->
-  <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none"></div>
-  <div class="absolute top-1/3 right-10 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+  <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-cyan-500/10 rounded-full blur-[130px] pointer-events-none"></div>
+  <div class="absolute top-1/3 right-10 w-[450px] h-[450px] bg-red-500/10 rounded-full blur-[110px] pointer-events-none"></div>
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
       
       <!-- Left Content -->
       <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-        <!-- Trust Badge -->
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-cyan-500/30 text-xs font-semibold text-cyan-300">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-          <span data-i18n="hero.badge">TP TEAMS — ĐỐI TÁC CÔNG NGHỆ & TỰ ĐỘNG HÓA AI TIN CẬY</span>
+        <!-- Viettel & HaUI Trust Credential Badge -->
+        <div class="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs font-semibold">
+          <span class="inline-flex items-center gap-1.5 text-red-400 font-bold">
+            <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+            VIETTEL SOFTWARE ENGINEER
+          </span>
+          <span class="text-slate-500">•</span>
+          <span class="text-cyan-400 font-mono">HaUI ALUMNUS</span>
+          <span class="text-slate-500">•</span>
+          <span class="text-emerald-400 font-medium" data-i18n="hero.badge_lead">TP TEAMS SOLUTIONS</span>
         </div>
 
         <!-- Main Headline -->
         <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.15] text-white">
-          <span data-i18n="hero.title_p1">Biến Lưu Lượng Truy Cập Thành</span><br>
-          <span class="gradient-text-tp" data-i18n="hero.title_p2">Khách Hàng Tiềm Năng</span><br>
-          <span data-i18n="hero.title_p3">& Tự Động Hóa Vận Hành Bằng AI</span>
+          <span data-i18n="hero.title_p1">Dừng Đốt Tiền Quảng Cáo Vào</span><br>
+          <span class="gradient-text-tp" data-i18n="hero.title_p2">Những Trang Đích Tải Chậm</span><br>
+          <span data-i18n="hero.title_p3">& Để Thất Thoát Khách Hàng Mỗi Ngày</span>
         </h1>
 
         <!-- Subtitle -->
         <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal" data-i18n="hero.subtitle">
-          TP Teams chuyên sâu phát triển <strong>Trang đích chuyển đổi cao (D1)</strong>, <strong>Hệ thống quản lý Lead tập trung (D2)</strong> và <strong>Nền tảng Tuyển dụng tự động hóa AI (D3)</strong> cho doanh nghiệp vừa và nhỏ. Cam kết hệ thống thật, đo lường rõ ràng, bàn giao trong 24–48h.
+          TP Teams được dẫn dắt bởi <strong>Kỹ sư Viettel Võ Trí Thức</strong>. Chúng tôi áp dụng tư duy kiến trúc hệ thống chuẩn viễn thông: tốc độ tải <strong>&lt; 1.5 giây</strong>, tự động bắt trọn UTM từ khóa và <strong>bắn thông báo Lead về Telegram trong đúng 2 giây</strong>. Cam kết hệ thống thật, sở hữu mã nguồn vĩnh viễn, không phí thuê bao hàng năm.
         </p>
 
         <!-- CTA Buttons -->
         <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
           <a 
-            href="#live-demos" 
-            class="w-full sm:w-auto px-7 py-3.5 rounded-xl gradient-cyan-emerald hover:opacity-95 text-slate-950 font-bold text-sm uppercase tracking-wider transition-all shadow-lg shadow-cyan-500/30 hover:scale-[1.02] flex items-center justify-center gap-2"
-            data-i18n="hero.btn_demos"
+            href="#interactive-demo" 
+            class="w-full sm:w-auto px-7 py-3.5 rounded-xl gradient-cyan-emerald hover:opacity-95 text-slate-950 font-black text-sm uppercase tracking-wider transition-all shadow-lg shadow-cyan-500/30 hover:scale-[1.02] flex items-center justify-center gap-2"
+            data-i18n="hero.btn_test_demo"
           >
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-            <span>Trải Nghiệm Demo Live (D1-D3)</span>
+            <span class="text-base">⚡</span>
+            <span>Test Thử Webhook Bắn Lead 2s</span>
           </a>
 
           <a 
@@ -219,68 +228,67 @@
             class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-slate-500 text-white font-semibold text-sm transition-all flex items-center justify-center gap-2"
             data-i18n="hero.btn_pricing"
           >
-            <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-            <span>Bảng Giá Dịch Vụ Minh Bạch</span>
+            <span>Bảng Giá Thị Trường (Từ 1.9Tr)</span>
           </a>
         </div>
 
         <!-- Live Metrics Grid -->
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-slate-800/80 text-left">
-          <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+          <div class="p-3 rounded-xl bg-slate-900/70 border border-slate-800">
             <div class="text-xl sm:text-2xl font-black text-cyan-400 font-mono">&lt; 1.5s</div>
-            <div class="text-xs text-slate-400" data-i18n="metrics.speed">Tốc độ tải trang Ads</div>
+            <div class="text-xs text-slate-400" data-i18n="metrics.speed">Tốc độ tải 4G Mobile</div>
           </div>
-          <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+          <div class="p-3 rounded-xl bg-slate-900/70 border border-slate-800">
             <div class="text-xl sm:text-2xl font-black text-emerald-400 font-mono">&lt; 2 Giây</div>
-            <div class="text-xs text-slate-400" data-i18n="metrics.alert">Bắn Lead về Telegram</div>
+            <div class="text-xs text-slate-400" data-i18n="metrics.alert">Bắn chuông Telegram</div>
           </div>
-          <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800">
-            <div class="text-xl sm:text-2xl font-black text-cyan-400 font-mono">100%</div>
-            <div class="text-xs text-slate-400" data-i18n="metrics.real">Dữ liệu & API thực tế</div>
+          <div class="p-3 rounded-xl bg-slate-900/70 border border-slate-800">
+            <div class="text-xl sm:text-2xl font-black text-amber-400 font-mono">0 VNĐ</div>
+            <div class="text-xs text-slate-400" data-i18n="metrics.fee">Phí thuê bao nền tảng</div>
           </div>
-          <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800">
-            <div class="text-xl sm:text-2xl font-black text-purple-400 font-mono">99.9%</div>
-            <div class="text-xs text-slate-400" data-i18n="metrics.uptime">Độ sẵn sàng VPS/Cloud</div>
+          <div class="p-3 rounded-xl bg-slate-900/70 border border-slate-800">
+            <div class="text-xl sm:text-2xl font-black text-purple-400 font-mono">100%</div>
+            <div class="text-xs text-slate-400" data-i18n="metrics.source">Sở hữu Source Code</div>
           </div>
         </div>
 
       </div>
 
-      <!-- Right Visual: Brand Crest & Core Identity -->
+      <!-- Right Visual: Founder & TP Teams Crest -->
       <div class="lg:col-span-5 flex justify-center">
         <div class="relative w-full max-w-md">
-          <!-- Ambient Glow Ring -->
-          <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-cyan-500 to-emerald-500 opacity-30 blur-xl"></div>
+          <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-cyan-500 via-red-500 to-emerald-500 opacity-25 blur-xl"></div>
           
-          <div class="relative rounded-2xl overflow-hidden border border-cyan-500/30 glass-card p-6 shadow-2xl">
-            <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-4">
+          <div class="relative rounded-2xl overflow-hidden border border-cyan-500/30 glass-card p-6 shadow-2xl space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
               <div class="flex items-center gap-2">
-                <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
-                <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
-                <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
-                <span class="ml-2 text-xs font-mono text-slate-400">tp_teams_identity.sys</span>
+                <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+                <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                <span class="ml-2 text-xs font-mono text-slate-400">viettel_engineer_spec.sys</span>
               </div>
-              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">ONLINE</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-black bg-red-500/20 text-red-400 border border-red-500/30 font-mono">VERIFIED</span>
+            </div>
+
+            <!-- Founder Portrait Badge Inside Hero -->
+            <div class="flex items-center gap-4 p-3 rounded-xl bg-slate-950/80 border border-slate-800">
+              <div class="relative w-16 h-16 rounded-xl overflow-hidden border-2 border-cyan-400 shrink-0">
+                <img src="anh/founder_avatar.jpg" alt="Võ Trí Thức" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white">Võ Trí Thức</h4>
+                <p class="text-xs text-red-400 font-semibold font-mono">Software Engineer @ Viettel</p>
+                <p class="text-[10px] text-slate-400 pt-0.5">Founder & Tech Lead — TP Teams</p>
+              </div>
             </div>
 
             <!-- Brand Logo Visual -->
-            <div class="rounded-xl overflow-hidden border border-slate-800 shadow-inner mb-4 bg-slate-950">
-              <img src="anh/tp_teams_logo.jpg" alt="TP Teams Brand Emblem" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500">
+            <div class="rounded-xl overflow-hidden border border-slate-800 shadow-inner bg-slate-950">
+              <img src="anh/tp_teams_logo.jpg" alt="TP Teams Brand Crest" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500">
             </div>
 
-            <div class="space-y-2">
-              <div class="flex justify-between items-center text-xs">
-                <span class="text-slate-400" data-i18n="card.engine">Đơn vị phát triển:</span>
-                <span class="font-bold text-white font-mono">TP TEAMS (Việt Nam)</span>
-              </div>
-              <div class="flex justify-between items-center text-xs">
-                <span class="text-slate-400" data-i18n="card.lead">Trưởng kỹ thuật:</span>
-                <span class="font-bold text-cyan-400">Võ Trí Thức</span>
-              </div>
-              <div class="flex justify-between items-center text-xs">
-                <span class="text-slate-400" data-i18n="card.stack">Công nghệ cốt lõi:</span>
-                <span class="font-mono text-emerald-400">Spring Boot, Next.js, AI LLM</span>
-              </div>
+            <div class="text-[11px] text-slate-400 text-center font-mono border-t border-slate-800 pt-2" data-i18n="hero.quote_card">
+              "Kỹ thuật thực chiến — Bảo vệ dòng tiền và nhân bản chuyển đổi"
             </div>
           </div>
         </div>
@@ -290,24 +298,189 @@
   </div>
 </section>
 
-<!-- ================= 3. INTERACTIVE D1 DEMO SANDBOX ================= -->
-<section id="interactive-demo" class="py-16 bg-slate-900/60 border-y border-slate-800/80 relative">
+<!-- ================= 3. NỖI ĐAU THỰC TẾ (EXACT PAIN POINTS) ================= -->
+<section id="pain-points" class="py-20 bg-slate-950 border-t border-slate-800 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-xs font-mono text-red-400 font-bold">
+        ⚠️ CẢNH BÁO RÒ RỈ DÒNG TIỀN QUẢNG CÁO
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight" data-i18n="pain.title">
+        4 Lỗ Hổng Khiến Bạn Đốt Tiền Quảng Cáo Nhưng Không Thu Được Đơn
+      </h2>
+      <p class="text-slate-400 text-sm sm:text-base leading-relaxed" data-i18n="pain.subtitle">
+        Khảo sát hơn 100 doanh nghiệp vừa và nhỏ (SME) tại Việt Nam cho thấy: 80% ngân sách quảng cáo đang bị lãng phí vì những lỗi kỹ thuật sơ đẳng mà chủ doanh nghiệp không hề hay biết.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Pain 1 -->
+      <div class="pain-card p-6 rounded-2xl flex flex-col justify-between space-y-4">
+        <div class="space-y-3">
+          <div class="w-12 h-12 rounded-xl bg-red-500/20 text-red-400 flex items-center justify-center font-black text-xl border border-red-500/30">
+            01
+          </div>
+          <h3 class="text-base font-bold text-white" data-i18n="pain.p1_title">Trang Tải Chậm &gt; 3s, Mất 50% Khách</h3>
+          <p class="text-xs text-slate-300 leading-relaxed" data-i18n="pain.p1_desc">
+            Mỗi click Facebook/Google tốn từ 5.000đ – 30.000đ. Nhưng nếu trang mất trên 3 giây để mở trên mạng 4G, khách hàng sẽ bấm thoát ngay. Bạn mất tiền mua click nhưng khách chưa kịp nhìn thấy sản phẩm!
+          </p>
+        </div>
+        <div class="p-2.5 rounded-lg bg-red-950/60 border border-red-900/50 text-[11px] text-red-300 font-mono">
+          💸 Thiệt hại: Mất 40–50% ngân sách ads mỗi ngày.
+        </div>
+      </div>
+
+      <!-- Pain 2 -->
+      <div class="pain-card p-6 rounded-2xl flex flex-col justify-between space-y-4">
+        <div class="space-y-3">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-black text-xl border border-amber-500/30">
+            02
+          </div>
+          <h3 class="text-base font-bold text-white" data-i18n="pain.p2_title">Phản Hồi Chậm, Khách Bị Nguội</h3>
+          <p class="text-xs text-slate-300 leading-relaxed" data-i18n="pain.p2_desc">
+            Khách điền form lúc 10h sáng, nhưng đến chiều nhân viên mới mở Google Sheet/Mail kiểm tra. Chậm 15 phút, khách đã bấm sang đối thủ hoặc đổi ý. Tỷ lệ chốt đơn rớt từ 40% xuống còn dưới 5%.
+          </p>
+        </div>
+        <div class="p-2.5 rounded-lg bg-amber-950/60 border border-amber-900/50 text-[11px] text-amber-300 font-mono">
+          ⏱️ Yêu cầu sống còn: Phải gọi khách trong 5 phút đầu!
+        </div>
+      </div>
+
+      <!-- Pain 3 -->
+      <div class="pain-card p-6 rounded-2xl flex flex-col justify-between space-y-4">
+        <div class="space-y-3">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center font-black text-xl border border-purple-500/30">
+            03
+          </div>
+          <h3 class="text-base font-bold text-white" data-i18n="pain.p3_title">Không Bắt UTM, Đốt Tiền Mù Quáng</h3>
+          <p class="text-xs text-slate-300 leading-relaxed" data-i18n="pain.p3_desc">
+            Bạn chi 20 triệu chạy 5 nhóm quảng cáo khác nhau nhưng hệ thống không ghi nhận nguồn (UTM). Bạn hoàn toàn không biết nhóm ads hay từ khóa nào sinh ra lead thật, nhóm nào đang đốt tiền rác.
+          </p>
+        </div>
+        <div class="p-2.5 rounded-lg bg-purple-950/60 border border-purple-900/50 text-[11px] text-purple-300 font-mono">
+          📊 Hậu quả: Không thể scale ngân sách quảng cáo.
+        </div>
+      </div>
+
+      <!-- Pain 4 -->
+      <div class="pain-card p-6 rounded-2xl flex flex-col justify-between space-y-4">
+        <div class="space-y-3">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-black text-xl border border-cyan-500/30">
+            04
+          </div>
+          <h3 class="text-base font-bold text-white" data-i18n="pain.p4_title">Bị "Bắt Con Tin" Phí Thuê Bao Hàng Năm</h3>
+          <p class="text-xs text-slate-300 leading-relaxed" data-i18n="pain.p4_desc">
+            Dùng các nền tảng kéo thả (LadiPage/SaaS) khiến bạn phải đóng 3.5 – 6 triệu/năm tiền duy trì. Quên đóng tiền là trang web bị đóng cửa, bạn không hề sở hữu mã nguồn của chính doanh nghiệp mình.
+          </p>
+        </div>
+        <div class="p-2.5 rounded-lg bg-cyan-950/60 border border-cyan-900/50 text-[11px] text-cyan-300 font-mono">
+          🔒 Giải pháp TP Teams: Bàn giao trọn gói, sở hữu 100%.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4. PHẢN BIỆN ĐANH THÉP: AI vs TP TEAMS ================= -->
+<section id="ai-comparison" class="py-20 bg-slate-900/50 border-t border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-xs font-mono text-cyan-400 font-bold">
+        🥊 PHẢN BIỆN THẲNG THẮN VỀ CÔNG NGHỆ
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight" data-i18n="vs_ai.title">
+        "Tại Sao Không Tự Dùng AI Viết Code Trong 5 Phút Mà Phải Thuê TP Teams?"
+      </h2>
+      <p class="text-slate-400 text-sm sm:text-base leading-relaxed" data-i18n="vs_ai.subtitle">
+        Hiện nay AI (ChatGPT, v0, Bolt) có thể sinh mã HTML rất nhanh. Nhưng giữa một <strong>đoạn mã giao diện thô</strong> và một <strong>hệ thống kinh doanh tạo ra doanh thu</strong> là khoảng cách một trời một vực.
+      </p>
+    </div>
+
+    <!-- Comparison Table -->
+    <div class="overflow-x-auto">
+      <table class="w-full text-left border-collapse glass-card rounded-2xl overflow-hidden text-xs sm:text-sm">
+        <thead>
+          <tr class="border-b border-slate-800 bg-slate-950 text-slate-300">
+            <th class="p-4 sm:p-5 font-bold uppercase tracking-wider text-xs">Tiêu chí so sánh</th>
+            <th class="p-4 sm:p-5 font-bold text-red-400 uppercase tracking-wider text-xs">AI tự sinh mã (ChatGPT/v0)</th>
+            <th class="p-4 sm:p-5 font-bold text-amber-400 uppercase tracking-wider text-xs">Nền tảng kéo thả (LadiPage)</th>
+            <th class="p-4 sm:p-5 font-bold text-cyan-400 uppercase tracking-wider text-xs bg-cyan-950/40 border-l border-cyan-500/30">Giải Pháp Thực Chiến TP TEAMS</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-800/80 text-slate-300">
+          <tr>
+            <td class="p-4 sm:p-5 font-bold text-white">1. Xử lý dữ liệu & Bắn Lead</td>
+            <td class="p-4 sm:p-5 text-slate-400">Không có backend, không biết gửi đi đâu trừ khi bạn tự code server.</td>
+            <td class="p-4 sm:p-5 text-slate-400">Chuyển về Google Sheet hoặc Email, dễ bị delay 10-30 phút.</td>
+            <td class="p-4 sm:p-5 font-bold text-emerald-400 bg-cyan-950/20 border-l border-cyan-500/30">
+              Webhook nổ chuông Telegram trong đúng 2 giây, bấm SĐT là gọi ngay!
+            </td>
+          </tr>
+          <tr>
+            <td class="p-4 sm:p-5 font-bold text-white">2. Bắt UTM & Tracking Ads</td>
+            <td class="p-4 sm:p-5 text-slate-400">AI không tự cài đặt được GTM, Meta CAPI hay bộ bắt UTM ngầm.</td>
+            <td class="p-4 sm:p-5 text-slate-400">Có hỗ trợ cơ bản nhưng cấu hình thủ công phức tạp, hay lỗi script.</td>
+            <td class="p-4 sm:p-5 font-bold text-emerald-400 bg-cyan-950/20 border-l border-cyan-500/30">
+              Cài đặt trọn gói GA4, GTM, Meta Pixel/CAPI, bắt trọn từ khóa và nhóm ads.
+            </td>
+          </tr>
+          <tr>
+            <td class="p-4 sm:p-5 font-bold text-white">3. Tốc độ tải khi chạy Ads lớn</td>
+            <td class="p-4 sm:p-5 text-slate-400">Code nặng, ảnh không nén, dễ sập hoặc đơ form khi đổ traffic lớn.</td>
+            <td class="p-4 sm:p-5 text-slate-400">Phụ thuộc vào cụm máy chủ chung của nền tảng kéo thả.</td>
+            <td class="p-4 sm:p-5 font-bold text-emerald-400 bg-cyan-950/20 border-l border-cyan-500/30">
+              Tối ưu Core Web Vitals, CDN Edge toàn cầu, tốc độ &lt; 1.5s trên 4G.
+            </td>
+          </tr>
+          <tr>
+            <td class="p-4 sm:p-5 font-bold text-white">4. Chi phí & Quyền sở hữu</td>
+            <td class="p-4 sm:p-5 text-slate-400">Tưởng miễn phí nhưng tốn hàng chục giờ mày mò sửa lỗi.</td>
+            <td class="p-4 sm:p-5 text-slate-400">Phải đóng tiền thuê bao 3.5 – 6 triệu mỗi năm để giữ trang.</td>
+            <td class="p-4 sm:p-5 font-bold text-emerald-400 bg-cyan-950/20 border-l border-cyan-500/30">
+              Chi phí 1 lần từ 1.9Tr, sở hữu 100% mã nguồn, 0 VNĐ phí hàng năm!
+            </td>
+          </tr>
+          <tr>
+            <td class="p-4 sm:p-5 font-bold text-white">5. Trách nhiệm & Bảo hành</td>
+            <td class="p-4 sm:p-5 text-slate-400">AI không chịu trách nhiệm khi form lỗi khiến bạn mất tiền ads.</td>
+            <td class="p-4 sm:p-5 text-slate-400">Tự chịu trách nhiệm, gửi ticket hỗ trợ chờ phản hồi.</td>
+            <td class="p-4 sm:p-5 font-bold text-emerald-400 bg-cyan-950/20 border-l border-cyan-500/30">
+              Kỹ sư Viettel bảo hành kỹ thuật, hỗ trợ trực tiếp 24/7 qua Zalo/Phone.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-8 p-4 rounded-xl bg-slate-900 border border-slate-800 text-center text-xs text-slate-400 font-mono">
+      💡 <strong class="text-white">Kết luận:</strong> AI là công cụ hỗ trợ code nhanh hơn, nhưng chính kinh nghiệm kiến trúc của kỹ sư Viettel mới đảm bảo từng đồng tiền quảng cáo của bạn chuyển hóa thành khách hàng thật sự.
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= 5. INTERACTIVE D1 DEMO SANDBOX ================= -->
+<section id="interactive-demo" class="py-16 bg-slate-950 border-t border-slate-800 relative">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <div class="text-center max-w-3xl mx-auto mb-10 space-y-3">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-xs font-mono text-cyan-400">
-        ⚡ DEMO 1 (D1) TRẢI NGHIỆM THỰC TẾ
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-xs font-mono text-cyan-400 font-bold">
+        ⚡ DEMO TRẢI NGHIỆM TRỰC TIẾP
       </div>
       <h2 class="text-2xl sm:text-4xl font-extrabold text-white" data-i18n="d1demo.title">
-        Kiểm Chứng Tốc Độ Bắn Lead Về Telegram Trong 2 Giây
+        Tự Tay Kiểm Chứng Tốc Độ Bắn Lead Về Telegram Trong 2 Giây
       </h2>
       <p class="text-slate-400 text-sm leading-relaxed" data-i18n="d1demo.desc">
-        Thay vì lời nói suông, hãy tự tay nhập số điện thoại hoặc họ tên của bạn bên dưới. Ngay khi bấm gửi, hệ thống webhook của TP Teams sẽ đẩy trực tiếp thông báo đến điện thoại của Founder Võ Trí Thức.
+        Nhập họ tên và số điện thoại của bạn bên dưới. Ngay khi bấm nút, webhook của TP Teams sẽ đẩy trực tiếp thông báo đến điện thoại của Founder Võ Trí Thức kèm đồng hồ đo tốc độ phản hồi thực tế!
       </p>
     </div>
 
     <!-- Interactive Simulator Card -->
-    <div class="glass-card p-6 sm:p-8 rounded-2xl max-w-2xl mx-auto border border-cyan-500/30 glow-box">
+    <div class="glass-card p-6 sm:p-8 rounded-2xl max-w-2xl mx-auto border border-cyan-500/30 glow-box-cyan">
       <form id="sandboxForm" onsubmit="handleSandboxSubmit(event)" class="space-y-4">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
@@ -333,125 +506,138 @@
         </div>
 
         <div>
-          <label class="block text-xs font-semibold text-slate-300 mb-1" data-i18n="d1demo.interest_label">Mục đích kiểm chứng</label>
+          <label class="block text-xs font-semibold text-slate-300 mb-1" data-i18n="d1demo.interest_label">Mục đích trải nghiệm</label>
           <select 
             id="sbInterest" 
             class="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-sm text-white focus:outline-none focus:border-cyan-400 transition-colors"
           >
             <option value="Thử nghiệm tốc độ Telegram Webhook 2s">Thử nghiệm tốc độ Telegram Webhook 2s</option>
-            <option value="Tìm hiểu gói Trang đích chạy Ads (D1)">Tìm hiểu gói Trang đích chạy Ads (D1)</option>
-            <option value="Cần xây dựng hệ thống Mini-CRM lưu Lead (D2)">Cần xây dựng hệ thống Mini-CRM lưu Lead (D2)</option>
-            <option value="Đăng ký tư vấn giải pháp Tuyển dụng AI (D3)">Đăng ký tư vấn giải pháp Tuyển dụng AI (D3)</option>
+            <option value="Quan tâm Gói Landing Page Khởi Động (1.9 Triệu)">Quan tâm Gói Landing Page Khởi Động (1.9 Triệu)</option>
+            <option value="Quan tâm Gói Landing Page Chuyên Sâu Pro (3.8 Triệu)">Quan tâm Gói Landing Page Chuyên Sâu Pro (3.8 Triệu)</option>
+            <option value="Quan tâm Gói Landing Page + Mini-CRM (8.9 Triệu)">Quan tâm Gói Landing Page + Mini-CRM (8.9 Triệu)</option>
           </select>
         </div>
 
         <button 
           type="submit" 
           id="sbSubmitBtn"
-          class="w-full py-3.5 rounded-xl gradient-cyan-emerald hover:opacity-95 text-slate-950 font-bold text-sm uppercase tracking-wider transition-all shadow-md shadow-cyan-500/25 flex items-center justify-center gap-2 cursor-pointer"
+          class="w-full py-3.5 rounded-xl gradient-cyan-emerald hover:opacity-95 text-slate-950 font-black text-sm uppercase tracking-wider transition-all shadow-md shadow-cyan-500/25 flex items-center justify-center gap-2 cursor-pointer"
         >
           <span id="sbBtnSpinner" class="hidden animate-spin w-4 h-4 border-2 border-slate-950 border-t-transparent rounded-full"></span>
-          <span id="sbBtnText" data-i18n="d1demo.submit_btn">BẤM ĐỂ BẮN THÔNG BÁO TỨC THÌ (TEST LIVE)</span>
+          <span id="sbBtnText" data-i18n="d1demo.submit_btn">BẤM ĐỂ BẮN THÔNG BÁO TỨC THÌ (TEST LIVE 2S)</span>
         </button>
       </form>
 
-      <!-- Feedback Banner -->
       <div id="sbFeedback" class="hidden mt-4 p-4 rounded-xl text-xs leading-relaxed text-center font-mono"></div>
     </div>
 
   </div>
 </section>
 
-<!-- ================= 4. BỘ BA SẢN PHẨM MINH CHỨNG (D1 - D2 - D3) ================= -->
-<section id="solutions" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- ================= 6. BẢNG GIÁ THỊ TRƯỜNG MINH BẠCH (KHÔNG NGÁO GIÁ) ================= -->
+<section id="pricing" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800">
   <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-900 border border-slate-800 text-xs font-mono text-cyan-400">
-      🏆 THE THREE PROOF PILLARS
+    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-900 border border-slate-800 text-xs font-mono text-cyan-400 font-bold">
+      💎 BẢNG GIÁ DỊCH VỤ THỰC TẾ
     </div>
-    <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight" data-i18n="solutions.title">
-      Hệ Sinh Thái Bộ Ba Sản Phẩm Thực Chiến
+    <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight" data-i18n="pricing.title">
+      Giá Trị Thật — Chi Phí Cạnh Tranh & Không Ngáo Giá
     </h2>
-    <p class="text-slate-400 text-sm sm:text-base leading-relaxed" data-i18n="solutions.subtitle">
-      TP Teams không chào bán những lời hứa hẹn. Chúng tôi sở hữu bộ ba sản phẩm minh chứng độc quyền, được kiến trúc bài bản từ giao diện tiếp cận đến lõi trí tuệ nhân tạo.
+    <p class="text-slate-400 text-sm sm:text-base leading-relaxed" data-i18n="pricing.subtitle">
+      Khách hàng sở hữu mã nguồn vĩnh viễn 100%, không bị ép trả tiền thuê bao hàng năm như các nền tảng kéo thả. Đầy đủ bảo hành kỹ thuật từ kỹ sư Viettel.
     </p>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
     
-    <!-- D1 Card -->
-    <div class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between border-t-4 border-t-cyan-500 relative">
+    <!-- Package 1: Starter -->
+    <div class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between border border-slate-800 hover:border-cyan-500/50">
       <div class="space-y-4">
-        <div class="flex items-center justify-between">
-          <span class="px-2.5 py-1 rounded-lg bg-cyan-500/10 text-cyan-400 font-mono text-xs font-bold border border-cyan-500/20">CỬA VÀO (D1)</span>
-          <span class="text-xs text-slate-500">24–48h Giao hàng</span>
+        <div>
+          <span class="text-xs font-mono text-cyan-400 uppercase tracking-wider font-bold">GÓI KHỞI ĐỘNG ADS</span>
+          <h3 class="text-xl font-bold text-white pt-1">Landing Page Thu Lead (D1 Starter)</h3>
         </div>
-        <h3 class="text-xl font-bold text-white" data-i18n="d1.title">Trang Đích Chạy Ads Thu Lead</h3>
-        <p class="text-xs text-slate-300 leading-relaxed" data-i18n="d1.desc">
-          Tối ưu hóa phễu chuyển đổi cho chiến dịch Google/Facebook Ads. Bắt trọn UTM, validation số điện thoại, đẩy lead tức thì về Telegram trong 2 giây.
-        </p>
-        <ul class="space-y-2 text-xs text-slate-400 pt-2 border-t border-slate-800/80">
-          <li class="flex items-center gap-2">✓ <span data-i18n="d1.feat1">Tốc độ tải trang &lt; 1.5s trên di động</span></li>
-          <li class="flex items-center gap-2">✓ <span data-i18n="d1.feat2">Tự động bắt UTM Source, Campaign, Medium</span></li>
-          <li class="flex items-center gap-2">✓ <span data-i18n="d1.feat3">Chống spam bot thông minh (Honeypot/Turnstile)</span></li>
-          <li class="flex items-center gap-2">✓ <span data-i18n="d1.feat4">Bắn thông báo chuông về Telegram / Zalo</span></li>
+        <div class="py-2">
+          <span class="text-3xl font-black text-white font-mono">1,900,000</span>
+          <span class="text-xs text-slate-400">VNĐ / trang</span>
+        </div>
+        <p class="text-xs text-slate-300">Phù hợp nhất cho cá nhân hoặc shop đang thử nghiệm chiến dịch chạy ads, cần trang tải nhanh để chốt đơn.</p>
+        
+        <ul class="space-y-2.5 text-xs text-slate-400 pt-3 border-t border-slate-800">
+          <li class="flex items-center gap-2">✓ <span>Thiết kế 5–7 section chuyển đổi cao</span></li>
+          <li class="flex items-center gap-2">✓ <span>Tốc độ tải &lt; 1.5s, chuẩn Mobile 100%</span></li>
+          <li class="flex items-center gap-2">✓ <span>Form thu lead + Bắn Telegram sau 2s</span></li>
+          <li class="flex items-center gap-2">✓ <span>Bàn giao mã nguồn, miễn phí hosting tốc độ cao</span></li>
+          <li class="flex items-center gap-2">✓ <span>Hoàn thành trong 24 – 48 giờ</span></li>
         </ul>
       </div>
 
       <div class="pt-6">
-        <a href="#contact" onclick="selectServiceForQuote('Gói 1: Trang đích Chạy Ads Thu Lead (D1)')" class="block w-full py-2.5 text-center rounded-xl bg-slate-900 hover:bg-cyan-500 hover:text-slate-950 font-bold text-xs uppercase tracking-wider text-cyan-400 transition-colors border border-cyan-500/30" data-i18n="btn.select_d1">
-          Chọn Gói D1 — 3.5 Triệu
+        <a href="#contact" onclick="selectServiceForQuote('Gói 1: Landing Page Khởi Động (D1 Starter) - 1.9 Triệu')" class="block w-full py-3 text-center rounded-xl bg-slate-900 hover:bg-cyan-500 hover:text-slate-950 font-bold text-xs uppercase tracking-wider text-cyan-400 transition-colors border border-cyan-500/30">
+          Chọn Gói 1.9 Triệu
         </a>
       </div>
     </div>
 
-    <!-- D2 Card -->
-    <div class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between border-t-4 border-t-emerald-500 relative">
+    <!-- Package 2: Pro (Recommended) -->
+    <div class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between border-2 border-cyan-500 glow-box-cyan relative bg-slate-900/90">
+      <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-cyan-400 text-slate-950 text-[10px] font-black uppercase tracking-wider">
+        🔥 KHUYÊN DÙNG CHO DOANH NGHIỆP CHẠY ADS
+      </div>
+
       <div class="space-y-4">
-        <div class="flex items-center justify-between">
-          <span class="px-2.5 py-1 rounded-lg bg-emerald-500/10 text-emerald-400 font-mono text-xs font-bold border border-emerald-500/20">VẬN HÀNH (D2)</span>
-          <span class="text-xs text-slate-500">3–5 Ngày Hoàn thành</span>
+        <div>
+          <span class="text-xs font-mono text-cyan-400 uppercase tracking-wider font-bold">GÓI CHUYÊN SÂU</span>
+          <h3 class="text-xl font-bold text-white pt-1">Landing Page Tối Ưu Chiến Dịch (D1 Pro)</h3>
         </div>
-        <h3 class="text-xl font-bold text-white" data-i18n="d2.title">Hệ Thống Quản Lý Lead Tập Trung</h3>
-        <p class="text-xs text-slate-300 leading-relaxed" data-i18n="d2.desc">
-          Bảng điều khiển Mini-CRM thay thế hoàn toàn Google Sheets thủ công. Quản lý phân loại lead, trạng thái chăm sóc khách hàng và xuất báo cáo hiệu quả chiến dịch.
-        </p>
-        <ul class="space-y-2 text-xs text-slate-400 pt-2 border-t border-slate-800/80">
-          <li class="flex items-center gap-2">✓ <span data-i18n="d2.feat1">Cơ sở dữ liệu PostgreSQL bảo mật trên VPS</span></li>
-          <li class="flex items-center gap-2">✓ <span data-i18n="d2.feat2">Bảng Kanban kéo thả trạng thái: Mới → Đang gọi → Chốt</span></li>
-          <li class="flex items-center gap-2">✓ <span data-i18n="d2.feat3">Xác thực đăng nhập JWT & phân quyền Admin/Sales</span></li>
-          <li class="flex items-center gap-2">✓ <span data-i18n="d2.feat4">Báo cáo ROI & xuất dữ liệu Excel/CSV bảo mật</span></li>
+        <div class="py-2">
+          <span class="text-3xl font-black text-cyan-400 font-mono">3,800,000</span>
+          <span class="text-xs text-slate-400">VNĐ / trọn gói</span>
+        </div>
+        <p class="text-xs text-slate-300">Dành cho doanh nghiệp chi từ 10 – 50 triệu/tháng tiền quảng cáo, cần bắt trọn vẹn UTM và cài tracking chuyển đổi chuẩn.</p>
+        
+        <ul class="space-y-2.5 text-xs text-slate-300 pt-3 border-t border-slate-800">
+          <li class="flex items-center gap-2 text-cyan-300 font-semibold">★ <span>Bao gồm toàn bộ tính năng của Gói Starter</span></li>
+          <li class="flex items-center gap-2">✓ <span>Thiết kế nhận diện thương hiệu riêng cao cấp</span></li>
+          <li class="flex items-center gap-2">✓ <span>Tự động bắt UTM Source, Campaign, Medium</span></li>
+          <li class="flex items-center gap-2">✓ <span>Cài trọn gói GTM, Meta Pixel & Conversion API (CAPI)</span></li>
+          <li class="flex items-center gap-2">✓ <span>Chống spam bot (Honeypot + Cloudflare Turnstile)</span></li>
+          <li class="flex items-center gap-2">✓ <span>Bảo hành kỹ thuật 6 tháng từ kỹ sư Viettel</span></li>
         </ul>
       </div>
 
       <div class="pt-6">
-        <a href="#contact" onclick="selectServiceForQuote('Gói 3: Hệ thống Quản trị Lead + Mini-CRM (D2)')" class="block w-full py-2.5 text-center rounded-xl bg-slate-900 hover:bg-emerald-500 hover:text-slate-950 font-bold text-xs uppercase tracking-wider text-emerald-400 transition-colors border border-emerald-500/30" data-i18n="btn.select_d2">
-          Chọn Gói D2 — 14 Triệu
+        <a href="#contact" onclick="selectServiceForQuote('Gói 2: Landing Page Chuyên Sâu (D1 Pro) - 3.8 Triệu')" class="block w-full py-3 text-center rounded-xl gradient-cyan-emerald text-slate-950 font-black text-xs uppercase tracking-wider hover:opacity-95 shadow-lg shadow-cyan-500/25 transition-all">
+          Chọn Gói Chuyên Sâu (3.8 Tr)
         </a>
       </div>
     </div>
 
-    <!-- D3 Card -->
-    <div class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between border-t-4 border-t-purple-500 relative">
+    <!-- Package 3: CRM Bundle -->
+    <div class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between border border-slate-800 hover:border-emerald-500/50">
       <div class="space-y-4">
-        <div class="flex items-center justify-between">
-          <span class="px-2.5 py-1 rounded-lg bg-purple-500/10 text-purple-400 font-mono text-xs font-bold border border-purple-500/20">CÔNG NGHỆ CAO (D3)</span>
-          <span class="text-xs text-slate-500">Live Production 100%</span>
+        <div>
+          <span class="text-xs font-mono text-emerald-400 uppercase tracking-wider font-bold">GÓI HỆ THỐNG</span>
+          <h3 class="text-xl font-bold text-white pt-1">Trang Đích + Mini-CRM Lưu Lead (D1 + D2)</h3>
         </div>
-        <h3 class="text-xl font-bold text-white" data-i18n="d3.title">Tự Động Hóa Tuyển Dụng & AI</h3>
-        <p class="text-xs text-slate-300 leading-relaxed" data-i18n="d3.desc">
-          Nền tảng VTT Careers HRM AI tích hợp DeepSeek AI. Tự động phân tích brief tạo JD, bóc tách hồ sơ CV PDF, đánh giá ứng viên đa vòng có kiểm soát (Human-in-the-loop).
-        </p>
-        <ul class="space-y-2 text-xs text-slate-400 pt-2 border-t border-slate-800/80">
-          <li class="flex items-center gap-2">✓ <span data-i18n="d3.feat1">Tích hợp DeepSeek AI LLM tạo JD chuyên nghiệp</span></li>
-          <li class="flex items-center gap-2">✓ <span data-i18n="d3.feat2">Cổng nộp CV PDF thật & tra cứu mã tiến độ tự động</span></li>
-          <li class="flex items-center gap-2">✓ <span data-i18n="d3.feat3">Bảng điều khiển tuyển dụng, đánh giá vòng PASS/FAIL</span></li>
-          <li class="flex items-center gap-2">✓ <span data-i18n="d3.feat4">Kiến trúc Spring Boot 3 + Redis + PostgreSQL</span></li>
+        <div class="py-2">
+          <span class="text-3xl font-black text-white font-mono">8,900,000</span>
+          <span class="text-xs text-slate-400">VNĐ / trọn gói</span>
+        </div>
+        <p class="text-xs text-slate-300">Dành cho công ty có đội Sales 2–10 người, cần quản lý tập trung lead vào database riêng, phân quyền rõ ràng.</p>
+        
+        <ul class="space-y-2.5 text-xs text-slate-400 pt-3 border-t border-slate-800">
+          <li class="flex items-center gap-2">✓ <span>Bao gồm 01 Trang đích D1 Pro chuẩn chỉ</span></li>
+          <li class="flex items-center gap-2">✓ <span>Hệ thống Web App quản trị riêng (PostgreSQL + API)</span></li>
+          <li class="flex items-center gap-2">✓ <span>Bảng Kanban kéo thả trạng thái chăm sóc khách</span></li>
+          <li class="flex items-center gap-2">✓ <span>Phân quyền tài khoản Admin và Nhân viên Sales</span></li>
+          <li class="flex items-center gap-2">✓ <span>Báo cáo ROI & xuất dữ liệu Excel/CSV bảo mật</span></li>
         </ul>
       </div>
 
       <div class="pt-6">
-        <a href="#live-demos" class="block w-full py-2.5 text-center rounded-xl bg-slate-900 hover:bg-purple-500 hover:text-slate-950 font-bold text-xs uppercase tracking-wider text-purple-400 transition-colors border border-purple-500/30" data-i18n="btn.explore_d3">
-          Trải Nghiệm Hệ Thống D3
+        <a href="#contact" onclick="selectServiceForQuote('Gói 3: Trang đích + Mini-CRM (D1 + D2) - 8.9 Triệu')" class="block w-full py-3 text-center rounded-xl bg-slate-900 hover:bg-emerald-500 hover:text-slate-950 font-bold text-xs uppercase tracking-wider text-emerald-400 transition-colors border border-emerald-500/30">
+          Chọn Gói Mini-CRM (8.9 Tr)
         </a>
       </div>
     </div>
@@ -459,31 +645,29 @@
   </div>
 </section>
 
-<!-- ================= 5. MINH CHỨNG SỐNG (LIVE DEMOS SHOWCASE) ================= -->
-<section id="live-demos" class="py-20 bg-slate-900/40 border-t border-slate-800/80">
+<!-- ================= 7. LIVE DEMOS SHOWCASE ================= -->
+<section id="live-demos" class="py-20 bg-slate-900/40 border-t border-slate-800">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-xs font-mono text-cyan-400">
-        🌐 100% PRODUCTION LIVE ASSETS
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-xs font-mono text-cyan-400 font-bold">
+        🌐 MINH CHỨNG SẢN PHẨM HOÀN CHỈNH
       </div>
       <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight" data-i18n="demos.title">
-        Minh Chứng Hệ Thống Thật Đang Vận Hành
+        Sản Phẩm Thật Đang Vận Hành Trên Máy Chủ
       </h2>
       <p class="text-slate-400 text-sm sm:text-base leading-relaxed" data-i18n="demos.subtitle">
-        Khách hàng và đối tác có thể bấm trực tiếp vào các đường dẫn bên dưới để kiểm chứng sản phẩm hoàn chỉnh mà TP Teams đã xây dựng và đưa vào vận hành trên Cloud VPS.
+        Khách hàng có thể truy cập trực tiếp các đường link bên dưới để kiểm tra hệ sinh thái thực tế do TP Teams phát triển:
       </p>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
       
-      <!-- Demo Asset 1: Candidate Job Portal -->
-      <div class="glass-card rounded-2xl p-6 sm:p-8 border border-slate-800 space-y-6 hover:border-cyan-500/40">
+      <!-- Demo Asset 1: Candidate Portal -->
+      <div class="glass-card rounded-2xl p-6 sm:p-8 border border-slate-800 space-y-5 hover:border-cyan-500/40">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center font-bold text-lg border border-cyan-500/20">
-              01
-            </div>
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center font-bold text-lg border border-cyan-500/20">01</div>
             <div>
               <h3 class="text-lg font-bold text-white">VTT Careers — Cổng Ứng Viên Công Khai</h3>
               <span class="text-xs text-slate-400 font-mono">jobs.votrithuc.click</span>
@@ -492,33 +676,21 @@
           <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-mono border border-emerald-500/30">200 OK</span>
         </div>
 
-        <p class="text-xs text-slate-300 leading-relaxed" data-i18n="demos.p1_desc">
-          Cổng việc làm responsive, hỗ trợ bộ lọc ngành nghề, xem 3 vòng phỏng vấn minh bạch, nộp hồ sơ bằng file PDF thật và tính năng tra cứu trực tiếp tiến độ tuyển dụng bằng SĐT/email.
+        <p class="text-xs text-slate-300 leading-relaxed">
+          Cổng tuyển dụng responsive, nộp CV bằng file PDF thật, tự động tạo mã hồ sơ và tra cứu trực tiếp tiến độ 3 vòng phỏng vấn qua SĐT/email.
         </p>
 
-        <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-400 space-y-1 font-mono">
-          <div>• Domain: <a href="https://jobs.votrithuc.click" target="_blank" class="text-cyan-400 hover:underline">https://jobs.votrithuc.click</a></div>
-          <div>• Tính năng: Nộp CV multipart, tra cứu trạng thái, hỏi đáp tương tác</div>
-        </div>
-
-        <a 
-          href="https://jobs.votrithuc.click" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl gradient-cyan-emerald text-slate-950 font-bold text-xs uppercase tracking-wider hover:opacity-95 shadow-md shadow-cyan-500/20 transition-all"
-        >
-          <span>Khám Phá Cổng Ứng Viên (Mở Tab Mới)</span>
+        <a href="https://jobs.votrithuc.click" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl gradient-cyan-emerald text-slate-950 font-bold text-xs uppercase tracking-wider hover:opacity-95 shadow-md shadow-cyan-500/20 transition-all">
+          <span>Xem Cổng Việc Làm (Tab Mới)</span>
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
         </a>
       </div>
 
-      <!-- Demo Asset 2: HRM Cockpit with 1-Click Recruiter -->
-      <div class="glass-card rounded-2xl p-6 sm:p-8 border border-slate-800 space-y-6 hover:border-emerald-500/40">
+      <!-- Demo Asset 2: HRM Cockpit -->
+      <div class="glass-card rounded-2xl p-6 sm:p-8 border border-slate-800 space-y-5 hover:border-emerald-500/40">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-lg border border-emerald-500/20">
-              02
-            </div>
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-lg border border-emerald-500/20">02</div>
             <div>
               <h3 class="text-lg font-bold text-white">HRM Cockpit — Quản Trị Tuyển Dụng & AI</h3>
               <span class="text-xs text-slate-400 font-mono">hrm.votrithuc.click</span>
@@ -527,21 +699,11 @@
           <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-mono border border-emerald-500/30">1-CLICK LIVE</span>
         </div>
 
-        <p class="text-xs text-slate-300 leading-relaxed" data-i18n="demos.p2_desc">
-          Bảng điều khiển cho nhà tuyển dụng: Bấm <strong>"Khám phá Trực tiếp Demo (1-Click Recruiter)"</strong> để vào xem ngay 5 tin tuyển dụng chiến lược, 15 hồ sơ ứng viên thật, bảng Kanban và tính năng AI JD Writer.
+        <p class="text-xs text-slate-300 leading-relaxed">
+          Bảng điều khiển cho nhà tuyển dụng: Bấm <strong>"Khám phá Trực tiếp Demo (1-Click Recruiter)"</strong> để xem ngay 15 ứng viên thật, bảng Kanban và tính năng AI JD Writer.
         </p>
 
-        <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-400 space-y-1 font-mono">
-          <div>• Domain: <a href="https://hrm.votrithuc.click/login" target="_blank" class="text-emerald-400 hover:underline">https://hrm.votrithuc.click/login</a></div>
-          <div>• Đăng nhập: Có sẵn nút 1-Click Showcase không cần OAuth</div>
-        </div>
-
-        <a 
-          href="https://hrm.votrithuc.click/login" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 text-white font-bold text-xs uppercase tracking-wider hover:opacity-95 shadow-md shadow-orange-500/25 transition-all"
-        >
+        <a href="https://hrm.votrithuc.click/login" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 text-white font-bold text-xs uppercase tracking-wider hover:opacity-95 shadow-md shadow-orange-500/25 transition-all">
           <span>Đăng Nhập 1-Click Thử Nghiệm HRM</span>
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
         </a>
@@ -551,8 +713,8 @@
   </div>
 </section>
 
-<!-- ================= 6. FOUNDER & ĐỘI NGŨ TP TEAMS ================= -->
-<section id="founder" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- ================= 8. FOUNDER & ĐỘI NGŨ TP TEAMS ================= -->
+<section id="founder" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800">
   <div class="glass-card rounded-3xl p-8 sm:p-12 border border-slate-800 relative overflow-hidden">
     
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -564,15 +726,16 @@
         </div>
         <div>
           <h3 class="text-xl font-bold text-white">Võ Trí Thức</h3>
-          <p class="text-xs font-mono text-cyan-400 uppercase tracking-wider">Founder & Chief Technology Architect</p>
+          <p class="text-xs font-mono text-red-400 uppercase tracking-wider font-bold">Software Engineer @ Viettel</p>
+          <p class="text-[11px] text-cyan-400 font-mono pt-0.5">Founder & Lead Solutions Architect — TP Teams</p>
           <p class="text-[11px] text-slate-400 pt-1">Kỹ sư Công nghệ Thông tin — Đại học Công nghiệp Hà Nội (HaUI)</p>
         </div>
       </div>
 
       <!-- Founder Mission & Engineering Philosophy -->
       <div class="lg:col-span-8 space-y-5">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-xs font-mono text-cyan-400">
-          💼 VỀ ĐỘI NGŨ TP TEAMS
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-xs font-mono text-red-400 font-bold">
+          ⭐ CAM KẾT TỪ KỸ SƯ VIETTEL
         </div>
 
         <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-snug" data-i18n="founder.title">
@@ -580,7 +743,7 @@
         </h2>
 
         <p class="text-sm text-slate-300 leading-relaxed font-normal" data-i18n="founder.desc1">
-          Xuất thân từ nền tảng đào tạo kỹ thuật chính quy tại <strong>Đại học Công nghiệp Hà Nội (HaUI)</strong>, tôi cùng các cộng sự tại <strong>TP Teams</strong> lựa chọn con đường kỹ thuật thực dụng: tập trung giải quyết bài toán cốt lõi của doanh nghiệp SME — chuyển đổi lưu lượng truy cập thành khách hàng thật và tự động hóa những quy trình lặp đi lặp lại.
+          Với nền tảng kỹ thuật chính quy tại <strong>Đại học Công nghiệp Hà Nội (HaUI)</strong> và kinh nghiệm thực chiến làm việc tại <strong>Tập đoàn Công nghiệp - Viễn thông Quân đội (Viettel)</strong>, tôi mang tư duy kỷ luật hệ thống viễn thông vào từng dòng mã: chịu tải cao, an toàn dữ liệu và tối ưu từng mili-giây trải nghiệm người dùng.
         </p>
 
         <p class="text-sm text-slate-300 leading-relaxed font-normal" data-i18n="founder.desc2">
@@ -609,161 +772,50 @@
   </div>
 </section>
 
-<!-- ================= 7. BẢNG GIÁ DỊCH VỤ MINH BẠCH ================= -->
-<section id="pricing" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800/80">
-  <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-900 border border-slate-800 text-xs font-mono text-cyan-400">
-      💎 TRANSPARENT PRICING
-    </div>
-    <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight" data-i18n="pricing.title">
-      Bảng Giá Dịch Vụ Minh Bạch & Cam Kết Rõ Ràng
-    </h2>
-    <p class="text-slate-400 text-sm sm:text-base leading-relaxed" data-i18n="pricing.subtitle">
-      Không phụ phí ẩn. Tất cả các gói đều bao gồm hỗ trợ triển khai, chứng chỉ bảo mật SSL, tích hợp Webhook Telegram và bảo hành hệ thống.
-    </p>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-    
-    <!-- Package 1: D1 Ads Landing Page -->
-    <div class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between border border-slate-800 hover:border-cyan-500/50">
-      <div class="space-y-4">
-        <div>
-          <span class="text-xs font-mono text-cyan-400 uppercase tracking-wider">GÓI CƠ BẢN</span>
-          <h3 class="text-xl font-bold text-white pt-1">Trang Đích Chạy Ads (D1)</h3>
-        </div>
-        <div class="py-2">
-          <span class="text-3xl font-black text-white font-mono">3,500,000</span>
-          <span class="text-xs text-slate-400">VNĐ / trang</span>
-        </div>
-        <p class="text-xs text-slate-300">Phù hợp nhất cho doanh nghiệp đang chạy Google/Facebook Ads cần tăng tỷ lệ chuyển đổi form.</p>
-        
-        <ul class="space-y-2.5 text-xs text-slate-400 pt-3 border-t border-slate-800">
-          <li class="flex items-center gap-2">✓ <span>Thiết kế 5-7 section chuyển đổi cao</span></li>
-          <li class="flex items-center gap-2">✓ <span>Tốc độ tải trang &lt; 1.5s, chuẩn Mobile 100%</span></li>
-          <li class="flex items-center gap-2">✓ <span>Tự động bắt UTM Source, Campaign, Medium</span></li>
-          <li class="flex items-center gap-2">✓ <span>Bắn thông báo Lead về Telegram trong 2s</span></li>
-          <li class="flex items-center gap-2">✓ <span>Giao hàng nhanh trong 48 giờ</span></li>
-        </ul>
-      </div>
-
-      <div class="pt-6">
-        <a href="#contact" onclick="selectServiceForQuote('Gói 1: Trang đích Chạy Ads (D1) - 3.5 Triệu')" class="block w-full py-3 text-center rounded-xl bg-slate-900 hover:bg-cyan-500 hover:text-slate-950 font-bold text-xs uppercase tracking-wider text-cyan-400 transition-colors border border-cyan-500/30">
-          Đăng Ký Gói Này
-        </a>
-      </div>
-    </div>
-
-    <!-- Package 2: D1+ & D2 Lead Management (Recommended) -->
-    <div class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between border-2 border-cyan-500 glow-box relative bg-slate-900/90">
-      <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-cyan-400 text-slate-950 text-[10px] font-black uppercase tracking-wider">
-        KHUYÊN DÙNG CHO SME
-      </div>
-
-      <div class="space-y-4">
-        <div>
-          <span class="text-xs font-mono text-cyan-400 uppercase tracking-wider">GÓI TĂNG TRƯỞNG</span>
-          <h3 class="text-xl font-bold text-white pt-1">Trang Đích + Mini-CRM (D1 + D2)</h3>
-        </div>
-        <div class="py-2">
-          <span class="text-3xl font-black text-cyan-400 font-mono">14,000,000</span>
-          <span class="text-xs text-slate-400">VNĐ / trọn gói</span>
-        </div>
-        <p class="text-xs text-slate-300">Dành cho doanh nghiệp muốn vừa có trang đích thu khách vừa có hệ thống Backend quản lý, tránh thất lạc lead.</p>
-        
-        <ul class="space-y-2.5 text-xs text-slate-300 pt-3 border-t border-slate-800">
-          <li class="flex items-center gap-2 text-cyan-300">★ <span>Bao gồm toàn bộ tính năng của Gói D1</span></li>
-          <li class="flex items-center gap-2">✓ <span>Bảng điều khiển Mini-CRM (PostgreSQL + Spring Boot)</span></li>
-          <li class="flex items-center gap-2">✓ <span>Bảng Kanban quản lý trạng thái tư vấn khách hàng</span></li>
-          <li class="flex items-center gap-2">✓ <span>Phân quyền tài khoản Admin và Nhân viên Sales</span></li>
-          <li class="flex items-center gap-2">✓ <span>Báo cáo hiệu quả nguồn quảng cáo & xuất Excel</span></li>
-        </ul>
-      </div>
-
-      <div class="pt-6">
-        <a href="#contact" onclick="selectServiceForQuote('Gói 2: Trang đích + Mini-CRM (D1 + D2) - 14 Triệu')" class="block w-full py-3 text-center rounded-xl gradient-cyan-emerald text-slate-950 font-bold text-xs uppercase tracking-wider hover:opacity-95 shadow-lg shadow-cyan-500/25 transition-all">
-          Chọn Gói Khuyên Dùng
-        </a>
-      </div>
-    </div>
-
-    <!-- Package 3: Enterprise AI & Custom (D3) -->
-    <div class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between border border-slate-800 hover:border-purple-500/50">
-      <div class="space-y-4">
-        <div>
-          <span class="text-xs font-mono text-purple-400 uppercase tracking-wider">DOANH NGHIỆP</span>
-          <h3 class="text-xl font-bold text-white pt-1">Tự Động Hóa & AI Riêng (D3)</h3>
-        </div>
-        <div class="py-2">
-          <span class="text-3xl font-black text-white font-mono">Từ 25,000,000</span>
-          <span class="text-xs text-slate-400">VNĐ</span>
-        </div>
-        <p class="text-xs text-slate-300">May đo hệ thống tuyển dụng AI, trợ lý ảo RAG hoặc quy trình tự động hóa phức tạp theo bài toán riêng.</p>
-        
-        <ul class="space-y-2.5 text-xs text-slate-400 pt-3 border-t border-slate-800">
-          <li class="flex items-center gap-2">✓ <span>Tích hợp DeepSeek / OpenAI / Multi-Agent</span></li>
-          <li class="flex items-center gap-2">✓ <span>Hệ thống xử lý tệp (CV/Hóa đơn/Hợp đồng) bất đồng bộ</span></li>
-          <li class="flex items-center gap-2">✓ <span>Cài đặt máy chủ riêng biệt (VPS / AWS / Docker)</span></li>
-          <li class="flex items-center gap-2">✓ <span>Thiết lập CI/CD tự động & tài liệu vận hành đầy đủ</span></li>
-          <li class="flex items-center gap-2">✓ <span>Đào tạo và chuyển giao công nghệ cho đội ngũ</span></li>
-        </ul>
-      </div>
-
-      <div class="pt-6">
-        <a href="#contact" onclick="selectServiceForQuote('Gói 3: Tự động hóa & AI Riêng (D3) - May đo theo yêu cầu')" class="block w-full py-3 text-center rounded-xl bg-slate-900 hover:bg-purple-500 hover:text-slate-950 font-bold text-xs uppercase tracking-wider text-purple-400 transition-colors border border-purple-500/30">
-          Tư Vấn Thiết Kế Riêng
-        </a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= 8. CÂU HỎI THƯỜNG GẶP (FAQ) ================= -->
+<!-- ================= 9. CÂU HỎI THƯỜNG GẶP (FAQ) ================= -->
 <section id="faq" class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
   <div class="text-center mb-12 space-y-2">
-    <span class="text-xs font-mono text-cyan-400 uppercase tracking-wider">HỎI ĐÁP THỰC TẾ</span>
+    <span class="text-xs font-mono text-cyan-400 uppercase tracking-wider font-bold">HỎI ĐÁP THỰC TẾ</span>
     <h2 class="text-2xl sm:text-3xl font-extrabold text-white" data-i18n="faq.title">Câu Hỏi Thường Gặp Khi Hợp Tác Với TP Teams</h2>
   </div>
 
   <div class="space-y-4 text-sm">
     <div class="glass-card p-5 rounded-xl border border-slate-800">
-      <h3 class="font-bold text-white mb-1" data-i18n="faq.q1">1. TP Teams có bàn giao đầy đủ mã nguồn (Source Code) không?</h3>
-      <p class="text-xs text-slate-300 leading-relaxed" data-i18n="faq.a1">Có, 100%. Sau khi nghiệm thu, chúng tôi bàn giao toàn bộ repository mã nguồn trên GitHub của bạn, file cấu hình Docker, và tài liệu hướng dẫn vận hành chi tiết. Bạn hoàn toàn làm chủ hệ thống của mình mà không bị phụ thuộc.</p>
+      <h3 class="font-bold text-white mb-1" data-i18n="faq.q1">1. Tôi dùng thử AI tạo web thì có thay thế được TP Teams không?</h3>
+      <p class="text-xs text-slate-300 leading-relaxed" data-i18n="faq.a1">AI chỉ có thể xuất ra file HTML giao diện tĩnh. AI không biết cấu hình server VPS, không biết cài Webhook đẩy chuông Telegram trong 2 giây, không bắt được UTM từ khóa quảng cáo và không chịu trách nhiệm khi form bị lỗi làm mất khách. TP Teams giải quyết trọn gói bài toán vận hành đó cho bạn.</p>
     </div>
 
     <div class="glass-card p-5 rounded-xl border border-slate-800">
-      <h3 class="font-bold text-white mb-1" data-i18n="faq.q2">2. Trang đích có kết nối được với chiến dịch Facebook Ads / Google Ads của tôi không?</h3>
-      <p class="text-xs text-slate-300 leading-relaxed" data-i18n="faq.a2">Chắc chắn có. Trang đích của TP Teams được tích hợp sẵn bộ bắt tham số UTM tự động và mã sự kiện chuyển đổi (Google Tag Manager, Facebook Pixel / Conversion API). Mọi sự kiện điền form đều được bắn ngược về tài khoản quảng cáo của bạn để thuật toán tối ưu giá thầu rẻ hơn.</p>
+      <h3 class="font-bold text-white mb-1" data-i18n="faq.q2">2. Trang đích của TP Teams có phải trả phí duy trì hàng năm không?</h3>
+      <p class="text-xs text-slate-300 leading-relaxed" data-i18n="faq.a2">Không! Bạn chỉ trả phí một lần duy nhất từ 1.9 triệu, sở hữu toàn bộ mã nguồn vĩnh viễn. Không giống như LadiPage phải đóng 3.5 - 6 triệu/năm, bạn hoàn toàn làm chủ tài sản số của mình.</p>
     </div>
 
     <div class="glass-card p-5 rounded-xl border border-slate-800">
       <h3 class="font-bold text-white mb-1" data-i18n="faq.q3">3. Sau khi bàn giao, nếu có lỗi phát sinh thì sao?</h3>
-      <p class="text-xs text-slate-300 leading-relaxed" data-i18n="faq.a3">Chúng tôi bảo hành kỹ thuật miễn phí trong vòng 3 đến 6 tháng tùy gói. Mọi lỗi kỹ thuật thuộc phạm vi cam kết sẽ được sửa chữa trong vòng tối đa 4–8 giờ làm việc.</p>
+      <p class="text-xs text-slate-300 leading-relaxed" data-i18n="faq.a3">Chúng tôi bảo hành kỹ thuật miễn phí từ 3 đến 6 tháng tùy gói. Đội ngũ kỹ sư Viettel cam kết hỗ trợ trực tiếp và khắc phục sự cố trong vòng tối đa 4–8 giờ làm việc.</p>
     </div>
   </div>
 </section>
 
-<!-- ================= 9. FORM ĐĂNG KÝ TƯ VẤN & BÁO GIÁ (LEAD ENGINE) ================= -->
+<!-- ================= 10. FORM ĐĂNG KÝ TƯ VẤN & BÁO GIÁ ================= -->
 <section id="contact" class="py-20 bg-slate-900/60 border-t border-slate-800 relative">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <div class="text-center mb-12 space-y-3">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-xs font-mono text-cyan-400">
-        📩 LIÊN HỆ TRỰC TIẾP
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-xs font-mono text-cyan-400 font-bold">
+        📩 LIÊN HỆ TRỰC TIẾP KỸ SƯ
       </div>
       <h2 class="text-3xl sm:text-4xl font-black text-white" data-i18n="contact.title">
         Gửi Yêu Cầu & Nhận Phản Hồi Trong 2 Giờ
       </h2>
       <p class="text-slate-400 text-sm max-w-xl mx-auto leading-relaxed" data-i18n="contact.subtitle">
-        Hãy mô tả ngắn gọn bài toán của doanh nghiệp bạn. Đội ngũ TP Teams sẽ phản hồi trực tiếp kèm phương án kiến trúc và báo giá tối ưu nhất.
+        Hãy mô tả bài toán kinh doanh hoặc chiến dịch ads của bạn. Kỹ sư Võ Trí Thức sẽ phản hồi trực tiếp kèm phương án tối ưu chi phí nhất.
       </p>
     </div>
 
-    <div class="glass-card p-6 sm:p-10 rounded-2xl border border-cyan-500/30 glow-box">
+    <div class="glass-card p-6 sm:p-10 rounded-2xl border border-cyan-500/30 glow-box-cyan">
       <form id="leadForm" onsubmit="handleLeadSubmit(event)" class="space-y-5">
         
-        <!-- Honeypot anti-spam field -->
         <input type="text" id="botField" class="hidden" tabindex="-1" autocomplete="off">
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -805,20 +857,20 @@
               id="leadType" 
               class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-sm text-white focus:outline-none focus:border-cyan-400 transition-colors"
             >
-              <option value="Gói 1: Trang đích Chạy Ads (D1) - 3.5 Triệu">Gói 1: Trang đích Chạy Ads (D1) — 3.5 Triệu</option>
-              <option value="Gói 2: Trang đích + Mini-CRM (D1 + D2) - 14 Triệu">Gói 2: Trang đích + Mini-CRM (D1 + D2) — 14 Triệu</option>
-              <option value="Gói 3: Tự động hóa & AI Riêng (D3) - May đo theo yêu cầu">Gói 3: Tự động hóa & AI Riêng (D3) — May đo theo yêu cầu</option>
-              <option value="Tư vấn kiến trúc hệ thống / Đối tác Agency">Tư vấn kiến trúc hệ thống / Hợp tác Agency</option>
+              <option value="Gói 1: Landing Page Khởi Động (D1 Starter) - 1.9 Triệu">Gói 1: Landing Page Khởi Động (D1 Starter) — 1.9 Triệu</option>
+              <option value="Gói 2: Landing Page Chuyên Sâu (D1 Pro) - 3.8 Triệu">Gói 2: Landing Page Chuyên Sâu (D1 Pro) — 3.8 Triệu (Khuyên dùng)</option>
+              <option value="Gói 3: Trang đích + Mini-CRM (D1 + D2) - 8.9 Triệu">Gói 3: Trang đích + Mini-CRM (D1 + D2) — 8.9 Triệu</option>
+              <option value="Gói 4: Tự động hóa & AI Riêng (D3) - May đo">Gói 4: Tự động hóa & AI Riêng (D3) — May đo theo yêu cầu</option>
             </select>
           </div>
         </div>
 
         <div>
-          <label class="block text-xs font-semibold text-slate-300 mb-1" data-i18n="form.message">Mô tả nhu cầu / Bài toán của bạn</label>
+          <label class="block text-xs font-semibold text-slate-300 mb-1" data-i18n="form.message">Mô tả bài toán / Sản phẩm kinh doanh</label>
           <textarea 
             id="leadMsg" 
             rows="3" 
-            placeholder="VD: Bên mình đang chạy ads bán khoá học, cần làm trang đích tối ưu thu lead và bắn thông báo về Telegram nhóm sales..." 
+            placeholder="VD: Bên mình chạy ads khóa học tiếng Anh, cần làm trang đích chuyển đổi cao và bắt lead về Telegram..." 
             class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-sm text-white focus:outline-none focus:border-cyan-400 transition-colors"
           ></textarea>
         </div>
@@ -829,7 +881,7 @@
           class="w-full py-4 rounded-xl gradient-cyan-emerald hover:opacity-95 text-slate-950 font-black text-sm uppercase tracking-wider transition-all shadow-xl shadow-cyan-500/30 hover:scale-[1.01] flex items-center justify-center gap-2 cursor-pointer"
         >
           <span id="btnSpinner" class="hidden animate-spin w-4 h-4 border-2 border-slate-950 border-t-transparent rounded-full"></span>
-          <span id="btnText" data-i18n="form.submit">GỬI YÊU CẦU & NHẬN BÁO GIÁ NGAY</span>
+          <span id="btnText" data-i18n="form.submit">GỬI YÊU CẦU & NHẬN TƯ VẤN NGAY</span>
         </button>
 
       </form>
@@ -838,7 +890,7 @@
   </div>
 </section>
 
-<!-- ================= 10. FOOTER ================= -->
+<!-- ================= 11. FOOTER ================= -->
 <footer class="py-12 bg-slate-950 border-t border-slate-800 text-xs text-slate-400">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
     
@@ -846,7 +898,7 @@
       <img src="anh/tp_teams_icon.png" alt="TP Teams" class="w-8 h-8 rounded-lg">
       <div>
         <div class="text-white font-bold text-sm">TP TEAMS SOLUTIONS</div>
-        <div class="text-[11px] text-slate-500">© 2026 TP Teams. Kiến trúc bởi Võ Trí Thức (HaUI Alumnus).</div>
+        <div class="text-[11px] text-slate-500">© 2026 TP Teams. Sáng lập bởi Võ Trí Thức (Software Engineer @ Viettel, HaUI Alumnus).</div>
       </div>
     </div>
 
@@ -863,19 +915,16 @@
 
 <!-- ================= FLOATING CONTACT BUTTONS ================= -->
 <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-  <!-- Telegram Button -->
   <a href="https://t.me/Trithuc23" target="_blank" rel="noopener noreferrer" title="Chat Telegram với Founder" class="group relative flex items-center justify-center w-13 h-13 rounded-full bg-[#229ED9] hover:bg-[#1E88E5] text-white shadow-2xl shadow-sky-500/40 transition-transform transform hover:scale-110">
     <span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-emerald-400 rounded-full border-2 border-slate-950 animate-ping"></span>
     <span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-emerald-400 rounded-full border-2 border-slate-950"></span>
     <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
   </a>
 
-  <!-- Zalo Button -->
   <a href="https://zalo.me/0349363992" target="_blank" rel="noopener noreferrer" title="Chat Zalo" class="flex items-center justify-center w-13 h-13 rounded-full bg-blue-600 hover:bg-blue-500 text-white shadow-2xl shadow-blue-500/40 transition-transform transform hover:scale-110">
     <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.08L2 22l5.12-1.34C8.57 21.49 10.23 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm1 14.5h-2v-2h2v2zm0-4h-2V7h2v5.5z"/></svg>
   </a>
 
-  <!-- Phone Hotline Button -->
   <a href="tel:0349363992" title="Gọi Hotline" class="flex items-center justify-center w-13 h-13 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white shadow-2xl shadow-emerald-500/40 transition-transform transform hover:scale-110">
     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
   </a>
@@ -897,161 +946,130 @@
 
 <!-- ================= JAVASCRIPT: BILINGUAL ENGINE, UTM & FORMS ================= -->
 <script>
-  // Bilingual Content Dictionary
   const translations = {
     vi: {
       "nav.tagline": "Software & AI Agency",
-      "nav.about": "Về Chúng Tôi",
+      "nav.pain": "Nỗi Đau Doanh Nghiệp",
+      "nav.vs_ai": "Tại Sao Không Dùng AI?",
       "nav.solutions": "Giải Pháp D1-D3",
       "nav.demos": "Minh Chứng Live",
-      "nav.pricing": "Bảng Giá",
-      "nav.founder": "Đội Ngũ & Founder",
+      "nav.pricing": "Bảng Giá Thị Trường",
+      "nav.founder": "Founder & Đội Ngũ",
       "nav.faq": "FAQ",
       "nav.cta": "Tư Vấn 1-1",
-      "hero.badge": "TP TEAMS — ĐỐI TÁC CÔNG NGHỆ & TỰ ĐỘNG HÓA AI TIN CẬY",
-      "hero.title_p1": "Biến Lưu Lượng Truy Cập Thành",
-      "hero.title_p2": "Khách Hàng Tiềm Năng",
-      "hero.title_p3": "& Tự Động Hóa Vận Hành Bằng AI",
-      "hero.subtitle": "TP Teams chuyên sâu phát triển Trang đích chuyển đổi cao (D1), Hệ thống quản lý Lead tập trung (D2) và Nền tảng Tuyển dụng tự động hóa AI (D3) cho doanh nghiệp vừa và nhỏ. Cam kết hệ thống thật, đo lường rõ ràng, bàn giao trong 24–48h.",
-      "hero.btn_demos": "Trải Nghiệm Demo Live (D1-D3)",
-      "hero.btn_pricing": "Bảng Giá Dịch Vụ Minh Bạch",
-      "metrics.speed": "Tốc độ tải trang Ads",
-      "metrics.alert": "Bắn Lead về Telegram",
-      "metrics.real": "Dữ liệu & API thực tế",
-      "metrics.uptime": "Độ sẵn sàng VPS/Cloud",
-      "card.engine": "Đơn vị phát triển:",
-      "card.lead": "Trưởng kỹ thuật:",
-      "card.stack": "Công nghệ cốt lõi:",
-      "d1demo.title": "Kiểm Chứng Tốc Độ Bắn Lead Về Telegram Trong 2 Giây",
-      "d1demo.desc": "Thay vì lời nói suông, hãy tự tay nhập số điện thoại hoặc họ tên của bạn bên dưới. Ngay khi bấm gửi, hệ thống webhook của TP Teams sẽ đẩy trực tiếp thông báo đến điện thoại của Founder Võ Trí Thức.",
+      "hero.title_p1": "Dừng Đốt Tiền Quảng Cáo Vào",
+      "hero.title_p2": "Những Trang Đích Tải Chậm",
+      "hero.title_p3": "& Để Thất Thoát Khách Hàng Mỗi Ngày",
+      "hero.subtitle": "TP Teams được dẫn dắt bởi Kỹ sư Viettel Võ Trí Thức. Chúng tôi áp dụng tư duy kiến trúc hệ thống chuẩn viễn thông: tốc độ tải < 1.5 giây, tự động bắt trọn UTM từ khóa và bắn thông báo Lead về Telegram trong đúng 2 giây. Cam kết hệ thống thật, sở hữu mã nguồn vĩnh viễn, không phí thuê bao hàng năm.",
+      "hero.btn_test_demo": "Test Thử Webhook Bắn Lead 2s",
+      "hero.btn_pricing": "Bảng Giá Thị Trường (Từ 1.9Tr)",
+      "metrics.speed": "Tốc độ tải 4G Mobile",
+      "metrics.alert": "Bắn chuông Telegram",
+      "metrics.fee": "Phí thuê bao nền tảng",
+      "metrics.source": "Sở hữu Source Code",
+      "hero.quote_card": '"Kỹ thuật thực chiến — Bảo vệ dòng tiền và nhân bản chuyển đổi"',
+      "pain.title": "4 Lỗ Hổng Khiến Bạn Đốt Tiền Quảng Cáo Nhưng Không Thu Được Đơn",
+      "pain.subtitle": "Khảo sát hơn 100 doanh nghiệp vừa và nhỏ (SME) tại Việt Nam cho thấy: 80% ngân sách quảng cáo đang bị lãng phí vì những lỗi kỹ thuật sơ đẳng mà chủ doanh nghiệp không hề hay biết.",
+      "pain.p1_title": "Trang Tải Chậm > 3s, Mất 50% Khách",
+      "pain.p1_desc": "Mỗi click Facebook/Google tốn từ 5.000đ – 30.000đ. Nhưng nếu trang mất trên 3 giây để mở trên mạng 4G, khách hàng sẽ bấm thoát ngay. Bạn mất tiền mua click nhưng khách chưa kịp nhìn thấy sản phẩm!",
+      "pain.p2_title": "Phản Hồi Chậm, Khách Bị Nguội",
+      "pain.p2_desc": "Khách điền form lúc 10h sáng, nhưng đến chiều nhân viên mới mở Google Sheet/Mail kiểm tra. Chậm 15 phút, khách đã bấm sang đối thủ hoặc đổi ý. Tỷ lệ chốt đơn rớt từ 40% xuống còn dưới 5%.",
+      "pain.p3_title": "Không Bắt UTM, Đốt Tiền Mù Quáng",
+      "pain.p3_desc": "Bạn chi 20 triệu chạy 5 nhóm quảng cáo khác nhau nhưng hệ thống không ghi nhận nguồn (UTM). Bạn hoàn toàn không biết nhóm ads hay từ khóa nào sinh ra lead thật, nhóm nào đang đốt tiền rác.",
+      "pain.p4_title": 'Bị "Bắt Con Tin" Phí Thuê Bao Hàng Năm',
+      "pain.p4_desc": "Dùng các nền tảng kéo thả (LadiPage/SaaS) khiến bạn phải đóng 3.5 – 6 triệu/năm tiền duy trì. Quên đóng tiền là trang web bị đóng cửa, bạn không hề sở hữu mã nguồn của chính doanh nghiệp mình.",
+      "vs_ai.title": '"Tại Sao Không Tự Dùng AI Viết Code Trong 5 Phút Mà Phải Thuê TP Teams?"',
+      "vs_ai.subtitle": "Hiện nay AI (ChatGPT, v0, Bolt) có thể sinh mã HTML rất nhanh. Nhưng giữa một đoạn mã giao diện thô và một hệ thống kinh doanh tạo ra doanh thu là khoảng cách một trời một vực.",
+      "d1demo.title": "Tự Tay Kiểm Chứng Tốc Độ Bắn Lead Về Telegram Trong 2 Giây",
+      "d1demo.desc": "Nhập họ tên và số điện thoại của bạn bên dưới. Ngay khi bấm nút, webhook của TP Teams sẽ đẩy trực tiếp thông báo đến điện thoại của Founder Võ Trí Thức kèm đồng hồ đo tốc độ phản hồi thực tế!",
       "d1demo.name_label": "Họ tên của bạn *",
       "d1demo.phone_label": "Số điện thoại di động *",
-      "d1demo.interest_label": "Mục đích kiểm chứng",
-      "d1demo.submit_btn": "BẤM ĐỂ BẮN THÔNG BÁO TỨC THÌ (TEST LIVE)",
-      "solutions.title": "Hệ Sinh Thái Bộ Ba Sản Phẩm Thực Chiến",
-      "solutions.subtitle": "TP Teams không chào bán những lời hứa hẹn. Chúng tôi sở hữu bộ ba sản phẩm minh chứng độc quyền, được kiến trúc bài bản từ giao diện tiếp cận đến lõi trí tuệ nhân tạo.",
-      "d1.title": "Trang Đích Chạy Ads Thu Lead",
-      "d1.desc": "Tối ưu hóa phễu chuyển đổi cho chiến dịch Google/Facebook Ads. Bắt trọn UTM, validation số điện thoại, đẩy lead tức thì về Telegram trong 2 giây.",
-      "d1.feat1": "Tốc độ tải trang < 1.5s trên di động",
-      "d1.feat2": "Tự động bắt UTM Source, Campaign, Medium",
-      "d1.feat3": "Chống spam bot thông minh (Honeypot/Turnstile)",
-      "d1.feat4": "Bắn thông báo chuông về Telegram / Zalo",
-      "btn.select_d1": "Chọn Gói D1 — 3.5 Triệu",
-      "d2.title": "Hệ Thống Quản Lý Lead Tập Trung",
-      "d2.desc": "Bảng điều khiển Mini-CRM thay thế hoàn toàn Google Sheets thủ công. Quản lý phân loại lead, trạng thái chăm sóc khách hàng và xuất báo cáo hiệu quả chiến dịch.",
-      "d2.feat1": "Cơ sở dữ liệu PostgreSQL bảo mật trên VPS",
-      "d2.feat2": "Bảng Kanban kéo thả trạng thái: Mới → Đang gọi → Chốt",
-      "d2.feat3": "Xác thực đăng nhập JWT & phân quyền Admin/Sales",
-      "d2.feat4": "Báo cáo ROI & xuất dữ liệu Excel/CSV bảo mật",
-      "btn.select_d2": "Chọn Gói D2 — 14 Triệu",
-      "d3.title": "Tự Động Hóa Tuyển Dụng & AI",
-      "d3.desc": "Nền tảng VTT Careers HRM AI tích hợp DeepSeek AI. Tự động phân tích brief tạo JD, bóc tách hồ sơ CV PDF, đánh giá ứng viên đa vòng có kiểm soát (Human-in-the-loop).",
-      "d3.feat1": "Tích hợp DeepSeek AI LLM tạo JD chuyên nghiệp",
-      "d3.feat2": "Cổng nộp CV PDF thật & tra cứu mã tiến độ tự động",
-      "d3.feat3": "Bảng điều khiển tuyển dụng, đánh giá vòng PASS/FAIL",
-      "d3.feat4": "Kiến trúc Spring Boot 3 + Redis + PostgreSQL",
-      "btn.explore_d3": "Trải Nghiệm Hệ Thống D3",
-      "demos.title": "Minh Chứng Hệ Thống Thật Đang Vận Hành",
-      "demos.subtitle": "Khách hàng và đối tác có thể bấm trực tiếp vào các đường dẫn bên dưới để kiểm chứng sản phẩm hoàn chỉnh mà TP Teams đã xây dựng và đưa vào vận hành trên Cloud VPS.",
-      "demos.p1_desc": "Cổng việc làm responsive, hỗ trợ bộ lọc ngành nghề, xem 3 vòng phỏng vấn minh bạch, nộp hồ sơ bằng file PDF thật và tính năng tra cứu trực tiếp tiến độ tuyển dụng bằng SĐT/email.",
-      "demos.p2_desc": "Bảng điều khiển cho nhà tuyển dụng: Bấm 'Khám phá Trực tiếp Demo (1-Click Recruiter)' để vào xem ngay 5 tin tuyển dụng chiến lược, 15 hồ sơ ứng viên thật, bảng Kanban và tính năng AI JD Writer.",
+      "d1demo.interest_label": "Mục đích trải nghiệm",
+      "d1demo.submit_btn": "BẤM ĐỂ BẮN THÔNG BÁO TỨC THÌ (TEST LIVE 2S)",
+      "pricing.title": "Giá Trị Thật — Chi Phí Cạnh Tranh & Không Ngáo Giá",
+      "pricing.subtitle": "Khách hàng sở hữu mã nguồn vĩnh viễn 100%, không bị ép trả tiền thuê bao hàng năm như các nền tảng kéo thả. Đầy đủ bảo hành kỹ thuật từ kỹ sư Viettel.",
+      "demos.title": "Sản Phẩm Thật Đang Vận Hành Trên Máy Chủ",
+      "demos.subtitle": "Khách hàng có thể truy cập trực tiếp các đường link bên dưới để kiểm tra hệ sinh thái thực tế do TP Teams phát triển:",
       "founder.title": '"Chúng tôi không bán mã nguồn để ngắm. Chúng tôi cung cấp giải pháp bảo vệ dòng tiền và tạo ra doanh thu."',
-      "founder.desc1": "Xuất thân từ nền tảng đào tạo kỹ thuật chính quy tại Đại học Công nghiệp Hà Nội (HaUI), tôi cùng các cộng sự tại TP Teams lựa chọn con đường kỹ thuật thực dụng: tập trung giải quyết bài toán cốt lõi của doanh nghiệp SME — chuyển đổi lưu lượng truy cập thành khách hàng thật và tự động hóa những quy trình lặp đi lặp lại.",
+      "founder.desc1": "Với nền tảng kỹ thuật chính quy tại Đại học Công nghiệp Hà Nội (HaUI) và kinh nghiệm thực chiến làm việc tại Tập đoàn Công nghiệp - Viễn thông Quân đội (Viettel), tôi mang tư duy kỷ luật hệ thống viễn thông vào từng dòng mã: chịu tải cao, an toàn dữ liệu và tối ưu từng mili-giây trải nghiệm người dùng.",
       "founder.desc2": "Mỗi sản phẩm do TP Teams bàn giao đều tuân thủ nguyên tắc 3 Không: Không công nghệ thừa thãi, Không giấu giếm mã nguồn, và Không bỏ rơi khách hàng sau nghiệm thu. Bạn nhận được giải pháp hoàn chỉnh với quy trình kiểm thử 3 lớp nghiêm ngặt.",
-      "pricing.title": "Bảng Giá Dịch Vụ Minh Bạch & Cam Kết Rõ Ràng",
-      "pricing.subtitle": "Không phụ phí ẩn. Tất cả các gói đều bao gồm hỗ trợ triển khai, chứng chỉ bảo mật SSL, tích hợp Webhook Telegram và bảo hành hệ thống.",
       "faq.title": "Câu Hỏi Thường Gặp Khi Hợp Tác Với TP Teams",
-      "faq.q1": "1. TP Teams có bàn giao đầy đủ mã nguồn (Source Code) không?",
-      "faq.a1": "Có, 100%. Sau khi nghiệm thu, chúng tôi bàn giao toàn bộ repository mã nguồn trên GitHub của bạn, file cấu hình Docker, và tài liệu hướng dẫn vận hành chi tiết. Bạn hoàn toàn làm chủ hệ thống của mình mà không bị phụ thuộc.",
-      "faq.q2": "2. Trang đích có kết nối được với chiến dịch Facebook Ads / Google Ads của tôi không?",
-      "faq.a2": "Chắc chắn có. Trang đích của TP Teams được tích hợp sẵn bộ bắt tham số UTM tự động và mã sự kiện chuyển đổi (Google Tag Manager, Facebook Pixel / Conversion API). Mọi sự kiện điền form đều được bắn ngược về tài khoản quảng cáo của bạn để thuật toán tối ưu giá thầu rẻ hơn.",
+      "faq.q1": "1. Tôi dùng thử AI tạo web thì có thay thế được TP Teams không?",
+      "faq.a1": "AI chỉ có thể xuất ra file HTML giao diện tĩnh. AI không biết cấu hình server VPS, không biết cài Webhook đẩy chuông Telegram trong 2 giây, không bắt được UTM từ khóa quảng cáo và không chịu trách nhiệm khi form bị lỗi làm mất khách. TP Teams giải quyết trọn gói bài toán vận hành đó cho bạn.",
+      "faq.q2": "2. Trang đích của TP Teams có phải trả phí duy trì hàng năm không?",
+      "faq.a2": "Không! Bạn chỉ trả phí một lần duy nhất từ 1.9 triệu, sở hữu toàn bộ mã nguồn vĩnh viễn. Không giống như LadiPage phải đóng 3.5 - 6 triệu/năm, bạn hoàn toàn làm chủ tài sản số của mình.",
       "faq.q3": "3. Sau khi bàn giao, nếu có lỗi phát sinh thì sao?",
-      "faq.a3": "Chúng tôi bảo hành kỹ thuật miễn phí trong vòng 3 đến 6 tháng tùy gói. Mọi lỗi kỹ thuật thuộc phạm vi cam kết sẽ được sửa chữa trong vòng tối đa 4–8 giờ làm việc.",
+      "faq.a3": "Chúng tôi bảo hành kỹ thuật miễn phí từ 3 đến 6 tháng tùy gói. Đội ngũ kỹ sư Viettel cam kết hỗ trợ trực tiếp và khắc phục sự cố trong vòng tối đa 4–8 giờ làm việc.",
       "contact.title": "Gửi Yêu Cầu & Nhận Phản Hồi Trong 2 Giờ",
-      "contact.subtitle": "Hãy mô tả ngắn gọn bài toán của doanh nghiệp bạn. Đội ngũ TP Teams sẽ phản hồi trực tiếp kèm phương án kiến trúc và báo giá tối ưu nhất.",
+      "contact.subtitle": "Hãy mô tả bài toán kinh doanh hoặc chiến dịch ads của bạn. Kỹ sư Võ Trí Thức sẽ phản hồi trực tiếp kèm phương án tối ưu chi phí nhất.",
       "form.name": "Họ và tên của bạn *",
       "form.phone": "Số điện thoại / Zalo *",
       "form.email": "Địa chỉ Email",
       "form.service": "Gói dịch vụ quan tâm",
-      "form.message": "Mô tả nhu cầu / Bài toán của bạn",
-      "form.submit": "GỬI YÊU CẦU & NHẬN BÁO GIÁ NGAY"
+      "form.message": "Mô tả bài toán / Sản phẩm kinh doanh",
+      "form.submit": "GỬI YÊU CẦU & NHẬN TƯ VẤN NGAY"
     },
     en: {
       "nav.tagline": "Software & AI Agency",
-      "nav.about": "About Us",
+      "nav.pain": "Business Bottlenecks",
+      "nav.vs_ai": "Why Not Just Use AI?",
       "nav.solutions": "D1-D3 Solutions",
       "nav.demos": "Live Demos",
-      "nav.pricing": "Pricing",
-      "nav.founder": "Team & Founder",
+      "nav.pricing": "Market Pricing",
+      "nav.founder": "Founder & Team",
       "nav.faq": "FAQ",
       "nav.cta": "1-on-1 Consult",
-      "hero.badge": "TP TEAMS — TRUSTED ENTERPRISE SOFTWARE & AI AGENCY",
-      "hero.title_p1": "Turn High-Intent Web Traffic Into",
-      "hero.title_p2": "Qualified Leads",
-      "hero.title_p3": "& Automate Operations With AI",
-      "hero.subtitle": "TP Teams specializes in engineering High-Converting Landing Pages (D1), Centralized Lead Management Hubs (D2), and Autonomous AI Recruitment Platforms (D3) for growing businesses. 100% production-ready code with real ROI.",
-      "hero.btn_demos": "Explore Live Demos (D1-D3)",
-      "hero.btn_pricing": "Transparent Service Pricing",
-      "metrics.speed": "Ads Landing Page Speed",
-      "metrics.alert": "Realtime Telegram Alert",
-      "metrics.real": "Production APIs & Data",
-      "metrics.uptime": "VPS/Cloud System Uptime",
-      "card.engine": "Engineering Agency:",
-      "card.lead": "Technical Lead:",
-      "card.stack": "Core Tech Stack:",
+      "hero.title_p1": "Stop Burning Ad Budget On",
+      "hero.title_p2": "Slow-Loading Landing Pages",
+      "hero.title_p3": "& Leaking Qualified Leads Daily",
+      "hero.subtitle": "TP Teams is led by Viettel Software Engineer Vo Tri Thuc. We enforce enterprise-grade telecommunications reliability: sub-1.5s mobile speed, automatic UTM keyword tracking, and sub-2s instant Telegram lead alerts. 100% full source code ownership with zero annual subscription lock-in.",
+      "hero.btn_test_demo": "Test 2s Lead Webhook Live",
+      "hero.btn_pricing": "Transparent Pricing (From $79)",
+      "metrics.speed": "4G Mobile Page Speed",
+      "metrics.alert": "Telegram Realtime Alert",
+      "metrics.fee": "Annual Platform Fee",
+      "metrics.source": "Source Code Ownership",
+      "hero.quote_card": '"Pragmatic Engineering — Protecting Cash Flow & Multiplying Conversions"',
+      "pain.title": "4 Critical Leaks Wasting Your Ad Spend Without Converting",
+      "pain.subtitle": "Surveying over 100 SMEs in Vietnam reveals: 80% of digital marketing budgets are wasted due to preventable technical flaws that business owners are unaware of.",
+      "pain.p1_title": "Load Speed > 3s Bounces 50% Visitors",
+      "pain.p1_desc": "Every Facebook/Google click costs $0.20 to $1.50. But if your page takes over 3 seconds to load on mobile networks, visitors abandon immediately. You pay for clicks before visitors even see your offer!",
+      "pain.p2_title": "Slow Response Cold-Calls Lose Deals",
+      "pain.p2_desc": "When a prospect submits a form at 10 AM but staff only checks spreadsheets hours later, the lead turns cold. Delays over 15 minutes drop close rates from 40% down to under 5%.",
+      "pain.p3_title": "Missing UTM Tracking Blinds Scaling",
+      "pain.p3_desc": "You spend $1,000 across 5 ad sets, yet your form doesn't capture UTM sources. You are completely blind to which keyword converts and which campaign is burning useless cash.",
+      "pain.p4_title": "Held Hostage by Annual Subscriptions",
+      "pain.p4_desc": "Drag-and-drop SaaS platforms force you to pay $150–$250 yearly just to keep your landing page online. Stop paying, and your business website disappears instantly.",
+      "vs_ai.title": '"Why Not Just Let AI Generate Code in 5 Minutes Instead of Hiring TP Teams?"',
+      "vs_ai.subtitle": "Today, AI (ChatGPT, v0, Bolt) can generate raw HTML markup quickly. But there is a massive chasm between a raw UI snippet and a revenue-generating production business engine.",
       "d1demo.title": "Test Realtime Lead Webhook Speed (< 2s)",
-      "d1demo.desc": "Instead of empty promises, enter your phone or name below. Upon submission, TP Teams' webhook immediately fires an instant alert directly to Founder Vo Tri Thuc's Telegram.",
+      "d1demo.desc": "Enter your name and phone number below. Upon clicking, TP Teams webhook dispatches an immediate notification to Founder Vo Tri Thuc's Telegram with a live response timer!",
       "d1demo.name_label": "Your Full Name *",
       "d1demo.phone_label": "Mobile Phone Number *",
       "d1demo.interest_label": "Testing Purpose",
-      "d1demo.submit_btn": "CLICK TO TRIGGER REALTIME ALERT (LIVE TEST)",
-      "solutions.title": "The Three Production Proof Pillars",
-      "solutions.subtitle": "TP Teams doesn't sell abstract slides. We build and maintain three battle-tested proof pillars spanning from consumer-facing conversion funnels to cutting-edge AI orchestration.",
-      "d1.title": "High-Converting Ads Landing Page",
-      "d1.desc": "Maximize conversion rates for Google & Meta Ads campaigns. Built-in UTM capturing, phone validation, and instant webhook forwarding to Telegram within 2 seconds.",
-      "d1.feat1": "Sub-1.5s mobile page load speed",
-      "d1.feat2": "Automatic UTM Source, Campaign, Medium capture",
-      "d1.feat3": "Smart bot protection (Honeypot/Turnstile)",
-      "d1.feat4": "Instant audible alerts to Telegram & Zalo",
-      "btn.select_d1": "Select D1 — $140 / Project",
-      "d2.title": "Centralized Lead Hub & Mini-CRM",
-      "d2.desc": "A dedicated management cockpit replacing manual messy spreadsheets. Categorize leads, manage sales pipelines, and export marketing performance reports.",
-      "d2.feat1": "Secure PostgreSQL database on private Cloud VPS",
-      "d2.feat2": "Kanban board pipeline: New → Contacted → Closed",
-      "d2.feat3": "JWT authentication with Admin & Sales RBAC roles",
-      "d2.feat4": "Campaign ROI analytics & secure Excel/CSV export",
-      "btn.select_d2": "Select D2 — $560 / Package",
-      "d3.title": "Autonomous AI Recruitment System",
-      "d3.desc": "VTT Careers HRM AI integrated with DeepSeek LLM. Autonomous job description generation, CV PDF parsing, and human-in-the-loop multi-round applicant evaluation.",
-      "d3.feat1": "DeepSeek AI LLM for structured JD generation",
-      "d3.feat2": "Real PDF upload portal & public application tracking",
-      "d3.feat3": "Recruiter cockpit with PASS/FAIL round evaluations",
-      "d3.feat4": "Scalable Spring Boot 3 + Redis + PostgreSQL core",
-      "btn.explore_d3": "Explore Live D3 System",
-      "demos.title": "Real Operating Production Systems",
-      "demos.subtitle": "Clients and partners can directly visit our live production URLs to inspect the complete software solutions TP Teams has engineered and deployed on Cloud VPS.",
-      "demos.p1_desc": "Public candidate portal featuring category filtering, transparent 3-round interview stages, PDF resume submission, and live status lookup via phone/email.",
-      "demos.p2_desc": "Recruiter operations cockpit: Click 'Khám phá Trực tiếp Demo (1-Click Recruiter)' to instantly view 5 strategic job postings, 15 authentic applicants, Kanban board, and AI JD Writer.",
+      "d1demo.submit_btn": "TRIGGER INSTANT NOTIFICATION (TEST LIVE 2S)",
+      "pricing.title": "Real Value — Competitive Market Pricing",
+      "pricing.subtitle": "Clients hold 100% perpetual source code ownership without being trapped in recurring platform subscription fees. Backed by Viettel engineer warranty.",
+      "demos.title": "Live Production Systems Running On Cloud",
+      "demos.subtitle": "You can directly inspect the operating live production URLs engineered by TP Teams below:",
       "founder.title": '"We do not write code for display. We build software to protect cash flow and generate revenue."',
-      "founder.desc1": "Educated at Hanoi University of Industry (HaUI), I and my fellow engineers at TP Teams pursue pragmatic software craftsmanship: solving the existential bottleneck of SMEs — turning web traffic into paying clients and eliminating manual operational drag.",
+      "founder.desc1": "With rigorous formal engineering education from Hanoi University of Industry (HaUI) and practical enterprise experience at Viettel Group, I apply telecommunications-grade discipline into every line of code: high concurrency, bulletproof data integrity, and sub-millisecond optimization.",
       "founder.desc2": "Every system delivered by TP Teams adheres to our Triple Guarantee: Zero redundant bloatware, 100% full source code ownership, and zero client abandonment post-handover. Thoroughly verified through 3-tier testing.",
-      "pricing.title": "Transparent Pricing & Clear Commitments",
-      "pricing.subtitle": "Zero hidden surcharges. All packages include setup assistance, SSL encryption, Telegram webhook integration, and ongoing warranty.",
       "faq.title": "Frequently Asked Questions About TP Teams",
-      "faq.q1": "1. Does TP Teams hand over 100% full source code?",
-      "faq.a1": "Yes, absolutely 100%. Upon acceptance, we transfer the complete GitHub repository, Docker configurations, and comprehensive operations manuals. You own full sovereignty over your code.",
-      "faq.q2": "2. Can the landing page integrate with my Facebook & Google Ads?",
-      "faq.a2": "Definitely. TP Teams landing pages feature automatic UTM parameter extraction and conversion event tracking (GTM, Meta Pixel, Conversion API) to feed accurate signals back to ad algorithms for lower CPA.",
-      "faq.q3": "3. How does technical support work after handover?",
-      "faq.a3": "We provide 3 to 6 months of complimentary technical warranty depending on the package. Any verified bug within scope will be addressed within 4 to 8 business hours.",
+      "faq.q1": "1. Can raw AI-generated code replace TP Teams?",
+      "faq.a1": "AI only outputs static HTML markup. It cannot configure private VPS servers, cannot hook up sub-2s audible Telegram webhooks, cannot extract UTM campaign tags, and carries zero accountability when a broken form loses paying customers. TP Teams manages the entire production lifecycle for you.",
+      "faq.q2": "2. Does TP Teams charge recurring annual platform fees?",
+      "faq.a2": "No! You pay a single upfront cost from $79 (1.9M VND) and own 100% full source code forever. Unlike LadiPage which costs $150-250/year, you retain full sovereignty over your digital asset.",
+      "faq.q3": "3. What happens if a technical bug occurs post-handover?",
+      "faq.a3": "We provide 3 to 6 months of complimentary technical warranty. Our Viettel-trained engineers directly respond and resolve verified bugs within 4 to 8 business hours.",
       "contact.title": "Submit Your Inquiry & Get Feedback in 2 Hours",
-      "contact.subtitle": "Briefly describe your business bottleneck. TP Teams engineers will respond directly with an architectural blueprint and an optimized quote.",
+      "contact.subtitle": "Describe your business challenge or advertising campaign. Engineer Vo Tri Thuc will respond directly with an optimized architectural proposal.",
       "form.name": "Your Full Name *",
       "form.phone": "Phone / WhatsApp / Zalo *",
       "form.email": "Email Address",
       "form.service": "Service Package of Interest",
       "form.message": "Project Description / Challenge",
-      "form.submit": "SUBMIT INQUIRY & GET QUOTE NOW"
+      "form.submit": "SUBMIT INQUIRY & GET CONSULTATION NOW"
     }
   };
 
@@ -1061,7 +1079,6 @@
     currentLang = lang;
     localStorage.setItem('tp_lang', lang);
     
-    // Update button text & flag
     const flagEl = document.getElementById('langFlag');
     const labelEl = document.getElementById('langLabel');
     if (flagEl && labelEl) {
@@ -1069,7 +1086,6 @@
       labelEl.textContent = lang.toUpperCase();
     }
 
-    // Apply translations
     const dict = translations[lang] || translations.vi;
     document.querySelectorAll('[data-i18n]').forEach((el) => {
       const key = el.getAttribute('data-i18n');
@@ -1089,7 +1105,6 @@
     menu.classList.toggle('hidden');
   }
 
-  // Pre-select service in form
   function selectServiceForQuote(serviceName) {
     const selectEl = document.getElementById('leadType');
     if (selectEl) {
@@ -1101,7 +1116,6 @@
     }
   }
 
-  // Auto-capture UTM parameters
   function getUtmParams() {
     const urlParams = new URLSearchParams(window.location.search);
     return {
@@ -1124,7 +1138,6 @@
     const interest = document.getElementById('sbInterest').value;
     const utm = getUtmParams();
 
-    // Validate phone
     const phoneClean = phone.replace(/[^0-9]/g, '');
     if (phoneClean.length < 9) {
       alert(currentLang === 'vi' ? 'Vui lòng nhập số điện thoại hợp lệ.' : 'Please enter a valid phone number.');
@@ -1180,7 +1193,6 @@
   async function handleLeadSubmit(e) {
     e.preventDefault();
 
-    // Check honeypot
     const botVal = document.getElementById('botField').value;
     if (botVal) {
       console.warn('Bot detected');
@@ -1236,8 +1248,8 @@
       showModal(
         currentLang === 'vi' ? 'Yêu Cầu Đã Được Tiếp Nhận!' : 'Inquiry Received Successfully!',
         currentLang === 'vi' 
-          ? `Cảm ơn bạn ${name}! Thông tin đã được chuyển tức thì đến Telegram của Founder Võ Trí Thức. Đội ngũ TP Teams sẽ liên hệ lại qua SĐT/Zalo ${phone} trong vòng 2 giờ làm việc.`
-          : `Thank you, ${name}! Your inquiry has been forwarded directly to Founder Vo Tri Thuc's Telegram. TP Teams will contact you back via ${phone} within 2 business hours.`
+          ? `Cảm ơn bạn ${name}! Thông tin đã được chuyển tức thì đến Telegram của Kỹ sư Võ Trí Thức. Đội ngũ TP Teams sẽ liên hệ lại qua SĐT/Zalo ${phone} trong vòng 2 giờ làm việc.`
+          : `Thank you, ${name}! Your inquiry has been forwarded directly to Engineer Vo Tri Thuc's Telegram. TP Teams will contact you back via ${phone} within 2 business hours.`
       );
 
       document.getElementById('leadForm').reset();
@@ -1263,7 +1275,6 @@
     document.getElementById('resultModal').classList.add('hidden');
   }
 
-  // Initialize Language on DOM Load
   document.addEventListener('DOMContentLoaded', () => {
     applyLanguage(currentLang);
   });
