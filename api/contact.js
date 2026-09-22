@@ -17,7 +17,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, phone, type, budget, message } = req.body || {};
+    const { name, email, phone, type, budget, message, utm_source, utm_medium, utm_campaign } = req.body || {};
 
     if (!name || !phone) {
       return res.status(400).json({ error: 'Vui lòng cung cấp họ tên và số điện thoại liên hệ.' });
@@ -43,18 +43,23 @@ export default async function handler(req, res) {
     const now = new Date();
     const timeStr = now.toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh' });
 
-    const telegramMessage = `🚨 <b>CÓ YÊU CẦU TƯ VẤN MỚI TỪ WEBSITE!</b>
+    const campaignInfo = utm_source || utm_campaign
+      ? `${escapeHtml(utm_source || 'Direct')} (Campaign: ${escapeHtml(utm_campaign || 'N/A')}, Medium: ${escapeHtml(utm_medium || 'N/A')})`
+      : 'Truy cập trực tiếp (Direct Web)';
+
+    const telegramMessage = `🚨 <b>CÓ YÊU CẦU TƯ VẤN MỚI TỪ TP TEAMS!</b>
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 👤 <b>Khách hàng:</b> ${escapeHtml(name)}
 📞 <b>Số điện thoại / Zalo:</b> <code>${escapeHtml(phone)}</code>
 ✉️ <b>Email:</b> ${escapeHtml(email)}
-🛠️ <b>Nhu cầu:</b> ${escapeHtml(type)}
-💰 <b>Ngân sách:</b> ${escapeHtml(budget)}
+🛠️ <b>Gói dịch vụ:</b> ${escapeHtml(type || 'Tư vấn giải pháp')}
+💰 <b>Ngân sách:</b> ${escapeHtml(budget || 'Chưa chọn')}
 📝 <b>Bài toán / Yêu cầu:</b>
-<blockquote>${escapeHtml(message)}</blockquote>
+<blockquote>${escapeHtml(message || 'Cần tư vấn giải pháp')}</blockquote>
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
+📡 <b>Nguồn chiến dịch:</b> ${campaignInfo}
 ⏰ <b>Thời gian:</b> ${timeStr}
-🌐 <b>Nguồn:</b> landing.votrithuc.click`;
+🌐 <b>Hệ thống:</b> TP Teams Agency (landing.votrithuc.click)`;
 
     const telegramApiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
     const response = await fetch(telegramApiUrl, {
