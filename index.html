@@ -1209,19 +1209,22 @@
       </div>
       <div class="p-3 rounded-2xl rounded-tl-none bg-slate-900/90 border border-slate-800 text-slate-200 space-y-2">
         <p data-i18n="ai.welcome_msg">
-          Chào bạn! Mình là Trợ lý AI của <b>Kỹ sư Võ Trí Thức</b> (TP Teams). Bạn đang kinh doanh ngành nghề gì và ngân sách chạy ads khoảng bao nhiêu mỗi tháng?
+          Chào bạn! Mình là Trợ lý AI của <b>Kỹ sư Võ Trí Thức</b> (TP Teams). Bạn đang cần tư vấn giải pháp phần mềm nào: Trang đích chuyển đổi cao (Landing Page), Hệ thống Web App/CRM quản trị, hay Giải pháp AI &amp; Tự động hóa theo yêu cầu?
         </p>
         
         <!-- Interactive Quick Choice Chips -->
         <div class="pt-1 flex flex-wrap gap-1.5">
-          <button onclick="sendQuickReply('Shop bán lẻ / Thời trang (Ngân sách dưới 10tr/tháng)')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-cyan-500 hover:text-slate-950 text-cyan-300 border border-cyan-500/30 text-[11px] font-mono transition-all">
-            🛍️ Shop bán lẻ (&lt; 10tr/th)
+          <button onclick="sendQuickReplyByKey('ai.chip_q1')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-cyan-500 hover:text-slate-950 text-cyan-300 border border-cyan-500/30 text-[11px] font-mono transition-all">
+            <span data-i18n="ai.chip_t1">🚀 Landing Page Thu Lead</span>
           </button>
-          <button onclick="sendQuickReply('Khóa học / Dịch vụ / Spa (Ngân sách 10 - 50tr/tháng)')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-cyan-500 hover:text-slate-950 text-cyan-300 border border-cyan-500/30 text-[11px] font-mono transition-all">
-            🎓 Dịch vụ / Khóa học (10–50tr)
+          <button onclick="sendQuickReplyByKey('ai.chip_q2')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-cyan-500 hover:text-slate-950 text-cyan-300 border border-cyan-500/30 text-[11px] font-mono transition-all">
+            <span data-i18n="ai.chip_t2">💼 Web App &amp; Quản Trị CRM</span>
           </button>
-          <button onclick="sendQuickReply('Doanh nghiệp có đội Sales (Ngân sách trên 50tr/tháng)')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-cyan-500 hover:text-slate-950 text-cyan-300 border border-cyan-500/30 text-[11px] font-mono transition-all">
-            🏢 Doanh nghiệp (&gt; 50tr/th)
+          <button onclick="sendQuickReplyByKey('ai.chip_q3')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-cyan-500 hover:text-slate-950 text-cyan-300 border border-cyan-500/30 text-[11px] font-mono transition-all">
+            <span data-i18n="ai.chip_t3">🤖 Tích Hợp AI &amp; Tự Động Hóa</span>
+          </button>
+          <button onclick="sendQuickReplyByKey('ai.chip_q4')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-cyan-500 hover:text-slate-950 text-cyan-300 border border-cyan-500/30 text-[11px] font-mono transition-all">
+            <span data-i18n="ai.chip_t4">🛠️ May Đo Dự Án Phần Mềm</span>
           </button>
         </div>
       </div>
@@ -1444,9 +1447,9 @@
       "form.opt1": "Gói 1: Landing Page Khởi Động (D1 Starter) — 1.9 Triệu",
       "form.opt2": "Gói 2: Landing Page Chuyên Sâu (D1 Pro) — 3.8 Triệu (Khuyên dùng)",
       "form.opt3": "Gói 3: Trang đích + Mini-CRM (D1 + D2) — 8.9 Triệu",
-      "form.opt4": "Gói 4: Tự động hóa & AI Riêng (D3) — May đo theo yêu cầu",
+      "form.opt4": "Gói 4: Phát triển Phần mềm, Web App & AI (D3) — May đo theo yêu cầu",
       "form.message": "Mô tả bài toán / Sản phẩm kinh doanh",
-      "form.message_ph": "VD: Bên mình chạy ads khóa học tiếng Anh, cần làm trang đích chuyển đổi cao và bắt lead về Telegram...",
+      "form.message_ph": "VD: Cần làm landing page bán hàng, hoặc phát triển hệ thống phần mềm quản lý CRM, Web App, tích hợp AI...",
       "form.submit": "GỬI YÊU CẦU & NHẬN TƯ VẤN TRONG 5–15 PHÚT",
 
       "footer.copy": "© 2026 TP Teams. Sáng lập bởi Võ Trí Thức (Software Engineer @ Viettel, HaUI Alumnus).",
@@ -1460,8 +1463,16 @@
       "ai.trigger_title": "Trợ Lý AI Kỹ Sư",
       "ai.modal_title": "Trợ Lý AI Kỹ Sư — TP Teams",
       "ai.modal_subtitle": "● Phản hồi tức thì • Kết nối Kỹ sư",
-      "ai.welcome_msg": "Chào bạn! Mình là Trợ lý AI của Kỹ sư Võ Trí Thức (TP Teams). Bạn đang kinh doanh ngành nghề gì và ngân sách chạy ads khoảng bao nhiêu mỗi tháng?",
-      "ai.input_ph": "Nhập câu hỏi hoặc SĐT/Zalo của bạn..."
+      "ai.welcome_msg": "Chào bạn! Mình là Trợ lý AI của <b>Kỹ sư Võ Trí Thức</b> (TP Teams). Bạn đang cần tư vấn giải pháp phần mềm nào: Trang đích chuyển đổi cao (Landing Page), Hệ thống Web App / CRM quản trị, hay Giải pháp AI & Tự động hóa theo yêu cầu?",
+      "ai.input_ph": "Nhập câu hỏi hoặc SĐT/Zalo của bạn...",
+      "ai.chip_t1": "🚀 Landing Page Thu Lead",
+      "ai.chip_q1": "Tôi cần làm Trang đích / Landing Page chạy ads tối ưu chuyển đổi, tốc độ < 1.5s và nhận lead Telegram 2s",
+      "ai.chip_t2": "💼 Web App & Quản Trị CRM",
+      "ai.chip_q2": "Tôi cần xây dựng Phần mềm quản lý nội bộ / Mini-CRM / Web App tùy biến theo yêu cầu doanh nghiệp",
+      "ai.chip_t3": "🤖 Tích Hợp AI & Tự Động Hóa",
+      "ai.chip_q3": "Tôi muốn tích hợp Trợ lý AI thông minh và Bot tự động hóa quy trình vận hành doanh nghiệp",
+      "ai.chip_t4": "🛠️ May Đo Dự Án Phần Mềm",
+      "ai.chip_q4": "Tôi có bài toán phần mềm riêng cần Kỹ sư Viettel tư vấn kiến trúc hệ thống và báo giá may đo"
     },
 
     en: {
@@ -1636,9 +1647,9 @@
       "form.opt1": "Package 1: Landing Page Starter (D1 Starter) — 1.9M VND",
       "form.opt2": "Package 2: Landing Page Pro (D1 Pro) — 3.8M VND (Recommended)",
       "form.opt3": "Package 3: Landing Page + Mini-CRM (D1 + D2) — 8.9M VND",
-      "form.opt4": "Package 4: Custom AI & Automation (D3) — Tailor-made",
-      "form.message": "Project Description / Challenge",
-      "form.message_ph": "e.g. We are running ads for English courses, need a high-converting landing page with 2s Telegram lead alerts...",
+      "form.opt4": "Package 4: Custom Software, Web App & AI (D3) — Bespoke Quote",
+      "form.message": "Project Description / Business Scope",
+      "form.message_ph": "e.g. Need a high-converting landing page, or custom software/CRM/Web App development, AI integration...",
       "form.submit": "SUBMIT INQUIRY & GET CONSULTATION WITHIN 5–15 MINS",
 
       "footer.copy": "© 2026 TP Teams. Founded by Vo Tri Thuc (Software Engineer @ Viettel, HaUI Alumnus).",
@@ -1652,8 +1663,16 @@
       "ai.trigger_title": "AI Engineer Assistant",
       "ai.modal_title": "AI Engineer Assistant — TP Teams",
       "ai.modal_subtitle": "● Instant Response • Connects with Engineer",
-      "ai.welcome_msg": "Hello! I am the AI Assistant of Vo Tri Thuc (Viettel Engineer). What business niche are you in and what is your monthly ad budget?",
-      "ai.input_ph": "Ask a question or enter your Phone/WhatsApp..."
+      "ai.welcome_msg": "Hello! I am the AI Assistant of <b>Engineer Vo Tri Thuc</b> (TP Teams). What software solution can we help you with: High-converting Landing Pages, Custom Web App / CRM Systems, or Bespoke Software & AI Solutions?",
+      "ai.input_ph": "Ask a question or enter your Phone/WhatsApp...",
+      "ai.chip_t1": "🚀 Lead Gen Landing Page",
+      "ai.chip_q1": "I need a high-converting Landing Page for ad campaigns with sub-1.5s speed and 2s Telegram lead webhook",
+      "ai.chip_t2": "💼 Web App & CRM Hub",
+      "ai.chip_q2": "I need custom enterprise management software / Mini-CRM / Web App development",
+      "ai.chip_t3": "🤖 AI & Workflow Automation",
+      "ai.chip_q3": "I want to integrate custom AI assistants and workflow automation bots for business operations",
+      "ai.chip_t4": "🛠️ Bespoke Software Project",
+      "ai.chip_q4": "I have a custom software project and need a Viettel Engineer for architecture consulting and quote"
     }
   };
 
@@ -1868,6 +1887,11 @@
   function sendQuickReply(text) {
     document.getElementById('aiChatInput').value = text;
     handleAIChatSubmit(new Event('submit'));
+  }
+
+  function sendQuickReplyByKey(key) {
+    const text = (translations[currentLang] && translations[currentLang][key]) || (translations.vi[key]) || key;
+    sendQuickReply(text);
   }
 
   async function handleAIChatSubmit(e) {
