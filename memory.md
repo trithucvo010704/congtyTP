@@ -128,9 +128,35 @@ File này đóng vai trò là "bộ nhớ dài hạn" của dự án, lưu trữ
   2. Test kịch bản tư vấn đa vòng: AI hỏi lại trúng quy mô 3 kho, chỉ đúng nguyên nhân lệch tồn realtime, và chốt lead thành công xin SĐT/Zalo.
   3. Giao diện trang web đạt chuẩn nhận diện đồng nhất, 0 lỗi cú pháp, 184/184 keys song ngữ khớp tuyệt đối.
 
+### Phiên làm việc: Ngày 23/09/2026 (Phiên 7 - Triển Khai Thư Viện Showcase Demo 3D Đa Ngành, Performance Lab 98+, Sprint 24H-48H & Bộ 5 Live Demo Landing Pages Thực Chiến Độc Lập)
+- **Nhiệm vụ & Thành tựu:**
+  1. **Nâng cấp Hệ Thống Khối Chiến Lược trên Trang Chủ (`index.html`):**
+     - **Khối 04 [MỚI] — Thư Viện Showcase Demo 3D Đa Ngành (`#showcase`):** Bộ lọc 6 tab mượt mà (Tất cả, Bán lẻ E-com, Bất động sản, Khóa học / EdTech, Thẩm mỹ / Clinic, Phần mềm B2B) với hiệu ứng chuyển cảnh Spatial Card 3D nhẹ máy, không rườm rà.
+     - **Khối 05 [MỚI] — Phòng Thí Nghiệm Hiệu Năng Google PageSpeed 98+ (`#performance`):** 4 đồng hồ đo telemetry 3D (FCP 0.4s, LCP 0.7s, CLS 0.00, TBT 0ms) kèm bảng đối soát rò rỉ ngân sách quảng cáo so sánh Web Kém Chất Lượng vs Landing Page TP Teams.
+     - **Khối 06 [MỚI] — Quy Trình Bàn Giao Thần Tốc "Sprint 24H–48H" (`#workflow`):** 4 trạm phân kỳ minh bạch (Tiếp nhận -> Wireframe 24H -> Lập trình 48H -> Nghiệm thu) kèm cam kết SLA kỷ luật thép: Giảm trừ ngay 10%/ngày nếu bàn giao trễ hạn.
+     - Đánh số lại toàn bộ spatial eyebrows: Section 07 (Bảng Giá), 08 (Minh Chứng), 09 (Cam Kết Founder), 10 (FAQ), 11 (Kết Nối).
+     - Đồng bộ điều hướng Floating Island Header và Mobile Navigation Drawer bổ sung đầy đủ `#showcase`, `#performance`, `#workflow`.
+  2. **Xây Dựng Trọn Vẹn Bộ 5 Landing Page Live Demo Độc Lập (`demos/*.html`):**
+     - `demos/ecommerce.html`: CyberPulse Pro Flash Sale (Đồng hồ đếm ngược, bộ chọn màu SVG thời gian thực, form mua 1-chạm, tải 0.6s).
+     - `demos/realestate.html`: The Obsidian Sky Luxury Apartment (Phối cảnh vàng Champagne, mặt bằng 1PN-2PN-3PN tương tác, form tải bảng giá gốc qua Zalo).
+     - `demos/course.html`: AI Automation Engineering Masterclass (Lộ trình 6 module, đếm ngược suất học bổng 50%, giữ chỗ 1-chạm).
+     - `demos/spa.html`: Aurora Derma Clinic (Toggle so sánh Trước/Sau, công nghệ FDA, đặt lịch soi da 1-1 tặng voucher 500k).
+     - `demos/saas.html`: OpsFlow B2B SaaS & Mini-CRM (Dashboard Kanban mô phỏng, tính toán ROI tự động theo số nhân viên, dùng thử 14 ngày).
+     - 100% demo sử dụng pure Tailwind CSS và SVG vector mockups, tải trực tiếp trên edge server dưới 0.8s, không phụ thuộc ảnh ngoài, responsive hoàn hảo từ 320px đến 4K.
+  3. **Tương Tác Phễu & Đồng Bộ Form Tư Vấn:**
+     - Các nút "Chọn Mẫu Này" trong Showcase Card tự động điền form liên hệ, đổi loại dịch vụ và focus vào ô Tên khách hàng.
+     - Dropdown `leadType` bổ sung đầy đủ các lựa chọn template ngành hàng.
+  4. **Nâng Cấp Bilingual Engine 100% Đạt 249 Keys:**
+     - Mở rộng từ điển song ngữ từ 184 lên **249 keys** đồng nhất tuyệt đối giữa `translations.vi` và `translations.en`.
+     - Script kiểm thử tự động xác nhận 0 key thiếu, 221 thẻ `data-i18n` trong HTML được map 100%.
+  5. **Nâng Cấp Kho Vũ Khí Chào Thầu (`tailieu/11_BO_HO_SO_VA_MAU_CHAO_GIA_VLANCE_FREELANCERVIET.md`):**
+     - Đồng bộ nhận diện thương hiệu: Senior Software Engineer (HaUI Alumnus) & Founder TP Teams Solutions.
+     - Bổ sung 5 mẫu Proposal chuyên biệt cho từng ngành hàng (E-com, BĐS, EdTech, Spa, B2B SaaS) kèm link demo tương ứng và cam kết SLA Sprint 24H–48H.
+
 ---
 
 ## V. NHIỆM VỤ TIẾP THEO ĐANG THỰC HIỆN (CURRENT SPRINT)
-1. Đăng ký tài khoản và hoàn thiện Profile trên **vLance.vn** và **FreelancerViet.vn** theo `tailieu/11`.
-2. Bắt đầu gửi 3-5 Proposal mỗi ngày trong các khung giờ vàng (8h30-9h30 và 14h-15h).
+1. Sử dụng 5 mẫu Proposal và 5 Live Demo độc lập trong `tailieu/11` để chào thầu trên **vLance.vn** và các Group Facebook tìm nhà thầu web.
+2. Kiểm tra log nhận lead từ form website và chat AI qua Telegram Bot.
 3. Triển khai tài liệu kịch bản tiếp cận B2B Agency Marketing (Kênh 2).
+

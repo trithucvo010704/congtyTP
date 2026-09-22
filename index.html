@@ -205,6 +205,64 @@
     .telegram-bubble-in {
       animation: teleSlideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
+
+    /* 3D Industry Showcase Card */
+    .industry-card-3d {
+      background: var(--color-card-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--color-card-border);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8), inset 0 1px 0 0 var(--color-beveled-rim);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      transform-style: preserve-3d;
+    }
+    .industry-card-3d:hover {
+      border-color: rgba(6, 182, 212, 0.5);
+      transform: translateY(-5px);
+      box-shadow: 
+        0 28px 60px -15px rgba(0, 0, 0, 0.9),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
+        0 0 35px -5px rgba(6, 182, 212, 0.25);
+    }
+
+    /* 3D Telemetry Gauge */
+    .spatial-gauge {
+      background: radial-gradient(circle at 50% 30%, rgba(14, 165, 233, 0.12), rgba(4, 7, 17, 0.95));
+      border: 1px solid rgba(6, 182, 212, 0.25);
+      box-shadow: 
+        0 16px 36px -10px rgba(0, 0, 0, 0.8),
+        inset 0 0 25px rgba(6, 182, 212, 0.08);
+      transition: all 0.3s ease;
+    }
+    .spatial-gauge:hover {
+      border-color: rgba(6, 182, 212, 0.5);
+      transform: translateY(-3px);
+      box-shadow: 0 20px 40px -10px rgba(6, 182, 212, 0.25);
+    }
+
+    /* 3D Timeline Node */
+    .timeline-node-3d {
+      background: rgba(11, 16, 34, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 14px 30px -8px rgba(0, 0, 0, 0.7);
+      transition: all 0.3s ease;
+    }
+    .timeline-node-3d:hover {
+      border-color: rgba(6, 182, 212, 0.4);
+      transform: translateY(-3px);
+    }
+
+    /* Tab Filter Pills */
+    .filter-tab-btn {
+      transition: all 0.2s ease;
+    }
+    .filter-tab-btn.active {
+      background: linear-gradient(180deg, #06b6d4 0%, #0891b2 100%) !important;
+      color: #020617 !important;
+      font-weight: 800 !important;
+      border-color: rgba(255, 255, 255, 0.4) !important;
+      box-shadow: 0 4px 14px rgba(6, 182, 212, 0.4) !important;
+    }
   </style>
 </head>
 
@@ -232,10 +290,13 @@
     </a>
 
     <!-- Desktop Navigation Links (Understated & Architectural) -->
-    <nav class="hidden lg:flex items-center gap-5 xl:gap-7 text-xs font-semibold tracking-wider uppercase text-slate-300">
+    <nav class="hidden lg:flex items-center gap-4 xl:gap-5 text-xs font-semibold tracking-wider uppercase text-slate-300">
       <a href="#pain-points" class="hover:text-cyan-400 transition-colors" data-i18n="nav.pain">Nỗi Đau</a>
       <a href="#ai-comparison" class="hover:text-cyan-400 transition-colors" data-i18n="nav.vs_ai">Đối Soát AI</a>
       <a href="#interactive-demo" class="hover:text-cyan-400 transition-colors" data-i18n="nav.sandbox">Thử Nghiệm</a>
+      <a href="#showcase" class="text-cyan-300 font-bold hover:text-cyan-400 transition-colors" data-i18n="nav.showcase">Kho Demo</a>
+      <a href="#performance" class="hover:text-cyan-400 transition-colors" data-i18n="nav.performance">Hiệu Năng</a>
+      <a href="#workflow" class="hover:text-cyan-400 transition-colors" data-i18n="nav.workflow">Quy Trình 24H</a>
       <a href="#pricing" class="hover:text-cyan-400 transition-colors" data-i18n="nav.solutions">Bảng Giá</a>
       <a href="#live-demos" class="hover:text-cyan-400 transition-colors" data-i18n="nav.demos">Minh Chứng</a>
       <a href="#founder" class="hover:text-cyan-400 transition-colors" data-i18n="nav.founder">Founder</a>
@@ -279,6 +340,9 @@
     <a href="#pain-points" onclick="toggleMobileMenu()" class="block py-1.5 hover:text-cyan-400" data-i18n="nav.pain">Nỗi Đau Doanh Nghiệp</a>
     <a href="#ai-comparison" onclick="toggleMobileMenu()" class="block py-1.5 hover:text-cyan-400" data-i18n="nav.vs_ai">Tại Sao Không Dùng AI?</a>
     <a href="#interactive-demo" onclick="toggleMobileMenu()" class="block py-1.5 hover:text-cyan-400" data-i18n="nav.sandbox">Thử Nghiệm Live Webhook</a>
+    <a href="#showcase" onclick="toggleMobileMenu()" class="block py-1.5 text-cyan-300 font-bold hover:text-cyan-400" data-i18n="nav.showcase">Kho Demo Đa Ngành 3D</a>
+    <a href="#performance" onclick="toggleMobileMenu()" class="block py-1.5 hover:text-cyan-400" data-i18n="nav.performance">Hiệu Năng PageSpeed 99</a>
+    <a href="#workflow" onclick="toggleMobileMenu()" class="block py-1.5 hover:text-cyan-400" data-i18n="nav.workflow">Quy Trình Sprint 24H-48H</a>
     <a href="#pricing" onclick="toggleMobileMenu()" class="block py-1.5 hover:text-cyan-400" data-i18n="nav.solutions">Bảng Giá & Dịch Vụ</a>
     <a href="#live-demos" onclick="toggleMobileMenu()" class="block py-1.5 hover:text-cyan-400" data-i18n="nav.demos">Minh Chứng Live</a>
     <a href="#founder" onclick="toggleMobileMenu()" class="block py-1.5 hover:text-cyan-400" data-i18n="nav.founder">Founder & Đội Ngũ</a>
@@ -723,17 +787,541 @@
   </div>
 </section>
 
-<!-- ================= 6. SECTION 04: CHI PHÍ ĐẦU TƯ MINH BẠCH & PHÂN TÍCH ROI ================= -->
+<!-- ================= 6. SECTION 04: THƯ VIỆN SHOWCASE DEMO 3D ĐA NGÀNH ================= -->
+<section id="showcase" class="py-20 bg-slate-900/30 border-t border-slate-800/80 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto mb-10 space-y-3">
+      <div class="eyebrow-code" data-i18n="showcase.badge">
+        [ 04 // THƯ VIỆN DEMO 3D ĐA NGÀNH ]
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight gradient-title-platinum" data-i18n="showcase.title">
+        Bộ Sưu Tập Trang Đích Thực Chiến — Chuẩn Chuyển Đổi Từng Ngành
+      </h2>
+      <p class="text-slate-400 text-sm sm:text-base leading-relaxed" data-i18n="showcase.subtitle">
+        Không chỉ cung cấp mã nguồn, TP Teams đúc kết cấu trúc chuyển đổi chuẩn cho từng ngành hàng cụ thể. Tải trang dưới 0.8s, kết nối webhook &lt; 2s và tối đa tỷ lệ chốt đơn ngay lập tức.
+      </p>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex flex-wrap items-center justify-center gap-2 pt-4">
+        <button onclick="filterShowcase('all')" id="tab-all" class="filter-tab-btn active px-3.5 py-1.5 rounded-xl border border-slate-700 bg-slate-900 text-xs font-bold text-slate-300 hover:text-white" data-i18n="showcase.tab_all">
+          Tất Cả (5 Mẫu)
+        </button>
+        <button onclick="filterShowcase('ecommerce')" id="tab-ecommerce" class="filter-tab-btn px-3.5 py-1.5 rounded-xl border border-slate-700 bg-slate-900 text-xs font-semibold text-slate-300 hover:text-white" data-i18n="showcase.tab_ecom">
+          🛒 E-Commerce &amp; Flash Sale
+        </button>
+        <button onclick="filterShowcase('realestate')" id="tab-realestate" class="filter-tab-btn px-3.5 py-1.5 rounded-xl border border-slate-700 bg-slate-900 text-xs font-semibold text-slate-300 hover:text-white" data-i18n="showcase.tab_re">
+          🏢 Bất Động Sản Hạng Sang
+        </button>
+        <button onclick="filterShowcase('course')" id="tab-course" class="filter-tab-btn px-3.5 py-1.5 rounded-xl border border-slate-700 bg-slate-900 text-xs font-semibold text-slate-300 hover:text-white" data-i18n="showcase.tab_course">
+          🎓 Khóa Học &amp; Đào Tạo
+        </button>
+        <button onclick="filterShowcase('spa')" id="tab-spa" class="filter-tab-btn px-3.5 py-1.5 rounded-xl border border-slate-700 bg-slate-900 text-xs font-semibold text-slate-300 hover:text-white" data-i18n="showcase.tab_spa">
+          💆 Thẩm Mỹ Viện &amp; Spa
+        </button>
+        <button onclick="filterShowcase('saas')" id="tab-saas" class="filter-tab-btn px-3.5 py-1.5 rounded-xl border border-slate-700 bg-slate-900 text-xs font-semibold text-slate-300 hover:text-white" data-i18n="showcase.tab_saas">
+          ⚙️ B2B SaaS &amp; Mini-CRM
+        </button>
+      </div>
+    </div>
+
+    <!-- 5 Showcase Cards Grid -->
+    <div id="showcaseGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
+      
+      <!-- Card 1: E-Commerce -->
+      <div class="showcase-card industry-card-3d rounded-3xl p-6 flex flex-col justify-between" data-cat="ecommerce">
+        <div class="space-y-4">
+          <!-- Visual Header -->
+          <div class="h-44 rounded-2xl bg-gradient-to-br from-cyan-950/70 to-slate-950 p-4 border border-cyan-500/20 relative overflow-hidden flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/40">
+                E-COMMERCE // FLASH SALE
+              </span>
+              <span class="text-[11px] font-mono text-emerald-400">⚡ Tải 0.6s • CR 8.4%</span>
+            </div>
+            <!-- Mockup Element -->
+            <div class="flex items-center justify-center py-2">
+              <div class="w-16 h-16 rounded-2xl bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center text-cyan-300 shadow-lg shadow-cyan-500/20">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+              </div>
+            </div>
+            <div class="flex items-center justify-between text-[11px] text-slate-400 font-mono">
+              <span>Đồng hồ Sale • Chọn Màu • Mua 1-Chạm</span>
+              <span class="text-cyan-400 font-bold">Live Ready</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors" data-i18n="showcase.m1_title">
+              CyberPulse Pro™ — Bán Hàng E-Commerce
+            </h3>
+            <p class="text-xs text-slate-300 mt-2 leading-relaxed" data-i18n="showcase.m1_desc">
+              Tối ưu cho bán lẻ sản phẩm vật lý, đồ công nghệ, gia dụng. Tích hợp đồng hồ Flash Sale đếm ngược, bộ chọn màu sắc tương tác và form mua hàng 1-chạm gửi webhook trong 2s.
+            </p>
+          </div>
+
+          <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-400 space-y-1">
+            <div class="flex items-center gap-1.5 text-cyan-300">
+              <span>✓ Tỷ lệ chuyển đổi: 8.4%</span>
+              <span class="text-slate-500">•</span>
+              <span>Đơn về Telegram tức thì</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-5 grid grid-cols-2 gap-2.5">
+          <a href="demos/ecommerce.html" target="_blank" rel="noopener noreferrer" class="py-2.5 px-3 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 hover:text-white font-bold text-xs text-center border border-slate-700 hover:border-cyan-400 transition-all flex items-center justify-center gap-1">
+            <span data-i18n="showcase.btn_view">Xem Live Demo</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
+          <button onclick="chooseTemplate('ecommerce', 'Mẫu E-Commerce CyberPulse Pro')" class="py-2.5 px-3 rounded-xl beveled-btn-primary text-slate-950 font-black text-xs text-center transition-all cursor-pointer" data-i18n="showcase.btn_choose">
+            Chọn Mẫu Này
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 2: Real Estate -->
+      <div class="showcase-card industry-card-3d rounded-3xl p-6 flex flex-col justify-between" data-cat="realestate">
+        <div class="space-y-4">
+          <!-- Visual Header -->
+          <div class="h-44 rounded-2xl bg-gradient-to-br from-amber-950/70 to-slate-950 p-4 border border-amber-500/20 relative overflow-hidden flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
+                BẤT ĐỘNG SẢN // RESIDENCES
+              </span>
+              <span class="text-[11px] font-mono text-amber-400">⚡ Tải 0.7s • CR 11.2%</span>
+            </div>
+            <!-- Mockup Element -->
+            <div class="flex items-center justify-center py-2">
+              <div class="w-16 h-16 rounded-2xl bg-amber-500/20 border border-amber-400/40 flex items-center justify-center text-amber-300 shadow-lg shadow-amber-500/20">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+              </div>
+            </div>
+            <div class="flex items-center justify-between text-[11px] text-slate-400 font-mono">
+              <span>Mặt Bằng 3D • Tải Bảng Giá • Zalo Lead</span>
+              <span class="text-amber-400 font-bold">VIP Design</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition-colors" data-i18n="showcase.m2_title">
+              The Obsidian Sky — Căn Hộ Hạng Sang
+            </h3>
+            <p class="text-xs text-slate-300 mt-2 leading-relaxed" data-i18n="showcase.m2_desc">
+              Thiết kế theo chuẩn nhận diện cao cấp (Champagne Gold &amp; Titanium). Tương tác xem mặt bằng căn hộ 1PN-2PN-3PN và form tải bảng giá gốc tự động qua Zalo.
+            </p>
+          </div>
+
+          <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-400 space-y-1">
+            <div class="flex items-center gap-1.5 text-amber-300">
+              <span>✓ Tỷ lệ chuyển đổi: 11.2%</span>
+              <span class="text-slate-500">•</span>
+              <span>Lọc số điện thoại rác 100%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-5 grid grid-cols-2 gap-2.5">
+          <a href="demos/realestate.html" target="_blank" rel="noopener noreferrer" class="py-2.5 px-3 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 hover:text-white font-bold text-xs text-center border border-slate-700 hover:border-amber-400 transition-all flex items-center justify-center gap-1">
+            <span data-i18n="showcase.btn_view">Xem Live Demo</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
+          <button onclick="chooseTemplate('realestate', 'Mẫu Bất Động Sản The Obsidian Sky')" class="py-2.5 px-3 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-400 hover:to-yellow-400 text-slate-950 font-black text-xs text-center transition-all cursor-pointer" data-i18n="showcase.btn_choose">
+            Chọn Mẫu Này
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 3: Course & Coaching -->
+      <div class="showcase-card industry-card-3d rounded-3xl p-6 flex flex-col justify-between" data-cat="course">
+        <div class="space-y-4">
+          <!-- Visual Header -->
+          <div class="h-44 rounded-2xl bg-gradient-to-br from-indigo-950/70 to-slate-950 p-4 border border-indigo-500/20 relative overflow-hidden flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/40">
+                KHÓA HỌC // MASTERCLASS
+              </span>
+              <span class="text-[11px] font-mono text-emerald-400">⚡ Tải 0.6s • CR 9.6%</span>
+            </div>
+            <!-- Mockup Element -->
+            <div class="flex items-center justify-center py-2">
+              <div class="w-16 h-16 rounded-2xl bg-indigo-500/20 border border-indigo-400/40 flex items-center justify-center text-indigo-300 shadow-lg shadow-indigo-500/20">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+              </div>
+            </div>
+            <div class="flex items-center justify-between text-[11px] text-slate-400 font-mono">
+              <span>Đếm Ngược Suất • 6 Module • QR Pay</span>
+              <span class="text-indigo-400 font-bold">High Trust</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors" data-i18n="showcase.m3_title">
+              Masterclass Tự Động Hóa Vận Hành
+            </h3>
+            <p class="text-xs text-slate-300 mt-2 leading-relaxed" data-i18n="showcase.m3_desc">
+              Dành riêng cho chuyên gia đào tạo, trung tâm tiếng Anh, coach kinh doanh. Lộ trình bài học accordion mở rộng, tạo hiệu ứng khan hiếm và cam kết hoàn tiền uy tín.
+            </p>
+          </div>
+
+          <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-400 space-y-1">
+            <div class="flex items-center gap-1.5 text-indigo-300">
+              <span>✓ Tỷ lệ chuyển đổi: 9.6%</span>
+              <span class="text-slate-500">•</span>
+              <span>Gửi link Zoom &amp; tài liệu tức thì</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-5 grid grid-cols-2 gap-2.5">
+          <a href="demos/course.html" target="_blank" rel="noopener noreferrer" class="py-2.5 px-3 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 hover:text-white font-bold text-xs text-center border border-slate-700 hover:border-indigo-400 transition-all flex items-center justify-center gap-1">
+            <span data-i18n="showcase.btn_view">Xem Live Demo</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
+          <button onclick="chooseTemplate('course', 'Mẫu Khóa Học Masterclass Tự Động Hóa')" class="py-2.5 px-3 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-black text-xs text-center transition-all cursor-pointer" data-i18n="showcase.btn_choose">
+            Chọn Mẫu Này
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 4: Spa & Clinic -->
+      <div class="showcase-card industry-card-3d rounded-3xl p-6 flex flex-col justify-between" data-cat="spa">
+        <div class="space-y-4">
+          <!-- Visual Header -->
+          <div class="h-44 rounded-2xl bg-gradient-to-br from-rose-950/70 to-slate-950 p-4 border border-rose-500/20 relative overflow-hidden flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-rose-500/20 text-rose-300 border border-rose-500/40">
+                THẨM MỸ VIỆN // CLINIC &amp; SPA
+              </span>
+              <span class="text-[11px] font-mono text-rose-400">⚡ Tải 0.6s • CR 12.8%</span>
+            </div>
+            <!-- Mockup Element -->
+            <div class="flex items-center justify-center py-2">
+              <div class="w-16 h-16 rounded-2xl bg-rose-500/20 border border-rose-400/40 flex items-center justify-center text-rose-300 shadow-lg shadow-rose-500/20">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+              </div>
+            </div>
+            <div class="flex items-center justify-between text-[11px] text-slate-400 font-mono">
+              <span>Trước &amp; Sau • Đặt Lịch • Tặng 500K</span>
+              <span class="text-rose-400 font-bold">Medical Standard</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold text-white group-hover:text-rose-400 transition-colors" data-i18n="showcase.m4_title">
+              Aurora Derma Clinic — Spa Chuẩn Y Khoa
+            </h3>
+            <p class="text-xs text-slate-300 mt-2 leading-relaxed" data-i18n="showcase.m4_desc">
+              Dành cho Thẩm mỹ viện, Phòng khám Nha khoa, Spa trị liệu da. Bố cục y khoa sang trọng, bộ so sánh Trước/Sau trực quan và form đặt lịch khám soi da 1-1 tặng voucher.
+            </p>
+          </div>
+
+          <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-400 space-y-1">
+            <div class="flex items-center gap-1.5 text-rose-300">
+              <span>✓ Tỷ lệ chuyển đổi: 12.8%</span>
+              <span class="text-slate-500">•</span>
+              <span>Đẩy lịch về Zalo Lễ tân &lt; 2s</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-5 grid grid-cols-2 gap-2.5">
+          <a href="demos/spa.html" target="_blank" rel="noopener noreferrer" class="py-2.5 px-3 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 hover:text-white font-bold text-xs text-center border border-slate-700 hover:border-rose-400 transition-all flex items-center justify-center gap-1">
+            <span data-i18n="showcase.btn_view">Xem Live Demo</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
+          <button onclick="chooseTemplate('spa', 'Mẫu Thẩm Mỹ Viện Aurora Derma Clinic')" class="py-2.5 px-3 rounded-xl bg-gradient-to-r from-rose-500 to-pink-600 hover:from-rose-400 hover:to-pink-500 text-white font-black text-xs text-center transition-all cursor-pointer" data-i18n="showcase.btn_choose">
+            Chọn Mẫu Này
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 5: B2B SaaS -->
+      <div class="showcase-card industry-card-3d rounded-3xl p-6 flex flex-col justify-between" data-cat="saas">
+        <div class="space-y-4">
+          <!-- Visual Header -->
+          <div class="h-44 rounded-2xl bg-gradient-to-br from-cyan-950/70 to-slate-950 p-4 border border-cyan-500/20 relative overflow-hidden flex flex-col justify-between">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/40">
+                B2B SAAS // MINI-CRM MAY ĐO
+              </span>
+              <span class="text-[11px] font-mono text-cyan-400">⚡ Tải 0.5s • CR 7.2%</span>
+            </div>
+            <!-- Mockup Element -->
+            <div class="flex items-center justify-center py-2">
+              <div class="w-16 h-16 rounded-2xl bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center text-cyan-300 shadow-lg shadow-cyan-500/20">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              </div>
+            </div>
+            <div class="flex items-center justify-between text-[11px] text-slate-400 font-mono">
+              <span>Kanban Live • Tính ROI • Dùng Thử 14 Ngày</span>
+              <span class="text-cyan-400 font-bold">Scalable Architecture</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors" data-i18n="showcase.m5_title">
+              OpsFlow™ — Nền Tảng Lead &amp; Mini-CRM
+            </h3>
+            <p class="text-xs text-slate-300 mt-2 leading-relaxed" data-i18n="showcase.m5_desc">
+              Dành cho công ty phần mềm, dịch vụ B2B, quản lý kho vận. Tích hợp bảng Kanban theo dõi phễu khách hàng, thanh tính toán ROI tiết kiệm chi phí và đăng ký dùng thử tự động.
+            </p>
+          </div>
+
+          <div class="pt-2 border-t border-slate-800 text-[11px] text-slate-400 space-y-1">
+            <div class="flex items-center gap-1.5 text-cyan-300">
+              <span>✓ Tỷ lệ chuyển đổi: 7.2%</span>
+              <span class="text-slate-500">•</span>
+              <span>PostgreSQL 16 &amp; Redis sẵn sàng</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-5 grid grid-cols-2 gap-2.5">
+          <a href="demos/saas.html" target="_blank" rel="noopener noreferrer" class="py-2.5 px-3 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 hover:text-white font-bold text-xs text-center border border-slate-700 hover:border-cyan-400 transition-all flex items-center justify-center gap-1">
+            <span data-i18n="showcase.btn_view">Xem Live Demo</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
+          <button onclick="chooseTemplate('saas', 'Mẫu B2B SaaS OpsFlow Engine')" class="py-2.5 px-3 rounded-xl beveled-btn-primary text-slate-950 font-black text-xs text-center transition-all cursor-pointer" data-i18n="showcase.btn_choose">
+            Chọn Mẫu Này
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= 7. SECTION 05: PHÒNG THÍ NGHIỆM HIỆU NĂNG GOOGLE PAGESPEED 99+ ================= -->
+<section id="performance" class="py-20 bg-slate-950/80 border-t border-slate-800/80 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+      <div class="eyebrow-code" data-i18n="performance.badge">
+        [ 05 // PHÒNG THÍ NGHIỆM HIỆU NĂNG ]
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight gradient-title-platinum" data-i18n="performance.title">
+        Đo Lường Chuẩn Mực — Điểm Google PageSpeed 98–100
+      </h2>
+      <p class="text-slate-400 text-sm sm:text-base leading-relaxed" data-i18n="performance.subtitle">
+        Mỗi 0.1 giây tải chậm khiến doanh nghiệp mất 7% tỷ lệ chuyển đổi. Trang đích TP Teams được lập trình thuần khiết, tối ưu Core Web Vitals, giúp hạ giá thầu quảng cáo từ 15% – 30% và đạt điểm chất lượng ads tối đa.
+      </p>
+    </div>
+
+    <!-- 4 Telemetry Gauges -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12">
+      
+      <!-- Gauge 1: Mobile Performance -->
+      <div class="spatial-gauge rounded-2xl p-5 text-center relative overflow-hidden">
+        <div class="w-20 h-20 mx-auto rounded-full border-4 border-emerald-400/80 flex items-center justify-center shadow-lg shadow-emerald-400/20 mb-3">
+          <span class="text-2xl font-black font-mono text-emerald-300">99</span>
+        </div>
+        <div class="text-xs font-bold text-white uppercase tracking-wider" data-i18n="performance.g1_name">Mobile Performance</div>
+        <div class="text-[11px] text-slate-400 mt-1" data-i18n="performance.g1_desc">Google Lighthouse Mobile</div>
+      </div>
+
+      <!-- Gauge 2: First Contentful Paint -->
+      <div class="spatial-gauge rounded-2xl p-5 text-center relative overflow-hidden">
+        <div class="w-20 h-20 mx-auto rounded-full border-4 border-cyan-400/80 flex items-center justify-center shadow-lg shadow-cyan-400/20 mb-3">
+          <span class="text-2xl font-black font-mono text-cyan-300">0.7s</span>
+        </div>
+        <div class="text-xs font-bold text-white uppercase tracking-wider" data-i18n="performance.g2_name">First Contentful Paint</div>
+        <div class="text-[11px] text-slate-400 mt-1" data-i18n="performance.g2_desc">Mở trang tức thì trên 4G</div>
+      </div>
+
+      <!-- Gauge 3: Cumulative Layout Shift -->
+      <div class="spatial-gauge rounded-2xl p-5 text-center relative overflow-hidden">
+        <div class="w-20 h-20 mx-auto rounded-full border-4 border-blue-400/80 flex items-center justify-center shadow-lg shadow-blue-400/20 mb-3">
+          <span class="text-2xl font-black font-mono text-blue-300">0.00</span>
+        </div>
+        <div class="text-xs font-bold text-white uppercase tracking-wider" data-i18n="performance.g3_name">Layout Shift (CLS)</div>
+        <div class="text-[11px] text-slate-400 mt-1" data-i18n="performance.g3_desc">Tuyệt đối không giật layout</div>
+      </div>
+
+      <!-- Gauge 4: SEO & Best Practices -->
+      <div class="spatial-gauge rounded-2xl p-5 text-center relative overflow-hidden">
+        <div class="w-20 h-20 mx-auto rounded-full border-4 border-purple-400/80 flex items-center justify-center shadow-lg shadow-purple-400/20 mb-3">
+          <span class="text-2xl font-black font-mono text-purple-300">100</span>
+        </div>
+        <div class="text-xs font-bold text-white uppercase tracking-wider" data-i18n="performance.g4_name">SEO &amp; Best Practices</div>
+        <div class="text-[11px] text-slate-400 mt-1" data-i18n="performance.g4_desc">Thân thiện tuyệt đối với Ads Bot</div>
+      </div>
+
+    </div>
+
+    <!-- Comparison Table Card -->
+    <div class="glass-monolith rounded-3xl p-6 sm:p-8 max-w-4xl mx-auto border-cyan-500/20">
+      <h3 class="text-base font-bold text-white mb-4 flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+        <span data-i18n="performance.table_title">Bảng Đối Soát Rò Rỉ Dòng Tiền &amp; Tốc Độ Tải Thực Tế</span>
+      </h3>
+      
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs">
+          <thead>
+            <tr class="border-b border-slate-800 text-slate-400 font-mono">
+              <th class="py-3 px-3">TIÊU CHÍ KỸ THUẬT</th>
+              <th class="py-3 px-3 text-red-400">WEB KÉO THẢ / WORDPRESS</th>
+              <th class="py-3 px-3 text-cyan-300">GIẢI PHÁP TP TEAMS</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60">
+            <tr>
+              <td class="py-3 px-3 font-medium text-white" data-i18n="performance.row1_crit">Thời gian tải trang trên di động 4G</td>
+              <td class="py-3 px-3 text-slate-400" data-i18n="performance.row1_old">4.5s – 7.2s (Rất chậm)</td>
+              <td class="py-3 px-3 font-bold text-emerald-400" data-i18n="performance.row1_tp">&lt; 0.8s (Mở tức thì)</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-3 font-medium text-white" data-i18n="performance.row2_crit">Tỷ lệ khách thoát trang vì phải chờ</td>
+              <td class="py-3 px-3 text-slate-400" data-i18n="performance.row2_old">Mất 45% – 55% khách vừa click</td>
+              <td class="py-3 px-3 font-bold text-emerald-400" data-i18n="performance.row2_tp">Giữ chân 92% – 95% khách truy cập</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-3 font-medium text-white" data-i18n="performance.row3_crit">Tác động lên giá thầu quảng cáo</td>
+              <td class="py-3 px-3 text-slate-400" data-i18n="performance.row3_old">Bị phạt điểm chất lượng, CPC cao</td>
+              <td class="py-3 px-3 font-bold text-emerald-400" data-i18n="performance.row3_tp">Hạ giá click ads từ 15% – 30%</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-3 font-medium text-white" data-i18n="performance.row4_crit">Tốc độ chuyển tiếp đơn về Telegram</td>
+              <td class="py-3 px-3 text-slate-400" data-i18n="performance.row4_old">Trễ 10 – 30 phút qua Google Sheet</td>
+              <td class="py-3 px-3 font-bold text-cyan-400" data-i18n="performance.row4_tp">&lt; 2 Giây (Bắn chuông tức thì)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mt-5 text-center">
+        <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Flanding.votrithuc.click" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-cyan-400 hover:text-cyan-300 transition">
+          <span data-i18n="performance.btn_audit">🔍 Kiểm tra trực tiếp bằng Google PageSpeed Insights trên tên miền thật</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= 8. SECTION 06: QUY TRÌNH BÀN GIAO THẦN TỐC 24H - 48H ================= -->
+<section id="workflow" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800/80">
+  <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+    <div class="eyebrow-code" data-i18n="workflow.badge">
+      [ 06 // QUY TRÌNH &amp; CAM KẾT SLA ]
+    </div>
+    <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight gradient-title-platinum" data-i18n="workflow.title">
+      Triển Khai Thần Tốc Trong 24H – 48H
+    </h2>
+    <p class="text-slate-400 text-sm sm:text-base leading-relaxed" data-i18n="workflow.subtitle">
+      Kỷ luật thực thi chuẩn xác. Chúng tôi hiểu rằng mỗi ngày chậm trễ là một ngày bạn bỏ lỡ cơ hội kinh doanh. Cam kết tiến độ bàn giao minh bạch từng mốc giờ:
+    </p>
+  </div>
+
+  <!-- 4 Stations Timeline -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 relative">
+    
+    <!-- Station 1 -->
+    <div class="timeline-node-3d rounded-2xl p-5 flex flex-col justify-between">
+      <div class="space-y-3">
+        <div class="flex items-center justify-between">
+          <span class="px-2 py-0.5 rounded font-mono text-[10px] font-bold bg-cyan-950 text-cyan-400 border border-cyan-800">
+            MỐC 01
+          </span>
+          <span class="text-[11px] font-mono text-slate-400">GIỜ 0 – 2</span>
+        </div>
+        <h3 class="text-sm font-bold text-white" data-i18n="workflow.s1_title">Tiếp Nhận &amp; Audit Cấu Trúc</h3>
+        <p class="text-xs text-slate-300 leading-relaxed" data-i18n="workflow.s1_desc">
+          Lắng nghe sản phẩm, xác định đối tượng khách hàng mục tiêu và chốt cấu trúc 7 section chuẩn chuyển đổi giữ chân người xem.
+        </p>
+      </div>
+      <div class="mt-4 pt-3 border-t border-slate-800 flex items-center text-[10px] font-mono text-cyan-400">
+        <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 mr-1.5"></span>
+        Khởi tạo Repo &amp; SLA
+      </div>
+    </div>
+
+    <!-- Station 2 -->
+    <div class="timeline-node-3d rounded-2xl p-5 flex flex-col justify-between">
+      <div class="space-y-3">
+        <div class="flex items-center justify-between">
+          <span class="px-2 py-0.5 rounded font-mono text-[10px] font-bold bg-cyan-950 text-cyan-400 border border-cyan-800">
+            MỐC 02
+          </span>
+          <span class="text-[11px] font-mono text-slate-400">GIỜ 2 – 24</span>
+        </div>
+        <h3 class="text-sm font-bold text-white" data-i18n="workflow.s2_title">Thiết Kế 3D &amp; Lập Trình Mobile</h3>
+        <p class="text-xs text-slate-300 leading-relaxed" data-i18n="workflow.s2_desc">
+          Xây dựng giao diện Obsidian Titanium sang trọng, tối ưu hình ảnh định dạng siêu nhẹ, đảm bảo co giãn mượt mà trên mọi màn hình.
+        </p>
+      </div>
+      <div class="mt-4 pt-3 border-t border-slate-800 flex items-center text-[10px] font-mono text-cyan-400">
+        <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 mr-1.5"></span>
+        Code sạch, 0 thư viện rác
+      </div>
+    </div>
+
+    <!-- Station 3 -->
+    <div class="timeline-node-3d rounded-2xl p-5 flex flex-col justify-between">
+      <div class="space-y-3">
+        <div class="flex items-center justify-between">
+          <span class="px-2 py-0.5 rounded font-mono text-[10px] font-bold bg-cyan-950 text-cyan-400 border border-cyan-800">
+            MỐC 03
+          </span>
+          <span class="text-[11px] font-mono text-slate-400">GIỜ 24 – 36</span>
+        </div>
+        <h3 class="text-sm font-bold text-white" data-i18n="workflow.s3_title">Tích Hợp Webhook &amp; Tracking</h3>
+        <p class="text-xs text-slate-300 leading-relaxed" data-i18n="workflow.s3_desc">
+          Kết nối Telegram/Zalo bắn thông báo trong 2 giây. Cấu hình bắt UTM tự động và mã theo dõi Meta Pixel, Google Analytics 4.
+        </p>
+      </div>
+      <div class="mt-4 pt-3 border-t border-slate-800 flex items-center text-[10px] font-mono text-cyan-400">
+        <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 mr-1.5"></span>
+        Webhook &amp; Tracking Live
+      </div>
+    </div>
+
+    <!-- Station 4 -->
+    <div class="timeline-node-3d rounded-2xl p-5 flex flex-col justify-between">
+      <div class="space-y-3">
+        <div class="flex items-center justify-between">
+          <span class="px-2 py-0.5 rounded font-mono text-[10px] font-bold bg-emerald-950 text-emerald-400 border border-emerald-800">
+            MỐC 04
+          </span>
+          <span class="text-[11px] font-mono text-emerald-400">GIỜ 36 – 48</span>
+        </div>
+        <h3 class="text-sm font-bold text-white" data-i18n="workflow.s4_title">Đo Kiểm 3 Lớp &amp; Bàn Giao</h3>
+        <p class="text-xs text-slate-300 leading-relaxed" data-i18n="workflow.s4_desc">
+          Kiểm thử PageSpeed đạt 95+, xác thực form thu lead, bàn giao 100% mã nguồn và kích hoạt chế độ bảo hành kỹ thuật 6 tháng.
+        </p>
+      </div>
+      <div class="mt-4 pt-3 border-t border-slate-800 flex items-center text-[10px] font-mono text-emerald-400">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-1.5"></span>
+        Nghiệm thu 100% hoàn hảo
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SLA Guarantee Box -->
+  <div class="mt-8 p-4 rounded-2xl bg-cyan-950/40 border border-cyan-500/30 text-center text-xs text-slate-300 flex flex-col sm:flex-row items-center justify-center gap-3">
+    <span class="inline-flex items-center gap-1.5 font-bold text-cyan-300">
+      <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      CAM KẾT SLA VÀNG:
+    </span>
+    <span>Nếu tiến độ bàn giao bị chậm trễ quá 48 giờ vì lý do từ phía TP Teams, chúng tôi lập tức <strong>giảm ngay 10% chi phí dự án</strong> cho mỗi ngày trễ hẹn!</span>
+  </div>
+</section>
+
+<!-- ================= 9. SECTION 07: CHI PHÍ ĐẦU TƯ MINH BẠCH & PHÂN TÍCH ROI ================= -->
 <section id="pricing" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800/80">
   <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
     <div class="eyebrow-code" data-i18n="pricing.badge">
-      [ 04 // BẢNG GIÁ &amp; PHÂN TÍCH ROI ]
+      [ 07 // BẢNG GIÁ &amp; PHÂN TÍCH ROI ]
     </div>
     <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight gradient-title-platinum" data-i18n="pricing.title">
       Giá Trị Thực — Chi Phí Cạnh Tranh & Tối Ưu Cho Doanh Nghiệp
     </h2>
     <p class="text-slate-400 text-sm sm:text-base leading-relaxed" data-i18n="pricing.subtitle">
-      Khách hàng sở hữu mã nguồn vĩnh viễn 100%, không bị ép trả tiền thuê bao hàng năm như các nền tảng kéo thả. Đầy đủ bảo hành kỹ thuật từ kỹ sư Viettel.
+      Khách hàng sở hữu mã nguồn vĩnh viễn 100%, không bị ép trả tiền thuê bao hàng năm như các nền tảng kéo thả. Đầy đủ bảo hành kỹ thuật từ đội ngũ kỹ sư TP Teams.
     </p>
   </div>
 
@@ -855,13 +1443,13 @@
   </div>
 </section>
 
-<!-- ================= 7. SECTION 05: HỆ THỐNG LIVE ĐANG VẬN HÀNH ================= -->
+<!-- ================= 10. SECTION 08: HỆ THỐNG LIVE ĐANG VẬN HÀNH ================= -->
 <section id="live-demos" class="py-20 bg-slate-900/40 border-t border-slate-800/80">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
       <div class="eyebrow-code" data-i18n="demos.badge">
-        [ 05 // MINH CHỨNG HỆ THỐNG LIVE ]
+        [ 08 // MINH CHỨNG HỆ THỐNG LIVE ]
       </div>
       <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight gradient-title-platinum" data-i18n="demos.title">
         Sản Phẩm Thật Đang Vận Hành Trên Máy Chủ
@@ -923,7 +1511,7 @@
   </div>
 </section>
 
-<!-- ================= 8. SECTION 06: UY TÍN & KỶ LUẬT VIỄN THÔNG (FOUNDER) ================= -->
+<!-- ================= 11. SECTION 09: CAM KẾT KỸ THUẬT & TRÁCH NHIỆM (FOUNDER) ================= -->
 <section id="founder" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800/80">
   <div class="glass-monolith rounded-3xl p-6 sm:p-10 lg:p-12 relative overflow-hidden">
     
@@ -945,7 +1533,7 @@
       <!-- Founder Mission & Engineering Philosophy -->
       <div class="lg:col-span-8 space-y-5">
         <div class="eyebrow-code" data-i18n="founder.badge">
-          [ 06 // CAM KẾT KỸ THUẬT &amp; TRÁCH NHIỆM ]
+          [ 09 // CAM KẾT KỸ THUẬT &amp; TRÁCH NHIỆM ]
         </div>
 
         <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-snug gradient-title-platinum" data-i18n="founder.title">
@@ -953,7 +1541,7 @@
         </h2>
 
         <p class="text-sm text-slate-300 leading-relaxed font-normal" data-i18n="founder.desc1">
-          Với nền tảng kỹ thuật chính quy tại <strong>Đại học Công nghiệp Hà Nội (HaUI)</strong> và kinh nghiệm thực chiến làm việc tại <strong>Tập đoàn Công nghiệp - Viễn thông Quân đội (Viettel)</strong>, tôi mang tư duy kỷ luật hệ thống viễn thông vào từng dòng mã: chịu tải cao, an toàn dữ liệu và tối ưu từng mili-giây trải nghiệm người dùng.
+          Với nền tảng kỹ thuật chính quy tại <strong>Đại học Công nghiệp Hà Nội (HaUI)</strong> và kinh nghiệm thực chiến trong phát triển các hệ thống chịu tải cao, tôi mang tư duy kiến trúc chuẩn mực vào từng dòng mã: chịu tải lớn, an toàn dữ liệu và tối ưu từng mili-giây trải nghiệm người dùng.
         </p>
 
         <p class="text-sm text-slate-300 leading-relaxed font-normal" data-i18n="founder.desc2">
@@ -982,11 +1570,11 @@
   </div>
 </section>
 
-<!-- ================= 9. SECTION 07: CÂU HỎI THƯỜNG GẶP (FAQ) ================= -->
+<!-- ================= 12. SECTION 10: CÂU HỎI THƯỜNG GẶP (FAQ) ================= -->
 <section id="faq" class="py-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
   <div class="text-center mb-12 space-y-3">
-    <div class="eyebrow-code" data-i18n="faq.badge">[ 07 // GIẢI ĐÁP BĂN KHOĂN ]</div>
-    <h2 class="text-2xl sm:text-3xl font-extrabold text-white gradient-title-platinum" data-i18n="faq.title">Câu Hỏi Thường Gặp Khi Hợp Tác Với TP Teams</h2>
+    <div class="eyebrow-code" data-i18n="faq.badge">[ 10 // GIẢI ĐÁP BĂN KHOĂN ]</div>
+    <h2 class="text-2xl sm:text-3xl font-extrabold text-white gradient-title-platinum" data-i18n="faq.title">Câu Hỏi Thường GẶp Khi Hợp Tác Với TP Teams</h2>
   </div>
 
   <div class="space-y-4 text-sm">
@@ -1002,18 +1590,18 @@
 
     <div class="glass-monolith p-5 rounded-2xl">
       <h3 class="font-bold text-white mb-1" data-i18n="faq.q3">3. Sau khi bàn giao, nếu có lỗi phát sinh thì sao?</h3>
-      <p class="text-xs text-slate-300 leading-relaxed" data-i18n="faq.a3">Chúng tôi bảo hành kỹ thuật miễn phí từ 3 đến 6 tháng tùy gói. Đội ngũ kỹ sư Viettel cam kết hỗ trợ trực tiếp và khắc phục sự cố trong vòng tối đa 4–8 giờ làm việc.</p>
+      <p class="text-xs text-slate-300 leading-relaxed" data-i18n="faq.a3">Chúng tôi bảo hành kỹ thuật miễn phí từ 3 đến 6 tháng tùy gói. Đội ngũ kỹ sư TP Teams cam kết hỗ trợ trực tiếp và khắc phục sự cố trong vòng tối đa 4–8 giờ làm việc.</p>
     </div>
   </div>
 </section>
 
-<!-- ================= 10. SECTION 08: FORM ĐĂNG KÝ TƯ VẤN & BÁO GIÁ ================= -->
+<!-- ================= 13. SECTION 11: FORM ĐĂNG KÝ TƯ VẤN & BÁO GIÁ ================= -->
 <section id="contact" class="py-20 bg-slate-900/60 border-t border-slate-800/80 relative">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <div class="text-center mb-10 sm:mb-12 space-y-3">
       <div class="eyebrow-code" data-i18n="contact.badge">
-        [ 08 // KẾT NỐI KỸ SƯ TRỰC TIẾP ]
+        [ 11 // KẾT NỐI KỸ SƯ TRỰC TIẾP ]
       </div>
       <h2 class="text-3xl sm:text-4xl font-black text-white gradient-title-platinum" data-i18n="contact.title">
         Gửi Yêu Cầu — Founder Phản Hồi Trực Tiếp Trong 5–15 Phút
@@ -1074,6 +1662,11 @@
               <option value="Gói 2: Landing Page Chuyên Sâu (D1 Pro) - 3.8 Triệu" data-i18n-opt="form.opt2">Gói 2: Landing Page Chuyên Sâu (D1 Pro) — 3.8 Triệu (Khuyên dùng)</option>
               <option value="Gói 3: Trang đích + Mini-CRM (D1 + D2) - 8.9 Triệu" data-i18n-opt="form.opt3">Gói 3: Trang đích + Mini-CRM (D1 + D2) — 8.9 Triệu</option>
               <option value="Gói 4: Tự động hóa & AI Riêng (D3) - May đo" data-i18n-opt="form.opt4">Gói 4: Tự động hóa & AI Riêng (D3) — May đo theo yêu cầu</option>
+              <option value="Mẫu E-Commerce / Flash Sale (D1 Pro)" data-i18n-opt="form.opt_ecom">Mẫu Thực Chiến: E-Commerce & Flash Sale</option>
+              <option value="Mẫu Bất Động Sản Cao Cấp (D1 Pro)" data-i18n-opt="form.opt_re">Mẫu Thực Chiến: Bất Động Sản Hạng Sang</option>
+              <option value="Mẫu Khóa Học / Đào Tạo (D1 Pro)" data-i18n-opt="form.opt_course">Mẫu Thực Chiến: Khóa Học & Đào Tạo</option>
+              <option value="Mẫu Thẩm Mỹ Viện / Spa (D1 Pro)" data-i18n-opt="form.opt_spa">Mẫu Thực Chiến: Thẩm Mỹ Viện & Spa</option>
+              <option value="Mẫu B2B SaaS / Mini-CRM (D1 + D2)" data-i18n-opt="form.opt_saas">Mẫu Thực Chiến: B2B SaaS & Mini-CRM</option>
             </select>
           </div>
         </div>
@@ -1280,6 +1873,9 @@
       "nav.pain": "Nỗi Đau",
       "nav.vs_ai": "Đối Soát AI",
       "nav.sandbox": "Thử Nghiệm",
+      "nav.showcase": "Kho Demo",
+      "nav.performance": "Hiệu Năng",
+      "nav.workflow": "Quy Trình 24H",
       "nav.solutions": "Bảng Giá",
       "nav.demos": "Minh Chứng",
       "nav.founder": "Founder",
@@ -1364,7 +1960,67 @@
       "d1demo.opt4": "Quan tâm Gói Landing Page + Mini-CRM (8.9 Triệu)",
       "d1demo.submit_btn": "BẤM ĐỂ BẮN THÔNG BÁO TỨC THÌ (TEST LIVE 2S)",
 
-      "pricing.badge": "[ 04 // BẢNG GIÁ & PHÂN TÍCH ROI ]",
+      "showcase.badge": "[ 04 // THƯ VIỆN DEMO 3D ĐA NGÀNH ]",
+      "showcase.title": "Bộ Sưu Tập Trang Đích Thực Chiến — Chuẩn Chuyển Đổi Từng Ngành",
+      "showcase.subtitle": "Không chỉ cung cấp mã nguồn, TP Teams đúc kết cấu trúc chuyển đổi chuẩn cho từng ngành hàng cụ thể. Tải trang dưới 0.8s, kết nối webhook < 2s và tối đa tỷ lệ chốt đơn ngay lập tức.",
+      "showcase.tab_all": "Tất Cả (5 Mẫu)",
+      "showcase.tab_ecom": "🛒 E-Commerce & Flash Sale",
+      "showcase.tab_re": "🏢 Bất Động Sản Hạng Sang",
+      "showcase.tab_course": "🎓 Khóa Học & Đào Tạo",
+      "showcase.tab_spa": "💆 Thẩm Mỹ Viện & Spa",
+      "showcase.tab_saas": "⚙️ B2B SaaS & Mini-CRM",
+      "showcase.m1_title": "CyberPulse Pro™ — Bán Hàng E-Commerce",
+      "showcase.m1_desc": "Tối ưu cho bán lẻ sản phẩm vật lý, đồ công nghệ, gia dụng. Tích hợp đồng hồ Flash Sale đếm ngược, bộ chọn màu sắc tương tác và form mua hàng 1-chạm gửi webhook trong 2s.",
+      "showcase.m2_title": "The Obsidian Sky — Căn Hộ Hạng Sang",
+      "showcase.m2_desc": "Thiết kế theo chuẩn nhận diện cao cấp (Champagne Gold & Titanium). Tương tác xem mặt bằng căn hộ 1PN-2PN-3PN và form tải bảng giá gốc tự động qua Zalo.",
+      "showcase.m3_title": "Masterclass Tự Động Hóa Vận Hành",
+      "showcase.m3_desc": "Dành riêng cho chuyên gia đào tạo, trung tâm tiếng Anh, coach kinh doanh. Lộ trình bài học accordion mở rộng, tạo hiệu ứng khan hiếm và cam kết hoàn tiền uy tín.",
+      "showcase.m4_title": "Aurora Derma Clinic — Spa Chuẩn Y Khoa",
+      "showcase.m4_desc": "Dành cho Thẩm mỹ viện, Phòng khám Nha khoa, Spa trị liệu da. Bố cục y khoa sang trọng, bộ so sánh Trước/Sau trực quan và form đặt lịch khám soi da 1-1 tặng voucher.",
+      "showcase.m5_title": "OpsFlow™ — Nền Tảng Lead & Mini-CRM",
+      "showcase.m5_desc": "Dành cho công ty phần mềm, dịch vụ B2B, quản lý kho vận. Tích hợp bảng Kanban theo dõi phễu khách hàng, thanh tính toán ROI tiết kiệm chi phí và đăng ký dùng thử tự động.",
+      "showcase.btn_view": "Xem Live Demo",
+      "showcase.btn_choose": "Chọn Mẫu Này",
+
+      "performance.badge": "[ 05 // PHÒNG THÍ NGHIỆM HIỆU NĂNG ]",
+      "performance.title": "Đo Lường Chuẩn Mực — Điểm Google PageSpeed 98–100",
+      "performance.subtitle": "Mỗi 0.1 giây tải chậm khiến doanh nghiệp mất 7% tỷ lệ chuyển đổi. Trang đích TP Teams được lập trình thuần khiết, tối ưu Core Web Vitals, giúp hạ giá thầu quảng cáo từ 15% – 30% và đạt điểm chất lượng ads tối đa.",
+      "performance.g1_name": "Mobile Performance",
+      "performance.g1_desc": "Google Lighthouse Mobile",
+      "performance.g2_name": "First Contentful Paint",
+      "performance.g2_desc": "Mở trang tức thì trên 4G",
+      "performance.g3_name": "Layout Shift (CLS)",
+      "performance.g3_desc": "Tuyệt đối không giật layout",
+      "performance.g4_name": "SEO & Best Practices",
+      "performance.g4_desc": "Thân thiện tuyệt đối với Ads Bot",
+      "performance.table_title": "Bảng Đối Soát Rò Rỉ Dòng Tiền & Tốc Độ Tải Thực Tế",
+      "performance.row1_crit": "Thời gian tải trang trên di động 4G",
+      "performance.row1_old": "4.5s – 7.2s (Rất chậm)",
+      "performance.row1_tp": "< 0.8s (Mở tức thì)",
+      "performance.row2_crit": "Tỷ lệ khách thoát trang vì phải chờ",
+      "performance.row2_old": "Mất 45% – 55% khách vừa click",
+      "performance.row2_tp": "Giữ chân 92% – 95% khách truy cập",
+      "performance.row3_crit": "Tác động lên giá thầu quảng cáo",
+      "performance.row3_old": "Bị phạt điểm chất lượng, CPC cao",
+      "performance.row3_tp": "Hạ giá click ads từ 15% – 30%",
+      "performance.row4_crit": "Tốc độ chuyển tiếp đơn về Telegram",
+      "performance.row4_old": "Trễ 10 – 30 phút qua Google Sheet",
+      "performance.row4_tp": "< 2 Giây (Bắn chuông tức thì)",
+      "performance.btn_audit": "🔍 Kiểm tra trực tiếp bằng Google PageSpeed Insights trên tên miền thật",
+
+      "workflow.badge": "[ 06 // QUY TRÌNH & CAM KẾT SLA ]",
+      "workflow.title": "Triển Khai Thần Tốc Trong 24H – 48H",
+      "workflow.subtitle": "Kỷ luật thực thi chuẩn xác. Chúng tôi hiểu rằng mỗi ngày chậm trễ là một ngày bạn bỏ lỡ cơ hội kinh doanh. Cam kết tiến độ bàn giao minh bạch từng mốc giờ:",
+      "workflow.s1_title": "Tiếp Nhận & Audit Cấu Trúc",
+      "workflow.s1_desc": "Lắng nghe sản phẩm, xác định đối tượng khách hàng mục tiêu và chốt cấu trúc 7 section chuẩn chuyển đổi giữ chân người xem.",
+      "workflow.s2_title": "Thiết Kế 3D & Lập Trình Mobile",
+      "workflow.s2_desc": "Xây dựng giao diện Obsidian Titanium sang trọng, tối ưu hình ảnh định dạng siêu nhẹ, đảm bảo co giãn mượt mà trên mọi màn hình.",
+      "workflow.s3_title": "Tích Hợp Webhook & Tracking",
+      "workflow.s3_desc": "Kết nối Telegram/Zalo bắn thông báo trong 2 giây. Cấu hình bắt UTM tự động và mã theo dõi Meta Pixel, Google Analytics 4.",
+      "workflow.s4_title": "Đo Kiểm 3 Lớp & Bàn Giao",
+      "workflow.s4_desc": "Kiểm thử PageSpeed đạt 95+, xác thực form thu lead, bàn giao 100% mã nguồn và kích hoạt chế độ bảo hành kỹ thuật 6 tháng.",
+
+      "pricing.badge": "[ 07 // BẢNG GIÁ & PHÂN TÍCH ROI ]",
       "pricing.title": "Giá Trị Thực — Chi Phí Cạnh Tranh & Tối Ưu Cho Doanh Nghiệp",
       "pricing.subtitle": "Khách hàng sở hữu mã nguồn vĩnh viễn 100%, không bị ép trả tiền thuê bao hàng năm như các nền tảng kéo thả. Đầy đủ bảo hành kỹ thuật chuyên sâu.",
       "pricing.p1_badge": "GÓI KHỞI ĐỘNG ADS",
@@ -1401,7 +2057,7 @@
       "pricing.p3_f5": "Báo cáo doanh thu & xuất dữ liệu khách hàng an toàn chỉ với 1-click",
       "pricing.p3_btn": "Chọn Gói Mini-CRM (8.9 Tr)",
 
-      "demos.badge": "[ 05 // MINH CHỨNG HỆ THỐNG LIVE ]",
+      "demos.badge": "[ 08 // MINH CHỨNG HỆ THỐNG LIVE ]",
       "demos.title": "Sản Phẩm Thật Đang Vận Hành Trên Máy Chủ",
       "demos.subtitle": "Khách hàng có thể truy cập trực tiếp các đường link bên dưới để kiểm tra hệ sinh thái thực tế do TP Teams phát triển:",
       "demos.d1_name": "VTT Careers — Cổng Ứng Viên Công Khai",
@@ -1411,12 +2067,12 @@
       "demos.d2_desc": "Bảng điều khiển cho nhà tuyển dụng: Bấm \"Khám phá Trực tiếp Demo (1-Click Recruiter)\" để xem ngay 15 ứng viên thật, bảng Kanban và tính năng AI JD Writer.",
       "demos.d2_btn": "Đăng Nhập 1-Click Thử Nghiệm HRM",
 
-      "founder.badge": "[ 06 // CAM KẾT KỸ THUẬT & TRÁCH NHIỆM ]",
+      "founder.badge": "[ 09 // CAM KẾT KỸ THUẬT & TRÁCH NHIỆM ]",
       "founder.role": "Senior Software Engineer • HaUI Alumnus",
       "founder.org": "Founder & Lead Solutions Architect — TP Teams",
       "founder.edu": "Kỹ sư Công nghệ Thông tin — Đại học Công nghiệp Hà Nội (HaUI)",
       "founder.title": '"Chúng tôi không bán mã nguồn để ngắm. Chúng tôi cung cấp giải pháp bảo vệ dòng tiền và tạo ra doanh thu."',
-      "founder.desc1": "Với nền tảng kỹ thuật chính quy tại Đại học Công nghiệp Hà Nội (HaUI) và kinh nghiệm thực chiến làm việc tại Tập đoàn Công nghiệp - Viễn thông Quân đội (Viettel), tôi mang tư duy kỷ luật hệ thống viễn thông vào từng dòng mã: chịu tải cao, an toàn dữ liệu và tối ưu từng mili-giây trải nghiệm người dùng.",
+      "founder.desc1": "Với nền tảng kỹ thuật chính quy tại Đại học Công nghiệp Hà Nội (HaUI) và kinh nghiệm thực chiến phát triển các hệ thống chịu tải cao, tôi mang tư duy kiến trúc chuẩn mực vào từng dòng mã: chịu tải cao, an toàn dữ liệu và tối ưu từng mili-giây trải nghiệm người dùng.",
       "founder.desc2": "Mỗi sản phẩm do TP Teams bàn giao đều tuân thủ nguyên tắc 3 Không: Không công nghệ thừa thãi, Không giấu giếm mã nguồn, và Không bỏ rơi khách hàng sau nghiệm thu. Bạn nhận được giải pháp hoàn chỉnh với quy trình kiểm thử 3 lớp nghiêm ngặt.",
       "founder.c1_title": "Mã nguồn minh bạch:",
       "founder.c1_desc": "Bàn giao 100% Repository, Dockerfile & tài liệu vận hành.",
@@ -1425,17 +2081,17 @@
       "founder.c3_title": "Hỗ trợ kỹ thuật:",
       "founder.c3_desc": "Đồng hành bảo trì, sao lưu dữ liệu và giám sát hệ thống 24/7.",
 
-      "faq.badge": "[ 07 // GIẢI ĐÁP BĂN KHOĂN ]",
+      "faq.badge": "[ 10 // GIẢI ĐÁP BĂN KHOĂN ]",
       "faq.title": "Câu Hỏi Thường Gặp Khi Hợp Tác Với TP Teams",
       "faq.q1": "1. Tôi dùng thử AI tạo web thì có thay thế được TP Teams không?",
       "faq.a1": "AI chỉ có thể xuất ra file HTML giao diện tĩnh. AI không biết cấu hình server VPS, không biết cài Webhook đẩy chuông Telegram trong 2 giây, không bắt được UTM từ khóa quảng cáo và không chịu trách nhiệm khi form bị lỗi làm mất khách. TP Teams giải quyết trọn gói bài toán vận hành đó cho bạn.",
       "faq.q2": "2. Trang đích của TP Teams có phải trả phí duy trì hàng năm không?",
       "faq.a2": "Không! Bạn chỉ trả phí một lần duy nhất từ 1.9 triệu, sở hữu toàn bộ mã nguồn vĩnh viễn. Không giống như LadiPage phải đóng 3.5 - 6 triệu/năm, bạn hoàn toàn làm chủ tài sản số của mình.",
       "faq.q3": "3. Sau khi bàn giao, nếu có lỗi phát sinh thì sao?",
-      "faq.a3": "Chúng tôi bảo hành kỹ thuật miễn phí từ 3 đến 6 tháng tùy gói. Đội ngũ kỹ sư Viettel cam kết hỗ trợ trực tiếp và khắc phục sự cố trong vòng tối đa 4–8 giờ làm việc.",
+      "faq.a3": "Chúng tôi bảo hành kỹ thuật miễn phí từ 3 đến 6 tháng tùy gói. Đội ngũ kỹ sư TP Teams cam kết hỗ trợ trực tiếp và khắc phục sự cố trong vòng tối đa 4–8 giờ làm việc.",
 
-      "contact.badge": "[ 08 // KẾT NỐI KỸ SƯ TRỰC TIẾP ]",
-      "contact.title": "Gửi Yêu Cầu — Kỹ Sư Viettel Phản Hồi Trong 5–15 Phút",
+      "contact.badge": "[ 11 // KẾT NỐI KỸ SƯ TRỰC TIẾP ]",
+      "contact.title": "Gửi Yêu Cầu — Founder Phản Hồi Trực Tiếp Trong 5–15 Phút",
       "contact.subtitle": "Hãy mô tả bài toán kinh doanh hoặc sản phẩm của bạn. Kỹ sư Võ Trí Thức sẽ kết nối và tư vấn phương án tối ưu chi phí ngay trong 5–15 phút.",
       "form.name": "Họ và tên của bạn *",
       "form.name_ph": "VD: Nguyễn Văn Nam",
@@ -1448,16 +2104,21 @@
       "form.opt2": "Gói 2: Landing Page Chuyên Sâu (D1 Pro) — 3.8 Triệu (Khuyên dùng)",
       "form.opt3": "Gói 3: Trang đích + Mini-CRM (D1 + D2) — 8.9 Triệu",
       "form.opt4": "Gói 4: Phát triển Phần mềm, Web App & AI (D3) — May đo theo yêu cầu",
+      "form.opt_ecom": "Mẫu Thực Chiến: E-Commerce & Flash Sale",
+      "form.opt_re": "Mẫu Thực Chiến: Bất Động Sản Hạng Sang",
+      "form.opt_course": "Mẫu Thực Chiến: Khóa Học & Đào Tạo",
+      "form.opt_spa": "Mẫu Thực Chiến: Thẩm Mỹ Viện & Spa",
+      "form.opt_saas": "Mẫu Thực Chiến: B2B SaaS & Mini-CRM",
       "form.message": "Mô tả bài toán / Sản phẩm kinh doanh",
       "form.message_ph": "VD: Cần làm landing page bán hàng, hoặc phát triển hệ thống phần mềm quản lý CRM, Web App, tích hợp AI...",
       "form.submit": "GỬI YÊU CẦU & NHẬN TƯ VẤN TRONG 5–15 PHÚT",
 
-      "footer.copy": "© 2026 TP Teams. Sáng lập bởi Võ Trí Thức (Software Engineer @ Viettel, HaUI Alumnus).",
+      "footer.copy": "© 2026 TP Teams. Sáng lập bởi Võ Trí Thức (Senior Software Engineer, HaUI Alumnus).",
       "footer.jobs": "Jobs Portal",
       "footer.hrm": "HRM Cockpit",
       "floating.telegram": "Chat Telegram với Founder",
       "floating.zalo": "Chat Zalo với Founder",
-      "floating.hotline": "Gọi Hotline Kỹ sư Viettel",
+      "floating.hotline": "Gọi Hotline Kỹ sư TP Teams",
       "modal.close_btn": "Đóng Thông Báo",
 
       "ai.trigger_title": "Trợ Lý AI Kỹ Sư",
@@ -1472,7 +2133,7 @@
       "ai.chip_t3": "🤖 Tích Hợp AI & Tự Động Hóa",
       "ai.chip_q3": "Tôi muốn tích hợp Trợ lý AI thông minh và Bot tự động hóa quy trình vận hành doanh nghiệp",
       "ai.chip_t4": "🛠️ May Đo Dự Án Phần Mềm",
-      "ai.chip_q4": "Tôi có bài toán phần mềm riêng cần Kỹ sư Viettel tư vấn kiến trúc hệ thống và báo giá may đo"
+      "ai.chip_q4": "Tôi có bài toán phần mềm riêng cần Kỹ sư TP Teams tư vấn kiến trúc hệ thống và báo giá may đo"
     },
 
     en: {
@@ -1480,6 +2141,9 @@
       "nav.pain": "Pain Points",
       "nav.vs_ai": "AI Comparison",
       "nav.sandbox": "Live Sandbox",
+      "nav.showcase": "Showcase",
+      "nav.performance": "Speed Lab",
+      "nav.workflow": "24H SLA",
       "nav.solutions": "Pricing",
       "nav.demos": "Live Demos",
       "nav.founder": "Founder",
@@ -1564,7 +2228,67 @@
       "d1demo.opt4": "Interested in D1 + D2 Mini-CRM Package (8.9M VND)",
       "d1demo.submit_btn": "TRIGGER INSTANT NOTIFICATION (TEST LIVE 2S)",
 
-      "pricing.badge": "[ 04 // PRICING & ROI AUDIT ]",
+      "showcase.badge": "[ 04 // 3D BESPOKE INDUSTRY SHOWCASE ]",
+      "showcase.title": "Battle-Tested Landing Page Collection — Tailored Conversion Architecture",
+      "showcase.subtitle": "Beyond rock-solid software infrastructure, TP Teams crafts proven conversion blueprints for specific high-stakes niches: sub-0.8s mobile speed, sub-2s Telegram webhooks, and maximum conversion rates.",
+      "showcase.tab_all": "All (5 Blueprints)",
+      "showcase.tab_ecom": "🛒 E-Commerce & Flash Sale",
+      "showcase.tab_re": "🏢 Luxury Real Estate",
+      "showcase.tab_course": "🎓 Courses & Coaching",
+      "showcase.tab_spa": "💆 Aesthetics & Medical Spa",
+      "showcase.tab_saas": "⚙️ B2B SaaS & Mini-CRM",
+      "showcase.m1_title": "CyberPulse Pro™ — E-Commerce & Retail",
+      "showcase.m1_desc": "Optimized for physical product drops and gadgets. Features countdown flash sales, interactive 3D color variants, and a 1-tap checkout form pushing webhooks in 2s.",
+      "showcase.m2_title": "The Obsidian Sky — Luxury Residences",
+      "showcase.m2_desc": "Engineered with champagne gold & titanium aesthetics. Features interactive 1BR-2BR-3BR floor blueprints and automated brochure delivery via instant messaging.",
+      "showcase.m3_title": "Operational Automation Masterclass",
+      "showcase.m3_desc": "Tailored for mentors, coaches, and education institutions. Expandable curriculum accordion, verified student reviews, and an ironclad money-back guarantee.",
+      "showcase.m4_title": "Aurora Derma Clinic — Medical Aesthetics",
+      "showcase.m4_desc": "Engineered for plastic surgery, dental, and medical spas. Elegant clinical visual hierarchy, interactive Before & After slider, and 1-on-1 consultation booking.",
+      "showcase.m5_title": "OpsFlow™ — Lead Hub & Mini-CRM",
+      "showcase.m5_desc": "Tailored for B2B services, logistics, and agencies. Live Kanban sales pipeline preview, interactive ROI savings calculator, and 14-day free trial signup.",
+      "showcase.btn_view": "View Live Demo",
+      "showcase.btn_choose": "Select This Template",
+
+      "performance.badge": "[ 05 // PERFORMANCE TELEMETRY LAB ]",
+      "performance.title": "Engineering Benchmark — Google PageSpeed 98–100 Scores",
+      "performance.subtitle": "Every 100ms of latency costs businesses 7% in lost conversions. TP Teams builds unbloated, pure web software to boost ad quality scores and reduce CPC by 15% to 30%.",
+      "performance.g1_name": "Mobile Performance",
+      "performance.g1_desc": "Google Lighthouse Mobile",
+      "performance.g2_name": "First Contentful Paint",
+      "performance.g2_desc": "Instant paint on 4G networks",
+      "performance.g3_name": "Layout Shift (CLS)",
+      "performance.g3_desc": "Zero visual jitter or jumping buttons",
+      "performance.g4_name": "SEO & Best Practices",
+      "performance.g4_desc": "100% compliant with Ads Bots",
+      "performance.table_title": "Technical Performance & Ad Spend Leakage Audit",
+      "performance.row1_crit": "Real-world mobile 4G load time",
+      "performance.row1_old": "4.5s – 7.2s (Painfully slow)",
+      "performance.row1_tp": "< 0.8s (Instant open)",
+      "performance.row2_crit": "Visitor bounce rate from waiting",
+      "performance.row2_old": "Loses 45% – 55% of paid clicks",
+      "performance.row2_tp": "Retains 92% – 95% of traffic",
+      "performance.row3_crit": "Impact on ad auction bidding",
+      "performance.row3_old": "Penalized quality score, expensive CPC",
+      "performance.row3_tp": "Reduces click costs by 15% – 30%",
+      "performance.row4_crit": "Telegram lead dispatch speed",
+      "performance.row4_old": "10 – 30 min delays via Google Sheets",
+      "performance.row4_tp": "< 2 Seconds (Audible alert)",
+      "performance.btn_audit": "🔍 Audit live URL directly with Google PageSpeed Insights",
+
+      "workflow.badge": "[ 06 // SPRINT TIMELINE & SLA ]",
+      "workflow.title": "Rapid Turnkey Deployment Within 24H – 48H",
+      "workflow.subtitle": "Rigorous execution discipline. Every day of delay is a lost revenue window. Our transparent milestone schedule guarantees delivery:",
+      "workflow.s1_title": "Intake & Structural Audit",
+      "workflow.s1_desc": "Examine product economics, identify target demographics, and lock in the 7-step conversion wireframe.",
+      "workflow.s2_title": "3D UI & Mobile-First Code",
+      "workflow.s2_desc": "Obsidian Titanium design system, ultra-light vector graphics, responsive across all screen dimensions.",
+      "workflow.s3_title": "Webhook & Tracking Setup",
+      "workflow.s3_desc": "Integrate 2s Telegram/messaging webhook alerts. Connect Meta Pixel CAPI, Google Analytics 4, TikTok Pixel.",
+      "workflow.s4_title": "3-Tier Verification & Handover",
+      "workflow.s4_desc": "Verify PageSpeed 95+, end-to-end form audits, 100% full source code handover, and 6-month warranty activation.",
+
+      "pricing.badge": "[ 07 // PRICING & ROI AUDIT ]",
       "pricing.title": "Real Value — Competitive & Transparent Investment",
       "pricing.subtitle": "Clients hold 100% perpetual source code ownership without recurring subscription fees. Backed by dedicated technical warranty.",
       "pricing.p1_badge": "ADS STARTER PACK",
@@ -1601,7 +2325,7 @@
       "pricing.p3_f5": "1-Click revenue analytics & secure customer data export",
       "pricing.p3_btn": "Select Mini-CRM Plan",
 
-      "demos.badge": "[ 05 // VERIFIED LIVE DEMOS ]",
+      "demos.badge": "[ 08 // VERIFIED LIVE DEMOS ]",
       "demos.title": "Live Systems Operating On Cloud",
       "demos.subtitle": "Directly test operating production applications built and managed by TP Teams:",
       "demos.d1_name": "VTT Careers — Public Candidate Portal",
@@ -1611,7 +2335,7 @@
       "demos.d2_desc": "Recruiter dashboard: Click \"Explore 1-Click Recruiter Demo\" to inspect 15 verified candidates, Kanban pipeline, and DeepSeek AI JD Writer.",
       "demos.d2_btn": "1-Click Recruiter Demo Access",
 
-      "founder.badge": "[ 06 // TECHNICAL INTEGRITY & WARRANTY ]",
+      "founder.badge": "[ 09 // TECHNICAL INTEGRITY & WARRANTY ]",
       "founder.role": "Senior Software Engineer • HaUI Alumnus",
       "founder.org": "Founder & Lead Solutions Architect — TP Teams",
       "founder.edu": "IT Engineer — Hanoi University of Industry (HaUI)",
@@ -1625,7 +2349,7 @@
       "founder.c3_title": "Technical Support:",
       "founder.c3_desc": "Ongoing maintenance, backups, and 24/7 monitoring.",
 
-      "faq.badge": "[ 07 // PRACTICAL FAQ ]",
+      "faq.badge": "[ 10 // PRACTICAL FAQ ]",
       "faq.title": "Frequently Asked Questions About TP Teams",
       "faq.q1": "1. Can raw AI-generated code replace TP Teams?",
       "faq.a1": "AI only outputs static HTML markup. It cannot configure VPS servers, cannot hook up sub-2s audible Telegram alerts, cannot track UTM keywords, and carries zero accountability when broken forms lose paying customers. TP Teams manages the entire production lifecycle for you.",
@@ -1634,7 +2358,7 @@
       "faq.q3": "3. What happens if a technical bug occurs post-handover?",
       "faq.a3": "We provide 3 to 6 months of complimentary warranty. Our dedicated engineering team directly responds and resolves verified bugs within 4 to 8 business hours.",
 
-      "contact.badge": "[ 08 // DIRECT CONSULTATION ]",
+      "contact.badge": "[ 11 // DIRECT CONSULTATION ]",
       "contact.title": "Submit Inquiry — Founder & Tech Lead Responds Within 5–15 Minutes",
       "contact.subtitle": "Describe your business challenge or product. Engineer Vo Tri Thuc will connect directly to provide an optimized plan within 5–15 minutes.",
       "form.name": "Your Full Name *",
@@ -1648,11 +2372,16 @@
       "form.opt2": "Package 2: Landing Page Pro (D1 Pro) — 3.8M VND (Recommended)",
       "form.opt3": "Package 3: Landing Page + Mini-CRM (D1 + D2) — 8.9M VND",
       "form.opt4": "Package 4: Custom Software, Web App & AI (D3) — Bespoke Quote",
+      "form.opt_ecom": "Battle-Tested: E-Commerce & Flash Sale",
+      "form.opt_re": "Battle-Tested: Luxury Real Estate",
+      "form.opt_course": "Battle-Tested: Courses & Coaching",
+      "form.opt_spa": "Battle-Tested: Medical Spa & Aesthetics",
+      "form.opt_saas": "Battle-Tested: B2B SaaS & Mini-CRM",
       "form.message": "Project Description / Business Scope",
       "form.message_ph": "e.g. Need a high-converting landing page, or custom software/CRM/Web App development, AI integration...",
       "form.submit": "SUBMIT INQUIRY & GET CONSULTATION WITHIN 5–15 MINS",
 
-      "footer.copy": "© 2026 TP Teams. Founded by Vo Tri Thuc (Software Engineer @ Viettel, HaUI Alumnus).",
+      "footer.copy": "© 2026 TP Teams. Founded by Vo Tri Thuc (Senior Software Engineer, HaUI Alumnus).",
       "footer.jobs": "Jobs Portal",
       "footer.hrm": "HRM Cockpit",
       "floating.telegram": "Chat Telegram with Founder",
@@ -1672,7 +2401,7 @@
       "ai.chip_t3": "🤖 AI & Workflow Automation",
       "ai.chip_q3": "I want to integrate custom AI assistants and workflow automation bots for business operations",
       "ai.chip_t4": "🛠️ Bespoke Software Project",
-      "ai.chip_q4": "I have a custom software project and need a Viettel Engineer for architecture consulting and quote"
+      "ai.chip_q4": "I have a custom software project and need a Senior TP Teams Engineer for architecture consulting and quote"
     }
   };
 
@@ -1776,7 +2505,67 @@
       utm_source: urlParams.get('utm_source') || '',
       utm_medium: urlParams.get('utm_medium') || '',
       utm_campaign: urlParams.get('utm_campaign') || '',
+      utm_term: urlParams.get('utm_term') || '',
+      utm_content: urlParams.get('utm_content') || ''
     };
+  }
+
+  // ================= 3D INDUSTRY SHOWCASE FILTER & SELECTION =================
+  function filterShowcase(category) {
+    const cards = document.querySelectorAll('.showcase-card');
+    const tabs = document.querySelectorAll('.filter-tab-btn');
+    
+    tabs.forEach(tab => {
+      if (tab.id === 'tab-' + category) {
+        tab.classList.add('active');
+      } else {
+        tab.classList.remove('active');
+      }
+    });
+
+    cards.forEach(card => {
+      if (category === 'all' || card.getAttribute('data-cat') === category) {
+        card.style.display = 'flex';
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(10px) scale(0.98)';
+        setTimeout(() => {
+          card.style.transition = 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)';
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0) scale(1)';
+        }, 20);
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  function chooseTemplate(templateKey, templateName) {
+    const leadMsg = document.getElementById('leadMsg');
+    const leadType = document.getElementById('leadType');
+    
+    if (leadType) {
+      const matchOption = Array.from(leadType.options).find(opt => 
+        opt.value.toLowerCase().includes(templateKey.toLowerCase())
+      );
+      if (matchOption) {
+        leadType.value = matchOption.value;
+      }
+    }
+    
+    if (leadMsg) {
+      leadMsg.value = currentLang === 'vi' 
+        ? `Tôi quan tâm và muốn triển khai: ${templateName}. Vui lòng liên hệ tư vấn chi tiết và báo giá.`
+        : `I am interested in deploying: ${templateName}. Please connect for details and a quote.`;
+    }
+    
+    const contactSec = document.getElementById('contact');
+    if (contactSec) {
+      contactSec.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => {
+        const nameInput = document.getElementById('leadName');
+        if (nameInput) nameInput.focus();
+      }, 600);
+    }
   }
 
   // ================= D1 SANDBOX & IPHONE 3D SIMULATOR =================
