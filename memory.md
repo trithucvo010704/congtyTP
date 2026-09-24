@@ -168,6 +168,9 @@ File này đóng vai trò là "bộ nhớ dài hạn" của dự án, lưu trữ
   3. **Kiểm Thử & Đồng Bộ Toàn Diện:**
      - Kiểm thử 100% cú pháp JS (`node -c`) trên toàn bộ 6 file đạt trạng thái hoàn hảo.
      - Từ điển song ngữ 249/249 keys nguyên vẹn, 221 thẻ `data-i18n` được map 100%.
+     - Quét toàn diện văn phong và chính tả tiếng Việt: 0 lỗi chính tả, văn phong sắc bén, chuẩn chuyên môn B2B.
+     - Loại bỏ 100% các class gradient, chuyển sang tông màu Solid Slate & Obsidian dịu mắt với chiều sâu 3D cơ học phản quang.
+     - Tích hợp khối bảo chứng uy tín từ 2 hệ thống Production thật: HRM Cockpit (https://hrm.votrithuc.click/login) và Candidate Portal (https://jobs.votrithuc.click).
      - Local test 6/6 URL trả về HTTP 200 OK.
 
 ---

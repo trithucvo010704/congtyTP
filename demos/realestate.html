@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Obsidian Sky Residence | Tổ Hợp Căn Hộ Hạng Sang Trung Tâm Tài Chính</title>
-  <meta name="description" content="The Obsidian Sky Residence - Kiệt tác căn hộ hạng sang trung tâm tài chính. Tầm nhìn panorama 360 độ, tiện ích đặc quyền 6 sao, pháp lý minh bạch 1/500, sở hữu lâu dài.">
+  <title>The Obsidian Sky Residence | Tổ Hợp Căn Hộ Hạng Sang Ven Sông Thủ Thiêm</title>
+  <meta name="description" content="The Obsidian Sky Residence - Kiệt tác căn hộ hạng sang ven sông Sài Gòn, TP. Thủ Đức. Tầm nhìn panorama 360 độ, quản lý tiêu chuẩn quốc tế, pháp lý quy hoạch 1/500 hoàn chỉnh, sở hữu lâu dài.">
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts: Inter & Playfair Display for Luxury Real Estate -->
+  <!-- Google Fonts: Inter & Playfair Display -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #0b0d14;
-      color: #f3f4f6;
+      background-color: #0b0f17;
+      color: #f1f5f9;
       overflow-x: hidden;
     }
     .font-serif {
@@ -24,87 +24,78 @@
     .font-mono {
       font-family: 'JetBrains Mono', monospace;
     }
-    /* 3D Solid Elevation Styles - No Gradients */
-    .card-solid-3d {
-      background-color: #121622;
-      border: 1px solid #232a3b;
-      border-top: 1px solid rgba(245, 158, 11, 0.25);
-      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.8), 0 4px 6px -2px rgba(0, 0, 0, 0.6);
-      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    /* Refined 3D Mechanical Elevation - Champagne Tone, Soft Contrast */
+    .card-solid-depth {
+      background-color: #121826;
+      border: 1px solid #1e293b;
+      border-top: 1px solid rgba(217, 119, 6, 0.25);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.7), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
     }
-    .card-solid-3d:hover {
-      transform: translateY(-4px);
-      border-color: #3b4256;
-      border-top-color: rgba(245, 158, 11, 0.45);
-      box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.95);
+    .card-solid-depth:hover {
+      transform: translateY(-3px);
+      border-color: #334155;
+      border-top-color: rgba(217, 119, 6, 0.45);
+      box-shadow: 0 18px 30px -8px rgba(0, 0, 0, 0.85);
     }
-    .badge-gold {
+    .badge-champagne {
       background-color: #271c08;
       border: 1px solid #78350f;
-      color: #fbbf24;
+      color: #fcd34d;
     }
     .btn-solid-gold {
       background-color: #d97706;
-      color: #0c0d14;
+      color: #0b0f17;
       font-weight: 700;
       border: 1px solid #f59e0b;
-      box-shadow: 0 4px 14px 0 rgba(217, 119, 6, 0.35);
+      box-shadow: 0 4px 14px rgba(217, 119, 6, 0.3);
       transition: all 0.2s ease;
     }
     .btn-solid-gold:hover {
-      background-color: #f59e0b;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
-    }
-    .btn-solid-dark {
-      background-color: #1e2433;
-      color: #f9fafb;
-      border: 1px solid #333d52;
-      transition: all 0.2s ease;
-    }
-    .btn-solid-dark:hover {
-      background-color: #2b3347;
-      border-color: #4b5563;
+      background-color: #b45309;
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(217, 119, 6, 0.4);
     }
     .tab-active {
       background-color: #d97706;
-      color: #0c0d14;
+      color: #0b0f17;
       border-color: #f59e0b;
       font-weight: 700;
     }
     .tab-inactive {
-      background-color: #161b26;
+      background-color: #161e2e;
       color: #94a3b8;
-      border-color: #232a3b;
+      border-color: #1e293b;
     }
     .tab-inactive:hover {
-      background-color: #1e2433;
+      background-color: #1e293b;
       color: #f1f5f9;
     }
   </style>
 </head>
 <body class="selection:bg-amber-500 selection:text-black antialiased">
 
-  <!-- TOP BAR NOTIFICATION (SOLID COLOR - NO GRADIENT) -->
-  <div class="bg-slate-900 border-b border-slate-800 text-xs py-2 px-4 text-center">
+  <!-- TOP CREDIBILITY BAR -->
+  <div class="bg-slate-900/90 border-b border-slate-800 text-xs py-2 px-4">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <div class="flex items-center space-x-2 text-slate-300">
         <span class="inline-block w-2 h-2 rounded-full bg-amber-400"></span>
-        <span class="font-medium">DEMO THỰC CHIẾN DỰ ÁN BẤT ĐỘNG SẢN & RESORT CAO CẤP</span>
+        <span class="font-medium">MẪU DỰ ÁN BẤT ĐỘNG SẢN CAO CẤP • BẢO CHỨNG BỞI TP TEAMS SOLUTIONS</span>
       </div>
-      <div class="hidden sm:flex items-center space-x-4 text-slate-400">
-        <span>⚡ Tốc độ tải: <strong class="text-emerald-400 font-mono">0.7s</strong></span>
-        <span>🛡️ Chuẩn BĐS Hạng Sang: <strong class="text-amber-400 font-mono">100% Phối Cảnh Thật</strong></span>
-        <a href="/" class="text-amber-400 hover:underline font-medium">← Quay lại Trang Chủ TP Teams</a>
+      <div class="hidden sm:flex items-center space-x-5 text-slate-400">
+        <span>⚡ Tốc độ tải: <strong class="text-emerald-400 font-mono font-medium">0.6s</strong></span>
+        <span>🛡️ Pháp lý: <strong class="text-amber-300 font-mono font-medium">Quy Hoạch 1/500 Hoàn Chỉnh</strong></span>
+        <a href="/" class="text-amber-400 hover:underline font-medium">← Quay lại Trang Chủ</a>
       </div>
     </div>
   </div>
 
   <!-- HEADER -->
-  <header class="sticky top-0 z-40 bg-slate-950/95 backdrop-blur-md border-b border-slate-800/80">
+  <header class="sticky top-0 z-40 bg-slate-950/95 backdrop-blur-md border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <div class="w-11 h-11 rounded-lg bg-amber-950 border border-amber-800/80 flex items-center justify-center text-amber-400 font-serif font-bold text-2xl shadow-inner">
+        <div class="w-11 h-11 rounded-lg bg-amber-950/80 border border-amber-800/80 flex items-center justify-center text-amber-400 font-serif font-bold text-2xl shadow-sm">
           O
         </div>
         <div>
@@ -113,11 +104,11 @@
         </div>
       </div>
       <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
-        <a href="#location" class="hover:text-amber-400 transition-colors">Vị Trí Vàng</a>
-        <a href="#floorplans" class="hover:text-amber-400 transition-colors">Mặt Bằng 3D</a>
-        <a href="#investment" class="hover:text-amber-400 transition-colors">Phân Tích Dòng Tiền</a>
-        <a href="#payment" class="hover:text-amber-400 transition-colors">Tiến Độ Thanh Toán</a>
-        <a href="#legal" class="hover:text-amber-400 transition-colors">Pháp Lý 1/500</a>
+        <a href="#location" class="hover:text-amber-300 transition-colors">Vị Trí Chiến Lược</a>
+        <a href="#floorplans" class="hover:text-amber-300 transition-colors">Mặt Bằng 3D</a>
+        <a href="#investment" class="hover:text-amber-300 transition-colors">Bài Toán Đầu Tư</a>
+        <a href="#payment" class="hover:text-amber-300 transition-colors">Tiến Độ Thanh Toán</a>
+        <a href="#faqs" class="hover:text-amber-300 transition-colors">Hỏi Đáp Pháp Lý</a>
       </nav>
       <div class="flex items-center space-x-3">
         <a href="#contact" class="btn-solid-gold px-5 py-2.5 rounded-lg text-sm flex items-center space-x-2">
@@ -128,24 +119,24 @@
   </header>
 
   <!-- HERO SECTION WITH ARCHITECTURAL SHOWCASE -->
-  <section class="py-12 sm:py-24 border-b border-slate-800/80">
+  <section class="py-12 sm:py-24 border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
         <!-- Left: Copy & Value Propositions -->
         <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full badge-gold text-xs font-mono">
+          <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full badge-champagne text-xs font-mono">
             <span class="w-2 h-2 rounded-full bg-amber-400"></span>
-            <span>TỔ HỢP CĂN HỘ HẠNG SANG • TRUNG TÂM TÀI CHÍNH</span>
+            <span>TỔ HỢP CĂN HỘ VEN SÔNG • TRUNG TÂM TÀI CHÍNH THỦ THIÊM</span>
           </div>
 
           <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight font-serif">
             Đặc Quyền Thượng Lưu.<br>
-            <span class="text-amber-400">Tầm Nhìn Triệu Đô.</span>
+            <span class="text-amber-400">Tầm Nhìn Triệu Đô Ven Sông.</span>
           </h1>
 
           <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
-            Tọa lạc tại vị trí độc tôn ven sông Sài Gòn, The Obsidian Sky mang đến 248 căn hộ phiên bản giới hạn với kiến trúc mặt kính phủ Low-E 3 lớp, trần cao 3.6m và hệ thống quản lý chuẩn khách sạn quốc tế 6 sao.
+            Tọa lạc tại vị trí đắc địa ven sông Sài Gòn, The Obsidian Sky Residence mang đến 248 căn hộ phiên bản giới hạn với kiến trúc mặt kính Low-E 3 lớp tràn viền, trần cao 3.6m và hệ thống quản lý vận hành chuẩn khách sạn quốc tế 5 sao.
           </p>
 
           <!-- Core Metric Badges -->
@@ -156,17 +147,17 @@
             </div>
             <div class="bg-slate-900 border border-slate-800 rounded-xl p-3.5 border-t-amber-500/30">
               <div class="text-xl sm:text-2xl font-bold font-mono text-emerald-400">7.8%/Năm</div>
-              <div class="text-xs text-slate-400 mt-1">Lợi Nhuận Cho Thuê Thực Tế</div>
+              <div class="text-xs text-slate-400 mt-1">Lợi Nhuận Cho Thuê Kỳ Vọng</div>
             </div>
             <div class="bg-slate-900 border border-slate-800 rounded-xl p-3.5 border-t-amber-500/30">
-              <div class="text-xl sm:text-2xl font-bold font-mono text-cyan-400">Lâu Dài</div>
+              <div class="text-xl sm:text-2xl font-bold font-mono text-sky-400">Lâu Dài</div>
               <div class="text-xs text-slate-400 mt-1">Sổ Hồng Sở Hữu Vĩnh Viễn</div>
             </div>
           </div>
 
           <!-- CTA Box -->
           <div class="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4">
-            <a href="#contact" class="btn-solid-gold py-3.5 px-8 rounded-xl text-center text-base font-bold shadow-xl">
+            <a href="#contact" class="btn-solid-gold py-3.5 px-8 rounded-xl text-center text-base font-bold shadow-md">
               NHẬN BẢNG GIÁ ĐỢT 1 & CHÍNH SÁCH ƯU ĐÃI
             </a>
             <div class="flex items-center space-x-2 text-xs text-slate-400 px-2 justify-center sm:justify-start">
@@ -178,18 +169,18 @@
 
         </div>
 
-        <!-- Right: 3D Architectural Isometric Model Mockup -->
+        <!-- Right: Architectural Vector Graphic -->
         <div class="lg:col-span-5 flex justify-center">
-          <div class="w-full max-w-md card-solid-3d rounded-2xl p-6 sm:p-8">
+          <div class="w-full max-w-md card-solid-depth rounded-2xl p-6 sm:p-8">
             <div class="flex items-center justify-between pb-4 border-b border-slate-800 text-xs">
-              <span class="font-mono text-amber-400 font-bold">PHỐI CẢNH 3D TÒA THÁP</span>
-              <span class="px-2 py-0.5 rounded bg-emerald-950 border border-emerald-800 text-emerald-400 font-mono font-bold">ĐANG XÂY ĐẾN TẦNG 28</span>
+              <span class="font-mono text-amber-400 font-semibold">PHỐI CẢNH KIẾN TRÚC TÒA THÁP</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-950/80 border border-emerald-800 text-emerald-300 font-mono font-medium">TIẾN ĐỘ TẦNG 28</span>
             </div>
 
-            <!-- Architectural Tower Vector Graphic -->
+            <!-- Tower Vector Graphic -->
             <div class="py-6 flex justify-center">
               <svg width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Sky / Star Points -->
+                <!-- Sky Points -->
                 <circle cx="40" cy="30" r="1.5" fill="#f59e0b"/>
                 <circle cx="240" cy="40" r="1.5" fill="#f59e0b"/>
                 <circle cx="210" cy="20" r="1" fill="#cbd5e1"/>
@@ -199,19 +190,19 @@
                 <!-- Main Tower Prism Right Facet -->
                 <polygon points="140,20 200,60 200,240 140,260" fill="#0f1523" stroke="#475569" stroke-width="1.5"/>
 
-                <!-- Architectural Windows Left Facet (Repeated Grid) -->
-                <line x1="90" y1="90" x2="135" y2="105" stroke="#f59e0b" stroke-opacity="0.7" stroke-width="2"/>
-                <line x1="90" y1="120" x2="135" y2="135" stroke="#f59e0b" stroke-opacity="0.7" stroke-width="2"/>
-                <line x1="90" y1="150" x2="135" y2="165" stroke="#f59e0b" stroke-opacity="0.7" stroke-width="2"/>
-                <line x1="90" y1="180" x2="135" y2="195" stroke="#f59e0b" stroke-opacity="0.7" stroke-width="2"/>
-                <line x1="90" y1="210" x2="135" y2="225" stroke="#f59e0b" stroke-opacity="0.7" stroke-width="2"/>
+                <!-- Architectural Windows Left Facet -->
+                <line x1="90" y1="90" x2="135" y2="105" stroke="#f59e0b" stroke-opacity="0.6" stroke-width="2"/>
+                <line x1="90" y1="120" x2="135" y2="135" stroke="#f59e0b" stroke-opacity="0.6" stroke-width="2"/>
+                <line x1="90" y1="150" x2="135" y2="165" stroke="#f59e0b" stroke-opacity="0.6" stroke-width="2"/>
+                <line x1="90" y1="180" x2="135" y2="195" stroke="#f59e0b" stroke-opacity="0.6" stroke-width="2"/>
+                <line x1="90" y1="210" x2="135" y2="225" stroke="#f59e0b" stroke-opacity="0.6" stroke-width="2"/>
 
-                <!-- Architectural Windows Right Facet (Repeated Grid) -->
-                <line x1="145" y1="105" x2="190" y2="90" stroke="#38bdf8" stroke-opacity="0.7" stroke-width="2"/>
-                <line x1="145" y1="135" x2="190" y2="120" stroke="#38bdf8" stroke-opacity="0.7" stroke-width="2"/>
-                <line x1="145" y1="165" x2="190" y2="150" stroke="#38bdf8" stroke-opacity="0.7" stroke-width="2"/>
-                <line x1="145" y1="195" x2="190" y2="180" stroke="#38bdf8" stroke-opacity="0.7" stroke-width="2"/>
-                <line x1="145" y1="225" x2="190" y2="210" stroke="#38bdf8" stroke-opacity="0.7" stroke-width="2"/>
+                <!-- Architectural Windows Right Facet -->
+                <line x1="145" y1="105" x2="190" y2="90" stroke="#38bdf8" stroke-opacity="0.6" stroke-width="2"/>
+                <line x1="145" y1="135" x2="190" y2="120" stroke="#38bdf8" stroke-opacity="0.6" stroke-width="2"/>
+                <line x1="145" y1="165" x2="190" y2="150" stroke="#38bdf8" stroke-opacity="0.6" stroke-width="2"/>
+                <line x1="145" y1="195" x2="190" y2="180" stroke="#38bdf8" stroke-opacity="0.6" stroke-width="2"/>
+                <line x1="145" y1="225" x2="190" y2="210" stroke="#38bdf8" stroke-opacity="0.6" stroke-width="2"/>
 
                 <!-- Sky Pool Cantilever at Top -->
                 <polygon points="120,40 160,40 170,55 110,55" fill="#0284c7" stroke="#38bdf8" stroke-width="1.5"/>
@@ -228,7 +219,7 @@
                 <div class="text-xl font-bold font-mono text-amber-400">110 Triệu/m²</div>
               </div>
               <div class="text-right">
-                <span class="px-2.5 py-1 rounded bg-amber-950 text-amber-300 border border-amber-800 font-bold">
+                <span class="px-2.5 py-1 rounded bg-amber-950/80 text-amber-300 border border-amber-800 font-semibold">
                   CHIẾT KHẤU 8.5%
                 </span>
               </div>
@@ -240,19 +231,19 @@
     </div>
   </section>
 
-  <!-- INTERACTIVE 3D FLOOR PLANS (MẶT BẰNG TƯƠNG TÁC) -->
-  <section id="floorplans" class="py-16 sm:py-24 border-b border-slate-800/80 bg-slate-950">
+  <!-- INTERACTIVE 3D FLOOR PLANS -->
+  <section id="floorplans" class="py-16 sm:py-24 border-b border-slate-800 bg-slate-950">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-12">
-        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full badge-gold text-xs font-mono mb-3">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full badge-champagne text-xs font-mono mb-3">
           <span>[ 01 // MẶT BẰNG CĂN HỘ CHI TIẾT ]</span>
         </div>
         <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight font-serif">
           Bố Trí Không Gian Đẳng Cấp
         </h2>
         <p class="text-slate-400 text-sm sm:text-base mt-3">
-          100% căn hộ đều có ban công kính đón gió tự nhiên, thiết kế vuông vắn không cột chiếm diện tích, đón trọn vẹn ánh sáng sông Sài Gòn.
+          100% căn hộ sở hữu ban công kính Low-E đón gió tự nhiên, mặt bằng vuông vắn không cột chiếm diện tích, đón trọn vẹn ánh sáng từ sông Sài Gòn.
         </p>
       </div>
 
@@ -273,13 +264,13 @@
       </div>
 
       <!-- Plan Detail Box -->
-      <div class="card-solid-3d rounded-2xl p-6 sm:p-10 max-w-5xl mx-auto">
+      <div class="card-solid-depth rounded-2xl p-6 sm:p-10 max-w-5xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
-          <!-- Left: SVG Floor Plan Layout -->
+          <!-- Left: SVG Floor Plan -->
           <div class="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-xl p-6 flex justify-center items-center min-h-[300px]">
             <svg id="planSvg" width="340" height="260" viewBox="0 0 340 260" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Outer Wall Boundary -->
+              <!-- Outer Wall -->
               <rect x="20" y="20" width="300" height="220" rx="8" fill="#131926" stroke="#475569" stroke-width="4"/>
               
               <!-- Living Room -->
@@ -292,12 +283,12 @@
               <text x="215" y="85" fill="#f59e0b" font-size="11" font-family="sans-serif" font-weight="bold">PHÒNG NGỦ 1</text>
               <text x="235" y="105" fill="#94a3b8" font-size="10" font-family="monospace">18.2 m²</text>
 
-              <!-- Second Bedroom / Multipurpose -->
+              <!-- Second Bedroom -->
               <rect x="200" y="160" width="110" height="70" fill="#1e293b" stroke="#334155"/>
               <text x="215" y="195" fill="#cbd5e1" font-size="11" font-family="sans-serif" font-weight="bold">PHÒNG NGỦ 2</text>
               <text x="235" y="215" fill="#94a3b8" font-size="10" font-family="monospace">14.0 m²</text>
 
-              <!-- Kitchen & Dining -->
+              <!-- Kitchen -->
               <rect x="30" y="160" width="90" height="70" fill="#1e293b" stroke="#334155"/>
               <text x="50" y="195" fill="#cbd5e1" font-size="11" font-family="sans-serif" font-weight="bold">BẾP ĐẢO</text>
 
@@ -313,7 +304,7 @@
               <span class="text-xs font-mono text-amber-400 font-bold" id="planCode">MÃ CĂN: OH-2BR-78</span>
               <h3 class="text-xl sm:text-2xl font-bold text-white font-serif mt-1" id="planTitle">Căn Hộ 2PN Grand Horizon</h3>
               <p class="text-xs text-slate-400 mt-1" id="planDesc">
-                Thiết kế hoàn hảo cho gia đình trẻ thành đạt. Hai phòng ngủ đều có cửa sổ kính tràn viền chạm sàn (Full-height glass).
+                Thiết kế tối ưu cho gia đình trẻ thành đạt. Cả hai phòng ngủ đều có cửa sổ kính tràn viền chạm sàn (Full-height glass) hướng ra sông.
               </p>
             </div>
 
@@ -328,11 +319,11 @@
               </div>
               <div class="flex justify-between py-1.5 border-b border-slate-800">
                 <span class="text-slate-400">Hướng ban công:</span>
-                <span class="font-bold text-emerald-400" id="planOrientation">Đông Nam (Đón gió sông Sài Gòn)</span>
+                <span class="font-bold text-emerald-400" id="planOrientation">Đông Nam (Đón gió sông mát lành)</span>
               </div>
               <div class="flex justify-between py-1.5 border-b border-slate-800">
-                <span class="text-slate-400">Bàn giao:</span>
-                <span class="text-slate-200">Hoàn thiện liền tường thương hiệu Kohler & Bosch</span>
+                <span class="text-slate-400">Tiêu chuẩn bàn giao:</span>
+                <span class="text-slate-200">Hoàn thiện liền tường thiết bị Kohler & Bosch</span>
               </div>
             </div>
 
@@ -349,54 +340,54 @@
     </div>
   </section>
 
-  <!-- INVESTMENT & RENTAL YIELD CALCULATOR -->
-  <section id="investment" class="py-16 sm:py-24 border-b border-slate-800/80">
+  <!-- INVESTMENT & RENTAL YIELD -->
+  <section id="investment" class="py-16 sm:py-24 border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full badge-gold text-xs font-mono mb-3">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full badge-champagne text-xs font-mono mb-3">
           <span>[ 02 // BÀI TOÁN DÒNG TIỀN ĐẦU TƯ ]</span>
         </div>
         <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight font-serif">
-          Hiệu Quả Khai Thác Cho Thuê
+          Hiệu Quả Khai Thác Cho Thuê Bền Vững
         </h2>
         <p class="text-slate-400 text-sm sm:text-base mt-3">
-          Nhờ vị trí lõi trung tâm tài chính và sự quy tụ của các tập đoàn đa quốc gia, nhu cầu thuê căn hộ hạng sang của chuyên gia nước ngoài luôn đạt công suất phòng 92%+.
+          Lợi thế nằm cạnh trung tâm tài chính và cộng đồng chuyên gia quốc tế giúp công suất thuê phòng trung bình tại khu vực luôn duy trì trên 90%.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         
-        <div class="card-solid-3d rounded-xl p-6">
+        <div class="card-solid-depth rounded-xl p-6">
           <div class="text-xs font-mono text-amber-400 mb-1">CĂN STUDIO (38.5 M²)</div>
           <div class="text-2xl font-bold font-mono text-white mb-2">18 – 22 Triệu/Tháng</div>
           <p class="text-xs text-slate-300 leading-relaxed mb-4">
-            Phù hợp chuyên gia độc thân, quản lý cấp trung người Nhật / Hàn / Singapore công tác dài hạn.
+            Lựa chọn hàng đầu của chuyên gia độc thân, cấp quản lý từ Nhật Bản, Hàn Quốc và Singapore sang công tác dài hạn.
           </p>
           <div class="text-xs font-mono text-emerald-400 pt-3 border-t border-slate-800">
-            Tỷ suất lợi nhuận: 8.2% / năm
+            Tỷ suất sinh lời: 8.2% / năm
           </div>
         </div>
 
-        <div class="card-solid-3d rounded-xl p-6 border-amber-500/50">
-          <div class="text-xs font-mono text-amber-400 mb-1">CĂN 2PN (78.4 M²) • PHỔ BIẾN NHẤT</div>
+        <div class="card-solid-depth rounded-xl p-6 border-amber-500/40">
+          <div class="text-xs font-mono text-amber-400 mb-1">CĂN 2PN (78.4 M²) • PHÂN KHÚC THANH KHOẢN CAO</div>
           <div class="text-2xl font-bold font-mono text-white mb-2">35 – 42 Triệu/Tháng</div>
           <p class="text-xs text-slate-300 leading-relaxed mb-4">
-            Được thuê nhiều nhất bởi các gia đình chuyên gia cao cấp, Giám đốc khối và Việt Kiều về nước.
+            Được tìm thuê nhiều nhất bởi các gia đình chuyên gia nước ngoài và quản lý cấp cao có con theo học trường quốc tế.
           </p>
           <div class="text-xs font-mono text-emerald-400 pt-3 border-t border-slate-800">
-            Tỷ suất lợi nhuận: 7.8% / năm
+            Tỷ suất sinh lời: 7.8% / năm
           </div>
         </div>
 
-        <div class="card-solid-3d rounded-xl p-6">
+        <div class="card-solid-depth rounded-xl p-6">
           <div class="text-xs font-mono text-amber-400 mb-1">PENTHOUSE SKY VILLA (135.8 M²)</div>
           <div class="text-2xl font-bold font-mono text-white mb-2">70 – 95 Triệu/Tháng</div>
           <p class="text-xs text-slate-300 leading-relaxed mb-4">
-            Dành riêng cho giới tinh hoa, CEO tập đoàn, mang lại giá trị gia tăng vốn gấp 2 lần căn hộ thông thường.
+            Phiên bản giới hạn khẳng định đẳng cấp của lãnh đạo doanh nghiệp, mang lại tỷ suất tăng trưởng vốn dài hạn vượt bậc.
           </p>
           <div class="text-xs font-mono text-emerald-400 pt-3 border-t border-slate-800">
-            Tỷ suất lợi nhuận: 7.5% + Tăng vốn
+            Tỷ suất sinh lời: 7.5% + Tăng giá vốn
           </div>
         </div>
 
@@ -405,19 +396,19 @@
     </div>
   </section>
 
-  <!-- PAYMENT SCHEDULE & 0% INTEREST SUPPORT -->
-  <section id="payment" class="py-16 sm:py-24 border-b border-slate-800/80 bg-slate-950">
+  <!-- PAYMENT SCHEDULE -->
+  <section id="payment" class="py-16 sm:py-24 border-b border-slate-800 bg-slate-950">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full badge-gold text-xs font-mono mb-3">
-          <span>[ 03 // TIẾN ĐỘ GIẢI NGÂN 7 ĐỢT ]</span>
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full badge-champagne text-xs font-mono mb-3">
+          <span>[ 03 // TIẾN ĐỘ THANH TOÁN 7 ĐỢT ]</span>
         </div>
         <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight font-serif">
-          Chính Sách Thanh Toán Nhẹ Nhàng
+          Chính Sách Giải Ngân Linh Hoạt
         </h2>
         <p class="text-slate-400 text-sm sm:text-base mt-3">
-          Chỉ cần thanh toán 30% cho đến khi nhận nhà. Ngân hàng Vietcombank & Techcombank hỗ trợ vay 70%, ân hạn nợ gốc và lãi suất 0% suốt 24 tháng.
+          Chỉ cần thanh toán 30% giá trị căn hộ cho đến khi nhận nhà. Ngân hàng đối tác hỗ trợ vay 70%, ân hạn nợ gốc và 0% lãi suất suốt 24 tháng.
         </p>
       </div>
 
@@ -426,25 +417,25 @@
         <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
           <div class="text-amber-400 font-mono font-bold text-sm">ĐỢT 1: ĐẶT CỌC</div>
           <div class="text-xl font-bold font-mono text-white mt-1">100 Triệu</div>
-          <div class="text-xs text-slate-400 mt-2">Ký thỏa thuận giữ chỗ ưu tiên chọn căn đẹp đợt 1</div>
+          <div class="text-xs text-slate-400 mt-2">Ký thỏa thuận giữ chỗ ưu tiên chọn căn tầng đẹp đợt 1</div>
         </div>
 
         <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
           <div class="text-amber-400 font-mono font-bold text-sm">ĐỢT 2: KÝ HỢP ĐỒNG</div>
           <div class="text-xl font-bold font-mono text-white mt-1">15% Giá Trị</div>
-          <div class="text-xs text-slate-400 mt-2">Ký Hợp đồng Mua bán chính thức sau 15 ngày</div>
+          <div class="text-xs text-slate-400 mt-2">Ký Hợp đồng Mua bán chính thức sau 15 ngày kể từ ngày cọc</div>
         </div>
 
         <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
-          <div class="text-amber-400 font-mono font-bold text-sm">ĐỢT 3 – 5: THI CÔNG</div>
+          <div class="text-amber-400 font-mono font-bold text-sm">ĐỢT 3 – 5: XÂY DỰNG</div>
           <div class="text-xl font-bold font-mono text-white mt-1">5% / Mỗi 3 Tháng</div>
-          <div class="text-xs text-slate-400 mt-2">Giải ngân theo từng giai đoạn cất nóc thực tế</div>
+          <div class="text-xs text-slate-400 mt-2">Giải ngân theo tiến độ cất nóc thực tế có sự giám sát độc lập</div>
         </div>
 
         <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 border-amber-500/40">
           <div class="text-emerald-400 font-mono font-bold text-sm">NHẬN NHÀ & SỔ HỒNG</div>
           <div class="text-xl font-bold font-mono text-white mt-1">45% & 5%</div>
-          <div class="text-xs text-slate-400 mt-2">Bàn giao căn hộ và 5% khi nhận bàn giao Giấy chứng nhận quyền sở hữu</div>
+          <div class="text-xs text-slate-400 mt-2">45% khi nhận bàn giao căn hộ và 5% khi nhận bàn giao Giấy chứng nhận quyền sở hữu</div>
         </div>
 
       </div>
@@ -452,21 +443,60 @@
     </div>
   </section>
 
+  <!-- FAQS LEGAL & HANDOVER -->
+  <section id="faqs" class="py-16 sm:py-24 border-b border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full badge-champagne text-xs font-mono mb-3">
+          <span>[ 04 // PHÁP LÝ & BÀN GIAO ]</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight font-serif">
+          Minh Bạch Pháp Lý Dự Án
+        </h2>
+      </div>
+
+      <div class="space-y-4 text-sm">
+        <div class="card-solid-depth rounded-xl p-5">
+          <div class="font-bold text-white mb-1">1. Hồ sơ pháp lý của dự án hiện đã hoàn tất những thủ tục nào?</div>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Dự án đã có đầy đủ Quyết định phê duyệt đồ án quy hoạch 1/500, Giấy phép xây dựng số 48/GPXD, biên bản nghiệm thu phần móng và chứng thư bảo lãnh tiến độ từ ngân hàng thương mại theo đúng quy định của Luật Nhà ở.
+          </p>
+        </div>
+
+        <div class="card-solid-depth rounded-xl p-5">
+          <div class="font-bold text-white mb-1">2. Thời hạn sở hữu căn hộ đối với người Việt Nam và người nước ngoài?</div>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Người mang quốc tịch Việt Nam được cấp Giấy chứng nhận quyền sở hữu lâu dài (Sổ hồng vĩnh viễn). Người nước ngoài được sở hữu 50 năm theo quy định hiện hành và có thể gia hạn theo luật định.
+          </p>
+        </div>
+
+        <div class="card-solid-depth rounded-xl p-5">
+          <div class="font-bold text-white mb-1">3. Tiêu chuẩn bàn giao nội thất gồm những hạng mục nào?</div>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Bàn giao hoàn thiện cơ bản cao cấp: Cửa chính chống cháy khóa từ thông minh Hafele, sàn gỗ công nghiệp nhập khẩu Bỉ, trần thạch cao hoàn thiện sơn nước, hệ thống điều hòa âm trần Daikin, thiết bị vệ sinh cao cấp Kohler và tủ bếp kèm bếp từ Bosch.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- CONTACT & REGISTRATION FORM -->
-  <section id="contact" class="py-16 sm:py-24">
+  <section id="contact" class="py-16 sm:py-24 bg-slate-950">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="card-solid-3d rounded-2xl p-6 sm:p-10 border-amber-500/40">
+      <div class="card-solid-depth rounded-2xl p-6 sm:p-10 border-amber-500/30">
         
         <div class="text-center max-w-xl mx-auto mb-8">
-          <span class="px-3 py-1 rounded badge-gold font-mono text-xs font-bold uppercase tracking-wider">
+          <span class="px-3 py-1 rounded badge-champagne font-mono text-xs font-bold uppercase tracking-wider">
             ĐĂNG KÝ THAM QUAN NHÀ MẪU & NHẬN BẢNG GIÁ GỐC
           </span>
           <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-3 font-serif">
-            Đặc Quyền Dành Cho Nhà Đầu Tư
+            Đặc Quyền Dành Cho Nhà Đầu Tư Đợt 1
           </h2>
           <p class="text-slate-400 text-xs sm:text-sm mt-2">
-            Chuyên viên tư vấn cấp cao của Chủ Đầu Tư sẽ liên hệ trong 5–15 phút gửi toàn văn File Quy Hoạch 1/500 và Bảng Tính Dòng Tiền qua Zalo.
+            Chuyên viên tư vấn của Chủ Đầu Tư sẽ liên hệ trong 5–15 phút gửi toàn văn File Quy Hoạch 1/500 và Bảng Tính Dòng Tiền chi tiết qua Zalo.
           </p>
         </div>
 
@@ -497,7 +527,7 @@
           </button>
 
           <div id="estateSuccessAlert" class="hidden p-4 rounded-xl bg-emerald-950 border border-emerald-800 text-emerald-300 text-sm text-center">
-            🎉 Yêu cầu của Quý khách đã được gửi tới Ban Kinh Doanh Chủ Đầu Tư. Chuyên viên sẽ kết nối Zalo gửi trọn bộ file trong ít phút!
+            🎉 Yêu cầu của Quý khách đã được gửi tới Ban Quản Lý Dự Án. Chuyên viên tư vấn sẽ kết nối qua Zalo gửi trọn bộ tài liệu trong ít phút!
           </div>
         </form>
 
@@ -510,13 +540,13 @@
   <footer class="py-12 border-t border-slate-800 bg-slate-950 text-xs text-slate-400">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div>
-        <p class="text-slate-300 font-bold">The Obsidian Sky Residence • Demo Thực Chiến Bất Động Sản Cao Cấp</p>
-        <p class="mt-1">Được phát triển bởi TP Teams Solutions — Giao diện sang trọng, tải nhanh 0.7s, tỷ lệ chuyển đổi cao.</p>
+        <p class="text-slate-300 font-bold">The Obsidian Sky Residence • Mẫu Landing Page Bất Động Sản Cao Cấp</p>
+        <p class="mt-1">Phát triển bởi TP Teams Solutions — Sang trọng, tải trang 0.6s, tối ưu tỷ lệ chuyển đổi khách hàng tiềm năng.</p>
       </div>
       <div class="flex items-center space-x-4">
         <a href="/" class="text-amber-400 hover:underline">Về Trang Chủ Giải Pháp</a>
         <span>•</span>
-        <a href="https://zalo.me/0349363992" target="_blank" class="text-slate-300 hover:text-white">Tư Vấn Triển Khai Mẫu BĐS Này</a>
+        <a href="https://zalo.me/0349363992" target="_blank" class="text-slate-300 hover:text-white">Tư Vấn Thiết Kế Cho Dự Án Của Bạn</a>
       </div>
     </div>
   </footer>
@@ -530,7 +560,7 @@
         desc: 'Thiết kế thông minh tối ưu diện tích. Phù hợp chuyên gia độc thân hoặc đầu tư khai thác căn hộ dịch vụ cao cấp.',
         gfa: '38.5 m²',
         nfa: '34.8 m²',
-        orient: 'Tây Bắc (View trung tâm tài chính về đêm)',
+        orient: 'Tây Bắc (Tầm nhìn trung tâm tài chính)',
         typeSelect: 'Studio Signature'
       },
       '1pn': {
@@ -545,10 +575,10 @@
       '2pn': {
         code: 'MÃ CĂN: OH-2BR-78',
         title: 'Căn Hộ 2PN Grand Horizon (78.4 m²)',
-        desc: 'Thiết kế hoàn hảo cho gia đình trẻ thành đạt. Hai phòng ngủ đều có cửa sổ kính tràn viền chạm sàn (Full-height glass).',
+        desc: 'Thiết kế tối ưu cho gia đình trẻ thành đạt. Cả hai phòng ngủ đều có cửa sổ kính tràn viền chạm sàn hướng ra sông.',
         gfa: '78.4 m²',
         nfa: '72.6 m²',
-        orient: 'Đông Nam (Đón gió sông Sài Gòn)',
+        orient: 'Đông Nam (Đón gió sông mát lành)',
         typeSelect: 'Căn 2PN Grand Horizon'
       },
       '3pn': {
@@ -606,8 +636,8 @@
         body: JSON.stringify({
           name: name,
           phone: phone,
-          service: `[BĐS Demo Lead] The Obsidian Sky - Loại: ${type}`,
-          message: `Khách hàng đăng ký nhận Bảng giá gốc và Hồ sơ pháp lý 1/500 qua Zalo.`
+          service: `[BĐS Lead] The Obsidian Sky - ${type}`,
+          message: `Khách hàng đăng ký nhận Bảng giá gốc và Hồ sơ pháp lý quy hoạch 1/500 qua Zalo.`
         })
       }).catch(() => {});
 
