@@ -230,7 +230,33 @@ File này đóng vai trò là "bộ nhớ dài hạn" của dự án, lưu trữ
 
 ---
 
+### Phiên làm việc: Ngày 28/09/2026 (Phiên 11 - Tối Giản Màu Sắc "Dùng Ít Màu", Khắc Phục Lỗi Header Responsive & Đưa Bộ Đôi Sáng Lập Lên Vị Trí Danh Dự)
+- **Nhiệm vụ & Khắc phục phản hồi thực tế từ người dùng:**
+  1. **Đưa Co-Founder Doãn Hữu Phong lên vị trí mặt tiền (Front & Center):**
+     - Đặt huy hiệu bảo chứng ngay trên Hero: `🛡️ BẢO CHỨNG BỞI BỘ ĐÔI KỸ SƯ SÁNG LẬP: VÕ TRÍ THỨC (VIETTEL) & DOÃN HỮU PHONG (MOBIFONE)`.
+     - Bổ sung Section 01.5: **Founders Credibility Spotlight** ngay dưới Hero — hiển thị chân dung, chức danh và bằng cấp của 2 kỹ sư kèm nút bấm nhảy trực tiếp tới hồ sơ chi tiết.
+     - Thêm mục **`👥 Đội Ngũ Kỹ Sư`** vào thanh Menu Header chính (cả Desktop và Mobile Drawer).
+     - Biên soạn văn phong chuyên sâu, trang trọng cho Kỹ sư **Doãn Hữu Phong**: Tốt nghiệp Bằng Giỏi HaUI, Kỹ sư phần mềm MobiFone Việt Nam, phụ trách Kỹ thuật hệ thống phân tán chịu tải cao, an toàn thông tin và đường ống dữ liệu viễn thông.
+  2. **Tối giản màu sắc ("Dùng ít màu thôi — Màu đáng tin cậy"):**
+     - Loại bỏ hoàn toàn các quầng gradient loang lổ (`radial-gradient` xanh dương + xanh lục).
+     - Quy về **Hệ Màu Đơn Sắc Doanh Nghiệp (Monochromatic Corporate Trust Palette)**:
+       * Nền: Trắng tinh `#FFFFFF` & Xám Canvas `#F8FAFC`.
+       * Chữ: Xanh đen Navy đậm `#0F172A` & Than chì `#334155`.
+       * Màu nhấn thương hiệu DUY NHẤT: **Deep Royal Navy Blue (`#1E40AF`)**.
+       * Đồng nhất 100% nút bấm (xóa bỏ hoàn toàn nút xanh lá cây `btn-trust-emerald`, chuyển toàn bộ sang Navy Blue `#1E40AF` chữ trắng tinh tế).
+  3. **Tái cấu trúc Header 100% Responsive & Chấm dứt xung đột Layout:**
+     - Loại bỏ cấu trúc floating `top-4` gây khe hở trôi nội dung.
+     - Đưa Header về `sticky top-0`, viền phẳng chuẩn quốc tế (`w-full bg-white/95 backdrop-blur-md border-b border-slate-200`).
+     - Thanh top bar tối giản thành 1 dòng duy nhất, không bao giờ bị gãy dòng trên mobile.
+     - Logo co giãn thông minh: Ẩn slogan dài trên mobile để tránh tràn viền (horizontal overflow).
+     - Drawer mobile trượt xuống êm ái, bám sát mép header, có nút đóng và các mục tap lớn.
+  4. **Triển khai & Kiểm thử Live:**
+     - Commit `a0b7161` đã push lên nhánh `main`.
+     - Vercel deploy `dpl_1teLEwKNUba4ybk4jFu7m3vk1os4` đã **READY** và phân phối toàn cầu lên `https://landing.votrithuc.click/`.
+     - Kiểm thử HTTP 200 OK, hiển thị sắc nét trên cả desktop và điện thoại.
+
+---
+
 ## V. NHIỆM VỤ TIẾP THEO ĐANG THỰC HIỆN (CURRENT SPRINT)
-1. Thực hiện lệnh `git commit` và `git push origin main` để kích hoạt Vercel deploy lên production live domain `https://landing.votrithuc.click`.
-2. Kiểm tra live endpoint trên máy tính và điện thoại.
-3. Kích hoạt kế hoạch tiếp cận đối tác Agency và săn việc trên vLance / FreelancerViet.
+1. Kiểm tra trải nghiệm thực tế cùng người dùng trên thiết bị di động.
+2. Sẵn sàng kích hoạt kế hoạch tiếp cận đối tác Marketing Agency và chào thầu vLance.
