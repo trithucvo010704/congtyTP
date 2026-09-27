@@ -62,6 +62,8 @@
       --color-card-border: #e2e8f0;
       --color-text-main: #0f172a;
       --color-text-body: #334155;
+      --color-brand-primary: #1e40af;
+      --color-brand-hover: #1d4ed8;
     }
     body {
       font-family: 'Inter', sans-serif;
@@ -70,92 +72,81 @@
       overflow-x: hidden;
     }
 
-    /* Ambient Subtle Grid Pattern */
+    /* Ambient Subtle Grid Pattern (Clean hairline grid, no messy colored radial blobs) */
     .bg-corporate-mesh {
       background-color: #f8fafc;
       background-image: 
-        radial-gradient(at 50% 0%, rgba(37, 99, 235, 0.05) 0px, transparent 60%),
-        radial-gradient(at 100% 30%, rgba(5, 150, 105, 0.04) 0px, transparent 50%),
         linear-gradient(to right, rgba(226, 232, 240, 0.6) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(226, 232, 240, 0.6) 1px, transparent 1px);
-      background-size: 100% 100%, 100% 100%, 32px 32px, 32px 32px;
+      background-size: 32px 32px;
     }
 
-    /* Floating Island Nav */
-    .floating-island-nav {
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(226, 232, 240, 0.9);
-      box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.06);
-    }
-
-    /* Pristine Trust Card (White Monolith) */
+    /* Pristine Trust Card (Solid White Monolith) */
     .card-trust {
       background: #ffffff;
       border: 1px solid #e2e8f0;
-      box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.04), 0 2px 4px -2px rgba(15, 23, 42, 0.03);
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.04), 0 2px 4px -2px rgba(15, 23, 42, 0.02);
+      transition: all 0.2s ease;
     }
     .card-trust:hover {
       border-color: #cbd5e1;
-      transform: translateY(-3px);
-      box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 20px -4px rgba(15, 23, 42, 0.07);
     }
 
-    /* Primary Trust Button */
+    /* Primary Trust Button (Deep Corporate Navy Blue) */
     .btn-trust-primary {
-      background-color: #2563eb;
+      background-color: #1e40af;
       color: #ffffff;
       font-weight: 700;
-      border: 1px solid #1d4ed8;
-      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+      border: 1px solid #1e3a8a;
+      box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2);
       transition: all 0.2s ease;
     }
     .btn-trust-primary:hover {
       background-color: #1d4ed8;
-      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.38);
-      transform: translateY(-1.5px);
+      box-shadow: 0 6px 18px rgba(30, 64, 175, 0.28);
+      transform: translateY(-1px);
     }
 
-    /* Growth Emerald Button */
+    /* Unified Secondary / Action Button (No more green clash) */
     .btn-trust-emerald {
-      background-color: #059669;
+      background-color: #1e40af;
       color: #ffffff;
       font-weight: 700;
-      border: 1px solid #047857;
-      box-shadow: 0 4px 14px rgba(5, 150, 105, 0.25);
+      border: 1px solid #1e3a8a;
+      box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2);
       transition: all 0.2s ease;
     }
     .btn-trust-emerald:hover {
-      background-color: #047857;
-      box-shadow: 0 6px 20px rgba(5, 150, 105, 0.38);
-      transform: translateY(-1.5px);
+      background-color: #1d4ed8;
+      box-shadow: 0 6px 18px rgba(30, 64, 175, 0.28);
+      transform: translateY(-1px);
     }
 
-    /* Trust Eyebrow Badge */
+    /* Trust Eyebrow Badge (Monochromatic Slate & Navy) */
     .eyebrow-trust {
       font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       font-weight: 700;
-      color: #1d4ed8;
+      color: #1e40af;
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 5px 12px;
+      padding: 4px 12px;
       border-radius: 9999px;
-      background: #eff6ff;
-      border: 1px solid #bfdbfe;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
     }
 
     /* Silver Titanium iPhone Chassis */
     .iphone-silver-chassis {
-      background: #f1f5f9;
+      background: #f8fafc;
       border: 4px solid #cbd5e1;
       border-radius: 40px;
-      box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.2), inset 0 0 0 2px rgba(255, 255, 255, 0.9);
+      box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.15), inset 0 0 0 2px rgba(255, 255, 255, 0.9);
       position: relative;
     }
     .iphone-dynamic-island {
@@ -168,93 +159,101 @@
 </head>
 <body class="bg-corporate-mesh text-slate-700 antialiased selection:bg-blue-600 selection:text-white">
 
-  <!-- ================= TOP CREDIBILITY BAR ================= -->
+  <!-- ================= TOP CREDIBILITY BAR (SLICK 1-LINE, NO WRAP) ================= -->
   <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
-      <div class="flex items-center gap-2">
-        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span class="font-medium text-white" data-i18n="top.tagline">TP TEAMS SOLUTIONS — GIẢI PHÁP WEB CHUYỂN ĐỔI CAO CHO DOANH NGHIỆP</span>
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2 truncate text-[11px] sm:text-xs">
+        <span class="w-2 h-2 rounded-full bg-blue-400 shrink-0 animate-pulse"></span>
+        <span class="font-medium text-white truncate" data-i18n="top.tagline">TP TEAMS — BỘ ĐÔI KỸ SƯ VIỄN THÔNG SÁNG LẬP (VIETTEL &amp; MOBIFONE)</span>
       </div>
-      <div class="flex items-center gap-4 text-[11px] font-mono text-slate-300">
-        <span>⚡ Tốc độ: <strong class="text-emerald-400">&lt; 1 giây</strong></span>
-        <span>🔔 Báo đơn: <strong class="text-blue-400">Telegram 2s</strong></span>
-        <span class="hidden md:inline">🛡️ Hợp đồng &amp; Hóa đơn VAT</span>
-        <a href="tel:0349363992" class="text-emerald-400 font-bold hover:underline">Hotline: 0349 363 992</a>
+      <div class="flex items-center gap-4 text-[11px] font-mono shrink-0 ml-3">
+        <span class="hidden md:inline text-slate-400">🛡️ Hợp Đồng &amp; Hóa Đơn VAT</span>
+        <a href="tel:0349363992" class="text-white font-bold hover:text-blue-300 flex items-center gap-1">
+          <span class="hidden sm:inline">Hotline:</span> 0349 363 992
+        </a>
       </div>
     </div>
   </div>
 
-  <!-- ================= FLOATING ISLAND NAVIGATION ================= -->
-  <header class="sticky top-4 z-40 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <nav class="floating-island-nav rounded-2xl px-4 sm:px-6 py-3 flex items-center justify-between">
-      
-      <!-- Brand Logo -->
-      <a href="#" class="flex items-center gap-3 group">
-        <img src="anh/tp_teams_icon.png" alt="TP Teams Logo" class="w-9 h-9 rounded-xl shadow-sm border border-slate-200">
-        <div>
-          <div class="text-base font-black tracking-tight text-slate-900 flex items-center gap-1.5">
-            TP TEAMS
-            <span class="text-[10px] px-1.5 py-0.2 rounded bg-blue-100 text-blue-700 font-mono font-bold">SOLUTIONS</span>
+  <!-- ================= STICKY TOP-0 CORPORATE NAVIGATION ================= -->
+  <header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="h-16 sm:h-20 flex items-center justify-between gap-3">
+        
+        <!-- Brand Logo (Responsive: Compact on mobile, detailed on desktop) -->
+        <a href="#" class="flex items-center gap-2.5 sm:gap-3 shrink-0 group">
+          <img src="anh/tp_teams_icon.png" alt="TP Teams Logo" class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl shadow-sm border border-slate-200">
+          <div>
+            <div class="text-base sm:text-lg font-black tracking-tight text-slate-900 flex items-center gap-1.5 leading-tight">
+              TP TEAMS
+              <span class="text-[9px] sm:text-[10px] px-1.5 py-0.2 rounded bg-slate-100 text-blue-800 font-mono font-bold border border-slate-200">SOLUTIONS</span>
+            </div>
+            <div class="hidden sm:block text-[10px] text-slate-500 font-medium leading-tight" data-i18n="nav.subtitle">Kỹ Thuật Phần Mềm &amp; AI</div>
           </div>
-          <div class="text-[10px] text-slate-500 font-medium" data-i18n="nav.subtitle">Web &amp; Tự Động Hóa Bán Hàng</div>
-        </div>
-      </a>
-
-      <!-- Desktop Nav Menu -->
-      <div class="hidden lg:flex items-center gap-7 text-xs font-semibold text-slate-600">
-        <a href="#benefits" class="hover:text-blue-600 transition-colors" data-i18n="nav.benefits">Lợi Ích</a>
-        <a href="#showcase" class="hover:text-blue-600 transition-colors" data-i18n="nav.showcase">Kho Mẫu Demo</a>
-        <a href="#case-studies" class="hover:text-blue-600 transition-colors" data-i18n="nav.case_studies">Kết Quả Thật</a>
-        <a href="#workflow" class="hover:text-blue-600 transition-colors" data-i18n="nav.workflow">Quy Trình 3 Bước</a>
-        <a href="#pricing" class="hover:text-blue-600 transition-colors" data-i18n="nav.pricing">Bảng Giá</a>
-        <a href="#agency" class="hover:text-blue-600 transition-colors" data-i18n="nav.agency">Đối Tác Agency</a>
-        <a href="#faq" class="hover:text-blue-600 transition-colors" data-i18n="nav.faq">Hỏi Đáp</a>
-      </div>
-
-      <!-- Action & Lang Buttons -->
-      <div class="flex items-center gap-3">
-        <!-- Language Switcher -->
-        <button 
-          id="langSwitcher" 
-          onclick="toggleLanguage()" 
-          class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs font-mono font-medium transition-colors cursor-pointer"
-          title="Switch Language"
-        >
-          <span id="langFlag">🇻🇳</span>
-          <span id="langText" class="font-bold">VI</span>
-        </button>
-
-        <a 
-          href="#contact" 
-          class="hidden sm:inline-flex items-center justify-center btn-trust-primary px-4 py-2.5 rounded-xl text-xs uppercase tracking-wider"
-          data-i18n="nav.cta"
-        >
-          Nhận Tư Vấn Miễn Phí
         </a>
 
-        <!-- Mobile Menu Toggle Button -->
-        <button 
-          id="mobileMenuBtn" 
-          onclick="toggleMobileMenu()" 
-          class="lg:hidden p-2 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100"
-          aria-label="Toggle menu"
-        >
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-        </button>
+        <!-- Desktop Nav Menu (Includes Direct Link to Co-Founders!) -->
+        <div class="hidden lg:flex items-center gap-5 xl:gap-7 text-xs font-semibold text-slate-700">
+          <a href="#benefits" class="hover:text-blue-700 transition-colors" data-i18n="nav.benefits">Lợi Ích</a>
+          <a href="#showcase" class="hover:text-blue-700 transition-colors" data-i18n="nav.showcase">Kho Demo</a>
+          <a href="#case-studies" class="hover:text-blue-700 transition-colors" data-i18n="nav.case_studies">Kết Quả Thật</a>
+          <a href="#workflow" class="hover:text-blue-700 transition-colors" data-i18n="nav.workflow">Quy Trình</a>
+          <a href="#pricing" class="hover:text-blue-700 transition-colors" data-i18n="nav.pricing">Bảng Giá</a>
+          <!-- Direct Link to Dual Founders -->
+          <a href="#founder" class="text-blue-700 font-bold hover:text-blue-900 flex items-center gap-1.5 py-1 px-2.5 rounded-lg bg-blue-50 border border-blue-200">
+            <span>👥 Đội Ngũ Kỹ Sư</span>
+          </a>
+          <a href="#agency" class="hover:text-blue-700 transition-colors" data-i18n="nav.agency">Agency</a>
+          <a href="#faq" class="hover:text-blue-700 transition-colors" data-i18n="nav.faq">Hỏi Đáp</a>
+        </div>
+
+        <!-- Action & Lang Buttons -->
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+          <!-- Language Switcher -->
+          <button 
+            id="langSwitcher" 
+            onclick="toggleLanguage()" 
+            class="flex items-center gap-1 px-2 sm:px-2.5 py-1.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs font-mono font-semibold transition-colors cursor-pointer"
+            title="Switch Language"
+          >
+            <span id="langFlag">🇻🇳</span>
+            <span id="langText">VI</span>
+          </button>
+
+          <a 
+            href="#contact" 
+            class="hidden sm:inline-flex items-center justify-center btn-trust-primary px-4 sm:px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider font-bold"
+            data-i18n="nav.cta"
+          >
+            Nhận Tư Vấn
+          </a>
+
+          <!-- Mobile Menu Toggle Button -->
+          <button 
+            id="mobileMenuBtn" 
+            onclick="toggleMobileMenu()" 
+            class="lg:hidden p-2 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100 focus:outline-none"
+            aria-label="Toggle menu"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+
       </div>
+    </div>
 
-    </nav>
-
-    <!-- Mobile Drawer Menu -->
-    <div id="mobileDrawer" class="hidden lg:hidden mt-2 p-5 rounded-2xl bg-white border border-slate-200 shadow-xl space-y-4 text-sm font-semibold text-slate-700">
-      <a href="#benefits" onclick="toggleMobileMenu()" class="block py-1 hover:text-blue-600" data-i18n="nav.benefits">Lợi Ích</a>
-      <a href="#showcase" onclick="toggleMobileMenu()" class="block py-1 hover:text-blue-600" data-i18n="nav.showcase">Kho Mẫu Demo</a>
-      <a href="#case-studies" onclick="toggleMobileMenu()" class="block py-1 hover:text-blue-600" data-i18n="nav.case_studies">Kết Quả Thật</a>
-      <a href="#workflow" onclick="toggleMobileMenu()" class="block py-1 hover:text-blue-600" data-i18n="nav.workflow">Quy Trình 3 Bước</a>
-      <a href="#pricing" onclick="toggleMobileMenu()" class="block py-1 hover:text-blue-600" data-i18n="nav.pricing">Bảng Giá</a>
-      <a href="#agency" onclick="toggleMobileMenu()" class="block py-1 hover:text-blue-600" data-i18n="nav.agency">Đối Tác Agency</a>
-      <a href="#faq" onclick="toggleMobileMenu()" class="block py-1 hover:text-blue-600" data-i18n="nav.faq">Hỏi Đáp</a>
-      <a href="#contact" onclick="toggleMobileMenu()" class="block w-full py-3 text-center rounded-xl btn-trust-primary text-xs uppercase" data-i18n="nav.cta">Nhận Tư Vấn Miễn Phí</a>
+    <!-- Mobile Drawer Menu (Directly under Header, Clean & Full Width) -->
+    <div id="mobileDrawer" class="hidden lg:hidden border-t border-slate-200 bg-white px-5 py-6 shadow-2xl space-y-3.5 text-sm font-semibold text-slate-800">
+      <a href="#founder" onclick="toggleMobileMenu()" class="block py-2.5 px-3.5 rounded-xl bg-blue-50 text-blue-800 font-bold border border-blue-200 text-center">
+        👥 Gặp Gỡ 2 Kỹ Sư Sáng Lập (Viettel &amp; MobiFone) →
+      </a>
+      <a href="#benefits" onclick="toggleMobileMenu()" class="block py-1 hover:text-blue-700" data-i18n="nav.benefits">Lợi Ích</a>
+      <a href="#showcase" onclick="toggleMobileMenu()" class="block py-1 hover:text-blue-700" data-i18n="nav.showcase">Kho Mẫu Demo</a>
+      <a href="#case-studies" onclick="toggleMobileMenu()" class="block py-1 hover:text-blue-700" data-i18n="nav.case_studies">Kết Quả Thật</a>
+      <a href="#workflow" onclick="toggleMobileMenu()" class="block py-1 hover:text-blue-700" data-i18n="nav.workflow">Quy Trình 3 Bước</a>
+      <a href="#pricing" onclick="toggleMobileMenu()" class="block py-1 hover:text-blue-700" data-i18n="nav.pricing">Bảng Giá</a>
+      <a href="#agency" onclick="toggleMobileMenu()" class="block py-1 hover:text-blue-700" data-i18n="nav.agency">Đối Tác Agency</a>
+      <a href="#faq" onclick="toggleMobileMenu()" class="block py-1 hover:text-blue-700" data-i18n="nav.faq">Hỏi Đáp</a>
     </div>
   </header>
 
@@ -267,47 +266,47 @@
         <!-- Left: Value Proposition -->
         <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
           
-          <!-- Trust Badge -->
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-semibold">
-            <span class="w-2 h-2 rounded-full bg-blue-600"></span>
-            <span data-i18n="hero.badge">DÀNH CHO DOANH NGHIỆP KHÔNG RÀNH CÔNG NGHỆ • BÀN GIAO TRỌN GÓI</span>
+          <!-- Trust Badge: Dual Telecom Founders -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-300 text-slate-800 text-xs font-bold font-mono">
+            <span class="w-2 h-2 rounded-full bg-blue-700 animate-pulse"></span>
+            <span>BẢO CHỨNG BỞI BỘ ĐÔI KỸ SƯ SÁNG LẬP: VÕ TRÍ THỨC (VIETTEL) &amp; DOÃN HỮU PHONG (MOBIFONE)</span>
           </div>
 
           <!-- Main Headline -->
           <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.15]">
             <span data-i18n="hero.h1_p1">Trang Web Bán Hàng</span><br class="hidden sm:inline">
-            <span class="text-blue-600" data-i18n="hero.h1_p2">Tốc Độ Siêu Tốc</span>
+            <span class="text-blue-700" data-i18n="hero.h1_p2">Tốc Độ Siêu Tốc</span>
             <span data-i18n="hero.h1_p3">&amp; Báo Đơn Tức Thì Về Máy</span>
           </h1>
 
           <!-- Subtitle -->
           <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0" data-i18n="hero.subtitle">
-            Khách bấm quảng cáo là mở ngay dưới 1 giây. Khách điền thông tin là chuông điện thoại reo sau 2 giây. Bạn không cần biết kỹ thuật — TP Teams lo trọn gói từ thiết kế đến vận hành, sở hữu vĩnh viễn không mất phí thường niên.
+            Khách bấm quảng cáo là mở ngay dưới 1 giây. Khách điền thông tin là chuông điện thoại reo sau 2 giây. Trực tiếp thiết kế và bảo chứng kỹ thuật bởi Bộ đôi Kỹ sư Viễn thông <strong>Võ Trí Thức (Viettel)</strong> và <strong>Doãn Hữu Phong (MobiFone, HaUI Bằng Giỏi)</strong> — sở hữu vĩnh viễn, không mất phí thường niên.
           </p>
 
           <!-- 4 Bullet Guarantees -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs font-semibold text-slate-700 text-left max-w-lg mx-auto lg:mx-0">
             <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-white border border-slate-200 shadow-sm">
-              <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs shrink-0">✓</span>
+              <span class="w-5 h-5 rounded-full bg-slate-100 text-blue-800 flex items-center justify-center font-bold text-xs shrink-0 border border-slate-200">✓</span>
               <span data-i18n="hero.check1">Bàn giao chìa khóa trao tay trong 48h</span>
             </div>
             <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-white border border-slate-200 shadow-sm">
-              <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs shrink-0">✓</span>
+              <span class="w-5 h-5 rounded-full bg-slate-100 text-blue-800 flex items-center justify-center font-bold text-xs shrink-0 border border-slate-200">✓</span>
               <span data-i18n="hero.check2">0 VNĐ phí thuê bao duy trì hàng năm</span>
             </div>
             <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-white border border-slate-200 shadow-sm">
-              <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs shrink-0">✓</span>
+              <span class="w-5 h-5 rounded-full bg-slate-100 text-blue-800 flex items-center justify-center font-bold text-xs shrink-0 border border-slate-200">✓</span>
               <span data-i18n="hero.check3">Video 3 phút hướng dẫn sửa chữ &amp; ảnh</span>
             </div>
             <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-white border border-slate-200 shadow-sm">
-              <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs shrink-0">✓</span>
+              <span class="w-5 h-5 rounded-full bg-slate-100 text-blue-800 flex items-center justify-center font-bold text-xs shrink-0 border border-slate-200">✓</span>
               <span data-i18n="hero.check4">Ký hợp đồng pháp lý &amp; Xuất hóa đơn VAT</span>
             </div>
           </div>
 
           <!-- CTAs -->
           <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
-            <a href="#contact" class="w-full sm:w-auto btn-trust-primary px-7 py-4 rounded-xl text-center text-sm uppercase tracking-wider" data-i18n="hero.btn_quote">
+            <a href="#contact" class="w-full sm:w-auto btn-trust-primary px-7 py-4 rounded-xl text-center text-sm uppercase tracking-wider font-bold" data-i18n="hero.btn_quote">
               Đăng Ký Nhận Tư Vấn Miễn Phí
             </a>
             <a href="#interactive-demo" class="w-full sm:w-auto px-6 py-4 rounded-xl bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 text-center font-bold text-sm shadow-sm transition-colors" data-i18n="hero.btn_demo">
@@ -322,11 +321,11 @@
               <div class="text-[11px] text-slate-500 font-medium" data-i18n="hero.stat_speed">Tốc độ mở trang trên 4G</div>
             </div>
             <div>
-              <div class="text-2xl font-black text-emerald-600 font-mono">&lt; 2s</div>
+              <div class="text-2xl font-black text-blue-800 font-mono">&lt; 2s</div>
               <div class="text-[11px] text-slate-500 font-medium" data-i18n="hero.stat_alert">Đơn báo về Telegram</div>
             </div>
             <div>
-              <div class="text-2xl font-black text-blue-600 font-mono">100%</div>
+              <div class="text-2xl font-black text-slate-900 font-mono">100%</div>
               <div class="text-[11px] text-slate-500 font-medium" data-i18n="hero.stat_code">Sở hữu mã nguồn riêng</div>
             </div>
           </div>
@@ -384,7 +383,7 @@
                 <button 
                   onclick="triggerSimulatorPing()" 
                   id="simTriggerBtn"
-                  class="w-full py-2.5 rounded-xl btn-trust-emerald text-xs uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer"
+                  class="w-full py-2.5 rounded-xl btn-trust-primary text-xs uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer font-bold"
                 >
                   <span id="simBtnSpinner" class="hidden animate-spin w-3 h-3 border-2 border-white border-t-transparent rounded-full"></span>
                   <span id="simBtnText">Bấm Thử Nghiệm Bắn Lead 2s</span>
@@ -399,6 +398,53 @@
 
       </div>
 
+    </div>
+  </section>
+
+  <!-- ================= 01.5 FOUNDERS CREDIBILITY SPOTLIGHT (FRONT & CENTER) ================= -->
+  <section class="py-8 sm:py-10 bg-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="card-trust rounded-2xl p-6 sm:p-8 bg-slate-50 border border-slate-200">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
+          
+          <div class="space-y-1.5 text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-900 text-xs font-bold font-mono">
+              <span>🛡️ TRỰC TIẾP ĐỒNG HÀNH &amp; CHỊU TRÁCH NHIỆM KỸ THUẬT</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+              Bộ Đôi Kỹ Sư Viễn Thông Sáng Lập TP Teams
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 max-w-2xl">
+              Chúng tôi không thuê ngoài sinh viên hay làm qua loa. Toàn bộ kiến trúc và trang web của bạn được bảo chứng kỹ thuật bởi 2 kỹ sư chính quy:
+            </p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-center gap-4 w-full lg:w-auto shrink-0">
+            
+            <!-- Founder 1 Mini Card -->
+            <a href="#founder" class="w-full sm:w-auto flex items-center gap-3.5 p-3 rounded-xl bg-white border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all">
+              <img src="anh/founder_avatar.jpg" alt="Võ Trí Thức" class="w-12 h-12 rounded-xl object-cover border border-slate-200 shrink-0">
+              <div class="text-left">
+                <div class="text-xs font-bold text-slate-900">Võ Trí Thức</div>
+                <div class="text-[11px] text-blue-700 font-bold font-mono">Kỹ Sư Phần Mềm Viettel</div>
+                <div class="text-[10px] text-slate-500">Founder &amp; Tech Lead</div>
+              </div>
+            </a>
+
+            <!-- Founder 2 Mini Card: Doan Huu Phong -->
+            <a href="#founder" class="w-full sm:w-auto flex items-center gap-3.5 p-3 rounded-xl bg-white border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all">
+              <img src="anh/doanhuuphong.jpeg" alt="Doãn Hữu Phong" class="w-12 h-12 rounded-xl object-cover border border-slate-200 shrink-0">
+              <div class="text-left">
+                <div class="text-xs font-bold text-slate-900">Doãn Hữu Phong</div>
+                <div class="text-[11px] text-blue-700 font-bold font-mono">Kỹ Sư MobiFone (HaUI Bằng Giỏi)</div>
+                <div class="text-[10px] text-slate-500">Co-Founder &amp; Systems Lead</div>
+              </div>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
     </div>
   </section>
 
@@ -913,14 +959,14 @@
 
         <!-- Step 3 -->
         <div class="card-trust rounded-3xl p-6 sm:p-8 space-y-4 relative">
-          <div class="w-12 h-12 rounded-2xl bg-emerald-600 text-white flex items-center justify-center font-bold text-xl shadow-md shadow-emerald-500/20">
+          <div class="w-12 h-12 rounded-2xl bg-slate-900 text-white flex items-center justify-center font-bold text-xl shadow-md">
             3
           </div>
           <h3 class="text-lg font-bold text-slate-900">Bước 3: Bàn Giao &amp; Hướng Dẫn Dễ Dàng</h3>
           <p class="text-xs text-slate-600 leading-relaxed">
             Bàn giao kèm video 3 phút hướng dẫn gõ chữ/thay ảnh cực dễ. Trong 6 tháng, cần đổi giá hay banner chỉ cần nhắn Zalo, kỹ sư sửa miễn phí 100%.
           </p>
-          <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-100 text-[11px] text-emerald-900 font-medium">
+          <div class="p-3 rounded-xl bg-slate-100 border border-slate-200 text-[11px] text-slate-800 font-medium">
             🛡️ Bảo hành trọn đời mã nguồn, đồng hành dài lâu.
           </div>
         </div>
@@ -1180,50 +1226,50 @@
         </div>
 
         <!-- Co-Founder 2: Doãn Hữu Phong -->
-        <div class="card-trust rounded-3xl p-6 sm:p-8 flex flex-col justify-between space-y-6 border border-slate-200 hover:border-emerald-300 transition-all shadow-sm">
+        <div class="card-trust rounded-3xl p-6 sm:p-8 flex flex-col justify-between space-y-6 border border-slate-200 hover:border-blue-400 transition-all shadow-sm">
           <div class="space-y-5">
             <div class="flex items-center gap-4">
               <div class="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden shadow-md border-2 border-slate-200 shrink-0">
                 <img src="anh/doanhuuphong.jpeg" alt="Doãn Hữu Phong" class="w-full h-full object-cover">
               </div>
               <div>
-                <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-[10px] font-mono font-bold mb-1 border border-emerald-200">
+                <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-100 text-blue-900 text-[10px] font-mono font-bold mb-1 border border-slate-200">
                   <span>CO-FOUNDER &amp; SYSTEMS LEAD</span>
                 </div>
                 <h3 class="text-lg sm:text-xl font-bold text-slate-900">Doãn Hữu Phong</h3>
-                <div class="text-xs text-emerald-700 font-bold font-mono">Kỹ Sư Phần Mềm MobiFone • HaUI Bằng Giỏi</div>
-                <div class="text-[11px] text-slate-500">Chuyên Gia Hệ Thống Viễn Thông &amp; Bảo Mật</div>
+                <div class="text-xs text-blue-800 font-bold font-mono">Kỹ Sư Phần Mềm MobiFone • HaUI Bằng Giỏi</div>
+                <div class="text-[11px] text-slate-500 font-medium">Chuyên Gia Hệ Thống Viễn Thông &amp; Bảo Mật Dữ Liệu</div>
               </div>
             </div>
 
             <div class="space-y-2 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
               <p class="italic font-medium text-slate-700">
-                "Mỗi hệ thống bàn giao đều được kiểm thử nghiêm ngặt theo tiêu chuẩn viễn thông: tốc độ mở trang dưới 1 giây, dữ liệu khách hàng được bảo mật đa tầng và thông báo đơn reo tức thì không trễ một nhịp."
+                "Tôi mang nguyên lý khắt khe của mạng viễn thông quốc gia vào từng dự án của TP Teams: Mọi hệ thống bàn giao phải mở trang dưới 1 giây, dữ liệu khách hàng được bảo mật đa tầng, và thông báo đơn hàng reo tức thì không được phép trễ một nhịp nào để bảo vệ tối đa ngân sách quảng cáo của khách hàng."
               </p>
             </div>
 
             <div class="space-y-2 text-xs">
-              <div class="font-bold text-slate-800 text-[11px] uppercase tracking-wider text-slate-400">Chuyên môn phụ trách:</div>
+              <div class="font-bold text-slate-800 text-[11px] uppercase tracking-wider text-slate-400">Trọng trách chuyên môn tại TP Teams:</div>
               <div class="grid grid-cols-1 gap-2 text-slate-600">
                 <div class="flex items-start gap-2">
-                  <span class="text-emerald-600 font-bold">✔</span>
-                  <span>Kỹ thuật hệ thống tải cao (High-throughput &amp; Distributed Systems)</span>
+                  <span class="text-blue-700 font-bold">✔</span>
+                  <span><strong>Kiến trúc chịu tải phân tán:</strong> Thiết kế hạ tầng chịu tải đồng thời hàng chục nghìn lượt click quảng cáo mà không nghẽn mạng.</span>
                 </div>
                 <div class="flex items-start gap-2">
-                  <span class="text-emerald-600 font-bold">✔</span>
-                  <span>An toàn thông tin, bảo mật dữ liệu doanh nghiệp &amp; phân quyền</span>
+                  <span class="text-blue-700 font-bold">✔</span>
+                  <span><strong>An toàn thông tin &amp; Bảo mật đa lớp:</strong> Thiết lập tiêu chuẩn bảo mật dữ liệu cấp viễn thông, chống đánh cắp danh sách số điện thoại khách hàng.</span>
                 </div>
                 <div class="flex items-start gap-2">
-                  <span class="text-emerald-600 font-bold">✔</span>
-                  <span>Đường ống dữ liệu (Data Pipelines) &amp; Tối ưu hiệu năng mạng</span>
+                  <span class="text-blue-700 font-bold">✔</span>
+                  <span><strong>Đường ống dữ liệu &amp; Webhook 2s:</strong> Đảm bảo thông tin đơn hàng bắn về máy chủ và Telegram ổn định 99.99% thời gian.</span>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-mono">
-            <span>Tốt nghiệp Bằng Giỏi HaUI</span>
-            <span class="text-emerald-600 font-bold">MobiFone Telecom Stack</span>
+            <span>Tốt Nghiệp Bằng Giỏi HaUI</span>
+            <span class="text-blue-800 font-bold">MobiFone Telecom Standards</span>
           </div>
         </div>
 
