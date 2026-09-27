@@ -17,7 +17,21 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, phone, type, budget, message, utm_source, utm_medium, utm_campaign } = req.body || {};
+    const { 
+      name, 
+      email, 
+      phone, 
+      type, 
+      serviceType, 
+      track, 
+      team_size, 
+      bottleneck, 
+      budget, 
+      message, 
+      utm_source, 
+      utm_medium, 
+      utm_campaign 
+    } = req.body || {};
 
     if (!name || !phone) {
       return res.status(400).json({ error: 'Vui lòng cung cấp họ tên và số điện thoại liên hệ.' });
@@ -47,19 +61,23 @@ export default async function handler(req, res) {
       ? `${escapeHtml(utm_source || 'Direct')} (Campaign: ${escapeHtml(utm_campaign || 'N/A')}, Medium: ${escapeHtml(utm_medium || 'N/A')})`
       : 'Truy cập trực tiếp (Direct Web)';
 
-    const telegramMessage = `🚨 <b>CÓ YÊU CẦU TƯ VẤN MỚI TỪ TP TEAMS!</b>
+    const strategicTrack = track || type || serviceType || 'Hội chẩn giải pháp doanh nghiệp';
+
+    const telegramMessage = `🚨 <b>YÊU CẦU HỘI CHẨN KIẾN TRÚC KỸ THUẬT TP TEAMS</b>
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 👤 <b>Khách hàng:</b> ${escapeHtml(name)}
 📞 <b>Số điện thoại / Zalo:</b> <code>${escapeHtml(phone)}</code>
 ✉️ <b>Email:</b> ${escapeHtml(email)}
-🛠️ <b>Gói dịch vụ:</b> ${escapeHtml(type || 'Tư vấn giải pháp')}
-💰 <b>Ngân sách:</b> ${escapeHtml(budget || 'Chưa chọn')}
-📝 <b>Bài toán / Yêu cầu:</b>
-<blockquote>${escapeHtml(message || 'Cần tư vấn giải pháp')}</blockquote>
+🎯 <b>Mục tiêu chiến lược:</b> ${escapeHtml(strategicTrack)}
+👥 <b>Quy mô nhân sự:</b> ${escapeHtml(team_size || 'Chưa cung cấp')}
+⚠️ <b>Nút thắt đang gặp:</b> ${escapeHtml(bottleneck || 'Cần tối ưu hệ thống')}
+💰 <b>Ngân sách dự kiến:</b> ${escapeHtml(budget || 'Tư vấn theo bài toán')}
+📝 <b>Bài toán / Yêu cầu chi tiết:</b>
+<blockquote>${escapeHtml(message || 'Đăng ký tư vấn giải pháp từ kỹ sư')}</blockquote>
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 📡 <b>Nguồn chiến dịch:</b> ${campaignInfo}
 ⏰ <b>Thời gian:</b> ${timeStr}
-🌐 <b>Hệ thống:</b> TP Teams Agency (landing.votrithuc.click)`;
+🌐 <b>Hệ thống:</b> TP Teams Solutions (landing.votrithuc.click)`;
 
     const telegramApiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
     const response = await fetch(telegramApiUrl, {

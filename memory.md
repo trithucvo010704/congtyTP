@@ -281,8 +281,41 @@ File này đóng vai trò là "bộ nhớ dài hạn" của dự án, lưu trữ
 
 ---
 
-## V. NHIỆM VỤ TIẾP THEO ĐANG THỰC HIỆN (CURRENT SPRINT)
-1. Kiểm tra toàn bộ cú pháp HTML, JavaScript và CSS.
+### Phiên làm việc: Ngày 28/09/2026 (Phiên 13 - /goal Triệt Để: Song Ngữ Toàn Diện VI/EN, Form Hội Chẩn Kiến Trúc 3 Chiến Lược, Kiểm Thử Tự Động Playwright Trên Linux Fedora & Deploy Vercel Production)
+- **Mục tiêu & Yêu cầu hoàn thành:**
+  1. **Hệ Thống Song Ngữ Doanh Nghiệp Toàn Diện (Bilingual i18n VI / EN):**
+     - Xây dựng từ điển song ngữ hoàn chỉnh `translations.vi` và `translations.en` phủ 100% các thành phần: Top Navigation, Hero, Co-founders, 4 Pain Points, Bảng tính ROI/Ads Waste, Đo tốc độ Benchmark, Bảng so sánh 3 phương án, Kho 6 Showcase, Kết quả thực chiến (Case Studies), Quy trình 3 bước, Bảng giá 3 gói, Hợp tác Agency, Hồ sơ chi tiết 2 Kỹ sư, FAQ và Form tư vấn.
+     - Tự động chuyển đổi tỷ giá và đơn vị tiền tệ: VNĐ (`1.900.000 VNĐ / trang`, `3.800.000 VNĐ`, `8.900.000 VNĐ`) ⇄ USD (`$79 / page`, `$155`, `$360`).
+     - Tự động chuyển đổi đơn vị và nhận định trên thanh trượt ngân sách ads (5M-100M VNĐ ⇄ $200-$4,000 USD).
+     - Lưu trạng thái ngôn ngữ đã chọn vào `localStorage` (`tp_lang`).
+  2. **Nâng Cấp Form Tư Vấn Thành "Hội Chẩn Bài Toán & Đề Xuất Kiến Trúc Doanh Nghiệp":**
+     - Thay thế dropdown gói thông thường bằng **3 Thẻ Mục Tiêu Chiến Lược Tương Tác**:
+       * Thẻ 1: Landing Page Chuyển Đổi Cao & Tối Ưu Tốc Độ Ads (Tải <0.8s, Webhook 2s, sở hữu trọn đời).
+       * Thẻ 2: Phát Triển Phần Mềm / Web App / Mini-CRM May Đo (Chuẩn kiến trúc Viễn thông Viettel & MobiFone, bảo mật dữ liệu riêng).
+       * Thẻ 3: AI Agent & Tự Động Hóa Vận Hành (Bot Telegram, phân luồng lead tự động, tiết kiệm 80% thời gian trực).
+     - Bổ sung chọn quy mô nhân sự nhanh dạng pill (`< 10 người`, `10–50 người`, `> 50 người`).
+     - Bổ sung chọn nút thắt lớn nhất doanh nghiệp đang gặp phải.
+     - Ô mô tả bài toán tự động thay đổi gợi ý theo chiến lược được chọn.
+     - Nút đăng ký chuyển đổi sang: `[ 🚀 ĐĂNG KÝ HỘI CHẨN KIẾN TRÚC MIỄN PHÍ VỚI BỘ ĐÔI KỸ SƯ ]`.
+     - Backend API `api/contact.js` nâng cấp nhận diện đầy đủ `track`, `team_size`, `bottleneck` và format Telegram HTML chuyên nghiệp.
+  3. **Môi Trường Trình Duyệt & Kiểm Thử Tự Động (Playwright / Chrome on Linux Fedora 44):**
+     - Cài đặt & cấu hình Google Chrome for Testing 153 và headless Playwright trên hệ điều hành Fedora 44.
+     - Kiểm thử tự động 9 mục checklist:
+       1. Top announcement bar: Chuẩn Light Corporate (`rgba(255, 255, 255, 0.95)`), không thanh đen.
+       2. Hero: Hiển thị đầy đủ Kỹ sư Doãn Hữu Phong (MobiFone Việt Nam) và Võ Trí Thức (Viettel), 0 chữ 'HaUI'.
+       3. Founders Spotlight: 2 thẻ hiển thị sắc nét, chuẩn nhận diện viễn thông, 0 chữ 'HaUI'.
+       4. Công cụ tương tác Section 02.5: Thanh trượt nhảy mượt mà (25M -> 50M -> thất thoát 22.5M), nút đo tốc độ chạy thanh tiến trình mượt mà (0.62s vs 2.80s) và âm thanh chuông chime.
+       5. Kho dự án Section 04: Đầy đủ 6 cards và 7 tabs bộ lọc, không gãy vỡ layout.
+       6. Footer Section 12: Light corporate (`rgba(241, 245, 249, 0.9)`), không nền đen `bg-slate-900`.
+       7. Responsive mobile 375x667: `clientWidth: 375`, `scrollWidth: 375`, 0 lỗi tràn ngang (horizontal scroll = false), sticky header hoạt động mượt mà.
+       8. Chuyển đổi ngôn ngữ ENG: Chuyển toàn bộ văn bản và đổi giá sang USD ($79, $155, $360) mượt mà.
+       9. Không có bất kỳ lỗi console (0 console errors).
+
+---
+
+## V. ĐÃ TRIỂN KHAI & DUY TRÌ HỆ THỐNG
+- Mã nguồn sạch sẽ, không dư thừa, tuân thủ nguyên tắc Light Corporate Trust & Speed.
+- Triển khai Vercel Production: `https://landing.votrithuc.click/`.
 2. Kiểm thử độ phản hồi responsive trên trình duyệt giả lập headless.
 3. Commit Git, push lên GitHub và deploy Vercel Edge Production.
 4. Xác minh HTTP 200 OK trên miền `https://landing.votrithuc.click/`.
