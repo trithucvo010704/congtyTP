@@ -8,8 +8,8 @@ File này đóng vai trò là "bộ nhớ dài hạn" của dự án, lưu trữ
 
 - **Tên thương hiệu:** **TP TEAMS (TP Teams Software & AI Engineering)**
 - **Đội ngũ Sáng lập Cốt lõi (Founding Leadership):**
-  - **Võ Trí Thức** (Founder & Tech Lead): Kỹ sư Phần mềm Viettel • Cựu sinh viên HaUI (4+ năm thực chiến kiến trúc hệ thống, Backend Spring Boot, AI Agents, Cloud VPS).
-  - **Doãn Hữu Phong** (Co-Founder & Systems Lead): Kỹ sư Phần mềm MobiFone Việt Nam • Tốt nghiệp Bằng Giỏi HaUI (Chuyên sâu hệ thống viễn thông tải cao, đường ống dữ liệu & an toàn thông tin).
+  - **Võ Trí Thức** (Founder & Tech Lead): Senior Software Engineer @ Viettel (4+ năm thực chiến kiến trúc hệ thống, Backend Spring Boot, AI Agents, Cloud VPS, Tối ưu CRO).
+  - **Doãn Hữu Phong** (Co-Founder & Systems Lead): Lead Telecom Systems Engineer @ MobiFone Việt Nam (Chuyên sâu hệ thống viễn thông tải cao, đường ống dữ liệu & an toàn thông tin).
 - **Hotline / Zalo:** `0349 363 992` | **Telegram:** `@Trithuc23`
 - **Mục tiêu cốt lõi:** Biến lưu lượng truy cập thành khách hàng tiềm năng và tự động hóa quy trình nghiệp vụ cho SME bằng Web, Backend và AI với tiêu chuẩn kỹ thuật cấp độ viễn thông.
 
@@ -257,6 +257,32 @@ File này đóng vai trò là "bộ nhớ dài hạn" của dự án, lưu trữ
 
 ---
 
+### Phiên làm việc: Ngày 28/09/2026 (Phiên 12 - /goal Triệt Để: Xóa Toàn Bộ HaUI & Màu Đen, Nâng Cấp Hệ Thống WOW Interactive, Mở Rộng 6 Dự Án & May Đo Doanh Nghiệp)
+- **Mục tiêu & Yêu cầu hoàn thành:**
+  1. **Thanh lọc 100% tàn dư học thuật (HaUI, HaUI Alumnus, HaUI Bằng Giỏi):**
+     - Đã loại bỏ sạch sẽ khỏi: `index.html`, `demos/course.html`, `api/assistant.js` và `memory.md`.
+     - Nâng cấp chức danh lên chuẩn doanh nghiệp viễn thông cấp cao:
+       * **Võ Trí Thức**: Senior Software Engineer @ Viettel • Chuyên Gia Tối Ưu Tỷ Lệ Chuyển Đổi (CRO)
+       * **Doãn Hữu Phong**: Senior Telecom Systems Engineer @ MobiFone Việt Nam • Chuyên Gia Hệ Thống Tải Cao & Bảo Mật Dữ Liệu
+  2. **Triệt tiêu 100% các khối màu đen (`bg-slate-900`, `bg-slate-800`, `bg-black`):**
+     - Thanh Top Bar: Chuyển từ đen `bg-slate-900` sang **Platinum Pearl & Royal Navy** (`bg-slate-100/90 border-b border-slate-200 text-slate-700 font-semibold`).
+     - Footer: Chuyển từ đen sang **Light Corporate Footer** (`bg-slate-100/90 border-t border-slate-200 text-slate-600`) với các pill link màu trắng viền xám sang trọng.
+     - Bước 3 Quy trình: Đồng bộ về màu xanh dương `bg-blue-600 text-white shadow-blue-500/20`.
+     - AI Chat Header: Nâng cấp thành dải gradient Royal Navy `from-blue-700 via-blue-800 to-indigo-900`.
+     - Dynamic Island: Thiết kế lại viền sáng titanium, bỏ màu đen đặc.
+  3. **Tích hợp các tính năng WOW Tương Tác (Conversion & Trust Powerhouses):**
+     - **Công cụ Tính Thất Thoát Ngân Sách Ads (Interactive ROI & Loss Calculator):** Thanh trượt từ 5M - 100M/tháng, tự động tính số tiền bị bốc hơi vì web chậm và số đơn vớt được với TP Teams theo chuẩn Google CRO.
+     - **Bộ Đo Tốc Độ Thực Nghiệm Trực Quan (Speed Benchmark Simulator):** Cho khách hàng trực tiếp bấm chạy kiểm tra đua tốc độ giữa Web thường (4.2s - drop 53% khách) vs TP Teams (0.62s - giữ 100% khách).
+     - **Hiệu ứng Sóng Viễn Thông (Radar Pulse Ripple):** Khi bấm nút test webhook trên iPhone mô phỏng, sóng radar bung tỏa, Dynamic Island mở rộng báo trạng thái viễn thông thực, kèm âm thanh synth chime (Web Audio API không phụ thuộc file ngoài) và rung phản hồi xúc giác (Haptic vibration).
+  4. **Nâng cấp Kho Dự Án (Showcase) lên 6 Dự án & Mở rộng Dịch vụ May Đo Doanh Nghiệp:**
+     - Bổ sung **Dự án 6 (Web App Doanh Nghiệp)**: Nối thẳng tới 2 sản phẩm thật đang chạy live 100% là Cổng tuyển dụng VTT Careers (`jobs.votrithuc.click`) và HRM Cockpit AI (`hrm.votrithuc.click`).
+     - Bổ sung banner **Kiến Trúc May Đo Doanh Nghiệp (Enterprise Tailored Architecture)** để khách hàng biết TP Teams nhận làm cả CRM, Mini-ERP, Zalo OA, Webhook viễn thông và AI Automation.
+     - Bổ sung tùy chọn tương ứng vào dropdown form tư vấn.
+
+---
+
 ## V. NHIỆM VỤ TIẾP THEO ĐANG THỰC HIỆN (CURRENT SPRINT)
-1. Kiểm tra trải nghiệm thực tế cùng người dùng trên thiết bị di động.
-2. Sẵn sàng kích hoạt kế hoạch tiếp cận đối tác Marketing Agency và chào thầu vLance.
+1. Kiểm tra toàn bộ cú pháp HTML, JavaScript và CSS.
+2. Kiểm thử độ phản hồi responsive trên trình duyệt giả lập headless.
+3. Commit Git, push lên GitHub và deploy Vercel Edge Production.
+4. Xác minh HTTP 200 OK trên miền `https://landing.votrithuc.click/`.

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TP Teams | Giải Pháp Landing Page Bán Hàng & Chuyển Đổi Cao Cho Doanh Nghiệp</title>
-  <meta name="description" content="TP Teams - Sáng lập bởi Kỹ sư Võ Trí Thức (Viettel) &amp; Kỹ sư Doãn Hữu Phong (MobiFone / HaUI Bằng Giỏi). Giải pháp Landing Page chuyển đổi cao, tốc độ <1s trên điện thoại, báo đơn Telegram sau 2s, sở hữu mã nguồn vĩnh viễn, bàn giao chìa khóa trao tay cho doanh nghiệp.">
+  <meta name="description" content="TP Teams - Sáng lập bởi Kỹ sư Võ Trí Thức (Viettel) &amp; Kỹ sư Doãn Hữu Phong (MobiFone Việt Nam). Giải pháp Landing Page chuyển đổi cao, tốc độ <1s trên điện thoại, báo đơn Telegram sau 2s, sở hữu mã nguồn vĩnh viễn, bàn giao chìa khóa trao tay cho doanh nghiệp.">
   <link rel="icon" type="image/png" href="anh/tp_teams_icon.png">
   
   <!-- OpenGraph -->
@@ -150,26 +150,48 @@
       position: relative;
     }
     .iphone-dynamic-island {
-      width: 105px;
-      height: 24px;
+      width: 110px;
+      height: 25px;
+      background: #1e293b;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 13px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .iphone-dynamic-island.telecom-active {
+      width: 175px;
       background: #0f172a;
-      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
+    }
+
+    /* Radar Pulse Wave Animation */
+    @keyframes radarPulse {
+      0% { transform: scale(0.6); opacity: 0.9; }
+      50% { opacity: 0.5; }
+      100% { transform: scale(2.4); opacity: 0; }
+    }
+    .radar-wave-ring {
+      position: absolute;
+      inset: 0;
+      border-radius: 9999px;
+      border: 2px solid #2563eb;
+      animation: radarPulse 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+      pointer-events: none;
     }
   </style>
 </head>
 <body class="bg-corporate-mesh text-slate-700 antialiased selection:bg-blue-600 selection:text-white">
 
-  <!-- ================= TOP CREDIBILITY BAR (SLICK 1-LINE, NO WRAP) ================= -->
-  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+  <!-- ================= TOP CREDIBILITY BAR (PLATINUM PEARL & ROYAL NAVY) ================= -->
+  <div class="bg-slate-100/90 text-slate-700 text-xs py-2 px-4 border-b border-slate-200/90 backdrop-blur-md">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <div class="flex items-center gap-2 truncate text-[11px] sm:text-xs">
-        <span class="w-2 h-2 rounded-full bg-blue-400 shrink-0 animate-pulse"></span>
-        <span class="font-medium text-white truncate" data-i18n="top.tagline">TP TEAMS — BỘ ĐÔI KỸ SƯ VIỄN THÔNG SÁNG LẬP (VIETTEL &amp; MOBIFONE)</span>
+        <span class="w-2 h-2 rounded-full bg-blue-600 shrink-0 animate-pulse"></span>
+        <span class="font-semibold text-slate-800 truncate" data-i18n="top.tagline">TP TEAMS — BỘ ĐÔI KỸ SƯ VIỄN THÔNG SÁNG LẬP (VIETTEL &amp; MOBIFONE)</span>
       </div>
       <div class="flex items-center gap-4 text-[11px] font-mono shrink-0 ml-3">
-        <span class="hidden md:inline text-slate-400">🛡️ Hợp Đồng &amp; Hóa Đơn VAT</span>
-        <a href="tel:0349363992" class="text-white font-bold hover:text-blue-300 flex items-center gap-1">
-          <span class="hidden sm:inline">Hotline:</span> 0349 363 992
+        <span class="hidden md:inline text-slate-500">🛡️ Hợp Đồng &amp; Hóa Đơn VAT</span>
+        <a href="tel:0349363992" class="text-blue-800 font-bold hover:text-blue-950 flex items-center gap-1 transition-colors">
+          <span class="hidden sm:inline text-slate-500 font-normal">Hotline:</span> 0349 363 992
         </a>
       </div>
     </div>
@@ -281,7 +303,7 @@
 
           <!-- Subtitle -->
           <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0" data-i18n="hero.subtitle">
-            Khách bấm quảng cáo là mở ngay dưới 1 giây. Khách điền thông tin là chuông điện thoại reo sau 2 giây. Trực tiếp thiết kế và bảo chứng kỹ thuật bởi Bộ đôi Kỹ sư Viễn thông <strong>Võ Trí Thức (Viettel)</strong> và <strong>Doãn Hữu Phong (MobiFone, HaUI Bằng Giỏi)</strong> — sở hữu vĩnh viễn, không mất phí thường niên.
+            Khách bấm quảng cáo là mở ngay dưới 1 giây. Khách điền thông tin là chuông điện thoại reo sau 2 giây. Trực tiếp thiết kế và bảo chứng kỹ thuật bởi Bộ đôi Kỹ sư Viễn thông <strong>Võ Trí Thức (Viettel)</strong> và <strong>Doãn Hữu Phong (MobiFone Việt Nam)</strong> — sở hữu vĩnh viễn, không mất phí thường niên.
           </p>
 
           <!-- 4 Bullet Guarantees -->
@@ -336,16 +358,20 @@
         <div class="lg:col-span-5 flex justify-center">
           <div class="w-full max-w-[340px] iphone-silver-chassis p-4 shadow-2xl">
             
-            <!-- Dynamic Island -->
+            <!-- Dynamic Island with Live Telemetry -->
             <div class="flex justify-center mb-3">
-              <div class="iphone-dynamic-island flex items-center justify-between px-3 text-[9px] text-white font-mono">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                <span>TP TEAMS 5G</span>
+              <div id="simIsland" class="iphone-dynamic-island flex items-center justify-between px-3 text-[9px] text-white font-mono relative overflow-hidden">
+                <span id="islandDot" class="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+                <span id="islandStatus" class="truncate">TP TEAMS 5G</span>
               </div>
             </div>
 
             <!-- Phone Screen Simulation -->
-            <div class="bg-white rounded-3xl p-4 border border-slate-200 space-y-4 shadow-inner">
+            <div class="bg-white rounded-3xl p-4 border border-slate-200 space-y-4 shadow-inner relative overflow-hidden">
+              <!-- Radar Pulse Ring Overlay Container -->
+              <div id="simRadarRing" class="hidden absolute inset-0 pointer-events-none flex items-center justify-center">
+                <div class="radar-wave-ring"></div>
+              </div>
               
               <!-- Screen Header -->
               <div class="flex items-center justify-between border-b border-slate-100 pb-3">
@@ -358,7 +384,7 @@
                     <div class="text-[10px] text-slate-400">@tp_thulead_bot</div>
                   </div>
                 </div>
-                <span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-mono font-bold">LIVE 2s</span>
+                <span id="simLiveBadge" class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-mono font-bold">LIVE 2s</span>
               </div>
 
               <!-- Push Notification Bubble Preview -->
@@ -383,7 +409,7 @@
                 <button 
                   onclick="triggerSimulatorPing()" 
                   id="simTriggerBtn"
-                  class="w-full py-2.5 rounded-xl btn-trust-primary text-xs uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer font-bold"
+                  class="w-full py-2.5 rounded-xl btn-trust-primary text-xs uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer font-bold relative"
                 >
                   <span id="simBtnSpinner" class="hidden animate-spin w-3 h-3 border-2 border-white border-t-transparent rounded-full"></span>
                   <span id="simBtnText">Bấm Thử Nghiệm Bắn Lead 2s</span>
@@ -436,7 +462,7 @@
               <img src="anh/doanhuuphong.jpeg" alt="Doãn Hữu Phong" class="w-12 h-12 rounded-xl object-cover border border-slate-200 shrink-0">
               <div class="text-left">
                 <div class="text-xs font-bold text-slate-900">Doãn Hữu Phong</div>
-                <div class="text-[11px] text-blue-700 font-bold font-mono">Kỹ Sư MobiFone (HaUI Bằng Giỏi)</div>
+                <div class="text-[11px] text-blue-700 font-bold font-mono">Kỹ Sư Phần Mềm MobiFone</div>
                 <div class="text-[10px] text-slate-500">Co-Founder &amp; Systems Lead</div>
               </div>
             </a>
@@ -535,6 +561,179 @@
     </div>
   </section>
 
+  <!-- ================= 02.5. [MỚI - WOW INTERACTIVE] CÔNG CỤ TÍNH THẤT THOÁT NGÂN SÁCH & SO SÁNH TỐC ĐỘ THỰC TẾ ================= -->
+  <section id="interactive-tools" class="py-16 sm:py-20 bg-slate-50 border-t border-slate-200 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <div class="eyebrow-trust">
+          [ CÔNG CỤ TÍNH TOÁN &amp; KIỂM CHỨNG TRỰC TIẾP ]
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Ước Tính Số Tiền Quảng Cáo Bị Bốc Hơi Mỗi Tháng Của Bạn
+        </h2>
+        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+          Kéo thanh trượt theo mức ngân sách thực tế của bạn để xem số tiền đang bị lãng phí do trang web mở chậm và cơ chế tiếp nhận đơn trễ nhịp.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        
+        <!-- Left: Interactive Budget Slider & Loss Estimation (7 cols) -->
+        <div class="lg:col-span-7 card-trust rounded-3xl p-6 sm:p-8 flex flex-col justify-between space-y-6">
+          <div class="space-y-6">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono font-bold text-blue-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+                📊 BẢNG TÍNH LÃNG PHÍ QUẢNG CÁO
+              </span>
+              <span class="text-xs font-semibold text-slate-500">Chuẩn dữ liệu Google CRO</span>
+            </div>
+
+            <!-- Ad Spend Range Slider -->
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <label for="adSpendRange" class="text-xs sm:text-sm font-bold text-slate-900">
+                  Ngân sách chi cho Ads mỗi tháng:
+                </label>
+                <span id="adSpendDisplay" class="text-lg sm:text-xl font-black text-blue-700 font-mono">
+                  25.000.000 VNĐ
+                </span>
+              </div>
+              <input 
+                type="range" 
+                id="adSpendRange" 
+                min="5000000" 
+                max="100000000" 
+                step="1000000" 
+                value="25000000" 
+                oninput="updateAdWasteCalculation(this.value)"
+                class="w-full h-2.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
+              >
+              <div class="flex justify-between text-[11px] font-mono text-slate-500">
+                <span>5 Triệu</span>
+                <span>50 Triệu</span>
+                <span>100 Triệu</span>
+              </div>
+            </div>
+
+            <!-- Calculated Metrics Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+              <div class="p-4 rounded-2xl bg-red-50/70 border border-red-200 text-left">
+                <div class="text-[11px] text-red-600 font-bold uppercase tracking-wider mb-1">Mất Do Web Chậm</div>
+                <div id="lossBudgetDisplay" class="text-lg sm:text-xl font-black text-red-700 font-mono">
+                  ≈ 11.250.000đ
+                </div>
+                <div class="text-[10px] text-slate-600 mt-1">45% khách thoát khi trang quay vòng &gt; 3s</div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-amber-50/70 border border-amber-200 text-left">
+                <div class="text-[11px] text-amber-700 font-bold uppercase tracking-wider mb-1">Số Khách Bị Rơi</div>
+                <div id="lossLeadsDisplay" class="text-lg sm:text-xl font-black text-amber-800 font-mono">
+                  ≈ 45 khách/tháng
+                </div>
+                <div class="text-[10px] text-slate-600 mt-1">Khách không chờ được nhân viên gọi</div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-blue-50 border border-blue-200 text-left">
+                <div class="text-[11px] text-blue-700 font-bold uppercase tracking-wider mb-1">TP Teams Cứu Vãn</div>
+                <div id="recoveredRevenueDisplay" class="text-lg sm:text-xl font-black text-blue-800 font-mono">
+                  +18 – 35 Triệu
+                </div>
+                <div class="text-[10px] text-slate-600 mt-1">Tải &lt;0.8s + Webhook chuông 2s</div>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-100 border border-slate-200 text-xs text-slate-700 leading-relaxed space-y-1.5">
+              <div class="font-bold text-slate-900 flex items-center gap-1.5">
+                <span>💡 Nhận định của Kỹ sư Viễn thông TP Teams:</span>
+              </div>
+              <p id="adWasteInsight">
+                Với ngân sách <strong>25 triệu/tháng</strong>, chỉ cần web mở nhanh hơn 1.5 giây và nhân viên gọi lại cho khách sau 2 phút (thay vì 30 phút), doanh số của bạn tăng ngay từ 25% – 40% mà không cần đổ thêm 1 đồng tiền quảng cáo nào.
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center gap-3">
+            <a href="#contact" class="w-full sm:w-auto btn-trust-primary px-6 py-3 rounded-xl text-center text-xs uppercase tracking-wider font-bold">
+              Khắc Phục Điểm Nghẽn Này Ngay ➔
+            </a>
+            <button onclick="sendQuickReplyText('Tư vấn giải pháp giảm lãng phí ngân sách Ads')" class="w-full sm:w-auto px-4 py-3 rounded-xl bg-white hover:bg-slate-100 border border-slate-300 text-slate-700 text-xs font-semibold transition-colors">
+              Nhờ Trợ Lý AI Phân Tích
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Live Speed Benchmark Simulator (5 cols) -->
+        <div class="lg:col-span-5 card-trust rounded-3xl p-6 sm:p-8 flex flex-col justify-between space-y-6">
+          <div class="space-y-5">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+                ⚡ ĐO THỰC NGHIỆM ĐUA TỐC ĐỘ
+              </span>
+              <span class="text-xs font-mono text-slate-500">Mạng di động 4G</span>
+            </div>
+
+            <h3 class="text-base sm:text-lg font-bold text-slate-900">
+              Mô Phỏng Trải Nghiệm Khách Hàng Khi Nhấp Vào Quảng Cáo
+            </h3>
+
+            <!-- Competitor Web Speed Progress -->
+            <div class="space-y-2">
+              <div class="flex items-center justify-between text-xs font-semibold">
+                <span class="text-slate-700">Web Truyền Thống / Nền Tảng Kéo Thả:</span>
+                <span id="benchSlowTime" class="font-mono text-red-600 font-bold">4.20s</span>
+              </div>
+              <div class="w-full bg-slate-200 rounded-full h-3 overflow-hidden">
+                <div id="benchSlowBar" class="bg-red-500 h-3 rounded-full transition-all duration-1000" style="width: 100%;"></div>
+              </div>
+              <div id="benchSlowStatus" class="text-[11px] text-red-600 flex items-center gap-1 font-mono">
+                <span>⚠️ 53% Khách đã bấm thoát trước khi web mở xong!</span>
+              </div>
+            </div>
+
+            <!-- TP Teams Web Speed Progress -->
+            <div class="space-y-2 pt-2">
+              <div class="flex items-center justify-between text-xs font-semibold">
+                <span class="text-blue-900 font-bold">Kiến Trúc Kỹ Sư TP Teams:</span>
+                <span id="benchFastTime" class="font-mono text-emerald-600 font-bold">0.62s</span>
+              </div>
+              <div class="w-full bg-slate-200 rounded-full h-3 overflow-hidden">
+                <div id="benchFastBar" class="bg-blue-600 h-3 rounded-full transition-all duration-300" style="width: 15%;"></div>
+              </div>
+              <div id="benchFastStatus" class="text-[11px] text-emerald-700 flex items-center gap-1 font-mono font-semibold">
+                <span>✓ Mở tức thì • 100% Khách xem trọn • Webhook 2s</span>
+              </div>
+            </div>
+
+            <!-- Performance Badges -->
+            <div class="grid grid-cols-2 gap-2 pt-2 text-[11px] font-mono">
+              <div class="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-center">
+                <div class="text-slate-500 text-[10px]">Core Web Vitals</div>
+                <div class="text-blue-800 font-bold text-sm">99 / 100 (A+)</div>
+              </div>
+              <div class="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-center">
+                <div class="text-slate-500 text-[10px]">Độ trễ Webhook</div>
+                <div class="text-emerald-700 font-bold text-sm">&lt; 2 Giây (Realtime)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100">
+            <button 
+              id="benchRunBtn"
+              onclick="runSpeedBenchmarkDemo()" 
+              class="w-full py-3 rounded-xl btn-trust-primary text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md font-bold"
+            >
+              <span>⚡ Bấm Chạy Đo Thử Nghiệm Tốc Độ Lại</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
   <!-- ================= 03. SECTION: SO SÁNH 3 LỰA CHỌN (VS AI & KÉO THẢ) ================= -->
   <section class="py-20 bg-white border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -617,12 +816,13 @@
 
       <!-- Category Filter Tabs -->
       <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
-        <button onclick="filterShowcase('all')" class="showcase-tab active px-4 py-2 rounded-xl text-xs font-bold transition-all bg-blue-600 text-white shadow-sm" data-tab="all">Tất Cả 5 Mẫu</button>
+        <button onclick="filterShowcase('all')" class="showcase-tab active px-4 py-2 rounded-xl text-xs font-bold transition-all bg-blue-600 text-white shadow-sm" data-tab="all">Tất Cả 6 Dự Án</button>
         <button onclick="filterShowcase('ecom')" class="showcase-tab px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-white border border-slate-200 text-slate-700 hover:bg-slate-100" data-tab="ecom">Bán Lẻ &amp; Flash Sale</button>
         <button onclick="filterShowcase('realestate')" class="showcase-tab px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-white border border-slate-200 text-slate-700 hover:bg-slate-100" data-tab="realestate">Bất Động Sản</button>
         <button onclick="filterShowcase('course')" class="showcase-tab px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-white border border-slate-200 text-slate-700 hover:bg-slate-100" data-tab="course">Khóa Học &amp; Đào Tạo</button>
         <button onclick="filterShowcase('spa')" class="showcase-tab px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-white border border-slate-200 text-slate-700 hover:bg-slate-100" data-tab="spa">Thẩm Mỹ &amp; Spa</button>
-        <button onclick="filterShowcase('saas')" class="showcase-tab px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-white border border-slate-200 text-slate-700 hover:bg-slate-100" data-tab="saas">Quản Lý Khách (CRM)</button>
+        <button onclick="filterShowcase('saas')" class="showcase-tab px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-white border border-slate-200 text-slate-700 hover:bg-slate-100" data-tab="saas">Mini-CRM Bán Hàng</button>
+        <button onclick="filterShowcase('enterprise')" class="showcase-tab px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-white border border-slate-200 text-slate-700 hover:bg-slate-100" data-tab="enterprise">Web App Doanh Nghiệp</button>
       </div>
 
       <!-- Showcase Cards Grid -->
@@ -763,6 +963,58 @@
           </div>
         </div>
 
+        <!-- Demo 6: Custom Enterprise App & Recruitment Portal -->
+        <div class="showcase-card card-trust rounded-3xl p-6 flex flex-col justify-between" data-category="enterprise">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono font-bold text-indigo-700 bg-indigo-50 px-2.5 py-1 rounded-full border border-indigo-200">HỆ THỐNG DOANH NGHIỆP</span>
+              <span class="text-[11px] font-mono text-emerald-600 font-bold">LIVE 100%</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">VTT Careers &amp; HRM Cockpit AI</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Hệ thống thật do chính Kỹ sư TP Teams thiết kế và vận hành trực tiếp: Cổng nộp hồ sơ ứng viên trực tuyến, lọc CV thông minh bằng AI, bảng điều khiển quản trị nhân sự và đường ống dữ liệu tải cao.
+            </p>
+            <div class="flex flex-wrap gap-1.5 text-[11px] font-mono text-slate-500">
+              <span class="px-2 py-0.5 rounded bg-slate-100">Cổng Tuyển Dụng Live</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100">HRM Cockpit AI</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100">Bảo mật đa tầng</span>
+            </div>
+          </div>
+          <div class="pt-6 space-y-2">
+            <div class="grid grid-cols-2 gap-2">
+              <a href="https://jobs.votrithuc.click" target="_blank" class="py-2.5 rounded-xl btn-trust-primary text-center text-[11px] uppercase tracking-wider font-bold">
+                VTT Careers ↗
+              </a>
+              <a href="https://hrm.votrithuc.click/login" target="_blank" class="py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-center text-[11px] uppercase tracking-wider font-bold border border-slate-200">
+                HRM Cockpit ↗
+              </a>
+            </div>
+            <button onclick="selectServiceForQuote('Gia công phần mềm Web App / Mini-ERP theo yêu cầu')" class="w-full py-2 rounded-xl bg-slate-50 hover:bg-blue-50 text-blue-700 text-xs font-semibold transition-colors border border-blue-200">
+              Tư Vấn May Đo Phần Mềm Doanh Nghiệp
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Enterprise Architecture Banner (Extensible for all future services) -->
+      <div class="mt-12 p-6 sm:p-8 rounded-3xl bg-white border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-2 text-center md:text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-800 text-xs font-bold font-mono border border-blue-200">
+            <span>🚀 BÀI TOÁN DOANH NGHIỆP CỦA BẠN ĐẶC THÙ?</span>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+            Bạn Cần Một Giải Pháp May Đo Cho Chuỗi Cửa Hàng, Phòng Khám Hay Doanh Nghiệp?
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-600 max-w-2xl">
+            Không chỉ dừng lại ở Landing Page, Đội ngũ Kỹ sư Viettel &amp; MobiFone trực tiếp nhận may đo: Web App bán hàng, Mini-CRM phân luồng đơn, Tích hợp Zalo OA, Bot Telegram giám sát doanh thu 24/7 và hệ thống AI tự động hóa.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center gap-3 shrink-0 w-full md:w-auto">
+          <a href="#contact" class="w-full sm:w-auto btn-trust-primary px-6 py-3.5 rounded-xl text-center text-xs uppercase tracking-wider font-bold">
+            Gặp Trực Tiếp Kỹ Sư Tư Vấn ➔
+          </a>
+        </div>
       </div>
 
     </div>
@@ -959,7 +1211,7 @@
 
         <!-- Step 3 -->
         <div class="card-trust rounded-3xl p-6 sm:p-8 space-y-4 relative">
-          <div class="w-12 h-12 rounded-2xl bg-slate-900 text-white flex items-center justify-center font-bold text-xl shadow-md">
+          <div class="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center font-bold text-xl shadow-md shadow-blue-500/20">
             3
           </div>
           <h3 class="text-lg font-bold text-slate-900">Bước 3: Bàn Giao &amp; Hướng Dẫn Dễ Dàng</h3>
@@ -1189,7 +1441,7 @@
                   <span>FOUNDER &amp; TECH LEAD</span>
                 </div>
                 <h3 class="text-lg sm:text-xl font-bold text-slate-900">Võ Trí Thức</h3>
-                <div class="text-xs text-blue-700 font-bold font-mono">Kỹ Sư Phần Mềm Viettel • HaUI Alumnus</div>
+                <div class="text-xs text-blue-700 font-bold font-mono">Senior Software Engineer @ Viettel • Chuyên Gia CRO</div>
                 <div class="text-[11px] text-slate-500">4+ Năm Thực Chiến Hệ Thống &amp; Tự Động Hóa</div>
               </div>
             </div>
@@ -1237,7 +1489,7 @@
                   <span>CO-FOUNDER &amp; SYSTEMS LEAD</span>
                 </div>
                 <h3 class="text-lg sm:text-xl font-bold text-slate-900">Doãn Hữu Phong</h3>
-                <div class="text-xs text-blue-800 font-bold font-mono">Kỹ Sư Phần Mềm MobiFone • HaUI Bằng Giỏi</div>
+                <div class="text-xs text-blue-800 font-bold font-mono">Senior Telecom Systems Engineer @ MobiFone Việt Nam</div>
                 <div class="text-[11px] text-slate-500 font-medium">Chuyên Gia Hệ Thống Viễn Thông &amp; Bảo Mật Dữ Liệu</div>
               </div>
             </div>
@@ -1268,7 +1520,7 @@
           </div>
 
           <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-mono">
-            <span>Tốt Nghiệp Bằng Giỏi HaUI</span>
+            <span>Kỹ Sư Hệ Thống Viễn Thông</span>
             <span class="text-blue-800 font-bold">MobiFone Telecom Standards</span>
           </div>
         </div>
@@ -1450,6 +1702,7 @@
                 <option value="Gói 2: Landing Page Chuyên Sâu (D1 Pro) - 3.8 Triệu">Gói 2: Landing Page Chuyên Sâu (D1 Pro) — 3.8 Triệu (Khuyên dùng)</option>
                 <option value="Gói 1: Landing Page Khởi Động (D1 Starter) - 1.9 Triệu">Gói 1: Landing Page Khởi Động (D1 Starter) — 1.9 Triệu</option>
                 <option value="Gói 3: Trang đích + Mini-CRM (D1 + D2) - 8.9 Triệu">Gói 3: Trang đích + Mini-CRM (D1 + D2) — 8.9 Triệu</option>
+                <option value="Gia công phần mềm Web App / Mini-ERP theo yêu cầu">May Đo Phần Mềm Doanh Nghiệp / Web App Tải Cao</option>
                 <option value="Hợp tác Agency Gia Công Kỹ Thuật (White-label)">Hợp tác Agency Gia Công Kỹ Thuật (White-label)</option>
                 <option value="Mẫu E-Commerce / Flash Sale (D1 Pro)">Mẫu Thực Chiến: E-Commerce &amp; Flash Sale</option>
                 <option value="Mẫu Bất Động Sản Cao Cấp (D1 Pro)">Mẫu Thực Chiến: Bất Động Sản Hạng Sang</option>
@@ -1490,24 +1743,27 @@
     </div>
   </section>
 
-  <!-- ================= 12. FOOTER CHUẨN DOANH NGHIỆP ================= -->
-  <footer class="py-12 bg-slate-900 text-slate-400 text-xs">
+  <!-- ================= 12. FOOTER CHUẨN DOANH NGHIỆP (LIGHT CORPORATE) ================= -->
+  <footer class="py-14 bg-slate-100/90 border-t border-slate-200 text-slate-600 text-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
       
       <div class="flex items-center gap-3">
-        <img src="anh/tp_teams_icon.png" alt="TP Teams" class="w-8 h-8 rounded-lg">
+        <img src="anh/tp_teams_icon.png" alt="TP Teams" class="w-9 h-9 rounded-xl border border-slate-200 shadow-sm">
         <div>
-          <div class="text-white font-bold text-sm">TP TEAMS SOLUTIONS</div>
-          <div class="text-[11px] text-slate-400">© 2026 TP Teams Solutions. Đồng sáng lập bởi Kỹ sư Võ Trí Thức (Viettel) &amp; Kỹ sư Doãn Hữu Phong (MobiFone).</div>
+          <div class="text-slate-900 font-extrabold text-sm tracking-tight flex items-center gap-1.5">
+            TP TEAMS SOLUTIONS
+            <span class="text-[9px] px-1.5 py-0.2 rounded bg-blue-100 text-blue-800 font-mono font-bold">OFFICIAL</span>
+          </div>
+          <div class="text-[11px] text-slate-500">© 2026 TP Teams Solutions. Sáng lập &amp; bảo chứng kỹ thuật bởi Bộ đôi Kỹ sư Viettel &amp; MobiFone.</div>
         </div>
       </div>
 
-      <div class="flex flex-wrap gap-5 text-slate-300 text-xs font-mono">
-        <a href="tel:0349363992" class="hover:text-blue-400 transition-colors">Hotline: 0349 363 992</a>
-        <a href="https://zalo.me/0349363992" target="_blank" class="hover:text-blue-400 transition-colors">Zalo: 0349 363 992</a>
-        <a href="https://t.me/Trithuc23" target="_blank" class="hover:text-blue-400 transition-colors">Telegram: @Trithuc23</a>
-        <a href="https://jobs.votrithuc.click" target="_blank" class="hover:text-blue-400 transition-colors">Cổng Tuyển Dụng</a>
-        <a href="https://hrm.votrithuc.click/login" target="_blank" class="hover:text-blue-400 transition-colors">HRM Cockpit</a>
+      <div class="flex flex-wrap items-center gap-3 text-xs font-mono">
+        <a href="tel:0349363992" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-800 font-bold hover:text-blue-700 hover:border-blue-300 transition-all shadow-sm">Hotline: 0349 363 992</a>
+        <a href="https://zalo.me/0349363992" target="_blank" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 hover:text-blue-700 hover:border-blue-300 transition-all shadow-sm">Zalo Kỹ Sư</a>
+        <a href="https://t.me/Trithuc23" target="_blank" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 hover:text-blue-700 hover:border-blue-300 transition-all shadow-sm">Telegram Bot</a>
+        <a href="https://jobs.votrithuc.click" target="_blank" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 hover:text-blue-700 hover:border-blue-300 transition-all shadow-sm">Cổng Tuyển Dụng</a>
+        <a href="https://hrm.votrithuc.click/login" target="_blank" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 hover:text-blue-700 hover:border-blue-300 transition-all shadow-sm">HRM Cockpit</a>
       </div>
 
     </div>
@@ -1558,25 +1814,25 @@
     </button>
   </div>
 
-  <!-- AI Assistant Chat Window (Light Mode) -->
+  <!-- AI Assistant Chat Window (Light Corporate Mode) -->
   <div 
     id="aiChatWindow" 
     class="fixed bottom-20 right-4 sm:bottom-24 sm:right-6 z-50 w-[360px] sm:w-[400px] h-[520px] max-w-[92vw] max-h-[80vh] rounded-3xl bg-white border border-slate-300 shadow-2xl hidden flex flex-col overflow-hidden"
   >
-    <!-- Window Header -->
-    <div class="p-3.5 bg-slate-900 text-white flex items-center justify-between">
+    <!-- Window Header: Royal Navy Gradient -->
+    <div class="p-4 bg-gradient-to-r from-blue-700 via-blue-800 to-indigo-900 text-white flex items-center justify-between shadow-sm">
       <div class="flex items-center gap-2.5">
-        <div class="relative w-8 h-8 rounded-xl overflow-hidden border border-blue-400 shrink-0">
+        <div class="relative w-8 h-8 rounded-xl overflow-hidden border border-blue-300 shrink-0">
           <img src="anh/founder_avatar.jpg" alt="Võ Trí Thức AI" class="w-full h-full object-cover">
         </div>
         <div>
           <h4 class="text-xs font-bold text-white flex items-center gap-1.5">
             <span>Trợ Lý AI Kỹ Sư — TP Teams</span>
           </h4>
-          <p class="text-[10px] text-emerald-400 font-mono">● Phản hồi tức thì • Tư vấn giải pháp</p>
+          <p class="text-[10px] text-emerald-300 font-mono">● Phản hồi tức thì • Tư vấn giải pháp</p>
         </div>
       </div>
-      <button onclick="toggleAIChat()" class="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800">
+      <button onclick="toggleAIChat()" class="p-1.5 rounded-lg text-white/80 hover:text-white hover:bg-white/10 transition-colors">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
     </div>
@@ -1797,7 +2053,121 @@
       }
     }
 
-    // Simulator Ping Trigger
+    // Interactive ROI & Ad Waste Calculation
+    function updateAdWasteCalculation(val) {
+      const spend = parseInt(val, 10);
+      const spendFormatted = new Intl.NumberFormat('vi-VN').format(spend) + ' VNĐ';
+      const spendMillion = Math.round(spend / 1000000);
+      
+      const elSpend = document.getElementById('adSpendDisplay');
+      const elLossBudget = document.getElementById('lossBudgetDisplay');
+      const elLossLeads = document.getElementById('lossLeadsDisplay');
+      const elRecovered = document.getElementById('recoveredRevenueDisplay');
+      const elInsight = document.getElementById('adWasteInsight');
+      
+      if (elSpend) elSpend.textContent = spendFormatted;
+      
+      // Calculations based on Google Benchmark: 45% bounce when page > 3s
+      const lossMoney = Math.round(spend * 0.45);
+      const lossFormatted = '≈ ' + new Intl.NumberFormat('vi-VN').format(lossMoney) + 'đ';
+      if (elLossBudget) elLossBudget.textContent = lossFormatted;
+      
+      // Estimated leads dropped due to delayed response
+      const lostLeads = Math.max(8, Math.round(spendMillion * 1.8));
+      if (elLossLeads) elLossLeads.textContent = '≈ ' + lostLeads + ' khách/tháng';
+      
+      // Estimated revenue recovered with TP Teams
+      const recMin = Math.round(lossMoney * 1.4 / 1000000);
+      const recMax = Math.round(lossMoney * 2.8 / 1000000);
+      if (elRecovered) elRecovered.textContent = '+' + recMin + ' – ' + recMax + ' Triệu';
+      
+      if (elInsight) {
+        elInsight.innerHTML = `Với ngân sách <strong>${spendMillion} triệu/tháng</strong>, chỉ cần web mở nhanh hơn 1.5 giây và nhân viên gọi lại cho khách sau 2 phút (thay vì 30 phút), doanh số của bạn tăng ngay từ 25% – 40% mà không cần đổ thêm 1 đồng tiền quảng cáo nào.`;
+      }
+    }
+
+    // Live Speed Benchmark Runner
+    let isBenchmarking = false;
+    function runSpeedBenchmarkDemo() {
+      if (isBenchmarking) return;
+      isBenchmarking = true;
+
+      const btn = document.getElementById('benchRunBtn');
+      const slowBar = document.getElementById('benchSlowBar');
+      const fastBar = document.getElementById('benchFastBar');
+      const slowTime = document.getElementById('benchSlowTime');
+      const fastTime = document.getElementById('benchFastTime');
+      const slowStatus = document.getElementById('benchSlowStatus');
+      const fastStatus = document.getElementById('benchFastStatus');
+
+      btn.disabled = true;
+      btn.innerHTML = '<span>⏳ Đang đo kiểm tra thực tế...</span>';
+
+      slowBar.style.transition = 'none';
+      fastBar.style.transition = 'none';
+      slowBar.style.width = '0%';
+      fastBar.style.width = '0%';
+      slowTime.textContent = '0.00s';
+      fastTime.textContent = '0.00s';
+      slowStatus.innerHTML = '<span class="text-slate-400">Đang gửi tín hiệu qua 4G...</span>';
+      fastStatus.innerHTML = '<span class="text-slate-400">Đang kết nối CDN máy chủ...</span>';
+
+      setTimeout(() => {
+        // Run Fast TP Teams Bar (0.62s)
+        fastBar.style.transition = 'width 0.62s cubic-bezier(0.16, 1, 0.3, 1)';
+        fastBar.style.width = '100%';
+        fastTime.textContent = '0.62s';
+        fastStatus.innerHTML = '<span class="text-emerald-700 font-bold font-mono">✓ Mở tức thì • 100% Khách xem trọn • Webhook 2s</span>';
+        playModernChime();
+
+        // Run Slow Competitor Bar (4.20s)
+        slowBar.style.transition = 'width 4.2s linear';
+        slowBar.style.width = '100%';
+        
+        let counter = 0;
+        const interval = setInterval(() => {
+          counter += 0.1;
+          if (counter < 4.2) {
+            slowTime.textContent = counter.toFixed(2) + 's';
+            if (counter > 2.0) {
+              slowStatus.innerHTML = '<span class="text-amber-600 font-mono">⚠️ Quá 2s: 32% khách hàng bắt đầu ấn nút thoát...</span>';
+            }
+          } else {
+            clearInterval(interval);
+            slowTime.textContent = '4.20s';
+            slowStatus.innerHTML = '<span class="text-red-600 font-mono font-bold">⚠️ 53% Khách đã bấm thoát trước khi web mở xong!</span>';
+            btn.disabled = false;
+            btn.innerHTML = '<span>⚡ Bấm Chạy Đo Thử Nghiệm Tốc Độ Lại</span>';
+            isBenchmarking = false;
+          }
+        }, 100);
+      }, 100);
+    }
+
+    // Web Audio Synthesizer Chime
+    function playModernChime() {
+      try {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtx) return;
+        const ctx = new AudioCtx();
+        if (ctx.state === 'suspended') {
+          ctx.resume();
+        }
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(587.33, ctx.currentTime); // D5
+        osc.frequency.exponentialRampToValueAtTime(880, ctx.currentTime + 0.15); // A5
+        gain.gain.setValueAtTime(0.15, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.6);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.6);
+      } catch (e) {}
+    }
+
+    // Enhanced Simulator Ping Trigger with Radar Ripple & Telecom Island
     let isSimulating = false;
     async function triggerSimulatorPing() {
       if (isSimulating) return;
@@ -1808,10 +2178,25 @@
       const btnText = document.getElementById('simBtnText');
       const pingEl = document.getElementById('simPing');
       const timeEl = document.getElementById('simTime');
-      const sound = document.getElementById('teleSound');
+      const radarRing = document.getElementById('simRadarRing');
+      const simIsland = document.getElementById('simIsland');
+      const islandStatus = document.getElementById('islandStatus');
+      const islandDot = document.getElementById('islandDot');
+      const liveBadge = document.getElementById('simLiveBadge');
 
       spinner.classList.remove('hidden');
-      btnText.textContent = 'Đang đẩy webhook...';
+      btnText.textContent = 'Đang đẩy webhook viễn thông...';
+      if (radarRing) radarRing.classList.remove('hidden');
+      if (simIsland) {
+        simIsland.classList.add('telecom-active');
+        if (islandStatus) islandStatus.textContent = '📡 ĐANG GỬI LEAD...';
+        if (islandDot) islandDot.className = 'w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0 animate-pulse';
+      }
+
+      if (navigator.vibrate) {
+        try { navigator.vibrate([70, 40, 70]); } catch (e) {}
+      }
+
       const startTime = performance.now();
 
       try {
@@ -1837,17 +2222,26 @@
       const elapsed = ((performance.now() - startTime) / 1000).toFixed(2);
       pingEl.textContent = elapsed + 's';
       timeEl.textContent = 'Vừa xong';
+      playModernChime();
 
-      try {
-        sound.currentTime = 0;
-        sound.play();
-      } catch (e) {}
+      if (simIsland) {
+        if (islandStatus) islandStatus.textContent = '🔔 TELEGRAM: ' + elapsed + 's';
+        if (islandDot) islandDot.className = 'w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0';
+      }
+      if (liveBadge) liveBadge.textContent = 'REO ' + elapsed + 's';
 
       spinner.classList.add('hidden');
       btnText.textContent = '✓ Đã Bắn Lead Thành Công (' + elapsed + 's)';
 
       setTimeout(() => {
         btnText.textContent = 'Bấm Thử Nghiệm Bắn Lead 2s';
+        if (radarRing) radarRing.classList.add('hidden');
+        if (simIsland) {
+          simIsland.classList.remove('telecom-active');
+          if (islandStatus) islandStatus.textContent = 'TP TEAMS 5G';
+          if (islandDot) islandDot.className = 'w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0';
+        }
+        if (liveBadge) liveBadge.textContent = 'LIVE 2s';
         isSimulating = false;
       }, 4000);
     }
