@@ -14,57 +14,55 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #090d16;
-      color: #f1f5f9;
+      background-color: #f8fafc;
+      color: #334155;
       overflow-x: hidden;
     }
     .font-mono {
       font-family: 'JetBrains Mono', monospace;
     }
-    /* Refined 3D Mechanical Elevation - Enterprise Indigo Tone */
+    /* Refined Light Enterprise Elevation */
     .card-solid-depth {
-      background-color: #111827;
-      border: 1px solid #1e293b;
-      border-top: 1px solid rgba(99, 102, 241, 0.25);
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.7), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.03);
       transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
     }
     .card-solid-depth:hover {
       transform: translateY(-3px);
-      border-color: #334155;
-      border-top-color: rgba(99, 102, 241, 0.45);
-      box-shadow: 0 18px 30px -8px rgba(0, 0, 0, 0.85);
+      border-color: #cbd5e1;
+      box-shadow: 0 12px 24px -6px rgba(15, 23, 42, 0.08);
     }
     .badge-enterprise {
-      background-color: #1e1b4b;
-      border: 1px solid #3730a3;
-      color: #a5b4fc;
+      background-color: #e0e7ff;
+      border: 1px solid #c7d2fe;
+      color: #4338ca;
     }
     .btn-solid-indigo {
-      background-color: #4338ca;
+      background-color: #4f46e5;
       color: #ffffff;
       font-weight: 600;
-      border: 1px solid #6366f1;
-      box-shadow: 0 4px 14px rgba(67, 56, 202, 0.3);
+      border: 1px solid #4338ca;
+      box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25);
       transition: all 0.2s ease;
     }
     .btn-solid-indigo:hover {
-      background-color: #3730a3;
+      background-color: #4338ca;
       transform: translateY(-1px);
-      box-shadow: 0 6px 18px rgba(67, 56, 202, 0.45);
+      box-shadow: 0 6px 18px rgba(79, 70, 229, 0.35);
     }
   </style>
 </head>
 <body class="selection:bg-indigo-500 selection:text-white antialiased">
 
   <!-- TOP CREDIBILITY BAR -->
-  <div class="bg-slate-900/90 border-b border-slate-800 text-xs py-2 px-4">
+  <div class="bg-slate-900 border-b border-slate-800 text-xs py-2 px-4">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <div class="flex items-center space-x-2 text-slate-300">
         <span class="inline-block w-2 h-2 rounded-full bg-indigo-400"></span>
-        <span class="font-medium">MẪU NỀN TẢNG DOANH NGHIỆP B2B • BẢO CHỨNG BỞI TP TEAMS SOLUTIONS</span>
+        <span class="font-medium text-white">MẪU NỀN TẢNG DOANH NGHIỆP B2B • BẢO CHỨNG BỞI TP TEAMS SOLUTIONS</span>
       </div>
-      <div class="hidden sm:flex items-center space-x-5 text-slate-400">
+      <div class="hidden sm:flex items-center space-x-5 text-slate-300">
         <span>⚡ Tốc độ tải: <strong class="text-emerald-400 font-mono font-medium">0.5s</strong></span>
         <span>🛡️ Bảo mật: <strong class="text-indigo-300 font-mono font-medium">Chuẩn ISO/IEC 27001</strong></span>
         <a href="/" class="text-indigo-400 hover:underline font-medium">← Quay lại Trang Chủ</a>
@@ -73,22 +71,22 @@
   </div>
 
   <!-- HEADER -->
-  <header class="sticky top-0 z-40 bg-slate-950/95 backdrop-blur-md border-b border-slate-800">
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <div class="w-10 h-10 rounded-lg bg-indigo-950/80 border border-indigo-800 flex items-center justify-center text-indigo-400 font-mono font-bold text-lg shadow-sm">
+        <div class="w-10 h-10 rounded-lg bg-indigo-600 text-white flex items-center justify-center font-mono font-bold text-lg shadow-sm">
           OP
         </div>
         <div>
-          <span class="text-base font-bold text-slate-100 tracking-tight">OpsFlow</span>
-          <span class="text-xs px-2 py-0.5 rounded bg-indigo-950/80 border border-indigo-800 text-indigo-300 font-mono font-bold ml-1.5">ENTERPRISE CRM</span>
+          <span class="text-base font-bold text-slate-900 tracking-tight">OpsFlow</span>
+          <span class="text-xs px-2 py-0.5 rounded bg-indigo-100 border border-indigo-200 text-indigo-800 font-mono font-bold ml-1.5">ENTERPRISE CRM</span>
         </div>
       </div>
-      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
-        <a href="#kanban" class="hover:text-indigo-300 transition-colors">Bảng Kanban Trực Quan</a>
-        <a href="#roi" class="hover:text-indigo-300 transition-colors">Tính Toán ROI</a>
-        <a href="#features" class="hover:text-indigo-300 transition-colors">Tính Năng Cốt Lõi</a>
-        <a href="#faqs" class="hover:text-indigo-300 transition-colors">Hỏi Đáp Doanh Nghiệp</a>
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+        <a href="#kanban" class="hover:text-indigo-600 transition-colors">Bảng Kanban Trực Quan</a>
+        <a href="#roi" class="hover:text-indigo-600 transition-colors">Tính Toán ROI</a>
+        <a href="#features" class="hover:text-indigo-600 transition-colors">Tính Năng Cốt Lõi</a>
+        <a href="#faqs" class="hover:text-indigo-600 transition-colors">Hỏi Đáp Doanh Nghiệp</a>
       </nav>
       <div class="flex items-center space-x-3">
         <a href="#trial" class="btn-solid-indigo px-5 py-2.5 rounded-lg text-sm flex items-center space-x-2">
@@ -99,39 +97,39 @@
   </header>
 
   <!-- HERO SECTION -->
-  <section class="py-12 sm:py-20 border-b border-slate-800">
+  <section class="py-12 sm:py-20 border-b border-slate-200 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
         <!-- Left: Copy & Value Propositions -->
         <div class="lg:col-span-7 space-y-6">
           <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full badge-enterprise text-xs font-mono">
-            <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
-            <span>TỰ ĐỘNG HÓA VẬN HÀNH BÁN HÀNG • LOẠI BỎ FILE EXCEL RỜI RẠC</span>
+            <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+            <span>NỀN TẢNG MINI-CRM &amp; VẬN HÀNH B2B CHUẨN DOANH NGHIỆP</span>
           </div>
 
-          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
-            Quản Trị Bán Hàng.<br>
-            <span class="text-indigo-400">Tự Động Hóa Dòng Tiền Doanh Nghiệp.</span>
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Quản Lý Khách Hàng.<br>
+            <span class="text-indigo-600">Đột Phá Doanh Số B2B.</span>
           </h1>
 
-          <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
-            Chấm dứt hoàn toàn tình trạng thất thoát khách hàng và dữ liệu phân tán. OpsFlow hợp nhất mọi nguồn khách từ Website, Facebook Ads, TikTok và Hotline vào một bảng điều khiển duy nhất, tự động phân chia cho nhân viên tư vấn và đẩy thông báo tức thì sau 2 giây.
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
+            Chấm dứt hoàn toàn tình trạng thất lạc số điện thoại khách hàng trong file Excel rời rạc. OpsFlow hợp nhất toàn bộ phễu bán hàng đa kênh, tự động phân bổ khách cho nhân viên, tích hợp bảng Kanban và thông báo đơn về Telegram tức thì.
           </p>
 
           <!-- Core Metric Badges -->
           <div class="grid grid-cols-3 gap-4 pt-2">
-            <div class="bg-slate-900 border border-slate-800 rounded-xl p-3.5 border-t-indigo-500/30">
-              <div class="text-xl sm:text-2xl font-bold font-mono text-indigo-400">&lt; 2 Giây</div>
-              <div class="text-xs text-slate-400 mt-1">Thông Báo Lead Về Telegram</div>
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-3.5">
+              <div class="text-xl sm:text-2xl font-bold font-mono text-indigo-600">&lt; 3 Phút</div>
+              <div class="text-xs text-slate-600 mt-1">Thời Gian Sale Gọi Lại Khách</div>
             </div>
-            <div class="bg-slate-900 border border-slate-800 rounded-xl p-3.5 border-t-indigo-500/30">
-              <div class="text-xl sm:text-2xl font-bold font-mono text-emerald-400">+34%</div>
-              <div class="text-xs text-slate-400 mt-1">Tỷ Lệ Chốt Đơn Bình Quân</div>
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-3.5">
+              <div class="text-xl sm:text-2xl font-bold font-mono text-emerald-600">+38%</div>
+              <div class="text-xs text-slate-600 mt-1">Tỷ Lệ Chốt Hợp Đồng</div>
             </div>
-            <div class="bg-slate-900 border border-slate-800 rounded-xl p-3.5 border-t-indigo-500/30">
-              <div class="text-xl sm:text-2xl font-bold font-mono text-sky-400">100%</div>
-              <div class="text-xs text-slate-400 mt-1">Bảo Mật Cơ Sở Dữ Liệu Riêng</div>
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-3.5">
+              <div class="text-xl sm:text-2xl font-bold font-mono text-blue-600">0% Rò Rỉ</div>
+              <div class="text-xs text-slate-600 mt-1">Bảo Mật Cơ Sở Dữ Liệu Riêng</div>
             </div>
           </div>
 
@@ -140,52 +138,52 @@
             <a href="#trial" class="btn-solid-indigo py-3.5 px-8 rounded-xl text-center text-base font-semibold shadow-md">
               KÍCH HOẠT DÙNG THỬ 14 NGÀY MIỄN PHÍ
             </a>
-            <div class="flex items-center space-x-2 text-xs text-slate-400 px-2 justify-center sm:justify-start">
+            <div class="flex items-center space-x-2 text-xs text-slate-500 px-2 justify-center sm:justify-start">
               <span>✓ Không cần thẻ tín dụng</span>
               <span>•</span>
-              <span>✓ Hỗ trợ chuyển đổi dữ liệu từ Excel miễn phí</span>
+              <span>✓ Bàn giao trong 24 giờ</span>
             </div>
           </div>
 
         </div>
 
-        <!-- Right: 3D Mini-Dashboard Visualizer -->
+        <!-- Right: Dashboard Visualizer -->
         <div class="lg:col-span-5 flex justify-center">
-          <div class="w-full max-w-md card-solid-depth rounded-2xl p-6 sm:p-8">
-            <div class="flex items-center justify-between pb-4 border-b border-slate-800 text-xs">
-              <span class="font-mono text-indigo-400 font-semibold">OPSFLOW TELEMETRY MONITOR</span>
-              <span class="px-2 py-0.5 rounded bg-emerald-950/80 border border-emerald-800 text-emerald-300 font-mono font-medium">HỆ THỐNG ONLINE</span>
+          <div class="w-full max-w-md card-solid-depth rounded-2xl p-6 sm:p-8 bg-white border border-slate-200">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-200 text-xs">
+              <span class="font-mono text-indigo-700 font-semibold">OPSFLOW TELEMETRY MONITOR</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-100 border border-emerald-200 text-emerald-800 font-mono font-medium">HỆ THỐNG ONLINE</span>
             </div>
 
             <div class="py-4 space-y-3">
-              <div class="bg-slate-900 border border-slate-800 rounded-lg p-3.5 flex items-center justify-between">
+              <div class="bg-slate-50 border border-slate-200 rounded-xl p-3.5 flex items-center justify-between">
                 <div>
-                  <div class="text-xs text-slate-400">Doanh thu tháng này</div>
-                  <div class="text-lg font-bold font-mono text-emerald-400">485.600.000 đ</div>
+                  <div class="text-xs text-slate-500">Doanh thu tháng này</div>
+                  <div class="text-lg font-bold font-mono text-emerald-700">485.600.000 đ</div>
                 </div>
-                <span class="text-xs px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 font-mono font-medium">+24.5%</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-mono font-medium">+24.5%</span>
               </div>
 
-              <div class="bg-slate-900 border border-slate-800 rounded-lg p-3.5 flex items-center justify-between">
+              <div class="bg-slate-50 border border-slate-200 rounded-xl p-3.5 flex items-center justify-between">
                 <div>
-                  <div class="text-xs text-slate-400">Khách hàng nóng cần chăm sóc</div>
-                  <div class="text-lg font-bold font-mono text-sky-400">42 Doanh Nghiệp</div>
+                  <div class="text-xs text-slate-500">Khách hàng nóng cần chăm sóc</div>
+                  <div class="text-lg font-bold font-mono text-sky-700">42 Doanh Nghiệp</div>
                 </div>
-                <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-300 font-mono font-medium">8 Nhân Viên</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-sky-100 text-sky-800 font-mono font-medium">8 Nhân Viên</span>
               </div>
 
-              <div class="bg-slate-900 border border-slate-800 rounded-lg p-3.5 flex items-center justify-between">
+              <div class="bg-slate-50 border border-slate-200 rounded-xl p-3.5 flex items-center justify-between">
                 <div>
-                  <div class="text-xs text-slate-400">Thời gian gọi lại trung bình</div>
-                  <div class="text-lg font-bold font-mono text-amber-300">4 Phút 12 Giây</div>
+                  <div class="text-xs text-slate-500">Thời gian gọi lại trung bình</div>
+                  <div class="text-lg font-bold font-mono text-amber-700">4 Phút 12 Giây</div>
                 </div>
-                <span class="text-xs px-2 py-0.5 rounded bg-amber-950 text-amber-300 font-mono font-medium">CHUẨN SLA</span>
+                <span class="text-xs px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-mono font-medium">CHUẨN SLA</span>
               </div>
             </div>
 
-            <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+            <div class="pt-4 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500">
               <span>Hạ tầng: <strong>PostgreSQL 16 + Redis</strong></span>
-              <span class="font-mono text-emerald-400 font-semibold">99.99% Uptime</span>
+              <span class="font-mono text-emerald-600 font-semibold">99.99% Uptime</span>
             </div>
           </div>
         </div>
@@ -195,17 +193,17 @@
   </section>
 
   <!-- INTERACTIVE KANBAN BOARD SIMULATOR -->
-  <section id="kanban" class="py-16 sm:py-24 border-b border-slate-800 bg-slate-950">
+  <section id="kanban" class="py-16 sm:py-24 border-b border-slate-200 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-12">
         <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full badge-enterprise text-xs font-mono mb-3">
           <span>[ 01 // BẢNG ĐIỀU KHIỂN KANBAN TRỰC QUAN ]</span>
         </div>
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
           Theo Dõi Từng Khách Hàng Theo Thời Gian Thực
         </h2>
-        <p class="text-slate-400 text-sm sm:text-base mt-3">
+        <p class="text-slate-600 text-sm sm:text-base mt-3">
           Mỗi khách hàng được quản lý dưới dạng thẻ thông tin độc lập: Ghi nhận chính xác nguồn chiến dịch (UTM), lịch sử trao đổi và tự động nhắc nhở khi đến lịch hẹn chăm sóc.
         </p>
       </div>
@@ -214,156 +212,143 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 overflow-x-auto pb-4">
         
         <!-- Column 1: Mới Nhận -->
-        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 min-w-[260px]">
-          <div class="flex items-center justify-between pb-3 border-b border-slate-800 mb-3 text-xs">
-            <span class="font-bold text-sky-400 flex items-center space-x-1.5">
-              <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+        <div class="bg-slate-200/60 border border-slate-300 rounded-2xl p-4 min-w-[260px]">
+          <div class="flex items-center justify-between pb-3 border-b border-slate-300 mb-3 text-xs">
+            <span class="font-bold text-sky-700 flex items-center space-x-1.5">
+              <span class="w-2 h-2 rounded-full bg-sky-600 animate-pulse"></span>
               <span>1. MỚI NHẬN (4)</span>
             </span>
-            <span class="font-mono text-slate-400">22.5 Triệu</span>
+            <span class="font-mono text-slate-500">22.5 Triệu</span>
           </div>
 
           <div class="space-y-3">
-            <div class="card-solid-depth rounded-lg p-3.5 border-t-sky-500/40">
-              <div class="flex justify-between text-xs text-slate-400 font-mono mb-1">
+            <div class="card-solid-depth rounded-xl p-3.5 border-t-4 border-t-sky-500 bg-white">
+              <div class="flex justify-between text-xs text-slate-500 font-mono mb-1">
                 <span>Vừa gửi form (1 phút trước)</span>
-                <span class="text-sky-400">Facebook Ads</span>
+                <span class="text-sky-700 font-semibold">Facebook Ads</span>
               </div>
-              <div class="font-bold text-sm text-white">Công Ty Logistics Đại Việt</div>
-              <div class="text-xs text-slate-400 mt-1">Cần Web Quản Lý Đội Xe 15 Chiếc</div>
-              <div class="pt-2 mt-2 border-t border-slate-800 flex justify-between items-center text-xs">
-                <span class="text-emerald-400 font-mono font-bold">18.000.000 đ</span>
-                <span class="text-slate-400">Phụ trách: Hoàng Nam</span>
+              <div class="font-bold text-sm text-slate-900">Công Ty Logistics Đại Việt</div>
+              <div class="text-xs text-slate-600 mt-1">Cần Web Quản Lý Đội Xe 15 Chiếc</div>
+              <div class="pt-2 mt-2 border-t border-slate-100 flex justify-between items-center text-xs">
+                <span class="text-emerald-700 font-mono font-bold">18.000.000 đ</span>
+                <span class="text-slate-500">Phụ trách: Hoàng Nam</span>
               </div>
             </div>
 
-            <div class="card-solid-depth rounded-lg p-3.5 border-t-sky-500/40">
-              <div class="flex justify-between text-xs text-slate-400 font-mono mb-1">
+            <div class="card-solid-depth rounded-xl p-3.5 border-t-4 border-t-sky-500 bg-white">
+              <div class="flex justify-between text-xs text-slate-500 font-mono mb-1">
                 <span>Vừa gửi form (5 phút trước)</span>
-                <span class="text-sky-400">Google Ads</span>
+                <span class="text-sky-700 font-semibold">Google Ads</span>
               </div>
-              <div class="font-bold text-sm text-white">Chuỗi Mỹ Phẩm SunGlow</div>
-              <div class="text-xs text-slate-400 mt-1">Cần Landing Page Thu Lead 3 Chi Nhánh</div>
-              <div class="pt-2 mt-2 border-t border-slate-800 flex justify-between items-center text-xs">
-                <span class="text-emerald-400 font-mono font-bold">4.500.000 đ</span>
-                <span class="text-slate-400">Phụ trách: Thu Trang</span>
+              <div class="font-bold text-sm text-slate-900">Chuỗi Mỹ Phẩm SunGlow</div>
+              <div class="text-xs text-slate-600 mt-1">Cần Landing Page Thu Lead 3 Chi Nhánh</div>
+              <div class="pt-2 mt-2 border-t border-slate-100 flex justify-between items-center text-xs">
+                <span class="text-emerald-700 font-mono font-bold">4.500.000 đ</span>
+                <span class="text-slate-500">Phụ trách: Thu Trang</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Column 2: Đã Hẹn Demo -->
-        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 min-w-[260px]">
-          <div class="flex items-center justify-between pb-3 border-b border-slate-800 mb-3 text-xs">
-            <span class="font-bold text-amber-300 flex items-center space-x-1.5">
-              <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+        <div class="bg-slate-200/60 border border-slate-300 rounded-2xl p-4 min-w-[260px]">
+          <div class="flex items-center justify-between pb-3 border-b border-slate-300 mb-3 text-xs">
+            <span class="font-bold text-amber-800 flex items-center space-x-1.5">
+              <span class="w-2 h-2 rounded-full bg-amber-500"></span>
               <span>2. ĐÃ HẸN DEMO (3)</span>
             </span>
-            <span class="font-mono text-slate-400">65.0 Triệu</span>
+            <span class="font-mono text-slate-500">65.0 Triệu</span>
           </div>
 
           <div class="space-y-3">
-            <div class="card-solid-depth rounded-lg p-3.5 border-t-amber-500/40">
-              <div class="flex justify-between text-xs text-slate-400 font-mono mb-1">
+            <div class="card-solid-depth rounded-xl p-3.5 border-t-4 border-t-amber-500 bg-white">
+              <div class="flex justify-between text-xs text-slate-500 font-mono mb-1">
                 <span>Hẹn 14:00 Chiều Nay</span>
-                <span class="text-amber-300">Zalo Lead</span>
+                <span class="text-amber-700 font-semibold">Zalo Lead</span>
               </div>
-              <div class="font-bold text-sm text-white">Viện Thẩm Mỹ Quốc Tế K-Beauty</div>
-              <div class="text-xs text-slate-400 mt-1">Demo tính năng Soi Da & Đặt Lịch</div>
-              <div class="pt-2 mt-2 border-t border-slate-800 flex justify-between items-center text-xs">
-                <span class="text-emerald-400 font-mono font-bold">25.000.000 đ</span>
-                <span class="text-slate-400">Phụ trách: Hoàng Nam</span>
+              <div class="font-bold text-sm text-slate-900">Viện Thẩm Mỹ Quốc Tế K-Beauty</div>
+              <div class="text-xs text-slate-600 mt-1">Demo tính năng Soi Da &amp; Đặt Lịch</div>
+              <div class="pt-2 mt-2 border-t border-slate-100 flex justify-between items-center text-xs">
+                <span class="text-emerald-700 font-mono font-bold">25.000.000 đ</span>
+                <span class="text-slate-500">Phụ trách: Hoàng Nam</span>
               </div>
             </div>
 
-            <div class="card-solid-depth rounded-lg p-3.5 border-t-amber-500/40">
-              <div class="flex justify-between text-xs text-slate-400 font-mono mb-1">
+            <div class="card-solid-depth rounded-xl p-3.5 border-t-4 border-t-amber-500 bg-white">
+              <div class="flex justify-between text-xs text-slate-500 font-mono mb-1">
                 <span>Hẹn 09:30 Ngày Mai</span>
-                <span class="text-amber-300">Giới thiệu</span>
+                <span class="text-amber-700 font-semibold">Giới thiệu</span>
               </div>
-              <div class="font-bold text-sm text-white">Tập Đoàn Nội Thất Hưng Thịnh</div>
-              <div class="text-xs text-slate-400 mt-1">Cần Mini-CRM & Phân Quyền Sales</div>
-              <div class="pt-2 mt-2 border-t border-slate-800 flex justify-between items-center text-xs">
-                <span class="text-emerald-400 font-mono font-bold">40.000.000 đ</span>
-                <span class="text-slate-400">Phụ trách: Quốc Bảo</span>
+              <div class="font-bold text-sm text-slate-900">Tập Đoàn Nội Thất Hưng Thịnh</div>
+              <div class="text-xs text-slate-600 mt-1">Cần Mini-CRM &amp; Phân Quyền Sales</div>
+              <div class="pt-2 mt-2 border-t border-slate-100 flex justify-between items-center text-xs">
+                <span class="text-emerald-700 font-mono font-bold">40.000.000 đ</span>
+                <span class="text-slate-500">Phụ trách: Quốc Bảo</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Column 3: Gửi Báo Giá -->
-        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 min-w-[260px]">
-          <div class="flex items-center justify-between pb-3 border-b border-slate-800 mb-3 text-xs">
-            <span class="font-bold text-indigo-400 flex items-center space-x-1.5">
-              <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+        <div class="bg-slate-200/60 border border-slate-300 rounded-2xl p-4 min-w-[260px]">
+          <div class="flex items-center justify-between pb-3 border-b border-slate-300 mb-3 text-xs">
+            <span class="font-bold text-indigo-700 flex items-center space-x-1.5">
+              <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
               <span>3. GỬI BÁO GIÁ (2)</span>
             </span>
-            <span class="font-mono text-slate-400">85.0 Triệu</span>
+            <span class="font-mono text-slate-500">85.0 Triệu</span>
           </div>
 
           <div class="space-y-3">
-            <div class="card-solid-depth rounded-lg p-3.5 border-t-indigo-500/40">
-              <div class="flex justify-between text-xs text-slate-400 font-mono mb-1">
+            <div class="card-solid-depth rounded-xl p-3.5 border-t-4 border-t-indigo-500 bg-white">
+              <div class="flex justify-between text-xs text-slate-500 font-mono mb-1">
                 <span>Chờ duyệt HĐ đợt 1</span>
-                <span class="text-indigo-300">Doanh Nghiệp B2B</span>
+                <span class="text-indigo-700 font-semibold">Doanh Nghiệp B2B</span>
               </div>
-              <div class="font-bold text-sm text-white">Nha Khoa Nụ Cười Xinh (5 CN)</div>
-              <div class="text-xs text-slate-400 mt-1">Hệ thống nhắc hẹn Zalo OA + CRM</div>
-              <div class="pt-2 mt-2 border-t border-slate-800 flex justify-between items-center text-xs">
-                <span class="text-emerald-400 font-mono font-bold">35.000.000 đ</span>
-                <span class="text-slate-400">Phụ trách: Thu Trang</span>
+              <div class="font-bold text-sm text-slate-900">Nha Khoa Nụ Cười Xinh (5 CN)</div>
+              <div class="text-xs text-slate-600 mt-1">Hệ thống nhắc hẹn Zalo OA + CRM</div>
+              <div class="pt-2 mt-2 border-t border-slate-100 flex justify-between items-center text-xs">
+                <span class="text-emerald-700 font-mono font-bold">35.000.000 đ</span>
+                <span class="text-slate-500">Phụ trách: Thu Trang</span>
               </div>
             </div>
 
-            <div class="card-solid-depth rounded-lg p-3.5 border-t-indigo-500/40">
-              <div class="flex justify-between text-xs text-slate-400 font-mono mb-1">
+            <div class="card-solid-depth rounded-xl p-3.5 border-t-4 border-t-indigo-500 bg-white">
+              <div class="flex justify-between text-xs text-slate-500 font-mono mb-1">
                 <span>Duyệt mẫu thiết kế</span>
-                <span class="text-indigo-300">Agency</span>
+                <span class="text-indigo-700 font-semibold">Agency</span>
               </div>
-              <div class="font-bold text-sm text-white">Bất Động Sản Nam Long Land</div>
-              <div class="text-xs text-slate-400 mt-1">Trang Dự Án Căn Hộ Cao Cấp 3D</div>
-              <div class="pt-2 mt-2 border-t border-slate-800 flex justify-between items-center text-xs">
-                <span class="text-emerald-400 font-mono font-bold">50.000.000 đ</span>
-                <span class="text-slate-400">Phụ trách: Quốc Bảo</span>
+              <div class="font-bold text-sm text-slate-900">Bất Động Sản Nam Long Land</div>
+              <div class="text-xs text-slate-600 mt-1">Trang Dự Án Căn Hộ Cao Cấp 3D</div>
+              <div class="pt-2 mt-2 border-t border-slate-100 flex justify-between items-center text-xs">
+                <span class="text-emerald-700 font-mono font-bold">50.000.000 đ</span>
+                <span class="text-slate-500">Phụ trách: Quốc Bảo</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Column 4: Chốt Đơn Thành Công -->
-        <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 min-w-[260px]">
-          <div class="flex items-center justify-between pb-3 border-b border-slate-800 mb-3 text-xs">
-            <span class="font-bold text-emerald-400 flex items-center space-x-1.5">
-              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        <div class="bg-slate-200/60 border border-slate-300 rounded-2xl p-4 min-w-[260px]">
+          <div class="flex items-center justify-between pb-3 border-b border-slate-300 mb-3 text-xs">
+            <span class="font-bold text-emerald-800 flex items-center space-x-1.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
               <span>4. CHỐT ĐƠN (3)</span>
             </span>
-            <span class="font-mono text-emerald-400">112.0 Triệu</span>
+            <span class="font-mono text-slate-500">112.0 Triệu</span>
           </div>
 
           <div class="space-y-3">
-            <div class="card-solid-depth rounded-lg p-3.5 border-t-emerald-500/50 bg-emerald-950/10">
-              <div class="flex justify-between text-xs text-slate-400 font-mono mb-1">
-                <span class="text-emerald-300 font-semibold">Đã thu cọc 50%</span>
-                <span class="text-emerald-300 font-mono">HĐ #882</span>
+            <div class="card-solid-depth rounded-xl p-3.5 border-t-4 border-t-emerald-600 bg-emerald-50/50">
+              <div class="flex justify-between text-xs text-slate-500 font-mono mb-1">
+                <span class="text-emerald-800 font-bold">Đã thu cọc 50%</span>
+                <span class="text-emerald-800 font-mono">HĐ #882</span>
               </div>
-              <div class="font-bold text-sm text-white">Chuỗi Giáo Dục Ngoại Ngữ EduPro</div>
-              <div class="text-xs text-slate-400 mt-1">Đã bàn giao trong 48h Sprint</div>
-              <div class="pt-2 mt-2 border-t border-slate-800 flex justify-between items-center text-xs">
-                <span class="text-emerald-400 font-mono font-bold">42.000.000 đ</span>
-                <span class="text-emerald-300 font-bold">HOÀN TẤT ✓</span>
-              </div>
-            </div>
-
-            <div class="card-solid-depth rounded-lg p-3.5 border-t-emerald-500/50 bg-emerald-950/10">
-              <div class="flex justify-between text-xs text-slate-400 font-mono mb-1">
-                <span class="text-emerald-300 font-semibold">Đã thanh toán 100%</span>
-                <span class="text-emerald-300 font-mono">HĐ #881</span>
-              </div>
-              <div class="font-bold text-sm text-white">Thời Trang Xuất Khẩu Việt Silk</div>
-              <div class="text-xs text-slate-400 mt-1">Landing Page Flash Sale 60fps</div>
-              <div class="pt-2 mt-2 border-t border-slate-800 flex justify-between items-center text-xs">
-                <span class="text-emerald-400 font-mono font-bold">18.000.000 đ</span>
-                <span class="text-emerald-300 font-bold">HOÀN TẤT ✓</span>
+              <div class="font-bold text-sm text-slate-900">Chuỗi Giáo Dục Ngoại Ngữ EduPro</div>
+              <div class="text-xs text-slate-600 mt-1">Đã bàn giao trong 48h Sprint</div>
+              <div class="pt-2 mt-2 border-t border-emerald-200 flex justify-between items-center text-xs">
+                <span class="text-emerald-700 font-mono font-bold">42.000.000 đ</span>
+                <span class="text-slate-500">Phụ trách: Hoàng Nam</span>
               </div>
             </div>
           </div>
@@ -374,142 +359,107 @@
     </div>
   </section>
 
-  <!-- INTERACTIVE ROI CALCULATOR -->
-  <section id="roi" class="py-16 sm:py-24 border-b border-slate-800">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="card-solid-depth rounded-2xl p-6 sm:p-10 border-indigo-500/30">
-        <div class="text-center max-w-2xl mx-auto mb-8">
-          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full badge-enterprise text-xs font-mono mb-3">
-            <span>[ 02 // TÍNH TOÁN HIỆU QUẢ ĐẦU TƯ ROI ]</span>
-          </div>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-white">
-            OpsFlow Tiết Kiệm Bao Nhiêu Chi Phí?
-          </h2>
-          <p class="text-slate-400 text-xs sm:text-sm mt-2">
-            Kéo thanh trượt theo quy mô nhân viên bán hàng & vận hành hiện tại để tính toán chính xác số giờ làm việc và chi phí lương được giải phóng mỗi tháng.
-          </p>
-        </div>
-
-        <!-- Slider Control -->
-        <div class="space-y-6 bg-slate-900 border border-slate-800 rounded-xl p-6">
-          <div class="flex justify-between items-center">
-            <span class="text-sm font-bold text-slate-300">Quy mô nhân viên Sales & Vận hành:</span>
-            <span class="text-2xl font-bold font-mono text-indigo-300" id="teamSizeDisplay">12 Người</span>
-          </div>
-
-          <input type="range" id="teamSizeSlider" min="3" max="50" value="12" oninput="updateRoi(this.value)" class="w-full accent-indigo-500 bg-slate-800 h-2.5 rounded-lg cursor-pointer">
-
-          <div class="flex justify-between text-xs text-slate-500 font-mono">
-            <span>3 Nhân Viên</span>
-            <span>25 Nhân Viên</span>
-            <span>50 Nhân Viên</span>
-          </div>
-        </div>
-
-        <!-- Calculated Metrics Outputs -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6">
-          <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 text-center">
-            <div class="text-xs text-slate-400">Thời gian tiết kiệm mỗi tuần</div>
-            <div class="text-2xl font-bold font-mono text-emerald-400 mt-1" id="hoursSaved">48 Giờ</div>
-            <div class="text-[11px] text-slate-500 mt-1">~4 giờ/nhân viên/tuần</div>
-          </div>
-
-          <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 text-center border-indigo-500/30">
-            <div class="text-xs text-slate-400">Chi phí lương thu hồi / tháng</div>
-            <div class="text-2xl font-bold font-mono text-indigo-300 mt-1" id="moneySaved">14.400.000 đ</div>
-            <div class="text-[11px] text-slate-500 mt-1">Dựa trên mức lương cơ bản TB</div>
-          </div>
-
-          <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 text-center">
-            <div class="text-xs text-slate-400">Doanh thu tăng thêm ước tính</div>
-            <div class="text-2xl font-bold font-mono text-sky-400 mt-1" id="revGrowth">+28%</div>
-            <div class="text-[11px] text-slate-500 mt-1">Nhờ phản hồi lead sau 2 giây</div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FAQS -->
-  <section id="faqs" class="py-16 sm:py-24 border-b border-slate-800">
+  <!-- ROI CALCULATOR -->
+  <section id="roi" class="py-16 sm:py-24 border-b border-slate-200 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-12">
         <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full badge-enterprise text-xs font-mono mb-3">
-          <span>[ 03 // CÂU HỎI THƯỜNG GẶP ]</span>
+          <span>[ 02 // BÀI TOÁN TÍNH TOÁN HIỆU QUẢ ]</span>
         </div>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-          Giải Đáp Thắc Mắc Triển Khai Cho Doanh Nghiệp
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Ước Tính Chi Phí Tiết Kiệm Hàng Tháng
         </h2>
+        <p class="text-slate-600 text-sm mt-2">
+          Kéo thanh trượt bên dưới theo số lượng nhân viên bán hàng/chăm sóc khách hàng của bạn để xem số giờ và ngân sách được tối ưu:
+        </p>
       </div>
 
-      <div class="space-y-4 text-sm">
-        <div class="card-solid-depth rounded-xl p-5">
-          <div class="font-bold text-white mb-1">1. Doanh nghiệp mất bao lâu để đưa hệ thống vào vận hành thực tế?</div>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            Với gói chuẩn Cloud Workspace, hệ thống được kích hoạt ngay trong 5 phút. Đội ngũ kỹ sư TP Teams sẽ hỗ trợ chuẩn hóa dữ liệu và nhập danh sách khách hàng từ file Excel cũ trong vòng 24 giờ mà không làm gián đoạn công việc của nhân viên.
-          </p>
+      <div class="card-solid-depth rounded-3xl p-6 sm:p-10 border border-slate-300 shadow-xl bg-white space-y-8">
+        
+        <div>
+          <div class="flex justify-between items-center mb-3">
+            <span class="font-bold text-slate-800 text-sm">Quy mô đội ngũ Sales / CSKH:</span>
+            <span class="font-mono font-bold text-xl text-indigo-600" id="teamSizeDisplay">8 Người</span>
+          </div>
+          <input 
+            type="range" 
+            min="3" 
+            max="50" 
+            value="8" 
+            oninput="updateRoi(this.value)" 
+            class="w-full h-2.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+          >
+          <div class="flex justify-between text-xs text-slate-400 font-mono mt-2">
+            <span>3 Nhân viên</span>
+            <span>25 Nhân viên</span>
+            <span>50 Nhân viên</span>
+          </div>
         </div>
 
-        <div class="card-solid-depth rounded-xl p-5">
-          <div class="font-bold text-white mb-1">2. Dữ liệu khách hàng của công ty có được bảo mật độc lập không?</div>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            Mỗi doanh nghiệp sở hữu một cơ sở dữ liệu (Database Schema) độc lập được mã hóa theo chuẩn AES-256 bit. Doanh nghiệp có toàn quyền sao lưu (Backup) hoặc xuất trọn vẹn dữ liệu sang định dạng CSV/Excel bất kỳ lúc nào.
-          </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-t border-slate-200 text-center">
+          <div class="p-4 rounded-2xl bg-indigo-50 border border-indigo-100 space-y-1">
+            <div class="text-xs text-indigo-800 font-semibold">Thời gian tiết kiệm mỗi tuần</div>
+            <div class="text-2xl font-bold font-mono text-indigo-700" id="hoursSaved">32 Giờ</div>
+            <div class="text-[11px] text-slate-500">Giảm bớt nhập liệu Excel thủ công</div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-emerald-50 border border-emerald-100 space-y-1">
+            <div class="text-xs text-emerald-800 font-semibold">Chi phí nhân sự tiết kiệm</div>
+            <div class="text-2xl font-bold font-mono text-emerald-700" id="moneySaved">9.600.000 đ</div>
+            <div class="text-[11px] text-slate-500">Ước tính mỗi tháng</div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-sky-50 border border-sky-100 space-y-1">
+            <div class="text-xs text-sky-800 font-semibold">Tăng trưởng doanh thu dự kiến</div>
+            <div class="text-2xl font-bold font-mono text-sky-700" id="revGrowth">+26%</div>
+            <div class="text-[11px] text-slate-500">Nhờ gọi khách thần tốc trong 3p</div>
+          </div>
         </div>
 
-        <div class="card-solid-depth rounded-xl p-5">
-          <div class="font-bold text-white mb-1">3. Khi quy mô công ty mở rộng, có thể nâng cấp máy chủ riêng hoặc mua đứt mã nguồn không?</div>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            Có. OpsFlow được thiết kế theo kiến trúc Microservices hiện đại (Spring Boot 3 + PostgreSQL). Khi công ty đạt quy mô lớn, TP Teams cung cấp phương án bàn giao toàn bộ mã nguồn và triển khai trên hạ tầng máy chủ riêng (On-Premise) của quý công ty.
-          </p>
-        </div>
       </div>
 
     </div>
   </section>
 
   <!-- 14-DAY TRIAL REGISTRATION FORM -->
-  <section id="trial" class="py-16 sm:py-24 bg-slate-950">
+  <section id="trial" class="py-16 sm:py-24 bg-slate-50 border-b border-slate-200">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="card-solid-depth rounded-2xl p-6 sm:p-10 border-indigo-500/30">
+      <div class="card-solid-depth rounded-3xl p-6 sm:p-10 border border-slate-300 shadow-xl bg-white">
         
         <div class="text-center max-w-xl mx-auto mb-8">
           <span class="px-3 py-1 rounded badge-enterprise font-mono text-xs font-bold uppercase tracking-wider">
             KHỞI TẠO WORKSPACE MIỄN PHÍ TRONG 60 GIÂY
           </span>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-3">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-3">
             Trải Nghiệm Toàn Diện OpsFlow B2B
           </h2>
-          <p class="text-slate-400 text-xs sm:text-sm mt-2">
+          <p class="text-slate-500 text-xs sm:text-sm mt-2">
             Không cần nhập thẻ tín dụng. Đội ngũ kỹ sư hỗ trợ chuyển đổi dữ liệu từ Excel / Google Sheets miễn phí.
           </p>
         </div>
 
         <form id="saasForm" onsubmit="handleSaasSubmit(event)" class="space-y-4">
           <div>
-            <label class="block text-xs font-medium text-slate-400 mb-1">Tên Doanh nghiệp / Tổ chức của bạn *</label>
-            <input type="text" id="companyName" required placeholder="Ví dụ: Công Ty TNHH Thương Mại Toàn Cầu" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:border-indigo-500 focus:outline-none">
+            <label class="block text-xs font-bold text-slate-700 mb-1">Tên Doanh nghiệp / Tổ chức của bạn *</label>
+            <input type="text" id="companyName" required placeholder="Ví dụ: Công Ty TNHH Thương Mại Toàn Cầu" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:border-indigo-600 focus:bg-white focus:outline-none">
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label class="block text-xs font-medium text-slate-400 mb-1">Người đại diện liên hệ *</label>
-              <input type="text" id="contactPerson" required placeholder="Ví dụ: Trần Minh Đức" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:border-indigo-500 focus:outline-none">
+              <label class="block text-xs font-bold text-slate-700 mb-1">Người đại diện liên hệ *</label>
+              <input type="text" id="contactPerson" required placeholder="Ví dụ: Trần Minh Đức" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:border-indigo-600 focus:bg-white focus:outline-none">
             </div>
             <div>
-              <label class="block text-xs font-medium text-slate-400 mb-1">Số điện thoại / Zalo quản trị *</label>
-              <input type="tel" id="contactPhone" required placeholder="Ví dụ: 0987 654 321" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:border-indigo-500 focus:outline-none">
+              <label class="block text-xs font-bold text-slate-700 mb-1">Số điện thoại / Zalo quản trị *</label>
+              <input type="tel" id="contactPhone" required placeholder="Ví dụ: 0987 654 321" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:border-indigo-600 focus:bg-white focus:outline-none">
             </div>
           </div>
 
           <div>
-            <label class="block text-xs font-medium text-slate-400 mb-1">Quy mô nhân sự sử dụng</label>
-            <select id="userRange" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:border-indigo-500 focus:outline-none">
+            <label class="block text-xs font-bold text-slate-700 mb-1">Quy mô nhân sự sử dụng</label>
+            <select id="userRange" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:border-indigo-600 focus:bg-white focus:outline-none">
               <option value="3-5 Người (Starter Team)">3 - 5 Người (Đội ngũ khởi đầu)</option>
               <option value="6-15 Người (Growth Business)">6 - 15 Người (Doanh nghiệp tăng trưởng)</option>
               <option value="16-50 Người (Medium Enterprise)">16 - 50 Người (Doanh nghiệp vừa)</option>
@@ -517,11 +467,11 @@
             </select>
           </div>
 
-          <button type="submit" id="saasSubmitBtn" class="btn-solid-indigo w-full py-3.5 rounded-xl font-bold text-sm tracking-wide mt-4">
+          <button type="submit" id="saasSubmitBtn" class="btn-solid-indigo w-full py-4 rounded-xl font-bold text-sm tracking-wide mt-4">
             KÍCH HOẠT WORKSPACE DÙNG THỬ 14 NGÀY →
           </button>
 
-          <div id="saasSuccessAlert" class="hidden p-4 rounded-xl bg-emerald-950 border border-emerald-800 text-emerald-300 text-sm text-center">
+          <div id="saasSuccessAlert" class="hidden p-4 rounded-xl bg-emerald-100 border border-emerald-300 text-emerald-800 text-sm text-center font-medium">
             🎉 Workspace của bạn đã được khởi tạo! Kỹ sư phụ trách sẽ gửi tài khoản quản trị và đường link đăng nhập qua Zalo trong ít phút.
           </div>
         </form>
@@ -532,16 +482,16 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="py-12 border-t border-slate-800 bg-slate-950 text-xs text-slate-400">
+  <footer class="py-12 border-t border-slate-200 bg-white text-xs text-slate-500">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div>
-        <p class="text-slate-300 font-bold">OpsFlow B2B • Mẫu Landing Page Phần Mềm Doanh Nghiệp & CRM</p>
-        <p class="mt-1">Phát triển bởi TP Teams Solutions — Giao diện dịu mắt, tải siêu tốc 0.5s, tập trung vào hiệu suất vận hành.</p>
+        <p class="text-slate-800 font-bold">OpsFlow B2B • Mẫu Landing Page Phần Mềm Doanh Nghiệp &amp; CRM</p>
+        <p class="mt-1">Phát triển bởi TP Teams Solutions — Giao diện sáng dịu mắt, tải siêu tốc 0.5s, tập trung vào hiệu suất vận hành.</p>
       </div>
       <div class="flex items-center space-x-4">
-        <a href="/" class="text-indigo-400 hover:underline">Về Trang Chủ Giải Pháp</a>
+        <a href="/" class="text-indigo-600 hover:underline font-medium">Về Trang Chủ Giải Pháp</a>
         <span>•</span>
-        <a href="https://zalo.me/0349363992" target="_blank" class="text-slate-300 hover:text-white">Tư Vấn Kiến Trúc CRM Riêng Biệt</a>
+        <a href="https://zalo.me/0349363992" target="_blank" class="text-slate-700 hover:text-indigo-600">Tư Vấn Kiến Trúc CRM Riêng Biệt</a>
       </div>
     </div>
   </footer>
@@ -583,7 +533,7 @@
 
       setTimeout(() => {
         btn.textContent = 'ĐÃ KHỞI TẠO WORKSPACE THÀNH CÔNG ✓';
-        btn.className = 'btn-solid-indigo w-full py-3.5 rounded-xl font-bold text-sm tracking-wide mt-4 bg-emerald-600 text-white';
+        btn.className = 'btn-solid-indigo w-full py-4 rounded-xl font-bold text-sm tracking-wide mt-4 bg-emerald-600 text-white';
         alertBox.classList.remove('hidden');
       }, 1000);
     }

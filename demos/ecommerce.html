@@ -14,67 +14,65 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #0b0f17;
-      color: #f1f5f9;
+      background-color: #f8fafc;
+      color: #334155;
       overflow-x: hidden;
     }
     .font-mono {
       font-family: 'JetBrains Mono', monospace;
     }
-    /* Refined 3D Mechanical Elevation - No Harsh Gradients, Easy on Eyes */
+    /* Crisp Light Elevation System */
     .card-solid-depth {
-      background-color: #131b2e;
-      border: 1px solid #1e293b;
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
       transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
     }
     .card-solid-depth:hover {
       transform: translateY(-3px);
-      border-color: #334155;
-      border-top-color: rgba(255, 255, 255, 0.22);
-      box-shadow: 0 18px 30px -8px rgba(0, 0, 0, 0.8), 0 6px 8px -3px rgba(0, 0, 0, 0.5);
+      border-color: #cbd5e1;
+      box-shadow: 0 12px 24px -6px rgba(15, 23, 42, 0.08);
     }
     .badge-subtle {
-      background-color: #1e293b;
-      border: 1px solid #334155;
-      color: #94a3b8;
+      background-color: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      color: #0369a1;
     }
     .btn-solid-primary {
       background-color: #0284c7;
       color: #ffffff;
       font-weight: 600;
-      border: 1px solid #38bdf8;
-      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.28);
+      border: 1px solid #0369a1;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
       transition: all 0.2s ease;
     }
     .btn-solid-primary:hover {
       background-color: #0369a1;
       transform: translateY(-1px);
-      box-shadow: 0 6px 16px rgba(2, 132, 199, 0.4);
+      box-shadow: 0 6px 16px rgba(2, 132, 199, 0.35);
     }
     .btn-solid-secondary {
-      background-color: #1e293b;
-      color: #f1f5f9;
-      border: 1px solid #334155;
+      background-color: #f8fafc;
+      color: #334155;
+      border: 1px solid #cbd5e1;
       transition: all 0.2s ease;
     }
     .btn-solid-secondary:hover {
-      background-color: #334155;
-      border-color: #475569;
+      background-color: #f1f5f9;
+      border-color: #94a3b8;
     }
   </style>
 </head>
 <body class="selection:bg-sky-500 selection:text-white antialiased">
 
   <!-- TOP CREDIBILITY BAR -->
-  <div class="bg-slate-900/90 border-b border-slate-800 text-xs py-2 px-4">
+  <div class="bg-slate-900 border-b border-slate-800 text-xs py-2 px-4">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <div class="flex items-center space-x-2 text-slate-300">
         <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
-        <span class="font-medium">MẪU GIAO DIỆN BÁN LẺ CAO CẤP • BẢO CHỨNG BỞI TP TEAMS SOLUTIONS</span>
+        <span class="font-medium text-white">MẪU GIAO DIỆN BÁN LẺ CAO CẤP • BẢO CHỨNG BỞI TP TEAMS SOLUTIONS</span>
       </div>
-      <div class="hidden sm:flex items-center space-x-5 text-slate-400">
+      <div class="hidden sm:flex items-center space-x-5 text-slate-300">
         <span>⚡ Tải nhanh: <strong class="text-emerald-400 font-mono font-medium">0.5s</strong></span>
         <span>🛡️ Chuẩn kiểm định: <strong class="text-sky-300 font-mono font-medium">Hi-Res Audio Japan</strong></span>
         <a href="/" class="text-sky-400 hover:text-sky-300 hover:underline font-medium">← Quay lại Trang Chủ</a>
@@ -83,100 +81,100 @@
   </div>
 
   <!-- STICKY HEADER -->
-  <header class="sticky top-0 z-40 bg-slate-950/95 backdrop-blur-md border-b border-slate-800">
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <div class="w-10 h-10 rounded-lg bg-slate-900 border border-slate-700 flex items-center justify-center text-sky-400 font-mono font-bold text-lg shadow-sm">
+        <div class="w-10 h-10 rounded-lg bg-sky-600 text-white flex items-center justify-center font-mono font-bold text-lg shadow-sm">
           CP
         </div>
         <div>
-          <span class="text-base font-bold text-slate-100 tracking-tight">CyberPulse</span>
-          <span class="text-xs px-2 py-0.5 rounded bg-sky-950/80 border border-sky-800 text-sky-300 font-mono font-bold ml-1.5">STUDIO MASTER</span>
+          <span class="text-base font-bold text-slate-900 tracking-tight">CyberPulse</span>
+          <span class="text-xs px-2 py-0.5 rounded bg-sky-100 border border-sky-200 text-sky-800 font-mono font-bold ml-1.5">STUDIO MASTER</span>
         </div>
       </div>
-      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
-        <a href="#features" class="hover:text-sky-300 transition-colors">Công Nghệ Âm Học</a>
-        <a href="#exploded" class="hover:text-sky-300 transition-colors">Cấu Tạo Chi Tiết</a>
-        <a href="#specs" class="hover:text-sky-300 transition-colors">Thông Số Kỹ Thuật</a>
-        <a href="#comparison" class="hover:text-sky-300 transition-colors">Bảng Đối Chiếu</a>
-        <a href="#reviews" class="hover:text-sky-300 transition-colors">Đánh Giá Thực Tế</a>
-        <a href="#faqs" class="hover:text-sky-300 transition-colors">Hỏi Đáp</a>
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+        <a href="#features" class="hover:text-sky-600 transition-colors">Công Nghệ Âm Học</a>
+        <a href="#exploded" class="hover:text-sky-600 transition-colors">Cấu Tạo Chi Tiết</a>
+        <a href="#specs" class="hover:text-sky-600 transition-colors">Thông Số Kỹ Thuật</a>
+        <a href="#comparison" class="hover:text-sky-600 transition-colors">Bảng Đối Chiếu</a>
+        <a href="#reviews" class="hover:text-sky-600 transition-colors">Đánh Giá Thực Tế</a>
+        <a href="#faqs" class="hover:text-sky-600 transition-colors">Hỏi Đáp</a>
       </nav>
       <div class="flex items-center space-x-3">
         <a href="#order" class="btn-solid-primary px-5 py-2.5 rounded-lg text-sm flex items-center space-x-2">
           <span>Đặt Mua Ngay</span>
-          <span class="font-mono text-xs bg-black/25 px-1.5 py-0.5 rounded">-45%</span>
+          <span class="font-mono text-xs bg-black/20 px-1.5 py-0.5 rounded">-45%</span>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- PROMOTION TICKER (DỊU MẮT, KHÔNG CHÓI) -->
-  <div class="bg-slate-900 border-b border-slate-800 text-slate-300 py-2.5 px-4">
+  <!-- PROMOTION TICKER -->
+  <div class="bg-amber-50 border-b border-amber-200 text-amber-900 py-2.5 px-4">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between text-xs sm:text-sm">
       <div class="flex items-center space-x-2">
-        <span class="w-2 h-2 rounded-full bg-amber-400"></span>
-        <span class="font-bold text-slate-100 uppercase tracking-wide">ƯU ĐÃI MỞ BÁN:</span>
-        <span class="text-slate-300">Chỉ còn đúng <strong class="text-amber-300 font-mono font-bold text-sm" id="stockCount">18</strong> suất tặng kèm Hộp đựng EVA chống va đập & Dây cáp mạ vàng</span>
+        <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+        <span class="font-bold uppercase tracking-wide">ƯU ĐÃI MỞ BÁN:</span>
+        <span>Chỉ còn đúng <strong class="text-amber-800 font-mono font-bold text-sm" id="stockCount">18</strong> suất tặng kèm Hộp đựng EVA chống va đập &amp; Dây cáp mạ vàng</span>
       </div>
-      <div class="flex items-center space-x-2 mt-1 sm:mt-0 font-mono text-xs">
-        <span class="text-slate-400">Thời gian còn lại:</span>
-        <div class="flex items-center space-x-1 font-semibold text-slate-100">
-          <span class="bg-slate-950 px-2 py-0.5 rounded border border-slate-800" id="hours">04</span>:
-          <span class="bg-slate-950 px-2 py-0.5 rounded border border-slate-800" id="minutes">42</span>:
-          <span class="bg-slate-950 px-2 py-0.5 rounded border border-slate-800 text-amber-300" id="seconds">19</span>
+      <div class="flex items-center space-x-2 mt-1 sm:mt-0 font-mono text-xs text-amber-800">
+        <span>Thời gian còn lại:</span>
+        <div class="flex items-center space-x-1 font-semibold text-slate-900">
+          <span class="bg-white px-2 py-0.5 rounded border border-amber-300" id="hours">04</span>:
+          <span class="bg-white px-2 py-0.5 rounded border border-amber-300" id="minutes">42</span>:
+          <span class="bg-white px-2 py-0.5 rounded border border-amber-300 text-amber-700 font-bold" id="seconds">19</span>
         </div>
       </div>
     </div>
   </div>
 
   <!-- HERO SECTION WITH REFINED VISUAL HIERARCHY -->
-  <section class="py-12 sm:py-20 border-b border-slate-800">
+  <section class="py-12 sm:py-20 border-b border-slate-200 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
         <!-- Left: Copy & Value Propositions -->
         <div class="lg:col-span-7 space-y-6">
           <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full badge-subtle text-xs font-mono">
-            <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+            <span class="w-2 h-2 rounded-full bg-sky-600"></span>
             <span>HI-RES WIRELESS AUDIO • BERYLLIUM DRIVER 40MM</span>
           </div>
 
-          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
             Âm Thanh Phòng Thu.<br>
-            <span class="text-sky-400">Tĩnh Lặng Tuyệt Đối.</span>
+            <span class="text-sky-600">Tĩnh Lặng Tuyệt Đối.</span>
           </h1>
 
-          <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
             CyberPulse Studio Master ANC là dòng tai nghe over-ear chuẩn phòng thu được chế tác từ màng loa Beryllium Composite 40mm, chip giải mã âm thanh độc lập DAC 32-bit/384kHz, cùng công nghệ chống ồn chủ động Hybrid ANC triệt tiêu 98.5% tiếng ồn môi trường.
           </p>
 
           <!-- Core Metric Badges -->
           <div class="grid grid-cols-3 gap-4 pt-2">
-            <div class="bg-slate-900 border border-slate-800 rounded-xl p-3.5 border-t-slate-700">
-              <div class="text-xl sm:text-2xl font-bold font-mono text-sky-400">-42dB</div>
-              <div class="text-xs text-slate-400 mt-1">Chống Ồn Hybrid ANC</div>
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-3.5">
+              <div class="text-xl sm:text-2xl font-bold font-mono text-sky-600">-42dB</div>
+              <div class="text-xs text-slate-600 mt-1">Chống Ồn Hybrid ANC</div>
             </div>
-            <div class="bg-slate-900 border border-slate-800 rounded-xl p-3.5 border-t-slate-700">
-              <div class="text-xl sm:text-2xl font-bold font-mono text-emerald-400">65 Giờ</div>
-              <div class="text-xs text-slate-400 mt-1">Thời Lượng Pin Bền Bỉ</div>
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-3.5">
+              <div class="text-xl sm:text-2xl font-bold font-mono text-emerald-600">65 Giờ</div>
+              <div class="text-xs text-slate-600 mt-1">Thời Lượng Pin Bền Bỉ</div>
             </div>
-            <div class="bg-slate-900 border border-slate-800 rounded-xl p-3.5 border-t-slate-700">
-              <div class="text-xl sm:text-2xl font-bold font-mono text-amber-300">0.035s</div>
-              <div class="text-xs text-slate-400 mt-1">Độ Trễ Thấp aptX LL</div>
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-3.5">
+              <div class="text-xl sm:text-2xl font-bold font-mono text-amber-700">0.035s</div>
+              <div class="text-xs text-slate-600 mt-1">Độ Trễ Thấp aptX LL</div>
             </div>
           </div>
 
           <!-- Color Selector & Pricing -->
           <div class="pt-2 space-y-3">
             <div class="flex items-center space-x-3 text-sm">
-              <span class="text-slate-400">Phiên bản màu sắc:</span>
-              <span class="font-semibold text-slate-100" id="selectedColorName">Titanium Slate (Xám Titan)</span>
+              <span class="text-slate-500">Phiên bản màu sắc:</span>
+              <span class="font-semibold text-slate-900" id="selectedColorName">Titanium Slate (Xám Titan)</span>
             </div>
             <div class="flex items-center space-x-3">
-              <button onclick="changeColor('slate', 'Titanium Slate (Xám Titan)')" class="w-9 h-9 rounded-full bg-slate-700 border-2 border-white ring-2 ring-sky-500/40 shadow flex items-center justify-center transition-transform hover:scale-105" id="btnColorSlate" title="Titanium Slate"></button>
-              <button onclick="changeColor('cyan', 'Nordic Blue (Xanh Biển Sâu)')" class="w-9 h-9 rounded-full bg-sky-700 border-2 border-slate-800 hover:border-white shadow flex items-center justify-center transition-transform hover:scale-105" id="btnColorCyan" title="Nordic Blue"></button>
-              <button onclick="changeColor('black', 'Stealth Charcoal (Đen Nhám)')" class="w-9 h-9 rounded-full bg-slate-950 border-2 border-slate-800 hover:border-white shadow flex items-center justify-center transition-transform hover:scale-105" id="btnColorBlack" title="Stealth Charcoal"></button>
+              <button onclick="changeColor('slate', 'Titanium Slate (Xám Titan)')" class="w-9 h-9 rounded-full bg-slate-600 border-2 border-white ring-2 ring-sky-500/40 shadow flex items-center justify-center transition-transform hover:scale-105" id="btnColorSlate" title="Titanium Slate"></button>
+              <button onclick="changeColor('cyan', 'Nordic Blue (Xanh Biển Sâu)')" class="w-9 h-9 rounded-full bg-sky-600 border-2 border-slate-300 hover:border-slate-500 shadow flex items-center justify-center transition-transform hover:scale-105" id="btnColorCyan" title="Nordic Blue"></button>
+              <button onclick="changeColor('black', 'Stealth Charcoal (Đen Nhám)')" class="w-9 h-9 rounded-full bg-slate-900 border-2 border-slate-300 hover:border-slate-500 shadow flex items-center justify-center transition-transform hover:scale-105" id="btnColorBlack" title="Stealth Charcoal"></button>
             </div>
           </div>
 
@@ -185,7 +183,7 @@
             <a href="#order" class="btn-solid-primary py-3.5 px-8 rounded-xl text-center text-base font-semibold shadow-md">
               ĐẶT HÀNG NHẬN TRỌN BỘ QUÀ TẶNG
             </a>
-            <div class="flex items-center space-x-2 text-xs text-slate-400 px-2 justify-center sm:justify-start">
+            <div class="flex items-center space-x-2 text-xs text-slate-500 px-2 justify-center sm:justify-start">
               <span>✓ Kiểm tra hàng trước khi thanh toán</span>
               <span>•</span>
               <span>✓ Bảo hành 1 đổi 1 trong 12 tháng</span>
@@ -196,50 +194,50 @@
 
         <!-- Right: 3D Product Visualizer -->
         <div class="lg:col-span-5 flex justify-center">
-          <div class="w-full max-w-md card-solid-depth rounded-2xl p-6 sm:p-8">
-            <div class="flex items-center justify-between pb-4 border-b border-slate-800 text-xs">
-              <span class="font-mono text-sky-400 font-semibold">SERIES: CPM-2026-PRO</span>
-              <span class="px-2 py-0.5 rounded bg-emerald-950/80 border border-emerald-800 text-emerald-300 font-mono font-medium">SẴN HÀNG GIAO NGAY</span>
+          <div class="w-full max-w-md card-solid-depth rounded-2xl p-6 sm:p-8 bg-white border border-slate-200">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-200 text-xs">
+              <span class="font-mono text-sky-600 font-semibold">SERIES: CPM-2026-PRO</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-100 border border-emerald-200 text-emerald-800 font-mono font-medium">SẴN HÀNG GIAO NGAY</span>
             </div>
 
             <!-- Headphone Vector Graphic -->
             <div class="py-8 flex justify-center">
               <svg id="headphoneSvg" width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg" class="drop-shadow-lg transition-all duration-300">
                 <!-- Headband Arc -->
-                <path d="M 50 150 C 50 60, 230 60, 230 150" stroke="#334155" stroke-width="18" stroke-linecap="round"/>
-                <path d="M 60 145 C 60 75, 220 75, 220 145" stroke="#1e293b" stroke-width="12" stroke-linecap="round"/>
-                <path d="M 80 135 C 80 85, 200 85, 200 135" stroke="#0f172a" stroke-width="8" stroke-linecap="round"/>
+                <path d="M 50 150 C 50 60, 230 60, 230 150" stroke="#475569" stroke-width="18" stroke-linecap="round"/>
+                <path d="M 60 145 C 60 75, 220 75, 220 145" stroke="#334155" stroke-width="12" stroke-linecap="round"/>
+                <path d="M 80 135 C 80 85, 200 85, 200 135" stroke="#1e293b" stroke-width="8" stroke-linecap="round"/>
                 
                 <!-- Left Ear Cup -->
                 <g id="leftEarCup">
-                  <ellipse cx="60" cy="170" rx="36" ry="48" fill="#1e293b" stroke="#334155" stroke-width="3"/>
-                  <ellipse cx="60" cy="170" rx="28" ry="40" fill="#0f172a" stroke="#475569" stroke-width="2"/>
-                  <circle id="leftAccentRing" cx="60" cy="170" r="14" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
-                  <circle cx="60" cy="170" r="6" fill="#38bdf8"/>
+                  <ellipse cx="60" cy="170" rx="36" ry="48" fill="#334155" stroke="#64748b" stroke-width="3"/>
+                  <ellipse cx="60" cy="170" rx="28" ry="40" fill="#1e293b" stroke="#94a3b8" stroke-width="2"/>
+                  <circle id="leftAccentRing" cx="60" cy="170" r="14" fill="#334155" stroke="#0284c7" stroke-width="3"/>
+                  <circle cx="60" cy="170" r="6" fill="#0284c7"/>
                 </g>
 
                 <!-- Right Ear Cup -->
                 <g id="rightEarCup">
-                  <ellipse cx="220" cy="170" rx="36" ry="48" fill="#1e293b" stroke="#334155" stroke-width="3"/>
-                  <ellipse cx="220" cy="170" rx="28" ry="40" fill="#0f172a" stroke="#475569" stroke-width="2"/>
-                  <circle id="rightAccentRing" cx="220" cy="170" r="14" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
-                  <circle cx="220" cy="170" r="6" fill="#38bdf8"/>
+                  <ellipse cx="220" cy="170" rx="36" ry="48" fill="#334155" stroke="#64748b" stroke-width="3"/>
+                  <ellipse cx="220" cy="170" rx="28" ry="40" fill="#1e293b" stroke="#94a3b8" stroke-width="2"/>
+                  <circle id="rightAccentRing" cx="220" cy="170" r="14" fill="#334155" stroke="#0284c7" stroke-width="3"/>
+                  <circle cx="220" cy="170" r="6" fill="#0284c7"/>
                 </g>
 
                 <!-- Stand Base Subtle Line -->
-                <line x1="40" y1="245" x2="240" y2="245" stroke="#1e293b" stroke-width="2"/>
-                <circle cx="140" cy="245" r="4" fill="#38bdf8"/>
+                <line x1="40" y1="245" x2="240" y2="245" stroke="#cbd5e1" stroke-width="2"/>
+                <circle cx="140" cy="245" r="4" fill="#0284c7"/>
               </svg>
             </div>
 
             <!-- Price & Trust Badges -->
-            <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+            <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
               <div>
                 <div class="text-xs text-slate-400 line-through font-mono">3.490.000 đ</div>
-                <div class="text-2xl font-bold font-mono text-sky-400">1.890.000 đ</div>
+                <div class="text-2xl font-bold font-mono text-sky-600">1.890.000 đ</div>
               </div>
               <div class="text-right">
-                <span class="text-xs px-2.5 py-1 rounded bg-amber-950/80 text-amber-300 border border-amber-800 font-medium">
+                <span class="text-xs px-2.5 py-1 rounded bg-amber-100 text-amber-800 border border-amber-300 font-medium">
                   TIẾT KIỆM 1.600.000 đ
                 </span>
               </div>
@@ -252,71 +250,71 @@
   </section>
 
   <!-- 4-LAYER ACOUSTIC ARCHITECTURE (EXPLODED VIEW) -->
-  <section id="exploded" class="py-16 sm:py-24 border-b border-slate-800 bg-slate-950">
+  <section id="exploded" class="py-16 sm:py-24 border-b border-slate-200 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full badge-subtle text-sky-300 text-xs font-mono mb-3">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full badge-subtle text-xs font-mono mb-3">
           <span>[ 01 // CẤU TẠO ÂM HỌC ĐA TẦNG ]</span>
         </div>
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
-          Cơ Học Âm Thanh Chuẩn Phòng Thu
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Bóc Tách 4 Tầng Vật Liệu Chuẩn Phòng Thu
         </h2>
-        <p class="text-slate-400 text-sm sm:text-base mt-3">
-          Từng linh kiện được gia công CNC tinh vi với độ chính xác cao, duy trì độ méo hài tổng (THD) dưới 0.05% ở toàn bộ dải tần số.
+        <p class="text-slate-600 text-sm sm:text-base mt-3">
+          Mỗi chi tiết đều được gia công cơ khí chính xác CNC với sai số dưới 0.01mm để mang lại chất âm tinh khiết nhất.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <div class="card-solid-depth rounded-xl p-6">
-          <div class="w-11 h-11 rounded-lg bg-slate-900 border border-slate-700 flex items-center justify-center font-mono font-bold text-sky-400 text-base mb-4">
+        <div class="card-solid-depth rounded-2xl p-6 bg-white">
+          <div class="w-11 h-11 rounded-lg bg-sky-100 border border-sky-200 flex items-center justify-center font-mono font-bold text-sky-700 text-base mb-4">
             01
           </div>
-          <h3 class="text-base font-bold text-white mb-2">Vỏ Khung Hợp Kim Titanium</h3>
-          <p class="text-xs text-slate-300 leading-relaxed mb-4">
-            Khung máy bay Grade-5 xử lý nhám cát vi mô, chống trầy xước và triệt tiêu toàn bộ sóng phản xạ cộng hưởng trong buồng âm.
+          <h3 class="text-base font-bold text-slate-900 mb-2">Khung Vỏ Hợp Kim Titanium</h3>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            Khung headband làm từ hợp kim Titanium hàng không siêu nhẹ (245g), chịu lực xoắn vặn 10.000 lần mà không biến dạng.
           </p>
-          <div class="text-xs font-mono text-slate-400 pt-3 border-t border-slate-800">
-            Khối lượng: 215g siêu nhẹ
+          <div class="text-xs font-mono text-slate-500 pt-3 border-t border-slate-100">
+            Trọng lượng: 245g siêu nhẹ
           </div>
         </div>
 
-        <div class="card-solid-depth rounded-xl p-6">
-          <div class="w-11 h-11 rounded-lg bg-slate-900 border border-slate-700 flex items-center justify-center font-mono font-bold text-sky-400 text-base mb-4">
+        <div class="card-solid-depth rounded-2xl p-6 bg-white">
+          <div class="w-11 h-11 rounded-lg bg-sky-100 border border-sky-200 flex items-center justify-center font-mono font-bold text-sky-700 text-base mb-4">
             02
           </div>
-          <h3 class="text-base font-bold text-white mb-2">Màng Loa Beryllium 40mm</h3>
-          <p class="text-xs text-slate-300 leading-relaxed mb-4">
-            Màng rung composite mạ Beryllium siêu nhẹ và có độ cứng vượt trội, đáp ứng dải tần siêu rộng 10Hz – 45.000Hz đạt chuẩn Hi-Res.
+          <h3 class="text-base font-bold text-slate-900 mb-2">Màng Loa Beryllium 40mm</h3>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            Vật liệu Beryllium cứng gấp 4 lần thép nhưng nhẹ hơn nhôm, tái tạo dải âm treble trong trẻo lên đến 40.000Hz mà không méo tiếng.
           </p>
-          <div class="text-xs font-mono text-slate-400 pt-3 border-t border-slate-800">
-            Dải tần: 10Hz – 45kHz
+          <div class="text-xs font-mono text-slate-500 pt-3 border-t border-slate-100">
+            Dải tần: 10Hz – 40.000Hz
           </div>
         </div>
 
-        <div class="card-solid-depth rounded-xl p-6">
-          <div class="w-11 h-11 rounded-lg bg-slate-900 border border-slate-700 flex items-center justify-center font-mono font-bold text-sky-400 text-base mb-4">
+        <div class="card-solid-depth rounded-2xl p-6 bg-white">
+          <div class="w-11 h-11 rounded-lg bg-sky-100 border border-sky-200 flex items-center justify-center font-mono font-bold text-sky-700 text-base mb-4">
             03
           </div>
-          <h3 class="text-base font-bold text-white mb-2">Chip Kép DSP & AI ANC</h3>
-          <p class="text-xs text-slate-300 leading-relaxed mb-4">
+          <h3 class="text-base font-bold text-slate-900 mb-2">Chip Kép DSP &amp; AI ANC</h3>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
             Bộ xử lý tín hiệu số 32-bit phân tích 48.000 mẫu/giây từ hệ thống 4 micro thu âm, tự động tạo sóng nghịch đảo triệt tiêu tiếng ồn.
           </p>
-          <div class="text-xs font-mono text-slate-400 pt-3 border-t border-slate-800">
+          <div class="text-xs font-mono text-slate-500 pt-3 border-t border-slate-100">
             Độ phân giải: 32-bit / 384kHz
           </div>
         </div>
 
-        <div class="card-solid-depth rounded-xl p-6">
-          <div class="w-11 h-11 rounded-lg bg-slate-900 border border-slate-700 flex items-center justify-center font-mono font-bold text-sky-400 text-base mb-4">
+        <div class="card-solid-depth rounded-2xl p-6 bg-white">
+          <div class="w-11 h-11 rounded-lg bg-sky-100 border border-sky-200 flex items-center justify-center font-mono font-bold text-sky-700 text-base mb-4">
             04
           </div>
-          <h3 class="text-base font-bold text-white mb-2">Đệm Tai Memory Foam Protein</h3>
-          <p class="text-xs text-slate-300 leading-relaxed mb-4">
+          <h3 class="text-base font-bold text-slate-900 mb-2">Đệm Tai Memory Foam Protein</h3>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
             Đệm mút hoạt tính bọc da sinh học thoáng khí, phân bổ áp lực đều quanh vành tai, đeo êm ái suốt 8 tiếng làm việc mà không đau vành tai.
           </p>
-          <div class="text-xs font-mono text-slate-400 pt-3 border-t border-slate-800">
+          <div class="text-xs font-mono text-slate-500 pt-3 border-t border-slate-100">
             Lực kẹp chuẩn: 3.2N êm ái
           </div>
         </div>
@@ -327,67 +325,67 @@
   </section>
 
   <!-- BENCHMARK SPECIFICATION TABLE -->
-  <section id="comparison" class="py-16 sm:py-24 border-b border-slate-800">
+  <section id="comparison" class="py-16 sm:py-24 border-b border-slate-200 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full badge-subtle text-sky-300 text-xs font-mono mb-3">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full badge-subtle text-xs font-mono mb-3">
           <span>[ 02 // BẢNG ĐỐI CHIẾU THÔNG SỐ THỰC TẾ ]</span>
         </div>
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
           Minh Bạch Thông Số Với Phân Khúc Cao Cấp
         </h2>
-        <p class="text-slate-400 text-sm sm:text-base mt-3">
+        <p class="text-slate-600 text-sm sm:text-base mt-3">
           Đối chiếu trực tiếp thông số đo lường độc lập với các dòng tai nghe phân khúc 6 – 8 triệu đồng trên thị trường.
         </p>
       </div>
 
-      <div class="overflow-x-auto">
+      <div class="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm">
         <table class="w-full text-left text-sm border-collapse min-w-[650px]">
           <thead>
-            <tr class="border-b border-slate-800 text-slate-400 font-mono text-xs uppercase">
-              <th class="py-4 px-4 bg-slate-950">Hạng Mục Kỹ Thuật</th>
-              <th class="py-4 px-4 bg-slate-900 text-sky-400 font-bold border-x border-slate-800">CyberPulse Studio Master</th>
-              <th class="py-4 px-4 bg-slate-950">Dòng S Cao Cấp (Nhật Bản)</th>
-              <th class="py-4 px-4 bg-slate-950">Dòng B Nổi Tiếng (Hoa Kỳ)</th>
+            <tr class="border-b border-slate-200 text-slate-600 font-mono text-xs uppercase bg-slate-50">
+              <th class="py-4 px-4">Hạng Mục Kỹ Thuật</th>
+              <th class="py-4 px-4 bg-sky-50 text-sky-800 font-bold border-x border-sky-200">CyberPulse Studio Master</th>
+              <th class="py-4 px-4 text-slate-500">Dòng S Cao Cấp (Nhật Bản)</th>
+              <th class="py-4 px-4 text-slate-500">Dòng B Nổi Tiếng (Hoa Kỳ)</th>
             </tr>
           </thead>
-          <tbody class="divide-y divide-slate-800/70 font-sans">
-            <tr class="hover:bg-slate-900/40">
-              <td class="py-4 px-4 text-slate-300 font-medium">Khả năng chống ồn chủ động (ANC)</td>
-              <td class="py-4 px-4 bg-slate-900/80 text-emerald-400 font-semibold font-mono border-x border-slate-800">-42dB (Hybrid 4 mic)</td>
-              <td class="py-4 px-4 text-slate-400 font-mono">-38dB</td>
-              <td class="py-4 px-4 text-slate-400 font-mono">-39dB</td>
+          <tbody class="divide-y divide-slate-200 font-sans">
+            <tr class="hover:bg-slate-50">
+              <td class="py-4 px-4 text-slate-700 font-medium">Khả năng chống ồn chủ động (ANC)</td>
+              <td class="py-4 px-4 bg-sky-50/50 text-emerald-700 font-semibold font-mono border-x border-sky-200">-42dB (Hybrid 4 mic)</td>
+              <td class="py-4 px-4 text-slate-500 font-mono">-38dB</td>
+              <td class="py-4 px-4 text-slate-500 font-mono">-39dB</td>
             </tr>
-            <tr class="hover:bg-slate-900/40">
-              <td class="py-4 px-4 text-slate-300 font-medium">Thời lượng pin nghe liên tục</td>
-              <td class="py-4 px-4 bg-slate-900/80 text-emerald-400 font-semibold font-mono border-x border-slate-800">65 Giờ (Tắt ANC: 80h)</td>
-              <td class="py-4 px-4 text-slate-400 font-mono">30 Giờ</td>
-              <td class="py-4 px-4 text-slate-400 font-mono">24 Giờ</td>
+            <tr class="hover:bg-slate-50">
+              <td class="py-4 px-4 text-slate-700 font-medium">Thời lượng pin nghe liên tục</td>
+              <td class="py-4 px-4 bg-sky-50/50 text-emerald-700 font-semibold font-mono border-x border-sky-200">65 Giờ (Tắt ANC: 80h)</td>
+              <td class="py-4 px-4 text-slate-500 font-mono">30 Giờ</td>
+              <td class="py-4 px-4 text-slate-500 font-mono">24 Giờ</td>
             </tr>
-            <tr class="hover:bg-slate-900/40">
-              <td class="py-4 px-4 text-slate-300 font-medium">Công nghệ sạc nhanh khẩn cấp</td>
-              <td class="py-4 px-4 bg-slate-900/80 text-emerald-400 font-semibold font-mono border-x border-slate-800">10 phút sạc = 6h nghe</td>
-              <td class="py-4 px-4 text-slate-400 font-mono">10 phút = 3h nghe</td>
-              <td class="py-4 px-4 text-slate-400 font-mono">15 phút = 2h nghe</td>
+            <tr class="hover:bg-slate-50">
+              <td class="py-4 px-4 text-slate-700 font-medium">Công nghệ sạc nhanh khẩn cấp</td>
+              <td class="py-4 px-4 bg-sky-50/50 text-emerald-700 font-semibold font-mono border-x border-sky-200">10 phút sạc = 6h nghe</td>
+              <td class="py-4 px-4 text-slate-500 font-mono">10 phút = 3h nghe</td>
+              <td class="py-4 px-4 text-slate-500 font-mono">15 phút = 2h nghe</td>
             </tr>
-            <tr class="hover:bg-slate-900/40">
-              <td class="py-4 px-4 text-slate-300 font-medium">Độ trễ tín hiệu xem phim / chơi game</td>
-              <td class="py-4 px-4 bg-slate-900/80 text-emerald-400 font-semibold font-mono border-x border-slate-800">35ms (Bluetooth 5.4 LE)</td>
-              <td class="py-4 px-4 text-slate-400 font-mono">80ms</td>
-              <td class="py-4 px-4 text-slate-400 font-mono">95ms</td>
+            <tr class="hover:bg-slate-50">
+              <td class="py-4 px-4 text-slate-700 font-medium">Độ trễ tín hiệu xem phim / chơi game</td>
+              <td class="py-4 px-4 bg-sky-50/50 text-emerald-700 font-semibold font-mono border-x border-sky-200">35ms (Bluetooth 5.4 LE)</td>
+              <td class="py-4 px-4 text-slate-500 font-mono">80ms</td>
+              <td class="py-4 px-4 text-slate-500 font-mono">95ms</td>
             </tr>
-            <tr class="hover:bg-slate-900/40">
-              <td class="py-4 px-4 text-slate-300 font-medium">Vật liệu cấu tạo khung tai nghe</td>
-              <td class="py-4 px-4 bg-slate-900/80 text-sky-300 font-semibold border-x border-slate-800">Hợp kim Titanium & Da Protein</td>
-              <td class="py-4 px-4 text-slate-400">Nhựa ABS tái chế</td>
-              <td class="py-4 px-4 text-slate-400">Nhựa pha nhôm</td>
+            <tr class="hover:bg-slate-50">
+              <td class="py-4 px-4 text-slate-700 font-medium">Vật liệu cấu tạo khung tai nghe</td>
+              <td class="py-4 px-4 bg-sky-50/50 text-sky-800 font-semibold border-x border-sky-200">Hợp kim Titanium &amp; Da Protein</td>
+              <td class="py-4 px-4 text-slate-500">Nhựa ABS tái chế</td>
+              <td class="py-4 px-4 text-slate-500">Nhựa pha nhôm</td>
             </tr>
-            <tr class="bg-sky-950/20">
-              <td class="py-4 px-4 text-white font-bold">Mức Giá Mở Bán Ưu Đãi</td>
-              <td class="py-4 px-4 bg-sky-950/40 text-sky-300 font-bold text-lg font-mono border-x border-sky-800">1.890.000 đ</td>
-              <td class="py-4 px-4 text-slate-400 font-mono">6.990.000 đ</td>
-              <td class="py-4 px-4 text-slate-400 font-mono">8.490.000 đ</td>
+            <tr class="bg-sky-50/80">
+              <td class="py-4 px-4 text-slate-900 font-bold">Mức Giá Mở Bán Ưu Đãi</td>
+              <td class="py-4 px-4 bg-sky-100 text-sky-900 font-bold text-lg font-mono border-x border-sky-300">1.890.000 đ</td>
+              <td class="py-4 px-4 text-slate-500 font-mono">6.990.000 đ</td>
+              <td class="py-4 px-4 text-slate-500 font-mono">8.490.000 đ</td>
             </tr>
           </tbody>
         </table>
@@ -397,78 +395,78 @@
   </section>
 
   <!-- VERIFIED CUSTOMER REVIEWS -->
-  <section id="reviews" class="py-16 sm:py-24 border-b border-slate-800 bg-slate-950">
+  <section id="reviews" class="py-16 sm:py-24 border-b border-slate-200 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full badge-subtle text-sky-300 text-xs font-mono mb-3">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full badge-subtle text-xs font-mono mb-3">
           <span>[ 03 // ĐÁNH GIÁ TỪ NGƯỜI DÙNG THỰC TẾ ]</span>
         </div>
-        <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
           Hơn 1.250 Khách Hàng Hài Lòng
         </h2>
-        <div class="flex items-center justify-center space-x-2 mt-3 text-amber-300 text-sm">
+        <div class="flex items-center justify-center space-x-2 mt-3 text-amber-500 text-sm">
           <span>★★★★★</span>
-          <span class="text-slate-200">4.92 / 5.0 (Tổng hợp từ 846 lượt đánh giá đã xác thực đơn hàng)</span>
+          <span class="text-slate-600 font-medium">4.92 / 5.0 (Tổng hợp từ 846 lượt đánh giá đã xác thực đơn hàng)</span>
         </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         
-        <div class="card-solid-depth rounded-xl p-6">
+        <div class="card-solid-depth rounded-2xl p-6 bg-white">
           <div class="flex items-center justify-between mb-4">
             <div class="flex items-center space-x-3">
-              <div class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-sky-400 font-bold font-mono text-sm">
+              <div class="w-10 h-10 rounded-full bg-sky-100 text-sky-800 font-bold font-mono text-sm flex items-center justify-center">
                 HL
               </div>
               <div>
-                <div class="text-sm font-bold text-white">Hoàng Long</div>
-                <div class="text-xs text-slate-400">Kỹ sư âm thanh • Hà Nội</div>
+                <div class="text-sm font-bold text-slate-900">Hoàng Long</div>
+                <div class="text-xs text-slate-500">Kỹ sư âm thanh • Hà Nội</div>
               </div>
             </div>
-            <span class="text-xs px-2 py-0.5 rounded bg-emerald-950/80 text-emerald-300 border border-emerald-800">Đã mua hàng</span>
+            <span class="text-xs px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 border border-emerald-200 font-medium">Đã mua hàng</span>
           </div>
-          <div class="text-amber-300 text-xs mb-2">★★★★★</div>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          <div class="text-amber-500 text-xs mb-2">★★★★★</div>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
             "Tôi dùng tai nghe để kiểm âm podcast và dựng video chuyên nghiệp. Dải âm trung (mid) rất sạch, không bị đẩy âm trầm quá đà như tai nghe thời trang thông thường. Không gian âm thanh mô phỏng chính xác. Trong tầm giá dưới 2 triệu, đây là sản phẩm vượt kỳ vọng."
           </p>
         </div>
 
-        <div class="card-solid-depth rounded-xl p-6">
+        <div class="card-solid-depth rounded-2xl p-6 bg-white">
           <div class="flex items-center justify-between mb-4">
             <div class="flex items-center space-x-3">
-              <div class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-sky-400 font-bold font-mono text-sm">
+              <div class="w-10 h-10 rounded-full bg-sky-100 text-sky-800 font-bold font-mono text-sm flex items-center justify-center">
                 TM
               </div>
               <div>
-                <div class="text-sm font-bold text-white">Trần Ngọc Mai</div>
-                <div class="text-xs text-slate-400">Giám đốc thiết kế • TP.HCM</div>
+                <div class="text-sm font-bold text-slate-900">Trần Ngọc Mai</div>
+                <div class="text-xs text-slate-500">Giám đốc thiết kế • TP.HCM</div>
               </div>
             </div>
-            <span class="text-xs px-2 py-0.5 rounded bg-emerald-950/80 text-emerald-300 border border-emerald-800">Đã mua hàng</span>
+            <span class="text-xs px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 border border-emerald-200 font-medium">Đã mua hàng</span>
           </div>
-          <div class="text-amber-300 text-xs mb-2">★★★★★</div>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            "Văn phòng mở của công ty tôi thường xuyên ồn ào. Khi bật chế độ chống ồn ANC, không gian làm việc trở nên tĩnh lặng rõ rệt. Đệm tai bằng da sinh học rất êm, tôi đeo kính cả ngày mà không hề bị cấn hay đau thái dương."
+          <div class="text-amber-500 text-xs mb-2">★★★★★</div>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            "Đeo đi làm tại văn phòng không gian mở cực kỳ êm. Chống ồn rất tự nhiên, không bị cảm giác ù tai hay áp lực trong màng nhĩ. Pin dùng gần 2 tuần mới phải cắm sạc một lần. Rất ưng màu Xám Titan sang trọng!"
           </p>
         </div>
 
-        <div class="card-solid-depth rounded-xl p-6">
+        <div class="card-solid-depth rounded-2xl p-6 bg-white">
           <div class="flex items-center justify-between mb-4">
             <div class="flex items-center space-x-3">
-              <div class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-sky-400 font-bold font-mono text-sm">
-                ĐK
+              <div class="w-10 h-10 rounded-full bg-sky-100 text-sky-800 font-bold font-mono text-sm flex items-center justify-center">
+                VT
               </div>
               <div>
-                <div class="text-sm font-bold text-white">Đặng Tuấn Khang</div>
-                <div class="text-xs text-slate-400">Lập trình viên • Đà Nẵng</div>
+                <div class="text-sm font-bold text-slate-900">Vũ Tuấn Kiệt</div>
+                <div class="text-xs text-slate-500">Lập trình viên • Đà Nẵng</div>
               </div>
             </div>
-            <span class="text-xs px-2 py-0.5 rounded bg-emerald-950/80 text-emerald-300 border border-emerald-800">Đã mua hàng</span>
+            <span class="text-xs px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 border border-emerald-200 font-medium">Đã mua hàng</span>
           </div>
-          <div class="text-amber-300 text-xs mb-2">★★★★★</div>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            "Thời lượng pin thực sự ấn tượng. Tôi nhận tai nghe từ đầu tuần, sử dụng mỗi ngày 8 tiếng lập trình mà đến cuối tuần vẫn còn hơn 40% pin. Khả năng kết nối đồng thời cả điện thoại và máy tính xách tay rất tiện lợi."
+          <div class="text-amber-500 text-xs mb-2">★★★★★</div>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            "Chế độ kết nối độ trễ thấp chơi game và xem phim không hề bị lệch tiếng với hình. Đệm tai da mềm đeo đeo kính không bị cấn đau thái dương. Đặt hàng chiều qua mà sáng nay đã nhận được ở Đà Nẵng."
           </p>
         </div>
 
@@ -477,144 +475,104 @@
     </div>
   </section>
 
-  <!-- FAQS SECTION (GIẢI TỎA MỌI ĐẮN ĐO CỦA KHÁCH) -->
-  <section id="faqs" class="py-16 sm:py-24 border-b border-slate-800">
+  <!-- ORDER FORM (1-TOUCH CONVERSION) -->
+  <section id="order" class="py-16 sm:py-24 bg-white border-b border-slate-200">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-12">
-        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full badge-subtle text-sky-300 text-xs font-mono mb-3">
-          <span>[ 04 // CÂU HỎI THƯỜNG GẶP ]</span>
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full badge-subtle text-xs font-mono mb-3">
+          <span>[ 04 // ĐẶT HÀNG NHẬN ƯU ĐÃI ]</span>
         </div>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-          Giải Đáp Thắc Mắc Trước Khi Mua Hàng
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Đăng Ký Đặt Hàng Trực Tiếp
         </h2>
+        <p class="text-slate-600 text-xs sm:text-sm mt-2">
+          Miễn phí giao hàng toàn quốc • Kiểm tra hàng trước khi thanh toán • Đổi mới trong 30 ngày nếu lỗi kỹ thuật.
+        </p>
       </div>
 
-      <div class="space-y-4 text-sm">
-        <div class="card-solid-depth rounded-xl p-5">
-          <div class="font-bold text-white mb-1">1. Tôi có được mở hộp kiểm tra hàng trước khi thanh toán không?</div>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            Hoàn toàn được. CyberPulse áp dụng chính sách đồng kiểm tận tay. Bạn được phép kiểm tra ngoại quan sản phẩm, phụ kiện đi kèm và thử bật nguồn trước khi thanh toán tiền cho nhân viên giao hàng.
-          </p>
-        </div>
-
-        <div class="card-solid-depth rounded-xl p-5">
-          <div class="font-bold text-white mb-1">2. Chính sách bảo hành 1 đổi 1 diễn ra như thế nào?</div>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            Trong suốt 12 tháng sử dụng, nếu tai nghe phát sinh bất kỳ lỗi kỹ thuật nào từ nhà sản xuất (lỗi pin, chập mic, mất kết nối), đội ngũ hỗ trợ sẽ đổi mới ngay một chiếc tai nghe nguyên seal tận nhà bạn mà bạn không phải chịu thêm bất kỳ chi phí vận chuyển nào.
-          </p>
-        </div>
-
-        <div class="card-solid-depth rounded-xl p-5">
-          <div class="font-bold text-white mb-1">3. Tai nghe có kết nối được đồng thời cả điện thoại và máy tính không?</div>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            Có. Với công nghệ Bluetooth 5.4 Multipoint Connection, tai nghe có thể kết nối song song 2 thiết bị. Khi bạn đang nghe nhạc trên máy tính mà có cuộc gọi đến điện thoại, tai nghe sẽ tự động chuyển kênh âm thanh để bạn đàm thoại ngay lập tức.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- HIGH CONVERTING 1-CLICK ORDER FORM -->
-  <section id="order" class="py-16 sm:py-24">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="card-solid-depth rounded-2xl p-6 sm:p-10 border-sky-500/30">
-        
-        <div class="text-center max-w-2xl mx-auto mb-8">
-          <span class="px-3 py-1 rounded bg-amber-950/80 border border-amber-800 text-amber-300 font-mono text-xs font-semibold uppercase tracking-wider">
-            ĐẶT HÀNG TRỰC TIẾP • BẢO TOÀN GIÁ MỞ BÁN
-          </span>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-3">
-            Sở Hữu CyberPulse Studio Master Ngay Hôm Nay
-          </h2>
-          <p class="text-slate-400 text-xs sm:text-sm mt-2">
-            Miễn phí giao hàng toàn quốc. Hỗ trợ đổi trả miễn phí trong 30 ngày nếu không hài lòng.
-          </p>
-        </div>
-
+      <div class="card-solid-depth rounded-3xl p-6 sm:p-10 bg-white border border-slate-300 shadow-xl">
         <form id="orderForm" onsubmit="handleOrderSubmit(event)" class="space-y-6">
           
-          <!-- Configuration -->
-          <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 sm:p-6 space-y-4">
-            <div class="font-bold text-sm text-slate-200">1. Chọn Phiên Bản Màu Sắc & Quà Tặng Đính Kèm</div>
+          <!-- Select Color Variation -->
+          <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-6 space-y-3">
+            <div class="font-bold text-sm text-slate-900">1. Chọn Phiên Bản Màu Sắc Của Bạn</div>
             
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              <label class="cursor-pointer border border-sky-500 bg-sky-950/20 rounded-lg p-3.5 flex items-center space-x-3 transition-colors" id="labelColorSlate">
-                <input type="radio" name="orderColor" value="Titanium Slate" checked onchange="updateFormColor('Titanium Slate')" class="text-sky-500 focus:ring-0">
-                <span class="text-xs font-bold text-white">Titanium Slate</span>
+              <label class="cursor-pointer border border-sky-500 bg-sky-50 rounded-xl p-3.5 flex items-center space-x-3 transition-colors" id="labelColorSlate">
+                <input type="radio" name="orderColor" value="Titanium Slate" checked onchange="updateFormColor('Titanium Slate')" class="text-sky-600 focus:ring-0">
+                <span class="text-xs font-bold text-slate-900">Titanium Slate</span>
               </label>
-              <label class="cursor-pointer border border-slate-800 bg-slate-950 rounded-lg p-3.5 flex items-center space-x-3 transition-colors" id="labelColorCyan">
-                <input type="radio" name="orderColor" value="Nordic Blue" onchange="updateFormColor('Nordic Blue')" class="text-sky-500 focus:ring-0">
-                <span class="text-xs font-bold text-white">Nordic Blue</span>
+              <label class="cursor-pointer border border-slate-200 bg-white rounded-xl p-3.5 flex items-center space-x-3 transition-colors" id="labelColorCyan">
+                <input type="radio" name="orderColor" value="Nordic Blue" onchange="updateFormColor('Nordic Blue')" class="text-sky-600 focus:ring-0">
+                <span class="text-xs font-bold text-slate-900">Nordic Blue</span>
               </label>
-              <label class="cursor-pointer border border-slate-800 bg-slate-950 rounded-lg p-3.5 flex items-center space-x-3 transition-colors" id="labelColorBlack">
-                <input type="radio" name="orderColor" value="Stealth Charcoal" onchange="updateFormColor('Stealth Charcoal')" class="text-sky-500 focus:ring-0">
-                <span class="text-xs font-bold text-white">Stealth Charcoal</span>
+              <label class="cursor-pointer border border-slate-200 bg-white rounded-xl p-3.5 flex items-center space-x-3 transition-colors" id="labelColorBlack">
+                <input type="radio" name="orderColor" value="Stealth Charcoal" onchange="updateFormColor('Stealth Charcoal')" class="text-sky-600 focus:ring-0">
+                <span class="text-xs font-bold text-slate-900">Stealth Charcoal</span>
               </label>
             </div>
 
             <!-- Gift Bundle -->
-            <div class="pt-2 border-t border-slate-800 text-xs text-slate-300 space-y-2">
+            <div class="pt-3 border-t border-slate-200 text-xs text-slate-600 space-y-2">
               <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-2">
-                  <span class="text-emerald-400 font-bold">🎁 Quà tặng 1:</span>
+                  <span class="text-emerald-600 font-bold">🎁 Quà tặng 1:</span>
                   <span>Dây cáp âm thanh Hi-Res 3.5mm bọc dù chống đứt mạ vàng</span>
                 </div>
                 <span class="text-slate-400 line-through">250.000 đ</span>
-                <span class="text-emerald-400 font-bold">MIỄN PHÍ</span>
+                <span class="text-emerald-600 font-bold">MIỄN PHÍ</span>
               </div>
               <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-2">
-                  <span class="text-emerald-400 font-bold">🎁 Quà tặng 2:</span>
+                  <span class="text-emerald-600 font-bold">🎁 Quà tặng 2:</span>
                   <span>Hộp đựng du lịch chống sốc cao cấp chuẩn EVA bọc sợi carbon</span>
                 </div>
                 <span class="text-slate-400 line-through">300.000 đ</span>
-                <span class="text-emerald-400 font-bold">MIỄN PHÍ</span>
+                <span class="text-emerald-600 font-bold">MIỄN PHÍ</span>
               </div>
             </div>
           </div>
 
           <!-- Customer Info -->
-          <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 sm:p-6 space-y-4">
-            <div class="font-bold text-sm text-slate-200">2. Thông Tin Người Nhận Hàng</div>
+          <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-6 space-y-4">
+            <div class="font-bold text-sm text-slate-900">2. Thông Tin Người Nhận Hàng</div>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label class="block text-xs font-medium text-slate-400 mb-1">Họ và tên của bạn *</label>
-                <input type="text" id="custName" required placeholder="Ví dụ: Nguyễn Văn An" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:border-sky-500 focus:outline-none">
+                <label class="block text-xs font-bold text-slate-700 mb-1">Họ và tên của bạn *</label>
+                <input type="text" id="custName" required placeholder="Ví dụ: Nguyễn Văn An" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:border-sky-500 focus:outline-none">
               </div>
               <div>
-                <label class="block text-xs font-medium text-slate-400 mb-1">Số điện thoại nhận hàng *</label>
-                <input type="tel" id="custPhone" required placeholder="Ví dụ: 0912 345 678" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:border-sky-500 focus:outline-none">
+                <label class="block text-xs font-bold text-slate-700 mb-1">Số điện thoại nhận hàng *</label>
+                <input type="tel" id="custPhone" required placeholder="Ví dụ: 0912 345 678" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:border-sky-500 focus:outline-none">
               </div>
             </div>
 
             <div>
-              <label class="block text-xs font-medium text-slate-400 mb-1">Địa chỉ giao hàng chi tiết *</label>
-              <input type="text" id="custAddress" required placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:border-sky-500 focus:outline-none">
+              <label class="block text-xs font-bold text-slate-700 mb-1">Địa chỉ giao hàng chi tiết *</label>
+              <input type="text" id="custAddress" required placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:border-sky-500 focus:outline-none">
             </div>
 
             <div>
-              <label class="block text-xs font-medium text-slate-400 mb-1">Ghi chú giao hàng (nếu có)</label>
-              <input type="text" id="custNote" placeholder="Giao giờ hành chính, gọi trước khi đến..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-white focus:border-sky-500 focus:outline-none">
+              <label class="block text-xs font-bold text-slate-700 mb-1">Ghi chú giao hàng (nếu có)</label>
+              <input type="text" id="custNote" placeholder="Giao giờ hành chính, gọi trước khi đến..." class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-sm text-slate-900 focus:border-sky-500 focus:outline-none">
             </div>
           </div>
 
           <!-- Total Summary & Submit -->
-          <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="bg-slate-100 border border-slate-200 rounded-2xl p-4 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
-              <div class="text-xs text-slate-400">Tổng thanh toán (Đã bao gồm VAT & Miễn phí vận chuyển):</div>
-              <div class="text-3xl font-extrabold font-mono text-sky-400 mt-1">1.890.000 đ</div>
-              <div class="text-xs text-emerald-400 mt-0.5">✓ Kiểm tra hàng trước khi thanh toán (COD tận nơi)</div>
+              <div class="text-xs text-slate-500">Tổng thanh toán (Đã bao gồm VAT &amp; Miễn phí vận chuyển):</div>
+              <div class="text-3xl font-extrabold font-mono text-sky-600 mt-1">1.890.000 đ</div>
+              <div class="text-xs text-emerald-600 font-medium mt-0.5">✓ Kiểm tra hàng trước khi thanh toán (COD tận nơi)</div>
             </div>
             <button type="submit" id="submitOrderBtn" class="w-full sm:w-auto btn-solid-primary py-3.5 px-8 rounded-xl font-bold text-sm tracking-wide">
               XÁC NHẬN ĐẶT HÀNG NGAY →
             </button>
           </div>
 
-          <div id="orderSuccessAlert" class="hidden p-4 rounded-xl bg-emerald-950 border border-emerald-800 text-emerald-300 text-sm text-center">
+          <div id="orderSuccessAlert" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm text-center font-medium">
             🎉 Đơn hàng của bạn đã được ghi nhận thành công! Chuyên viên chăm sóc khách hàng của CyberPulse sẽ gọi điện xác nhận trong vòng 5–15 phút.
           </div>
 
@@ -626,16 +584,16 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="py-12 border-t border-slate-800 bg-slate-950 text-xs text-slate-400">
+  <footer class="py-12 border-t border-slate-200 bg-white text-xs text-slate-500">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div>
-        <p class="text-slate-300 font-semibold">CyberPulse Audio Lab • Mẫu Landing Page Bán Lẻ Chuyển Đổi Cao</p>
+        <p class="text-slate-800 font-semibold">CyberPulse Audio Lab • Mẫu Landing Page Bán Lẻ Chuyển Đổi Cao</p>
         <p class="mt-1">Phát triển bởi TP Teams Solutions — Tối ưu hóa trải nghiệm thị giác dịu mắt, tải trang siêu tốc dưới 0.6s.</p>
       </div>
       <div class="flex items-center space-x-4">
-        <a href="/" class="text-sky-400 hover:underline">Về Trang Chủ Giải Pháp</a>
+        <a href="/" class="text-sky-600 hover:underline font-medium">Về Trang Chủ Giải Pháp</a>
         <span>•</span>
-        <a href="https://zalo.me/0349363992" target="_blank" class="text-slate-300 hover:text-white">Tư Vấn Triển Khai Cho Sản Phẩm Của Bạn</a>
+        <a href="https://zalo.me/0349363992" target="_blank" class="text-slate-700 hover:text-sky-600">Tư Vấn Triển Khai Cho Sản Phẩm Của Bạn</a>
       </div>
     </div>
   </footer>
@@ -668,12 +626,12 @@
 
       [btnSlate, btnCyan, btnBlack].forEach(b => {
         b.classList.remove('ring-2', 'ring-sky-500/40', 'border-white');
-        b.classList.add('border-slate-800');
+        b.classList.add('border-slate-300');
       });
 
-      let hex = '#38bdf8';
+      let hex = '#0284c7';
       if (colorKey === 'slate') {
-        hex = '#94a3b8';
+        hex = '#64748b';
         btnSlate.classList.add('ring-2', 'ring-sky-500/40', 'border-white');
         updateRadio('Titanium Slate');
       } else if (colorKey === 'cyan') {
@@ -681,7 +639,7 @@
         btnCyan.classList.add('ring-2', 'ring-sky-500/40', 'border-white');
         updateRadio('Nordic Blue');
       } else if (colorKey === 'black') {
-        hex = '#e2e8f0';
+        hex = '#0f172a';
         btnBlack.classList.add('ring-2', 'ring-sky-500/40', 'border-white');
         updateRadio('Stealth Charcoal');
       }
@@ -710,9 +668,9 @@
         const el = document.getElementById(item.id);
         if (el) {
           if (item.val === val) {
-            el.className = 'cursor-pointer border border-sky-500 bg-sky-950/20 rounded-lg p-3.5 flex items-center space-x-3 transition-colors';
+            el.className = 'cursor-pointer border border-sky-500 bg-sky-50 rounded-xl p-3.5 flex items-center space-x-3 transition-colors';
           } else {
-            el.className = 'cursor-pointer border border-slate-800 bg-slate-950 rounded-lg p-3.5 flex items-center space-x-3 transition-colors';
+            el.className = 'cursor-pointer border border-slate-200 bg-white rounded-xl p-3.5 flex items-center space-x-3 transition-colors';
           }
         }
       });
@@ -743,7 +701,7 @@
 
       setTimeout(() => {
         btn.textContent = 'ĐẶT HÀNG THÀNH CÔNG ✓';
-        btn.className = 'w-full sm:w-auto bg-emerald-600 text-white py-3.5 px-8 rounded-xl font-bold text-sm';
+        btn.className = 'w-full sm:w-auto bg-emerald-600 text-white py-3.5 px-8 rounded-xl font-bold text-sm shadow-md';
         alertBox.classList.remove('hidden');
         
         const stockEl = document.getElementById('stockCount');

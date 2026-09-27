@@ -7,9 +7,11 @@ File này đóng vai trò là "bộ nhớ dài hạn" của dự án, lưu trữ
 ## I. THÔNG TIN ĐỊNH DANH HỆ SINH THÁI TP TEAMS
 
 - **Tên thương hiệu:** **TP TEAMS (TP Teams Software & AI Engineering)**
-- **Nhà sáng lập (Founder & Tech Lead):** **Võ Trí Thức** (Kỹ sư CNTT — Đại học Công nghiệp Hà Nội - HaUI).
+- **Đội ngũ Sáng lập Cốt lõi (Founding Leadership):**
+  - **Võ Trí Thức** (Founder & Tech Lead): Kỹ sư Phần mềm Viettel • Cựu sinh viên HaUI (4+ năm thực chiến kiến trúc hệ thống, Backend Spring Boot, AI Agents, Cloud VPS).
+  - **Doãn Hữu Phong** (Co-Founder & Systems Lead): Kỹ sư Phần mềm MobiFone Việt Nam • Tốt nghiệp Bằng Giỏi HaUI (Chuyên sâu hệ thống viễn thông tải cao, đường ống dữ liệu & an toàn thông tin).
 - **Hotline / Zalo:** `0349 363 992` | **Telegram:** `@Trithuc23`
-- **Mục tiêu cốt lõi:** Biến lưu lượng truy cập thành khách hàng tiềm năng và tự động hóa quy trình nghiệp vụ cho SME bằng Web, Backend và AI.
+- **Mục tiêu cốt lõi:** Biến lưu lượng truy cập thành khách hàng tiềm năng và tự động hóa quy trình nghiệp vụ cho SME bằng Web, Backend và AI với tiêu chuẩn kỹ thuật cấp độ viễn thông.
 
 ---
 
@@ -175,9 +177,60 @@ File này đóng vai trò là "bộ nhớ dài hạn" của dự án, lưu trữ
 
 ---
 
+### Phiên làm việc: Ngày 27/09/2026 (Phiên 9 - Đập Đi Xây Lại Toàn Diện Sang Light Corporate & Trust System Design V2.0 Định Hướng Doanh Nghiệp Không Rành Công Nghệ)
+- **Nhiệm vụ & Bước ngoặt chiến lược:**
+  1. **Bước ngoặt định vị khách hàng:** Thoát khỏi tư duy "khoe công nghệ cho dev", định vị 100% phục vụ khách hàng Doanh nghiệp vừa và nhỏ (SME), chủ shop, spa, thẩm mỹ, BĐS, dịch vụ hoàn toàn không biết và không muốn bận tâm về kỹ thuật.
+  2. **Đập đi xây lại toàn diện System Design Sáng (Light Corporate & Trust):**
+     - Loại bỏ hoàn toàn nền tối Obsidian/Cyberpunk `#040711` và các hiệu ứng neon lóa mắt.
+     - Thiết lập hệ màu Trust-First chuẩn quốc tế: Nền thẻ Trắng tinh khiết (`#FFFFFF`), Nền tổng thể Slate dịu mắt (`#F8FAFC`), Tiêu đề Xanh Navy hoàng gia (`#0F172A`), Điểm nhấn Công nghệ Tin cậy (`#2563EB`), Nút Chốt Đơn & Tăng trưởng Xanh Lục Bảo (`#059669`).
+     - Ban hành tài liệu quy chuẩn `tailieu/12_SYSTEM_DESIGN_LIGHT_CORPORATE_TRUST_V2.md`.
+  3. **Đại tu toàn diện Trang Chủ (`index.html`):**
+     - *Hero:* Nhấn mạnh bài toán tốc độ < 1s trên 4G, chuông reo Telegram trong 2s, sở hữu vĩnh viễn 0 VNĐ phí duy trì, kèm mô hình iPhone Silver Titanium tương tác live.
+     - *Cảnh báo 4 cái bẫy tiền bạc:* Web chậm mất khách, bị trói buộc phí thuê bao năm, đơn về chậm đối thủ cướp khách, bị bỏ rơi sau bàn giao.
+     - *Bảng đối soát 3 lựa chọn (VS AI & Kéo thả):* Phân tích rõ ràng lợi ích thực tế khi chọn TP Teams.
+     - *[MỚI] Khối 3 Case Studies Thực Chiến:* Phân tích số liệu Before/After đo bằng tiền thật (E-com tăng +154% đơn, Spa tăng +42% lịch hẹn, BĐS cắt 40% chi phí ads rác).
+     - *[MỚI] Quy trình 3 bước "Cầm tay chỉ việc":* Giải tỏa triệt để nỗi sợ "không biết code thì phối hợp thế nào", kèm cam kết hỗ trợ cập nhật nội dung 0 VNĐ suốt thời gian bảo hành.
+     - *Bảng giá minh bạch:* 1.9M (Starter), 3.8M (Pro - Khuyên dùng), 8.9M (CRM) + Bảng so sánh tiết kiệm 9.7M sau 3 năm.
+     - *[MỚI] Cổng đối tác Marketing Agency (White-label):* Chính sách đại lý chiết khấu 20-30%, cam kết SLA phạt 10%/ngày nếu trễ hạn, xuất hóa đơn VAT và hợp đồng pháp nhân.
+     - *Bảo chứng pháp lý & Founder:* Kỹ sư Võ Trí Thức, Hợp đồng dịch vụ, Hóa đơn VAT, Cam kết bảo mật NDA, phản hồi khẩn cấp 2-4h.
+     - *FAQ & Form tư vấn:* Ngôn ngữ bình dị, dễ hiểu cho người không chuyên máy tính.
+     - *Trợ lý AI Chatbot & iPhone Webhook Simulator:* Chuyển sang giao diện sáng thanh lịch, System Prompt tư vấn tận tình.
+  4. **Cập nhật đồng bộ cả 5 Trang Demo Đa Ngành (`demos/*.html`) sang Light Mode:**
+     - `demos/ecommerce.html`: Bán lẻ CyberPulse Pro (Nền sáng, thanh ưu đãi Flash Sale, bộ chọn màu live, form 1-chạm đẩy đơn Telegram).
+     - `demos/realestate.html`: Bất động sản The Obsidian Sky (Nền Champagne/Ivory quý phái, mặt bằng tương tác 4 loại căn hộ, form tải bảng giá 1/500 qua Zalo).
+     - `demos/course.html`: Đào tạo AI & Backend Masterclass (Nền trắng học thuật, terminal review code trực quan, xét học bổng 50%).
+     - `demos/spa.html`: Phòng khám Aurora Derma Clinic (Nền trắng y khoa vô trùng, trình so sánh Trước/Sau 3 phác đồ, form đặt lịch nhận voucher 500k).
+     - `demos/saas.html`: OpsFlow Mini-CRM (Nền sáng doanh nghiệp, bảng Kanban 4 cột thời gian thực, thanh trượt tính tiền lương tiết kiệm hàng tháng).
+  5. **Kiểm thử chất lượng & Cú pháp:**
+     - 6/6 file HTML parse thành công 100% bằng HTML parser (0 lỗi cú pháp).
+     - Script kiểm thử tự động xác nhận tương thích hoàn hảo.
+
+---
+
+### Phiên làm việc: Ngày 27/09/2026 (Phiên 10 - Tích Hợp Co-Founder Doãn Hữu Phong, Định Vị Grand Portal vs. Demos & Lập Quy Trình Deploy Chuẩn Hóa)
+- **Nhiệm vụ hoàn thành:**
+  1. **Tích hợp Co-Founder thứ 2 — Doãn Hữu Phong vào `index.html`:**
+     - Tên & Bằng cấp: Doãn Hữu Phong — Tốt nghiệp Bằng Giỏi Đại học Công nghiệp Hà Nội (HaUI), Kỹ sư Phần mềm tại MobiFone Việt Nam.
+     - Chức vụ: Co-Founder & Lead Systems Engineer.
+     - Sử dụng ảnh chân dung thật: `anh/doanhuuphong.jpeg` (2048x1365px sắc nét, trang phục công nghệ HaUI FIT Media).
+     - Kiến trúc lại Section `#founder` thành Grid 2 cột song hành:
+       * **Võ Trí Thức**: Founder & Tech Lead (Kỹ sư Viettel) — Phụ trách Kiến trúc giải pháp, Spring Boot, AI Agents, CRO.
+       * **Doãn Hữu Phong**: Co-Founder & Systems Lead (Kỹ sư MobiFone, Bằng Giỏi HaUI) — Phụ trách Hệ thống phân tán tải cao, An toàn thông tin, Đường ống dữ liệu độ trễ siêu thấp (<1s).
+     - Khối 4 Cam Kết Danh Dự & Trách Nhiệm Pháp Lý: Hợp đồng kinh tế, Hóa đơn VAT, Cam kết bảo mật NDA, Phản hồi khẩn cấp 2-4 giờ.
+     - Cập nhật đồng bộ: `meta description`, `footer`, lời chào Trợ lý AI, bộ từ điển song ngữ (`translations.vi` & `translations.en`), form submit modal.
+  2. **Cập nhật Trợ Lý AI (`api/assistant.js`):**
+     - Đưa thông tin bộ đôi kỹ sư Viettel & MobiFone vào System Prompts tiếng Việt & tiếng Anh, rate limit errors và fallback messages.
+  3. **Làm rõ bản chất kiến trúc & vai trò sản phẩm:**
+     - `index.html` = **Grand Solutions Portal (Đại Cổng Giải Pháp)**: Phễu chào mồi bao quát, chạm trọn bộ pain points của chủ doanh nghiệp non-tech, giới thiệu Thang 7 Bậc Dịch Vụ và khẳng định uy tín pháp lý.
+     - `demos/*.html` = **Proofs-of-Concept cho Bậc 1 (Front-end Entry Offer — Landing Page CRO chạy Ads)**: 5 demo chuyên biệt cho 5 ngành nóng (BĐS, Spa/Clinic, E-commerce, Khóa học AI, B2B SaaS) đóng vai trò là "bằng chứng sống" chốt sale gói cửa vào.
+  4. **Lập Kế hoạch Deploy Chuẩn Hóa (Deployment Plan):**
+     - Tuân thủ nghiêm ngặt `tailieu/08` và `tailieu/09` (Pre-flight validation, Git commit conventions, Remote push, Vercel Edge build, Post-deploy live verification).
+  5. **Kiểm thử cú pháp:**
+     - 6/6 file HTML vượt qua kiểm tra cú pháp với 0 lỗi.
+
+---
+
 ## V. NHIỆM VỤ TIẾP THEO ĐANG THỰC HIỆN (CURRENT SPRINT)
-1. Sử dụng 5 mẫu Proposal và 5 Live Demo độc lập trong `tailieu/11` để chào thầu trên **vLance.vn** và các Group Facebook tìm nhà thầu web.
-2. Kiểm tra log nhận lead từ form website và chat AI qua Telegram Bot.
-3. Triển khai tài liệu kịch bản tiếp cận B2B Agency Marketing (Kênh 2).
-
-
+1. Thực hiện lệnh `git commit` và `git push origin main` để kích hoạt Vercel deploy lên production live domain `https://landing.votrithuc.click`.
+2. Kiểm tra live endpoint trên máy tính và điện thoại.
+3. Kích hoạt kế hoạch tiếp cận đối tác Agency và săn việc trên vLance / FreelancerViet.
