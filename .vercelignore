@@ -1,0 +1,8 @@
+node_modules
+.git
+.cache
+tailieu
+projects
+portfolio_landing_page (1).html
+.env*
+.DS_Store
