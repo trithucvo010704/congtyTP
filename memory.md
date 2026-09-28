@@ -313,9 +313,23 @@ File này đóng vai trò là "bộ nhớ dài hạn" của dự án, lưu trữ
 
 ---
 
+### Phiên làm việc: Ngày 28/09/2026 (Phiên 14 - Triệt Để 100% Chuyển Ngữ Tiếng Anh & Bộ WOW Interaction Engine Con Trỏ Chuột 3D)
+- **Mục tiêu & Yêu cầu hoàn thành:**
+  1. **Triệt để 100% Tiếng Anh (Zero-Leak Bilingual Architecture):**
+     - Quét toàn bộ DOM và nâng cấp từ điển song ngữ lên hơn 330 keys.
+     - Dịch toàn diện: Header Nav, Mockup iPhone Telegram, Cảnh báo 4 Cái bẫy, Đo tốc độ Benchmark, Toàn bộ 6 thẻ Showcase, Toàn bộ 3 Case studies (Before/After & Metrics), Quy trình 3 bước, Chi tiết tính năng 3 gói bảng giá và Hộp tiết kiệm 3 năm, Quyền lợi Agency, Hồ sơ chi tiết 2 Kỹ sư sáng lập (Tuyên ngôn, chức danh, 3 gạch đầu dòng chuyên môn), 4 Thẻ kỷ luật kỹ sư và cam kết pháp lý, FAQ, 3 Thẻ mục tiêu chiến lược & Pills chọn quy mô & Dropdown nút thắt doanh nghiệp, Footer, Trợ lý AI và Modal thông báo.
+     - Kiểm thử tự động bằng Playwright: Số lượng text node tiếng Việt khi ở chế độ `EN` giảm từ 216 xuống **chính xác 0 (Zero Vietnamese Elements)**.
+  2. **Bộ WOW Interaction Engine (Fluid Magnetic Glow Cursor & 3D Dynamic Spotlight):**
+     - **Fluid Magnetic Glow Cursor:** Hệ thống con trỏ kép gồm điểm laser micro-dot và vòng hào quang xanh ánh kim (Cyan/Royal Blue Glow Ring) di chuyển theo thuật toán quán tính vật lý (Lerp Spring Physics). Tự động hít nam châm và phóng to khi hover vào nút bấm, thẻ dự án và liên kết.
+     - **Click Ripple Wave:** Mỗi cú nhấp chuột tạo ra sóng radar viễn thông mở rộng.
+     - **3D Perspective Tilt & Cursor Spotlight:** Tự động tính toán góc nghiêng 3D (`rotateX`/`rotateY`) và quầng sáng `radial-gradient` lướt theo chính xác tọa độ con trỏ trên tất cả các thẻ `.card-trust`, `.solution-track-card`, `.showcase-card`.
+     - **Shimmer Sheen Waves:** Vệt sáng chuyển động chạy xiên qua nút bấm CTA chính.
+     - **Tối ưu Mobile:** Tự động ẩn custom cursor trên thiết bị cảm ứng để tránh vướng víu, thay bằng hiệu ứng nhún xúc giác chạm `active:scale-95`.
+
+---
+
 ## V. ĐÃ TRIỂN KHAI & DUY TRÌ HỆ THỐNG
 - Mã nguồn sạch sẽ, không dư thừa, tuân thủ nguyên tắc Light Corporate Trust & Speed.
 - Triển khai Vercel Production: `https://landing.votrithuc.click/`.
-2. Kiểm thử độ phản hồi responsive trên trình duyệt giả lập headless.
-3. Commit Git, push lên GitHub và deploy Vercel Edge Production.
-4. Xác minh HTTP 200 OK trên miền `https://landing.votrithuc.click/`.
+- Xác minh HTTP 200 OK trên miền `https://landing.votrithuc.click/`.
+
