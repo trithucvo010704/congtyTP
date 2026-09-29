@@ -94,6 +94,41 @@
       text-shadow: 0 1px 1px rgba(255,255,255,0.4), 0 -1px 1px rgba(0,0,0,0.6);
       letter-spacing: 0.15em;
     }
+    
+    /* 3D Tilt Card Elevation */
+    .tilt-card {
+      transform-style: preserve-3d;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+    }
+    .tilt-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px -8px rgba(15, 23, 42, 0.08);
+    }
+    /* Laser Pulse Sparkle */
+    @keyframes laserSparkle {
+      0% { box-shadow: 0 0 0 0 rgba(2, 132, 199, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(2, 132, 199, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(2, 132, 199, 0); }
+    }
+    .laser-active-sparkle {
+      animation: laserSparkle 0.8s ease-out;
+    }
+    /* Click Ripple Pulse */
+    .click-ripple {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(2, 132, 199, 0.25);
+      transform: scale(0);
+      animation: rippleAnim 0.6s linear;
+      pointer-events: none;
+    }
+    @keyframes rippleAnim {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+
     /* Toast slide animation */
     @keyframes slideInLeft {
       from { transform: translateX(-100%); opacity: 0; }
@@ -107,23 +142,23 @@
 <body class="selection:bg-sky-500 selection:text-white antialiased">
 
   <!-- TOP CREDIBILITY BAR -->
-  <div class="bg-slate-900 border-b border-slate-800 text-xs py-2 px-4 text-slate-300">
+  <div class="bg-slate-100/90 border-b border-slate-200 text-xs py-2 px-4 text-slate-600">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <div class="flex items-center space-x-2">
-        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span class="font-medium text-white" data-i18n="top.badge">MẪU GIAO DIỆN BÁN LẺ CAO CẤP • BẢO CHỨNG BỞI TP TEAMS SOLUTIONS</span>
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span class="font-semibold text-slate-800" data-i18n="top.badge">MẪU GIAO DIỆN BÁN LẺ CAO CẤP • BẢO CHỨNG BỞI TP TEAMS SOLUTIONS</span>
       </div>
-      <div class="flex items-center space-x-4 sm:space-x-6 text-slate-300">
-        <span class="hidden sm:inline">⚡ <span data-i18n="top.speed">Tốc độ tải:</span> <strong class="text-emerald-400 font-mono font-medium">0.48s</strong></span>
-        <span class="hidden md:inline">🛡️ <span data-i18n="top.audit">Chuẩn âm học:</span> <strong class="text-sky-300 font-mono font-medium">Hi-Res Audio Japan</strong></span>
+      <div class="flex items-center space-x-4 sm:space-x-6 text-slate-600">
+        <span class="hidden sm:inline">⚡ <span data-i18n="top.speed">Tốc độ tải:</span> <strong class="text-emerald-700 font-mono font-semibold">0.48s</strong></span>
+        <span class="hidden md:inline">🛡️ <span data-i18n="top.audit">Chuẩn âm học:</span> <strong class="text-sky-700 font-mono font-semibold">Hi-Res Audio Japan</strong></span>
         
         <!-- Language Switcher -->
-        <div class="flex items-center bg-slate-800 border border-slate-700 rounded-lg p-0.5 text-[11px] font-mono">
+        <div class="flex items-center bg-white border border-slate-300 rounded-lg p-0.5 text-[11px] font-mono shadow-sm">
           <button onclick="switchLang('vi')" id="langViBtn" class="px-2 py-0.5 rounded font-bold transition-colors bg-sky-600 text-white">🇻🇳 VI</button>
-          <button onclick="switchLang('en')" id="langEnBtn" class="px-2 py-0.5 rounded font-medium transition-colors text-slate-400 hover:text-white">🇬🇧 EN</button>
+          <button onclick="switchLang('en')" id="langEnBtn" class="px-2 py-0.5 rounded font-medium transition-colors text-slate-600 hover:text-sky-600">🇬🇧 EN</button>
         </div>
 
-        <a href="/" class="text-sky-400 hover:text-sky-300 hover:underline font-medium text-xs flex items-center space-x-1">
+        <a href="/" class="text-sky-600 hover:text-sky-800 hover:underline font-semibold text-xs flex items-center space-x-1">
           <span data-i18n="top.back_home">← Về Trang Chủ</span>
         </a>
       </div>
@@ -162,7 +197,7 @@
         </a>
         <a href="#order" class="btn-solid-primary px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm flex items-center space-x-2">
           <span data-i18n="nav.order_now">Đặt Mua Ngay</span>
-          <span class="font-mono text-xs bg-black/20 px-1.5 py-0.5 rounded">-45%</span>
+          <span class="font-mono text-xs bg-white/25 text-white px-1.5 py-0.5 rounded">-45%</span>
         </a>
       </div>
     </div>
@@ -301,9 +336,9 @@
               <img id="headphonePhoto" src="../anh/cyberpulse_headphones.jpg" alt="CyberPulse Studio Master ANC" class="w-full h-auto max-h-[360px] object-contain rounded-2xl transition-all duration-300 drop-shadow-xl">
 
               <!-- Simulated Laser Engrave Ribbon on Headband -->
-              <div class="absolute top-10 left-1/2 -translate-x-1/2 bg-slate-900/90 backdrop-blur-sm border border-slate-700/80 px-3.5 py-1 rounded-full text-center shadow-lg transition-all duration-200 max-w-[85%]">
-                <div class="text-[9px] font-mono text-sky-400 uppercase tracking-widest font-semibold" data-i18n="hero.engrave_preview_tag">LASER ENGRAVED EDITION</div>
-                <div id="laserDisplayHeadband" class="text-xs font-mono font-bold text-white laser-engrave-text truncate">
+              <div id="headbandPlaque" class="absolute top-10 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-md border border-slate-300 px-4 py-1.5 rounded-full text-center shadow-md transition-all duration-300 max-w-[88%]">
+                <div class="text-[9px] font-mono text-sky-700 uppercase tracking-widest font-bold" data-i18n="hero.engrave_preview_tag">LASER ENGRAVED EDITION</div>
+                <div id="laserDisplayHeadband" class="text-xs font-mono font-extrabold text-slate-800 laser-engrave-text truncate">
                   CYBERPULSE • LIMITED
                 </div>
               </div>
@@ -369,81 +404,81 @@
     </div>
   </section>
 
-  <!-- WOW FEATURE 1: REAL-TIME AUDIO & HYBRID ANC SIMULATOR (WEB AUDIO API) -->
-  <section id="simulator" class="py-16 sm:py-24 border-b border-slate-200 bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 text-white relative overflow-hidden">
+  <!-- WOW FEATURE 1: REAL-TIME AUDIO & HYBRID ANC SIMULATOR (LIGHT STUDIO LAB) -->
+  <section id="simulator" class="py-16 sm:py-24 border-b border-slate-200 bg-gradient-to-b from-slate-50 via-sky-50/25 to-white text-slate-900 relative overflow-hidden">
     
     <!-- Background subtle audio grid glow -->
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(2,132,199,0.18),transparent_70%)] pointer-events-none"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(2,132,199,0.06),transparent_60%)] pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <div class="text-center max-w-3xl mx-auto mb-12">
-        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-sky-950 border border-sky-800 text-sky-400 text-xs font-mono mb-3">
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-sky-100 border border-sky-200 text-sky-800 text-xs font-mono mb-3">
           <span data-i18n="sim.eyebrow">🎧 [ WEB AUDIO API // TRÌNH MÔ PHỎNG ÂM HỌC THỜI GIAN THỰC ]</span>
         </div>
-        <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight" data-i18n="sim.title">
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight" data-i18n="sim.title">
           Đeo Tai Nghe &amp; Thử Nghiệm Khử Ồn ANC Ngay
         </h2>
-        <p class="text-slate-400 text-xs sm:text-sm mt-3" data-i18n="sim.subtitle">
+        <p class="text-slate-600 text-xs sm:text-sm mt-3" data-i18n="sim.subtitle">
           Bấm nút phát âm thanh để trải nghiệm thuật toán triệt tiêu sóng âm thời gian thực của CyberPulse Studio Master qua bộ xử lý Web Audio trên trình duyệt của bạn.
         </p>
       </div>
 
       <!-- Simulator Console Container -->
-      <div class="max-w-4xl mx-auto bg-slate-800/80 backdrop-blur-md border border-slate-700 rounded-3xl p-6 sm:p-10 shadow-2xl">
+      <div class="max-w-4xl mx-auto bg-white/95 backdrop-blur-md border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-xl shadow-slate-200/60 transition-all duration-300 tilt-card">
         
         <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           
           <!-- Mode Switcher Controls -->
           <div class="md:col-span-6 space-y-4">
             
-            <div class="text-xs font-mono text-slate-400 uppercase tracking-wider" data-i18n="sim.select_mode">
+            <div class="text-xs font-mono text-slate-500 uppercase tracking-wider font-semibold" data-i18n="sim.select_mode">
               Chọn Môi Trường &amp; Chế Độ Âm Học:
             </div>
 
             <!-- Mode 1: Street / Cafe Noise -->
-            <button onclick="setAudioMode('noise')" id="btnModeNoise" class="w-full text-left p-4 rounded-2xl border transition-all flex items-center justify-between border-amber-500/60 bg-amber-950/20 text-white">
+            <button onclick="setAudioMode('noise')" id="btnModeNoise" class="w-full text-left p-4 rounded-2xl border transition-all flex items-center justify-between border-amber-400 bg-amber-50 text-amber-950 shadow-sm ring-2 ring-amber-400/20">
               <div class="flex items-center space-x-3.5">
                 <span class="text-2xl">🏙️</span>
                 <div>
-                  <div class="font-bold text-sm text-amber-300" data-i18n="sim.m1_title">1. Tạp Âm Quán Cà Phê / Phố Xá</div>
-                  <div class="text-xs text-slate-400 mt-0.5" data-i18n="sim.m1_desc">Môi trường ồn ào 78dB chưa qua lọc</div>
+                  <div class="font-bold text-sm text-amber-900" data-i18n="sim.m1_title">1. Tạp Âm Quán Cà Phê / Phố Xá</div>
+                  <div class="text-xs text-amber-700 mt-0.5" data-i18n="sim.m1_desc">Môi trường ồn ào 78dB chưa qua lọc</div>
                 </div>
               </div>
-              <span class="text-xs font-mono text-amber-400 font-bold">78 dB</span>
+              <span class="text-xs font-mono text-amber-900 font-bold bg-amber-100/90 px-2 py-0.5 rounded border border-amber-200">78 dB</span>
             </button>
 
             <!-- Mode 2: CyberPulse Hybrid ANC -->
-            <button onclick="setAudioMode('anc')" id="btnModeAnc" class="w-full text-left p-4 rounded-2xl border transition-all flex items-center justify-between border-slate-700 bg-slate-800/50 hover:border-sky-500 text-slate-300">
+            <button onclick="setAudioMode('anc')" id="btnModeAnc" class="w-full text-left p-4 rounded-2xl border transition-all flex items-center justify-between border-slate-200 bg-slate-50/70 hover:border-sky-300 hover:bg-white text-slate-700 shadow-sm">
               <div class="flex items-center space-x-3.5">
                 <span class="text-2xl">🛡️</span>
                 <div>
-                  <div class="font-bold text-sm text-sky-400" data-i18n="sim.m2_title">2. Kích Hoạt Hybrid ANC -42dB</div>
-                  <div class="text-xs text-slate-400 mt-0.5" data-i18n="sim.m2_desc">Triệt tiêu tạp âm, phòng thu tĩnh lặng</div>
+                  <div class="font-bold text-sm text-sky-800" data-i18n="sim.m2_title">2. Kích Hoạt Hybrid ANC -42dB</div>
+                  <div class="text-xs text-slate-500 mt-0.5" data-i18n="sim.m2_desc">Triệt tiêu tạp âm, phòng thu tĩnh lặng</div>
                 </div>
               </div>
-              <span class="text-xs font-mono text-emerald-400 font-bold">34 dB (-42dB)</span>
+              <span class="text-xs font-mono text-emerald-700 font-bold bg-emerald-100 px-2 py-0.5 rounded border border-emerald-200">34 dB (-42dB)</span>
             </button>
 
             <!-- Mode 3: Transparency Mode -->
-            <button onclick="setAudioMode('transparency')" id="btnModeTransparency" class="w-full text-left p-4 rounded-2xl border transition-all flex items-center justify-between border-slate-700 bg-slate-800/50 hover:border-sky-500 text-slate-300">
+            <button onclick="setAudioMode('transparency')" id="btnModeTransparency" class="w-full text-left p-4 rounded-2xl border transition-all flex items-center justify-between border-slate-200 bg-slate-50/70 hover:border-indigo-300 hover:bg-white text-slate-700 shadow-sm">
               <div class="flex items-center space-x-3.5">
                 <span class="text-2xl">🎙️</span>
                 <div>
-                  <div class="font-bold text-sm text-indigo-300" data-i18n="sim.m3_title">3. Chế Độ Xuyên Âm (Transparency)</div>
-                  <div class="text-xs text-slate-400 mt-0.5" data-i18n="sim.m3_desc">Tăng cường giọng nói đối thoại tự nhiên</div>
+                  <div class="font-bold text-sm text-indigo-800" data-i18n="sim.m3_title">3. Chế Độ Xuyên Âm (Transparency)</div>
+                  <div class="text-xs text-slate-500 mt-0.5" data-i18n="sim.m3_desc">Tăng cường giọng nói đối thoại tự nhiên</div>
                 </div>
               </div>
-              <span class="text-xs font-mono text-indigo-400 font-bold">52 dB</span>
+              <span class="text-xs font-mono text-indigo-700 font-bold bg-indigo-100 px-2 py-0.5 rounded border border-indigo-200">52 dB</span>
             </button>
 
             <!-- Play / Pause Audio Control -->
             <div class="pt-2">
-              <button onclick="toggleAudioPlayback()" id="btnPlayAudio" class="w-full py-4 rounded-2xl bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-400 hover:to-sky-500 text-white font-bold text-sm flex items-center justify-center space-x-2 shadow-lg shadow-sky-600/30 transition-all">
+              <button onclick="toggleAudioPlayback()" id="btnPlayAudio" class="w-full py-4 rounded-2xl btn-solid-primary text-white font-bold text-sm flex items-center justify-center space-x-2 shadow-lg transition-all">
                 <span id="playIcon">▶</span>
                 <span id="playText" data-i18n="sim.btn_start">BẬT PHÁT ÂM THANH THỬ NGHIỆM</span>
               </button>
-              <div class="text-[11px] text-slate-400 text-center mt-2" data-i18n="sim.headphone_note">
+              <div class="text-[11px] text-slate-500 text-center mt-2" data-i18n="sim.headphone_note">
                 💡 Khuyên dùng: Đeo tai nghe hoặc mở âm lượng trên 50% để cảm nhận rõ nhất.
               </div>
             </div>
@@ -451,36 +486,36 @@
           </div>
 
           <!-- Real-Time Canvas Spectrum Visualizer & Sound Meter -->
-          <div class="md:col-span-6 bg-slate-900 border border-slate-700/80 rounded-2xl p-5 flex flex-col justify-between h-full min-h-[300px]">
+          <div class="md:col-span-6 bg-slate-50/80 border border-slate-200 rounded-2xl p-5 flex flex-col justify-between h-full min-h-[300px] shadow-sm">
             
-            <div class="flex items-center justify-between border-b border-slate-800 pb-3 text-xs">
+            <div class="flex items-center justify-between border-b border-slate-200 pb-3 text-xs">
               <div class="flex items-center space-x-2">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                <span class="font-mono text-slate-300 font-bold" data-i18n="sim.spectrum_title">REAL-TIME FFT SPECTRUM</span>
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                <span class="font-mono text-slate-700 font-bold" data-i18n="sim.spectrum_title">REAL-TIME FFT SPECTRUM</span>
               </div>
-              <span class="font-mono text-sky-400 text-[11px]" id="simFreqRange">20Hz – 40kHz</span>
+              <span class="font-mono text-sky-700 text-[11px] font-semibold bg-sky-100 px-2 py-0.5 rounded" id="simFreqRange">20Hz – 40kHz</span>
             </div>
 
             <!-- Waveform Canvas -->
             <div class="py-4 relative flex items-center justify-center">
-              <canvas id="audioCanvas" width="360" height="150" class="w-full h-[150px] rounded-xl bg-slate-950/70 border border-slate-800"></canvas>
+              <canvas id="audioCanvas" width="360" height="150" class="w-full h-[150px] rounded-xl bg-white border border-slate-200 shadow-inner"></canvas>
               
               <!-- Center Status Overlay when paused -->
-              <div id="audioCanvasPrompt" class="absolute text-center pointer-events-none">
-                <div class="text-xs font-mono text-sky-400 font-semibold" data-i18n="sim.canvas_prompt">BẤM "BẬT PHÁT" ĐỂ XEM SÓNG ÂM</div>
+              <div id="audioCanvasPrompt" class="absolute text-center pointer-events-none bg-white/95 backdrop-blur-sm px-3.5 py-2 rounded-xl border border-sky-200 shadow-sm">
+                <div class="text-xs font-mono text-sky-700 font-bold" data-i18n="sim.canvas_prompt">BẤM "BẬT PHÁT" ĐỂ XEM SÓNG ÂM</div>
               </div>
             </div>
 
             <!-- Live dB Gauge Meter -->
-            <div class="pt-3 border-t border-slate-800 space-y-2">
+            <div class="pt-3 border-t border-slate-200 space-y-2">
               <div class="flex items-center justify-between text-xs">
-                <span class="text-slate-400" data-i18n="sim.db_label">Mức tạp âm môi trường:</span>
-                <span class="font-mono font-bold text-amber-400 text-sm" id="simDbValue">78 dB (ỒN)</span>
+                <span class="text-slate-600 font-medium" data-i18n="sim.db_label">Mức tạp âm môi trường:</span>
+                <span class="font-mono font-bold text-amber-700 text-sm bg-amber-100/80 px-2 py-0.5 rounded border border-amber-200" id="simDbValue">78 dB (ỒN)</span>
               </div>
               
               <!-- Progress Bar -->
-              <div class="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
-                <div id="simDbBar" class="bg-gradient-to-r from-emerald-500 via-amber-500 to-rose-500 h-2 rounded-full transition-all duration-300" style="width: 78%;"></div>
+              <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
+                <div id="simDbBar" class="bg-gradient-to-r from-emerald-500 via-amber-500 to-rose-500 h-2.5 rounded-full transition-all duration-300" style="width: 78%;"></div>
               </div>
 
               <div class="flex justify-between text-[10px] font-mono text-slate-500">
@@ -1063,7 +1098,7 @@
   </section>
 
   <!-- DYNAMIC ORDER CONFIRMATION & VIETQR MODAL -->
-  <div id="orderSuccessModal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden items-center justify-center p-4">
+  <div id="orderSuccessModal" class="fixed inset-0 z-50 bg-slate-900/35 backdrop-blur-md hidden items-center justify-center p-4">
     <div class="bg-white rounded-3xl max-w-lg w-full border border-slate-200 shadow-2xl p-6 sm:p-8 space-y-5 animate-scaleUp max-h-[92vh] overflow-y-auto">
       
       <div class="text-center space-y-1">
@@ -1132,7 +1167,7 @@
         </div>
       </div>
 
-      <button onclick="closeSuccessModal()" class="w-full py-3 rounded-xl bg-slate-900 text-white font-bold text-xs hover:bg-slate-800 transition-colors" data-i18n="modal.close">
+      <button onclick="closeSuccessModal()" class="w-full py-3.5 rounded-xl btn-solid-primary font-bold text-xs tracking-wider" data-i18n="modal.close">
         HOÀN TẤT &amp; ĐÓNG CỬA SỔ
       </button>
 
@@ -1921,6 +1956,7 @@
     function toggleAudioPlayback() {
       if (!isPlaying) {
         initWebAudio();
+        cancelAnimationFrame(idleAnimId);
         if (audioCtx.state === 'suspended') {
           audioCtx.resume();
         }
@@ -1941,6 +1977,7 @@
         document.getElementById('btnPlayAudio').className = 'w-full py-4 rounded-2xl bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-400 hover:to-sky-500 text-white font-bold text-sm flex items-center justify-center space-x-2 shadow-lg transition-all';
         document.getElementById('audioCanvasPrompt').classList.remove('hidden');
         cancelAnimationFrame(animFrameId);
+        startIdleCanvasWave();
       }
     }
 
@@ -1952,17 +1989,17 @@
       const btnTrans = document.getElementById('btnModeTransparency');
 
       [btnNoise, btnAnc, btnTrans].forEach(b => {
-        b.className = 'w-full text-left p-4 rounded-2xl border transition-all flex items-center justify-between border-slate-700 bg-slate-800/50 hover:border-sky-500 text-slate-300';
+        b.className = 'w-full text-left p-4 rounded-2xl border transition-all flex items-center justify-between border-slate-200 bg-slate-50/70 hover:border-sky-300 hover:bg-white text-slate-700 shadow-sm';
       });
 
       if (mode === 'noise') {
-        btnNoise.className = 'w-full text-left p-4 rounded-2xl border transition-all flex items-center justify-between border-amber-500/60 bg-amber-950/20 text-white';
+        btnNoise.className = 'w-full text-left p-4 rounded-2xl border transition-all flex items-center justify-between border-amber-400 bg-amber-50 text-amber-950 shadow-sm ring-2 ring-amber-400/20';
         document.getElementById('simDbBar').style.width = '78%';
       } else if (mode === 'anc') {
-        btnAnc.className = 'w-full text-left p-4 rounded-2xl border transition-all flex items-center justify-between border-sky-500 bg-sky-950/40 text-white';
+        btnAnc.className = 'w-full text-left p-4 rounded-2xl border transition-all flex items-center justify-between border-sky-400 bg-sky-50 text-sky-950 shadow-sm ring-2 ring-sky-400/20';
         document.getElementById('simDbBar').style.width = '34%';
       } else if (mode === 'transparency') {
-        btnTrans.className = 'w-full text-left p-4 rounded-2xl border transition-all flex items-center justify-between border-indigo-500 bg-indigo-950/30 text-white';
+        btnTrans.className = 'w-full text-left p-4 rounded-2xl border transition-all flex items-center justify-between border-indigo-400 bg-indigo-50 text-indigo-950 shadow-sm ring-2 ring-indigo-400/20';
         document.getElementById('simDbBar').style.width = '52%';
       }
 
@@ -1975,13 +2012,13 @@
       if (!dbEl) return;
       if (currentMode === 'noise') {
         dbEl.textContent = currentLang === 'vi' ? '78 dB (ỒN)' : '78 dB (NOISY)';
-        dbEl.className = 'font-mono font-bold text-amber-400 text-sm';
+        dbEl.className = 'font-mono font-bold text-amber-900 text-sm bg-amber-100/90 px-2 py-0.5 rounded border border-amber-200';
       } else if (currentMode === 'anc') {
         dbEl.textContent = currentLang === 'vi' ? '34 dB (TĨNH LẶNG)' : '34 dB (SILENT)';
-        dbEl.className = 'font-mono font-bold text-emerald-400 text-sm';
+        dbEl.className = 'font-mono font-bold text-emerald-800 text-sm bg-emerald-100 px-2 py-0.5 rounded border border-emerald-200';
       } else if (currentMode === 'transparency') {
         dbEl.textContent = currentLang === 'vi' ? '52 dB (TỰ NHIÊN)' : '52 dB (NATURAL)';
-        dbEl.className = 'font-mono font-bold text-indigo-400 text-sm';
+        dbEl.className = 'font-mono font-bold text-indigo-800 text-sm bg-indigo-100 px-2 py-0.5 rounded border border-indigo-200';
       }
     }
 
@@ -2220,6 +2257,95 @@
       }, 5500);
 
       proofIndex = (proofIndex + 1) % list.length;
+    }
+
+    
+    // -------------------------------------------------------------
+    // IDLE WAVE ANIMATION (LIVING OSCILLOSCOPE)
+    // -------------------------------------------------------------
+    let idleAnimId = null;
+    function startIdleCanvasWave() {
+      const canvas = document.getElementById('audioCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let step = 0;
+
+      function idleLoop() {
+        if (isPlaying) return;
+        step += 0.035;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Draw light grid lines
+        ctx.strokeStyle = '#f1f5f9';
+        ctx.lineWidth = 1;
+        for (let y = 30; y < canvas.height; y += 30) {
+          ctx.beginPath();
+          ctx.moveTo(0, y);
+          ctx.lineTo(canvas.width, y);
+          ctx.stroke();
+        }
+
+        // Draw gentle harmonic sine wave
+        ctx.beginPath();
+        ctx.lineWidth = 2.5;
+        const grad = ctx.createLinearGradient(0, 0, canvas.width, 0);
+        grad.addColorStop(0, '#38bdf8');
+        grad.addColorStop(0.5, '#0284c7');
+        grad.addColorStop(1, '#10b981');
+        ctx.strokeStyle = grad;
+
+        const mid = canvas.height / 2;
+        for (let x = 0; x < canvas.width; x++) {
+          const y = mid + Math.sin(x * 0.035 + step) * 14 * Math.sin(x * 0.015 + step * 0.4);
+          if (x === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+
+        idleAnimId = requestAnimationFrame(idleLoop);
+      }
+      idleLoop();
+    }
+
+    // Trigger idle wave when window loads
+    window.addEventListener('DOMContentLoaded', () => {
+      startIdleCanvasWave();
+      init3DCardTilt();
+    });
+
+    // -------------------------------------------------------------
+    // INTERACTIVE 3D PERSPECTIVE TILT & LASER SHIMMER
+    // -------------------------------------------------------------
+    function init3DCardTilt() {
+      const cards = document.querySelectorAll('.card-solid-depth, .tilt-card');
+      cards.forEach(card => {
+        card.addEventListener('mousemove', e => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          const rotX = ((y - centerY) / centerY) * -3.5;
+          const rotY = ((x - centerX) / centerX) * 3.5;
+          card.style.transform = `perspective(1000px) rotateX(${rotX.toFixed(2)}deg) rotateY(${rotY.toFixed(2)}deg) translateY(-2px)`;
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = '';
+        });
+      });
+    }
+
+    // Laser input shimmer animation
+    const engraveInput = document.getElementById('laserEngraveInput');
+    if (engraveInput) {
+      engraveInput.addEventListener('input', () => {
+        const plaque = document.getElementById('headbandPlaque');
+        if (plaque) {
+          plaque.classList.remove('laser-active-sparkle');
+          void plaque.offsetWidth; // re-flow
+          plaque.classList.add('laser-active-sparkle');
+        }
+      });
     }
 
     setInterval(rotateSocialProof, 12000);
